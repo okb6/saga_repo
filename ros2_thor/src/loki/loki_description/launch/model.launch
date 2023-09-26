@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="robot_name" default="" />
+  <arg name="tf_prefix" default="" />
+  <arg name="robot_model" default="$(find-pkg-share loki_description)/config/loki_ii_4wd4ws_std/loki_ii_4wd4ws_std.yaml" />
+  <arg name="model_extras" default="" />
+  <arg name="datum_file" default=""/>
+
+  <!--param name="robot_tf_prefix" value="$(var tf_prefix)" /-->
+
+  <!-- create robot model -->
+  <!-- "inorder" so that file process in read order this allows conditional includes -->
+
+
+  
+  <!-- state publisher -->
+  <group>
+    <push_ros_namespace namespace="base_driver" />
+    <node pkg="robot_state_publisher" exec="robot_state_publisher" name="robot_state_publisher" />
+  </group>
+
+</launch>
+

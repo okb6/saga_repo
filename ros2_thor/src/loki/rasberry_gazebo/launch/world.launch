@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <!-- Gazebo arguments -->
+  <arg name="world_name" default="riseholme"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+  <arg name="world" default="$(find-pkg-share rasberry_gazebo)/worlds/$(var world_name).world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+  <arg name="simple_sim" default="True" />
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="false"/>
+
+
+  <!-- Start gazebo and load the world -->
+  <include file="$(find-pkg-share gazebo_ros)/launch/empty_world.launch"/>
+    <!--let name="simple_sim" value="$(var simple_sim)" /-->
+    <!-- <let name="paused" value="$(var paused)"/>
+    <let name="use_sim_time" value="$(var use_sim_time)"/>
+    <let name="gui" value="$(var gui)"/>
+    <let name="headless" value="$(var headless)"/>
+    <let name="debug" value="$(var debug)"/>
+    <let name="verbose" value="$(var verbose)"/>
+    <let name="world_name" value="$(var world)"/> -->
+  <!-- </include> -->
+
+
+</launch>

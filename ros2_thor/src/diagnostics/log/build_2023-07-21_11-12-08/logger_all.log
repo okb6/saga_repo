@@ -1,0 +1,398 @@
+[0.269s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.269s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f03b97f0520>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f03b9f432b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f03b9f432b0>>)
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.287s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.287s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cairlab/diagnostics'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_aggregator) by extension 'ros'
+[0.299s] DEBUG:colcon.colcon_core.package_identification:Package 'diagnostic_aggregator' with type 'ros.ament_cmake' and name 'diagnostic_aggregator'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_common_diagnostics) by extension 'ros'
+[0.300s] DEBUG:colcon.colcon_core.package_identification:Package 'diagnostic_common_diagnostics' with type 'ros.ament_cmake' and name 'diagnostic_common_diagnostics'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extension 'colcon_pkg'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extensions ['colcon_meta']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extension 'colcon_meta'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extensions ['ros']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostic_updater) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'diagnostic_updater' with type 'ros.ament_cmake' and name 'diagnostic_updater'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(diagnostics) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'diagnostics' with type 'ros.ament_cmake' and name 'diagnostics'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(self_test) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'self_test' with type 'ros.ament_cmake' and name 'self_test'
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.322s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 315 installed packages in /opt/ros/humble
+[0.323s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_aggregator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'diagnostic_aggregator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/diagnostics/build/diagnostic_aggregator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/diagnostics/install/diagnostic_aggregator', 'merge_install': False, 'path': '/home/cairlab/diagnostics/diagnostic_aggregator', 'symlink_install': False, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_updater' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'diagnostic_updater' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/diagnostics/build/diagnostic_updater', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/diagnostics/install/diagnostic_updater', 'merge_install': False, 'path': '/home/cairlab/diagnostics/diagnostic_updater', 'symlink_install': False, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'diagnostic_common_diagnostics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'diagnostic_common_diagnostics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics', 'merge_install': False, 'path': '/home/cairlab/diagnostics/diagnostic_common_diagnostics', 'symlink_install': False, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'self_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'self_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/diagnostics/build/self_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/diagnostics/install/self_test', 'merge_install': False, 'path': '/home/cairlab/diagnostics/self_test', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'diagnostics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'diagnostics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/diagnostics/build/diagnostics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/diagnostics/install/diagnostics', 'merge_install': False, 'path': '/home/cairlab/diagnostics/diagnostics', 'symlink_install': False, 'test_result_base': None}
+[0.375s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.378s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.378s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/diagnostics/diagnostic_updater' with build type 'ament_cmake'
+[0.378s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/diagnostics/diagnostic_updater'
+[0.381s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.381s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.381s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.384s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/diagnostics/diagnostic_aggregator' with build type 'ament_cmake'
+[0.384s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/diagnostics/diagnostic_aggregator'
+[0.385s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.385s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_updater': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_updater -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_updater
+[0.394s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_aggregator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_aggregator -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_aggregator
+[1.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_aggregator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_aggregator -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_aggregator
+[1.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_aggregator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_aggregator -- -j12 -l12
+[2.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_updater' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_updater -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_updater
+[2.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_updater': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_updater -- -j12 -l12
+[11.714s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_updater' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_updater -- -j12 -l12
+[11.751s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_updater': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_updater
+[11.820s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_updater)
+[11.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_updater' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_updater
+[11.828s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater' for CMake module files
+[11.828s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater' for CMake config files
+[11.828s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_updater', 'cmake_prefix_path')
+[11.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.ps1'
+[11.831s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.dsv'
+[11.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.sh'
+[11.832s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib'
+[11.832s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/bin'
+[11.833s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib/pkgconfig/diagnostic_updater.pc'
+[11.833s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib/python3.10/site-packages'
+[11.833s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/bin'
+[11.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.ps1'
+[11.835s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.dsv'
+[11.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.sh'
+[11.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.bash'
+[11.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.zsh'
+[11.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_updater/share/colcon-core/packages/diagnostic_updater)
+[11.864s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_updater)
+[11.866s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater' for CMake module files
+[11.867s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater' for CMake config files
+[11.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_updater', 'cmake_prefix_path')
+[11.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.ps1'
+[11.869s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.dsv'
+[11.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/hook/cmake_prefix_path.sh'
+[11.870s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib'
+[11.870s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/bin'
+[11.870s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib/pkgconfig/diagnostic_updater.pc'
+[11.871s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/lib/python3.10/site-packages'
+[11.871s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_updater/bin'
+[11.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.ps1'
+[11.873s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.dsv'
+[11.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.sh'
+[11.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.bash'
+[11.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.zsh'
+[11.874s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_updater/share/colcon-core/packages/diagnostic_updater)
+[11.875s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/diagnostics/diagnostic_common_diagnostics' with build type 'ament_cmake'
+[11.875s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/diagnostics/diagnostic_common_diagnostics'
+[11.876s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.876s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.880s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/diagnostics/self_test' with build type 'ament_cmake'
+[11.881s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/diagnostics/self_test'
+[11.882s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.882s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.889s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_common_diagnostics -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics
+[11.891s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/self_test': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/self_test -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/self_test
+[13.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/diagnostic_common_diagnostics -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics
+[13.046s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_common_diagnostics -- -j12 -l12
+[13.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_common_diagnostics -- -j12 -l12
+[13.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/self_test' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/self_test -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/self_test
+[13.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/self_test': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/self_test -- -j12 -l12
+[13.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_common_diagnostics
+[13.482s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_common_diagnostics)
+[13.485s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics' for CMake module files
+[13.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_common_diagnostics
+[13.487s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics' for CMake config files
+[13.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_common_diagnostics', 'cmake_prefix_path')
+[13.490s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.ps1'
+[13.490s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.dsv'
+[13.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.sh'
+[13.491s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib'
+[13.491s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/bin'
+[13.492s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib/pkgconfig/diagnostic_common_diagnostics.pc'
+[13.492s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib/python3.10/site-packages'
+[13.492s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/bin'
+[13.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.ps1'
+[13.494s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.dsv'
+[13.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.sh'
+[13.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.bash'
+[13.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.zsh'
+[13.496s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/colcon-core/packages/diagnostic_common_diagnostics)
+[13.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_common_diagnostics)
+[13.533s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics' for CMake module files
+[13.533s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics' for CMake config files
+[13.534s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_common_diagnostics', 'cmake_prefix_path')
+[13.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.ps1'
+[13.536s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.dsv'
+[13.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/hook/cmake_prefix_path.sh'
+[13.537s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib'
+[13.537s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/bin'
+[13.537s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib/pkgconfig/diagnostic_common_diagnostics.pc'
+[13.537s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib/python3.10/site-packages'
+[13.537s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/bin'
+[13.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.ps1'
+[13.540s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.dsv'
+[13.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.sh'
+[13.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.bash'
+[13.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.zsh'
+[13.541s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/colcon-core/packages/diagnostic_common_diagnostics)
+[19.960s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_aggregator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostic_aggregator -- -j12 -l12
+[19.999s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostic_aggregator': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_aggregator
+[20.075s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_aggregator)
+[20.078s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator' for CMake module files
+[20.079s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostic_aggregator' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostic_aggregator
+[20.079s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator' for CMake config files
+[20.080s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_aggregator', 'cmake_prefix_path')
+[20.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.ps1'
+[20.082s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.dsv'
+[20.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.sh'
+[20.083s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib'
+[20.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_aggregator', 'ld_library_path_lib')
+[20.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.ps1'
+[20.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.dsv'
+[20.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.sh'
+[20.087s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/bin'
+[20.087s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/pkgconfig/diagnostic_aggregator.pc'
+[20.087s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/python3.10/site-packages'
+[20.087s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/bin'
+[20.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.ps1'
+[20.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.dsv'
+[20.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.sh'
+[20.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.bash'
+[20.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.zsh'
+[20.092s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_aggregator/share/colcon-core/packages/diagnostic_aggregator)
+[20.132s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostic_aggregator)
+[20.135s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator' for CMake module files
+[20.135s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator' for CMake config files
+[20.136s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_aggregator', 'cmake_prefix_path')
+[20.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.ps1'
+[20.138s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.dsv'
+[20.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/cmake_prefix_path.sh'
+[20.140s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib'
+[20.140s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostic_aggregator', 'ld_library_path_lib')
+[20.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.ps1'
+[20.142s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.dsv'
+[20.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/hook/ld_library_path_lib.sh'
+[20.143s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/bin'
+[20.143s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/pkgconfig/diagnostic_aggregator.pc'
+[20.143s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/python3.10/site-packages'
+[20.143s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostic_aggregator/bin'
+[20.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.ps1'
+[20.146s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.dsv'
+[20.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.sh'
+[20.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.bash'
+[20.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.zsh'
+[20.150s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostic_aggregator/share/colcon-core/packages/diagnostic_aggregator)
+[24.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/self_test' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/self_test -- -j12 -l12
+[24.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/self_test': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/self_test
+[24.169s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(self_test)
+[24.170s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test' for CMake module files
+[24.170s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/self_test' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/self_test
+[24.171s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test' for CMake config files
+[24.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('self_test', 'cmake_prefix_path')
+[24.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.ps1'
+[24.172s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.dsv'
+[24.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.sh'
+[24.173s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib'
+[24.173s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/bin'
+[24.173s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib/pkgconfig/self_test.pc'
+[24.173s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib/python3.10/site-packages'
+[24.173s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/bin'
+[24.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.ps1'
+[24.175s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/self_test/share/self_test/package.dsv'
+[24.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.sh'
+[24.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.bash'
+[24.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.zsh'
+[24.175s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/self_test/share/colcon-core/packages/self_test)
+[24.204s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(self_test)
+[24.207s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test' for CMake module files
+[24.208s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test' for CMake config files
+[24.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('self_test', 'cmake_prefix_path')
+[24.210s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.ps1'
+[24.210s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.dsv'
+[24.211s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/self_test/share/self_test/hook/cmake_prefix_path.sh'
+[24.212s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib'
+[24.212s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/bin'
+[24.212s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib/pkgconfig/self_test.pc'
+[24.212s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/lib/python3.10/site-packages'
+[24.212s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/self_test/bin'
+[24.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.ps1'
+[24.213s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/self_test/share/self_test/package.dsv'
+[24.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.sh'
+[24.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.bash'
+[24.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/self_test/share/self_test/package.zsh'
+[24.215s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/self_test/share/colcon-core/packages/self_test)
+[24.215s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/diagnostics/diagnostics' with build type 'ament_cmake'
+[24.215s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/diagnostics/diagnostics'
+[24.216s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[24.216s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[24.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/diagnostics -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostics
+[24.763s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/cairlab/diagnostics/diagnostics -DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostics
+[24.763s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostics -- -j12 -l12
+[24.789s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/diagnostics/build/diagnostics -- -j12 -l12
+[24.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/diagnostics/build/diagnostics': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostics
+[24.815s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostics)
+[24.817s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics' for CMake module files
+[24.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/diagnostics/build/diagnostics' returned '0': AMENT_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cairlab/diagnostics/build/diagnostics
+[24.817s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics' for CMake config files
+[24.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostics', 'cmake_prefix_path')
+[24.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.ps1'
+[24.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.dsv'
+[24.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.sh'
+[24.820s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/bin'
+[24.820s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/lib/pkgconfig/diagnostics.pc'
+[24.820s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/lib/python3.10/site-packages'
+[24.820s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/bin'
+[24.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.ps1'
+[24.821s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.dsv'
+[24.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.sh'
+[24.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.bash'
+[24.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.zsh'
+[24.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostics/share/colcon-core/packages/diagnostics)
+[24.841s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(diagnostics)
+[24.843s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics' for CMake module files
+[24.843s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics' for CMake config files
+[24.844s] Level 1:colcon.colcon_core.shell:create_environment_hook('diagnostics', 'cmake_prefix_path')
+[24.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.ps1'
+[24.845s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.dsv'
+[24.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/hook/cmake_prefix_path.sh'
+[24.846s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/bin'
+[24.846s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/lib/pkgconfig/diagnostics.pc'
+[24.846s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/lib/python3.10/site-packages'
+[24.846s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/diagnostics/install/diagnostics/bin'
+[24.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.ps1'
+[24.848s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.dsv'
+[24.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.sh'
+[24.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.bash'
+[24.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.zsh'
+[24.850s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/diagnostics/install/diagnostics/share/colcon-core/packages/diagnostics)
+[24.851s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[24.852s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[24.852s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[24.853s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[24.885s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[24.885s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[24.885s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[24.907s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[24.909s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/diagnostics/install/local_setup.ps1'
+[24.911s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/diagnostics/install/_local_setup_util_ps1.py'
+[24.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/diagnostics/install/setup.ps1'
+[24.913s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/diagnostics/install/local_setup.sh'
+[24.914s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/diagnostics/install/_local_setup_util_sh.py'
+[24.915s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/diagnostics/install/setup.sh'
+[24.916s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/diagnostics/install/local_setup.bash'
+[24.917s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/diagnostics/install/setup.bash'
+[24.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/diagnostics/install/local_setup.zsh'
+[24.919s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/diagnostics/install/setup.zsh'

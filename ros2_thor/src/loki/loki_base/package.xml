@@ -1,0 +1,40 @@
+<package format="3">
+  <name>loki_base</name>
+  <version>2.0.0</version>
+  <description>This package handles communication between ros and the robot's CANopen network. CAN communication is by means of a PCAN-USB adapter and the excellent cob_generic_can package</description>
+  <maintainer email="okb6@cornell.edu">TODO</maintainer>
+  <license>Apache 2.0</license>
+  <author email="okb6@cornell.edu">TODO</author>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <depend>angles</depend>
+  <depend>cob_generic_can</depend>
+  <depend>cob_utilities</depend>
+  <depend>control_msgs</depend>
+  <depend>diagnostic_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>libntcan</depend>
+  <depend>libpcan</depend>
+  <depend>ros2message</depend>
+  <depend>nav_msgs</depend>
+  <depend>pluginlib</depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>serial</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2</depend>
+  <depend>loki_msgs</depend>
+  <depend>loki_description</depend>
+  <depend>loki_can_devices</depend>
+  <exec_depend>base_driver</exec_depend>
+  <depend>ctypes</depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>

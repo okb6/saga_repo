@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>loki_bringup</name>
+  <version>2.0.0</version>
+  <description>Launch files for bringing up Thorvald II robots</description>
+  <maintainer email="okb6@cornell.edu">TODO</maintainer>
+  <license>Apache 2.0</license>
+  <author email="okb6@cornell.edu">TODO</author>
+
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <!-- defining these as build dependencies so that they are build before this package -->
+  <depend>gazebo_ros</depend>
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>loki_base</depend>
+  <depend>loki_description</depend>
+  <depend>loki_teleop</depend>
+  <depend>loki_twist_mux</depend>
+  <depend>robot_bringup</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+
+  </export>
+</package>

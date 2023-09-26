@@ -1,0 +1,750 @@
+[0.000000] (-) TimerEvent: {}
+[0.000156] (diagnostic_aggregator) JobQueued: {'identifier': 'diagnostic_aggregator', 'dependencies': OrderedDict()}
+[0.000535] (diagnostic_updater) JobQueued: {'identifier': 'diagnostic_updater', 'dependencies': OrderedDict()}
+[0.000573] (diagnostic_common_diagnostics) JobQueued: {'identifier': 'diagnostic_common_diagnostics', 'dependencies': OrderedDict([('diagnostic_updater', '/home/cairlab/diagnostics/install/diagnostic_updater')])}
+[0.000642] (self_test) JobQueued: {'identifier': 'self_test', 'dependencies': OrderedDict([('diagnostic_updater', '/home/cairlab/diagnostics/install/diagnostic_updater')])}
+[0.000662] (diagnostics) JobQueued: {'identifier': 'diagnostics', 'dependencies': OrderedDict([('diagnostic_aggregator', '/home/cairlab/diagnostics/install/diagnostic_aggregator'), ('diagnostic_updater', '/home/cairlab/diagnostics/install/diagnostic_updater'), ('diagnostic_common_diagnostics', '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics'), ('self_test', '/home/cairlab/diagnostics/install/self_test')])}
+[0.000691] (diagnostic_updater) JobStarted: {'identifier': 'diagnostic_updater'}
+[0.007609] (diagnostic_aggregator) JobStarted: {'identifier': 'diagnostic_aggregator'}
+[0.010755] (diagnostic_updater) JobProgress: {'identifier': 'diagnostic_updater', 'progress': 'cmake'}
+[0.011070] (diagnostic_updater) Command: {'cmd': ['/usr/bin/cmake', '/home/cairlab/diagnostics/diagnostic_updater', '-DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_updater'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_updater', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_updater'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.013766] (diagnostic_aggregator) JobProgress: {'identifier': 'diagnostic_aggregator', 'progress': 'cmake'}
+[0.014071] (diagnostic_aggregator) Command: {'cmd': ['/usr/bin/cmake', '/home/cairlab/diagnostics/diagnostic_aggregator', '-DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_aggregator'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_aggregator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_aggregator'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099259] (-) TimerEvent: {}
+[0.136116] (diagnostic_aggregator) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.136363] (diagnostic_updater) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.199348] (-) TimerEvent: {}
+[0.215890] (diagnostic_updater) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.216189] (diagnostic_aggregator) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.222532] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.222858] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.286583] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.286709] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.292313] (diagnostic_aggregator) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.292393] (diagnostic_updater) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.292537] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.292673] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.292838] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.292914] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.295093] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.295168] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299435] (-) TimerEvent: {}
+[0.363459] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.363584] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.369487] (diagnostic_aggregator) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.369648] (diagnostic_updater) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.369790] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.369929] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.370153] (diagnostic_aggregator) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.370238] (diagnostic_updater) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.374819] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.374969] (diagnostic_updater) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399549] (-) TimerEvent: {}
+[0.499758] (-) TimerEvent: {}
+[0.512470] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[0.512892] (diagnostic_updater) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[0.586012] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[0.586222] (diagnostic_updater) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[0.599879] (-) TimerEvent: {}
+[0.616000] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.616142] (diagnostic_updater) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.619867] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.620082] (diagnostic_updater) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.626456] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.626613] (diagnostic_updater) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.638572] (diagnostic_updater) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.638748] (diagnostic_aggregator) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.654992] (diagnostic_aggregator) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.655174] (diagnostic_updater) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700001] (-) TimerEvent: {}
+[0.763619] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found pluginlib: 5.1.0 (/opt/ros/humble/share/pluginlib/cmake)\n'}
+[0.763880] (diagnostic_updater) StdoutLine: {'line': b'-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.785656] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.800119] (-) TimerEvent: {}
+[0.815040] (diagnostic_updater) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.816945] (diagnostic_updater) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.833428] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.835452] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.897090] (diagnostic_updater) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.900217] (-) TimerEvent: {}
+[0.913123] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.917124] (diagnostic_updater) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.934348] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.956465] (diagnostic_updater) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.964161] (diagnostic_updater) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.975833] (diagnostic_aggregator) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.984146] (diagnostic_aggregator) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.000342] (-) TimerEvent: {}
+[1.021217] (diagnostic_updater) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.021486] (diagnostic_updater) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.040032] (diagnostic_aggregator) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.040590] (diagnostic_aggregator) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.085685] (diagnostic_updater) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.086647] (diagnostic_updater) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.100429] (-) TimerEvent: {}
+[1.106567] (diagnostic_aggregator) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.107553] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.200528] (-) TimerEvent: {}
+[1.201672] (diagnostic_updater) StdoutLine: {'line': b'-- Found rclpy: 3.3.8 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[1.204815] (diagnostic_updater) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.224102] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.294570] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.300621] (-) TimerEvent: {}
+[1.310420] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") \n'}
+[1.314090] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") \n'}
+[1.314369] (diagnostic_aggregator) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.314483] (diagnostic_aggregator) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.314588] (diagnostic_aggregator) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.314809] (diagnostic_updater) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.331153] (diagnostic_aggregator) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.368612] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.368919] (diagnostic_aggregator) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cairlab/diagnostics/diagnostic_aggregator/include>\n'}
+[1.369046] (diagnostic_aggregator) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.371294] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.371501] (diagnostic_aggregator) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.372417] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.373641] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.374570] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.376981] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.377191] (diagnostic_aggregator) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.377906] (diagnostic_aggregator) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.380584] (diagnostic_aggregator) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.399573] (diagnostic_aggregator) StdoutLine: {'line': b'-- Generating done\n'}
+[1.400694] (-) TimerEvent: {}
+[1.401241] (diagnostic_aggregator) StdoutLine: {'line': b'-- Build files have been written to: /home/cairlab/diagnostics/build/diagnostic_aggregator\n'}
+[1.413340] (diagnostic_aggregator) CommandEnded: {'returncode': 0}
+[1.413924] (diagnostic_aggregator) JobProgress: {'identifier': 'diagnostic_aggregator', 'progress': 'build'}
+[1.414987] (diagnostic_aggregator) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cairlab/diagnostics/build/diagnostic_aggregator', '--', '-j12', '-l12'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_aggregator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_aggregator'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.457587] (diagnostic_aggregator) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator.dir/src/aggregator.cpp.o\x1b[0m\n'}
+[1.457885] (diagnostic_aggregator) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator.dir/src/analyzer_group.cpp.o\x1b[0m\n'}
+[1.458097] (diagnostic_aggregator) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator.dir/src/status_item.cpp.o\x1b[0m\n'}
+[1.468544] (diagnostic_aggregator) StdoutLine: {'line': b'[ 30%] Built target ament_cmake_python_copy_diagnostic_aggregator\n'}
+[1.500811] (-) TimerEvent: {}
+[1.601051] (-) TimerEvent: {}
+[1.671228] (diagnostic_aggregator) StdoutLine: {'line': b'running egg_info\n'}
+[1.671920] (diagnostic_aggregator) StdoutLine: {'line': b'creating diagnostic_aggregator.egg-info\n'}
+[1.672163] (diagnostic_aggregator) StdoutLine: {'line': b'writing diagnostic_aggregator.egg-info/PKG-INFO\n'}
+[1.672407] (diagnostic_aggregator) StdoutLine: {'line': b'writing dependency_links to diagnostic_aggregator.egg-info/dependency_links.txt\n'}
+[1.672569] (diagnostic_aggregator) StdoutLine: {'line': b'writing top-level names to diagnostic_aggregator.egg-info/top_level.txt\n'}
+[1.672805] (diagnostic_aggregator) StdoutLine: {'line': b"writing manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'\n"}
+[1.675934] (diagnostic_aggregator) StdoutLine: {'line': b"reading manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'\n"}
+[1.676633] (diagnostic_aggregator) StdoutLine: {'line': b"writing manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'\n"}
+[1.701159] (-) TimerEvent: {}
+[1.710111] (diagnostic_aggregator) StdoutLine: {'line': b'[ 30%] Built target ament_cmake_python_build_diagnostic_aggregator_egg\n'}
+[1.801242] (-) TimerEvent: {}
+[1.901510] (-) TimerEvent: {}
+[2.001808] (-) TimerEvent: {}
+[2.056258] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.056514] (diagnostic_updater) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cairlab/diagnostics/diagnostic_updater/include>\n'}
+[2.056612] (diagnostic_updater) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.057747] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.057878] (diagnostic_updater) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.058344] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.058852] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.060178] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.060371] (diagnostic_updater) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.060790] (diagnostic_updater) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.063355] (diagnostic_updater) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.086278] (diagnostic_updater) StdoutLine: {'line': b'-- Generating done\n'}
+[2.088405] (diagnostic_updater) StdoutLine: {'line': b'-- Build files have been written to: /home/cairlab/diagnostics/build/diagnostic_updater\n'}
+[2.099189] (diagnostic_updater) CommandEnded: {'returncode': 0}
+[2.100206] (diagnostic_updater) JobProgress: {'identifier': 'diagnostic_updater', 'progress': 'build'}
+[2.100379] (diagnostic_updater) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cairlab/diagnostics/build/diagnostic_updater', '--', '-j12', '-l12'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_updater', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_updater'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.101871] (-) TimerEvent: {}
+[2.142478] (diagnostic_updater) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[2.142797] (diagnostic_updater) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[2.148796] (diagnostic_updater) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/example.dir/src/example.cpp.o\x1b[0m\n'}
+[2.151366] (diagnostic_updater) StdoutLine: {'line': b'[ 30%] Built target ament_cmake_python_copy_diagnostic_updater\n'}
+[2.202005] (-) TimerEvent: {}
+[2.302375] (-) TimerEvent: {}
+[2.402774] (-) TimerEvent: {}
+[2.503201] (-) TimerEvent: {}
+[2.551074] (diagnostic_updater) StdoutLine: {'line': b'running egg_info\n'}
+[2.552063] (diagnostic_updater) StdoutLine: {'line': b'creating diagnostic_updater.egg-info\n'}
+[2.552416] (diagnostic_updater) StdoutLine: {'line': b'writing diagnostic_updater.egg-info/PKG-INFO\n'}
+[2.552681] (diagnostic_updater) StdoutLine: {'line': b'writing dependency_links to diagnostic_updater.egg-info/dependency_links.txt\n'}
+[2.552900] (diagnostic_updater) StdoutLine: {'line': b'writing top-level names to diagnostic_updater.egg-info/top_level.txt\n'}
+[2.553271] (diagnostic_updater) StdoutLine: {'line': b"writing manifest file 'diagnostic_updater.egg-info/SOURCES.txt'\n"}
+[2.556689] (diagnostic_updater) StdoutLine: {'line': b"reading manifest file 'diagnostic_updater.egg-info/SOURCES.txt'\n"}
+[2.557506] (diagnostic_updater) StdoutLine: {'line': b"writing manifest file 'diagnostic_updater.egg-info/SOURCES.txt'\n"}
+[2.603335] (-) TimerEvent: {}
+[2.612278] (diagnostic_updater) StdoutLine: {'line': b'[ 30%] Built target ament_cmake_python_build_diagnostic_updater_egg\n'}
+[2.703491] (-) TimerEvent: {}
+[2.762858] (diagnostic_updater) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[2.795938] (diagnostic_updater) StdoutLine: {'line': b'[ 40%] Built target gtest_main\n'}
+[2.803618] (-) TimerEvent: {}
+[2.904045] (-) TimerEvent: {}
+[3.004512] (-) TimerEvent: {}
+[3.104979] (-) TimerEvent: {}
+[3.205432] (-) TimerEvent: {}
+[3.305744] (-) TimerEvent: {}
+[3.414732] (-) TimerEvent: {}
+[3.529834] (-) TimerEvent: {}
+[3.630404] (-) TimerEvent: {}
+[3.730720] (-) TimerEvent: {}
+[3.831060] (-) TimerEvent: {}
+[3.931360] (-) TimerEvent: {}
+[4.031647] (-) TimerEvent: {}
+[4.131953] (-) TimerEvent: {}
+[4.232262] (-) TimerEvent: {}
+[4.332573] (-) TimerEvent: {}
+[4.432879] (-) TimerEvent: {}
+[4.533175] (-) TimerEvent: {}
+[4.633492] (-) TimerEvent: {}
+[4.733825] (-) TimerEvent: {}
+[4.834149] (-) TimerEvent: {}
+[4.934427] (-) TimerEvent: {}
+[5.034755] (-) TimerEvent: {}
+[5.135181] (-) TimerEvent: {}
+[5.235795] (-) TimerEvent: {}
+[5.326579] (diagnostic_updater) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[5.335904] (-) TimerEvent: {}
+[5.389991] (diagnostic_updater) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[5.410674] (diagnostic_updater) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_updater_test.dir/test/diagnostic_updater_test.cpp.o\x1b[0m\n'}
+[5.410897] (diagnostic_updater) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_status_wrapper_test.dir/test/diagnostic_status_wrapper_test.cpp.o\x1b[0m\n'}
+[5.436043] (-) TimerEvent: {}
+[5.536367] (-) TimerEvent: {}
+[5.636796] (-) TimerEvent: {}
+[5.737188] (-) TimerEvent: {}
+[5.837524] (-) TimerEvent: {}
+[5.937893] (-) TimerEvent: {}
+[6.038313] (-) TimerEvent: {}
+[6.138963] (-) TimerEvent: {}
+[6.239349] (-) TimerEvent: {}
+[6.339768] (-) TimerEvent: {}
+[6.440296] (-) TimerEvent: {}
+[6.540687] (-) TimerEvent: {}
+[6.641069] (-) TimerEvent: {}
+[6.741509] (-) TimerEvent: {}
+[6.842137] (-) TimerEvent: {}
+[6.942634] (-) TimerEvent: {}
+[7.043025] (-) TimerEvent: {}
+[7.143342] (-) TimerEvent: {}
+[7.243738] (-) TimerEvent: {}
+[7.344079] (-) TimerEvent: {}
+[7.444467] (-) TimerEvent: {}
+[7.545011] (-) TimerEvent: {}
+[7.645587] (-) TimerEvent: {}
+[7.745963] (-) TimerEvent: {}
+[7.846267] (-) TimerEvent: {}
+[7.946636] (-) TimerEvent: {}
+[8.047147] (-) TimerEvent: {}
+[8.147785] (-) TimerEvent: {}
+[8.181892] (diagnostic_updater) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable example\x1b[0m\n'}
+[8.247926] (-) TimerEvent: {}
+[8.348437] (-) TimerEvent: {}
+[8.449260] (-) TimerEvent: {}
+[8.549745] (-) TimerEvent: {}
+[8.650326] (-) TimerEvent: {}
+[8.687077] (diagnostic_updater) StdoutLine: {'line': b'[ 80%] Built target example\n'}
+[8.750497] (-) TimerEvent: {}
+[8.851061] (-) TimerEvent: {}
+[8.951333] (-) TimerEvent: {}
+[9.051639] (-) TimerEvent: {}
+[9.151900] (-) TimerEvent: {}
+[9.252179] (-) TimerEvent: {}
+[9.325193] (diagnostic_updater) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable diagnostic_status_wrapper_test\x1b[0m\n'}
+[9.352410] (-) TimerEvent: {}
+[9.452974] (-) TimerEvent: {}
+[9.553476] (-) TimerEvent: {}
+[9.567993] (diagnostic_updater) StdoutLine: {'line': b'[ 90%] Built target diagnostic_status_wrapper_test\n'}
+[9.653594] (-) TimerEvent: {}
+[9.753874] (-) TimerEvent: {}
+[9.854139] (-) TimerEvent: {}
+[9.954404] (-) TimerEvent: {}
+[10.054666] (-) TimerEvent: {}
+[10.154948] (-) TimerEvent: {}
+[10.255279] (-) TimerEvent: {}
+[10.355611] (-) TimerEvent: {}
+[10.455899] (-) TimerEvent: {}
+[10.556175] (-) TimerEvent: {}
+[10.656485] (-) TimerEvent: {}
+[10.756774] (-) TimerEvent: {}
+[10.857025] (-) TimerEvent: {}
+[10.957277] (-) TimerEvent: {}
+[11.052966] (diagnostic_updater) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable diagnostic_updater_test\x1b[0m\n'}
+[11.057415] (-) TimerEvent: {}
+[11.157726] (-) TimerEvent: {}
+[11.258067] (-) TimerEvent: {}
+[11.326792] (diagnostic_updater) StdoutLine: {'line': b'[100%] Built target diagnostic_updater_test\n'}
+[11.335424] (diagnostic_updater) CommandEnded: {'returncode': 0}
+[11.358169] (-) TimerEvent: {}
+[11.365863] (diagnostic_updater) JobProgress: {'identifier': 'diagnostic_updater', 'progress': 'install'}
+[11.372308] (diagnostic_updater) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cairlab/diagnostics/build/diagnostic_updater'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_updater', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_updater'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[11.378524] (diagnostic_updater) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.378808] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/pythonpath.sh\n'}
+[11.379170] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/pythonpath.dsv\n'}
+[11.379385] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater-3.1.2-py3.10.egg-info\n'}
+[11.379579] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater-3.1.2-py3.10.egg-info/dependency_links.txt\n'}
+[11.379774] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater-3.1.2-py3.10.egg-info/PKG-INFO\n'}
+[11.379931] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater-3.1.2-py3.10.egg-info/SOURCES.txt\n'}
+[11.380103] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater-3.1.2-py3.10.egg-info/top_level.txt\n'}
+[11.380402] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater\n'}
+[11.380565] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_diagnostic_updater.py\n'}
+[11.380857] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/example.py\n'}
+[11.381081] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/__init__.py\n'}
+[11.381277] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_diagnostic_status_wrapper.py\n'}
+[11.381468] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_publisher.py\n'}
+[11.381717] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_update_functions.py\n'}
+[11.429156] (diagnostic_updater) StdoutLine: {'line': b"Listing '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater'...\n"}
+[11.429284] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/__init__.py'...\n"}
+[11.429339] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_diagnostic_status_wrapper.py'...\n"}
+[11.429389] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_diagnostic_updater.py'...\n"}
+[11.429436] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_publisher.py'...\n"}
+[11.429482] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/_update_functions.py'...\n"}
+[11.429527] (diagnostic_updater) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages/diagnostic_updater/example.py'...\n"}
+[11.432726] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/lib/diagnostic_updater/example.py\n'}
+[11.432874] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/lib/diagnostic_updater/example\n'}
+[11.434494] (diagnostic_updater) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/diagnostic_updater/lib/diagnostic_updater/example" to ""\n'}
+[11.434597] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include\n'}
+[11.434651] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include/diagnostic_updater\n'}
+[11.434761] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include/diagnostic_updater/publisher.hpp\n'}
+[11.435028] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include/diagnostic_updater/diagnostic_status_wrapper.hpp\n'}
+[11.435231] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include/diagnostic_updater/diagnostic_updater.hpp\n'}
+[11.435303] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/include/diagnostic_updater/update_functions.hpp\n'}
+[11.435422] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/library_path.sh\n'}
+[11.435557] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/library_path.dsv\n'}
+[11.435721] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/ament_index/resource_index/package_run_dependencies/diagnostic_updater\n'}
+[11.435996] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/ament_index/resource_index/parent_prefix_path/diagnostic_updater\n'}
+[11.436179] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/ament_prefix_path.sh\n'}
+[11.436289] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/ament_prefix_path.dsv\n'}
+[11.436493] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/path.sh\n'}
+[11.436639] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/environment/path.dsv\n'}
+[11.436828] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/local_setup.bash\n'}
+[11.437058] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/local_setup.sh\n'}
+[11.437281] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/local_setup.zsh\n'}
+[11.437478] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/local_setup.dsv\n'}
+[11.437636] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.dsv\n'}
+[11.437854] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/ament_index/resource_index/packages/diagnostic_updater\n'}
+[11.437998] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterTargetsExport.cmake\n'}
+[11.438264] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.438495] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.438686] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.438896] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterConfig.cmake\n'}
+[11.439074] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterConfig-version.cmake\n'}
+[11.439278] (diagnostic_updater) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/package.xml\n'}
+[11.442610] (diagnostic_updater) CommandEnded: {'returncode': 0}
+[11.458276] (-) TimerEvent: {}
+[11.498440] (diagnostic_updater) JobEnded: {'identifier': 'diagnostic_updater', 'rc': 0}
+[11.499017] (diagnostic_common_diagnostics) JobStarted: {'identifier': 'diagnostic_common_diagnostics'}
+[11.504076] (self_test) JobStarted: {'identifier': 'self_test'}
+[11.507596] (diagnostic_common_diagnostics) JobProgress: {'identifier': 'diagnostic_common_diagnostics', 'progress': 'cmake'}
+[11.508226] (diagnostic_common_diagnostics) Command: {'cmd': ['/usr/bin/cmake', '/home/cairlab/diagnostics/diagnostic_common_diagnostics', '-DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostic_common_diagnostics'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[11.511592] (self_test) JobProgress: {'identifier': 'self_test', 'progress': 'cmake'}
+[11.511936] (self_test) Command: {'cmd': ['/usr/bin/cmake', '/home/cairlab/diagnostics/self_test', '-DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/self_test'], 'cwd': '/home/cairlab/diagnostics/build/self_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/self_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[11.558491] (-) TimerEvent: {}
+[11.622546] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[11.623177] (self_test) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[11.658596] (-) TimerEvent: {}
+[11.693072] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[11.693358] (self_test) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[11.713925] (self_test) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[11.714277] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[11.758705] (-) TimerEvent: {}
+[11.772978] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[11.773125] (self_test) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[11.784602] (self_test) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[11.784736] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[11.784885] (self_test) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[11.784947] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[11.785074] (self_test) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[11.785222] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[11.788492] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[11.788780] (self_test) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[11.858824] (-) TimerEvent: {}
+[11.859186] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[11.859358] (self_test) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[11.865168] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[11.865403] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[11.865757] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[11.867607] (self_test) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[11.867837] (self_test) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[11.868205] (self_test) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[11.868715] (self_test) StdoutLine: {'line': b'-- Build for humble\n'}
+[11.868878] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[11.869933] (self_test) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[11.958919] (-) TimerEvent: {}
+[12.016278] (self_test) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[12.016584] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[12.059029] (-) TimerEvent: {}
+[12.111825] (self_test) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[12.159140] (-) TimerEvent: {}
+[12.165831] (self_test) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[12.170818] (self_test) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[12.180057] (self_test) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[12.183256] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[12.194923] (self_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[12.218456] (self_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[12.259260] (-) TimerEvent: {}
+[12.343289] (diagnostic_aggregator) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX shared library libdiagnostic_aggregator.so\x1b[0m\n'}
+[12.343989] (self_test) StdoutLine: {'line': b'-- Found diagnostic_updater: 3.1.2 (/home/cairlab/diagnostics/install/diagnostic_updater/share/diagnostic_updater/cmake)\n'}
+[12.359371] (-) TimerEvent: {}
+[12.413101] (self_test) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[12.417578] (self_test) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[12.459491] (-) TimerEvent: {}
+[12.530958] (self_test) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[12.554339] (self_test) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[12.559603] (-) TimerEvent: {}
+[12.599892] (self_test) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[12.610203] (self_test) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[12.655837] (diagnostic_common_diagnostics) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[12.656478] (diagnostic_common_diagnostics) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[12.657877] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.659723] (-) TimerEvent: {}
+[12.661255] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Generating done\n'}
+[12.662095] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Build files have been written to: /home/cairlab/diagnostics/build/diagnostic_common_diagnostics\n'}
+[12.666179] (diagnostic_common_diagnostics) CommandEnded: {'returncode': 0}
+[12.667038] (diagnostic_common_diagnostics) JobProgress: {'identifier': 'diagnostic_common_diagnostics', 'progress': 'build'}
+[12.667063] (diagnostic_common_diagnostics) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics', '--', '-j12', '-l12'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[12.678964] (self_test) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[12.679171] (self_test) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[12.713690] (diagnostic_common_diagnostics) StdoutLine: {'line': b'Built target ament_cmake_python_copy_diagnostic_common_diagnostics\n'}
+[12.741641] (self_test) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[12.742765] (self_test) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[12.759817] (-) TimerEvent: {}
+[12.860075] (-) TimerEvent: {}
+[12.894757] (self_test) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[12.960161] (-) TimerEvent: {}
+[12.971724] (self_test) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[12.983025] (diagnostic_common_diagnostics) StdoutLine: {'line': b'running egg_info\n'}
+[12.983441] (diagnostic_common_diagnostics) StdoutLine: {'line': b'creating diagnostic_common_diagnostics.egg-info\n'}
+[12.983670] (diagnostic_common_diagnostics) StdoutLine: {'line': b'writing diagnostic_common_diagnostics.egg-info/PKG-INFO\n'}
+[12.983853] (diagnostic_common_diagnostics) StdoutLine: {'line': b'writing dependency_links to diagnostic_common_diagnostics.egg-info/dependency_links.txt\n'}
+[12.983949] (diagnostic_common_diagnostics) StdoutLine: {'line': b'writing top-level names to diagnostic_common_diagnostics.egg-info/top_level.txt\n'}
+[12.984079] (self_test) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[12.984144] (diagnostic_common_diagnostics) StdoutLine: {'line': b"writing manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'\n"}
+[12.984194] (self_test) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/cairlab/diagnostics/self_test/include>\n'}
+[12.984265] (self_test) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[12.985198] (self_test) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[12.985275] (self_test) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[12.985399] (diagnostic_common_diagnostics) StdoutLine: {'line': b"reading manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'\n"}
+[12.985765] (diagnostic_common_diagnostics) StdoutLine: {'line': b"writing manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'\n"}
+[12.986029] (self_test) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[12.987251] (self_test) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[12.987342] (self_test) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[12.987715] (self_test) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[12.989253] (self_test) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.012515] (diagnostic_common_diagnostics) StdoutLine: {'line': b'Built target ament_cmake_python_build_diagnostic_common_diagnostics_egg\n'}
+[13.013291] (self_test) StdoutLine: {'line': b'-- Generating done\n'}
+[13.015175] (self_test) StdoutLine: {'line': b'-- Build files have been written to: /home/cairlab/diagnostics/build/self_test\n'}
+[13.022782] (diagnostic_common_diagnostics) CommandEnded: {'returncode': 0}
+[13.033878] (self_test) CommandEnded: {'returncode': 0}
+[13.034339] (self_test) JobProgress: {'identifier': 'self_test', 'progress': 'build'}
+[13.035054] (self_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cairlab/diagnostics/build/self_test', '--', '-j12', '-l12'], 'cwd': '/home/cairlab/diagnostics/build/self_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/self_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[13.045005] (diagnostic_common_diagnostics) JobProgress: {'identifier': 'diagnostic_common_diagnostics', 'progress': 'install'}
+[13.045866] (diagnostic_common_diagnostics) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_common_diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[13.052791] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.053073] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/pythonpath.sh\n'}
+[13.053192] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/pythonpath.dsv\n'}
+[13.053368] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics-3.1.2-py3.10.egg-info\n'}
+[13.053500] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics-3.1.2-py3.10.egg-info/dependency_links.txt\n'}
+[13.053608] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics-3.1.2-py3.10.egg-info/PKG-INFO\n'}
+[13.053692] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics-3.1.2-py3.10.egg-info/SOURCES.txt\n'}
+[13.053741] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics-3.1.2-py3.10.egg-info/top_level.txt\n'}
+[13.053811] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics\n'}
+[13.053880] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics/ntp_monitor.py\n'}
+[13.054010] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics/__init__.py\n'}
+[13.060323] (-) TimerEvent: {}
+[13.068905] (diagnostic_aggregator) StdoutLine: {'line': b'[ 40%] Built target diagnostic_aggregator\n'}
+[13.077611] (self_test) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/run_selftest.dir/src/run_selftest.cpp.o\x1b[0m\n'}
+[13.077841] (self_test) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/selftest_example.dir/example/selftest_example.cpp.o\x1b[0m\n'}
+[13.079253] (self_test) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[13.080109] (self_test) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[13.085743] (diagnostic_aggregator) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/discard_analyzer.cpp.o\x1b[0m\n'}
+[13.085989] (diagnostic_aggregator) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/generic_analyzer.cpp.o\x1b[0m\n'}
+[13.087570] (diagnostic_aggregator) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/aggregator_node.dir/src/aggregator_node.cpp.o\x1b[0m\n'}
+[13.087924] (diagnostic_common_diagnostics) StdoutLine: {'line': b"Listing '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics'...\n"}
+[13.088099] (diagnostic_common_diagnostics) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics/__init__.py'...\n"}
+[13.088268] (diagnostic_common_diagnostics) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages/diagnostic_common_diagnostics/ntp_monitor.py'...\n"}
+[13.088412] (diagnostic_aggregator) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/ignore_analyzer.cpp.o\x1b[0m\n'}
+[13.098085] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/ntp_monitor.py\n'}
+[13.098378] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/ament_index/resource_index/package_run_dependencies/diagnostic_common_diagnostics\n'}
+[13.098576] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/ament_index/resource_index/parent_prefix_path/diagnostic_common_diagnostics\n'}
+[13.098781] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/ament_prefix_path.sh\n'}
+[13.099136] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/ament_prefix_path.dsv\n'}
+[13.099300] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/path.sh\n'}
+[13.099488] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/path.dsv\n'}
+[13.099633] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.bash\n'}
+[13.099719] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.sh\n'}
+[13.099866] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.zsh\n'}
+[13.100024] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.dsv\n'}
+[13.100180] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.dsv\n'}
+[13.100625] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/ament_index/resource_index/packages/diagnostic_common_diagnostics\n'}
+[13.100777] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/cmake/diagnostic_common_diagnosticsConfig.cmake\n'}
+[13.100993] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/cmake/diagnostic_common_diagnosticsConfig-version.cmake\n'}
+[13.103399] (diagnostic_common_diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.xml\n'}
+[13.104429] (diagnostic_common_diagnostics) CommandEnded: {'returncode': 0}
+[13.160963] (-) TimerEvent: {}
+[13.163515] (diagnostic_common_diagnostics) JobEnded: {'identifier': 'diagnostic_common_diagnostics', 'rc': 0}
+[13.261070] (-) TimerEvent: {}
+[13.361386] (-) TimerEvent: {}
+[13.461747] (-) TimerEvent: {}
+[13.562166] (-) TimerEvent: {}
+[13.662678] (-) TimerEvent: {}
+[13.763149] (-) TimerEvent: {}
+[13.863619] (-) TimerEvent: {}
+[13.937733] (self_test) StdoutLine: {'line': b'[ 31%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[13.963759] (-) TimerEvent: {}
+[13.983361] (self_test) StdoutLine: {'line': b'[ 31%] Built target gtest_main\n'}
+[14.063899] (-) TimerEvent: {}
+[14.164352] (-) TimerEvent: {}
+[14.264791] (-) TimerEvent: {}
+[14.365214] (-) TimerEvent: {}
+[14.465639] (-) TimerEvent: {}
+[14.566071] (-) TimerEvent: {}
+[14.666508] (-) TimerEvent: {}
+[14.766949] (-) TimerEvent: {}
+[14.867365] (-) TimerEvent: {}
+[14.967686] (-) TimerEvent: {}
+[15.068020] (-) TimerEvent: {}
+[15.168339] (-) TimerEvent: {}
+[15.268670] (-) TimerEvent: {}
+[15.369070] (-) TimerEvent: {}
+[15.469510] (-) TimerEvent: {}
+[15.569886] (-) TimerEvent: {}
+[15.670210] (-) TimerEvent: {}
+[15.770556] (-) TimerEvent: {}
+[15.871013] (-) TimerEvent: {}
+[15.971364] (-) TimerEvent: {}
+[16.071733] (-) TimerEvent: {}
+[16.172153] (-) TimerEvent: {}
+[16.272574] (-) TimerEvent: {}
+[16.373196] (-) TimerEvent: {}
+[16.473638] (-) TimerEvent: {}
+[16.574078] (-) TimerEvent: {}
+[16.674690] (-) TimerEvent: {}
+[16.775191] (-) TimerEvent: {}
+[16.875659] (-) TimerEvent: {}
+[16.976020] (-) TimerEvent: {}
+[17.076479] (-) TimerEvent: {}
+[17.176948] (-) TimerEvent: {}
+[17.184815] (self_test) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[17.247804] (self_test) StdoutLine: {'line': b'[ 37%] Built target gtest\n'}
+[17.274005] (self_test) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object test/CMakeFiles/test_exception_selftest.dir/exception_selftest.cpp.o\x1b[0m\n'}
+[17.277098] (-) TimerEvent: {}
+[17.277755] (self_test) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object test/CMakeFiles/test_error_selftest.dir/error_selftest.cpp.o\x1b[0m\n'}
+[17.277937] (self_test) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object test/CMakeFiles/test_nominal_selftest.dir/nominal_selftest.cpp.o\x1b[0m\n'}
+[17.278039] (self_test) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object test/CMakeFiles/test_no_id_selftest.dir/no_id_selftest.cpp.o\x1b[0m\n'}
+[17.346226] (diagnostic_aggregator) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable aggregator_node\x1b[0m\n'}
+[17.377245] (-) TimerEvent: {}
+[17.477813] (-) TimerEvent: {}
+[17.578336] (-) TimerEvent: {}
+[17.678997] (-) TimerEvent: {}
+[17.779675] (-) TimerEvent: {}
+[17.824325] (self_test) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable selftest_example\x1b[0m\n'}
+[17.879794] (-) TimerEvent: {}
+[17.980154] (-) TimerEvent: {}
+[18.056773] (self_test) StdoutLine: {'line': b'[ 68%] Built target selftest_example\n'}
+[18.079536] (diagnostic_aggregator) StdoutLine: {'line': b'[ 90%] Built target aggregator_node\n'}
+[18.080305] (-) TimerEvent: {}
+[18.180704] (-) TimerEvent: {}
+[18.281014] (-) TimerEvent: {}
+[18.381291] (-) TimerEvent: {}
+[18.481593] (-) TimerEvent: {}
+[18.581941] (-) TimerEvent: {}
+[18.618698] (self_test) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable run_selftest\x1b[0m\n'}
+[18.682130] (-) TimerEvent: {}
+[18.782626] (-) TimerEvent: {}
+[18.842874] (self_test) StdoutLine: {'line': b'[ 75%] Built target run_selftest\n'}
+[18.882831] (-) TimerEvent: {}
+[18.983388] (-) TimerEvent: {}
+[19.053638] (diagnostic_aggregator) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libdiagnostic_aggregator_analyzers.so\x1b[0m\n'}
+[19.083505] (-) TimerEvent: {}
+[19.183952] (-) TimerEvent: {}
+[19.284800] (-) TimerEvent: {}
+[19.385356] (-) TimerEvent: {}
+[19.485850] (-) TimerEvent: {}
+[19.525880] (diagnostic_aggregator) StdoutLine: {'line': b'[100%] Built target diagnostic_aggregator_analyzers\n'}
+[19.579774] (diagnostic_aggregator) CommandEnded: {'returncode': 0}
+[19.586013] (-) TimerEvent: {}
+[19.618203] (diagnostic_aggregator) JobProgress: {'identifier': 'diagnostic_aggregator', 'progress': 'install'}
+[19.618902] (diagnostic_aggregator) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cairlab/diagnostics/build/diagnostic_aggregator'], 'cwd': '/home/cairlab/diagnostics/build/diagnostic_aggregator', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostic_aggregator'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[19.628672] (diagnostic_aggregator) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.628977] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/lib/diagnostic_aggregator/aggregator_node\n'}
+[19.629214] (diagnostic_aggregator) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/diagnostic_aggregator/aggregator_node" to ""\n'}
+[19.629355] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/lib/libdiagnostic_aggregator.so\n'}
+[19.644220] (diagnostic_aggregator) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/libdiagnostic_aggregator.so" to ""\n'}
+[19.644477] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/lib/libdiagnostic_aggregator_analyzers.so\n'}
+[19.646232] (diagnostic_aggregator) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/diagnostic_aggregator/lib/libdiagnostic_aggregator_analyzers.so" to ""\n'}
+[19.646518] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include\n'}
+[19.646715] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator\n'}
+[19.646874] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/generic_analyzer.hpp\n'}
+[19.647038] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/status_item.hpp\n'}
+[19.647155] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/visibility_control.hpp\n'}
+[19.647296] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/ignore_analyzer.hpp\n'}
+[19.647404] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/discard_analyzer.hpp\n'}
+[19.647499] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/analyzer.hpp\n'}
+[19.647591] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/aggregator.hpp\n'}
+[19.647684] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/generic_analyzer_base.hpp\n'}
+[19.647801] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/other_analyzer.hpp\n'}
+[19.647893] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/include/diagnostic_aggregator/analyzer_group.hpp\n'}
+[19.648011] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/pythonpath.sh\n'}
+[19.648107] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/pythonpath.dsv\n'}
+[19.648220] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator-3.1.2-py3.10.egg-info\n'}
+[19.648949] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator-3.1.2-py3.10.egg-info/dependency_links.txt\n'}
+[19.649184] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator-3.1.2-py3.10.egg-info/PKG-INFO\n'}
+[19.649390] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator-3.1.2-py3.10.egg-info/SOURCES.txt\n'}
+[19.649592] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator-3.1.2-py3.10.egg-info/top_level.txt\n'}
+[19.649970] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator\n'}
+[19.650183] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator/__init__.py\n'}
+[19.681775] (diagnostic_aggregator) StdoutLine: {'line': b"Listing '/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator'...\n"}
+[19.682015] (diagnostic_aggregator) StdoutLine: {'line': b"Compiling '/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages/diagnostic_aggregator/__init__.py'...\n"}
+[19.686153] (-) TimerEvent: {}
+[19.689519] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/example.launch.py\n'}
+[19.689842] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/lib/diagnostic_aggregator/example_pub.py\n'}
+[19.690094] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/example_analyzers.yaml\n'}
+[19.690284] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/plugin_description.xml\n'}
+[19.690491] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/library_path.sh\n'}
+[19.690643] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/library_path.dsv\n'}
+[19.690888] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/ament_index/resource_index/package_run_dependencies/diagnostic_aggregator\n'}
+[19.691108] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/ament_index/resource_index/parent_prefix_path/diagnostic_aggregator\n'}
+[19.691318] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/ament_prefix_path.sh\n'}
+[19.691460] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/ament_prefix_path.dsv\n'}
+[19.691663] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/path.sh\n'}
+[19.691773] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/path.dsv\n'}
+[19.691967] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.bash\n'}
+[19.692144] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.sh\n'}
+[19.692431] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.zsh\n'}
+[19.692627] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.dsv\n'}
+[19.692797] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.dsv\n'}
+[19.693187] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/ament_index/resource_index/packages/diagnostic_aggregator\n'}
+[19.693331] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/ament_index/resource_index/diagnostic_aggregator__pluginlib__plugin/diagnostic_aggregator\n'}
+[19.693578] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorTargetsExport.cmake\n'}
+[19.693825] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorTargetsExport-noconfig.cmake\n'}
+[19.694043] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.694258] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.694464] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.694709] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorConfig.cmake\n'}
+[19.694868] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorConfig-version.cmake\n'}
+[19.695074] (diagnostic_aggregator) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostic_aggregator/share/diagnostic_aggregator/package.xml\n'}
+[19.697094] (diagnostic_aggregator) CommandEnded: {'returncode': 0}
+[19.772810] (diagnostic_aggregator) JobEnded: {'identifier': 'diagnostic_aggregator', 'rc': 0}
+[19.786279] (-) TimerEvent: {}
+[19.886667] (-) TimerEvent: {}
+[19.987141] (-) TimerEvent: {}
+[20.087510] (-) TimerEvent: {}
+[20.187867] (-) TimerEvent: {}
+[20.288264] (-) TimerEvent: {}
+[20.388592] (-) TimerEvent: {}
+[20.488991] (-) TimerEvent: {}
+[20.589336] (-) TimerEvent: {}
+[20.689647] (-) TimerEvent: {}
+[20.790029] (-) TimerEvent: {}
+[20.890419] (-) TimerEvent: {}
+[20.990763] (-) TimerEvent: {}
+[21.091062] (-) TimerEvent: {}
+[21.191371] (-) TimerEvent: {}
+[21.291675] (-) TimerEvent: {}
+[21.392027] (-) TimerEvent: {}
+[21.492356] (-) TimerEvent: {}
+[21.592642] (-) TimerEvent: {}
+[21.692952] (-) TimerEvent: {}
+[21.793248] (-) TimerEvent: {}
+[21.893540] (-) TimerEvent: {}
+[21.993835] (-) TimerEvent: {}
+[22.094136] (-) TimerEvent: {}
+[22.194431] (-) TimerEvent: {}
+[22.294720] (-) TimerEvent: {}
+[22.395030] (-) TimerEvent: {}
+[22.495285] (-) TimerEvent: {}
+[22.595531] (-) TimerEvent: {}
+[22.695790] (-) TimerEvent: {}
+[22.796061] (-) TimerEvent: {}
+[22.896327] (-) TimerEvent: {}
+[22.996567] (-) TimerEvent: {}
+[23.011749] (self_test) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable test_exception_selftest\x1b[0m\n'}
+[23.096673] (-) TimerEvent: {}
+[23.196987] (-) TimerEvent: {}
+[23.228600] (self_test) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable test_error_selftest\x1b[0m\n'}
+[23.254483] (self_test) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable test_nominal_selftest\x1b[0m\n'}
+[23.294579] (self_test) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_no_id_selftest\x1b[0m\n'}
+[23.297098] (-) TimerEvent: {}
+[23.352748] (self_test) StdoutLine: {'line': b'[100%] Built target test_exception_selftest\n'}
+[23.397289] (-) TimerEvent: {}
+[23.497841] (-) TimerEvent: {}
+[23.598365] (-) TimerEvent: {}
+[23.648740] (self_test) StdoutLine: {'line': b'[100%] Built target test_nominal_selftest\n'}
+[23.694101] (self_test) StdoutLine: {'line': b'[100%] Built target test_no_id_selftest\n'}
+[23.698522] (-) TimerEvent: {}
+[23.728980] (self_test) StdoutLine: {'line': b'[100%] Built target test_error_selftest\n'}
+[23.746192] (self_test) CommandEnded: {'returncode': 0}
+[23.774654] (self_test) JobProgress: {'identifier': 'self_test', 'progress': 'install'}
+[23.775047] (self_test) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cairlab/diagnostics/build/self_test'], 'cwd': '/home/cairlab/diagnostics/build/self_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/self_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater:/opt/ros/humble')]), 'shell': False}
+[23.782725] (self_test) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.782865] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/include\n'}
+[23.782992] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/include/self_test\n'}
+[23.783140] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/include/self_test/test_runner.hpp\n'}
+[23.783223] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/lib/self_test/run_selftest\n'}
+[23.784027] (self_test) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/self_test/lib/self_test/run_selftest" to ""\n'}
+[23.784134] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/lib/self_test/selftest_example\n'}
+[23.784868] (self_test) StdoutLine: {'line': b'-- Set runtime path of "/home/cairlab/diagnostics/install/self_test/lib/self_test/selftest_example" to ""\n'}
+[23.785011] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/ament_index/resource_index/package_run_dependencies/self_test\n'}
+[23.785266] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/ament_index/resource_index/parent_prefix_path/self_test\n'}
+[23.785579] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/environment/ament_prefix_path.sh\n'}
+[23.785714] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/environment/ament_prefix_path.dsv\n'}
+[23.785854] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/environment/path.sh\n'}
+[23.785970] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/environment/path.dsv\n'}
+[23.786155] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/local_setup.bash\n'}
+[23.786463] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/local_setup.sh\n'}
+[23.786688] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/local_setup.zsh\n'}
+[23.786863] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/local_setup.dsv\n'}
+[23.787059] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/package.dsv\n'}
+[23.787295] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/ament_index/resource_index/packages/self_test\n'}
+[23.787428] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[23.787664] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/cmake/self_testConfig.cmake\n'}
+[23.788313] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/cmake/self_testConfig-version.cmake\n'}
+[23.788634] (self_test) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/self_test/share/self_test/package.xml\n'}
+[23.792177] (self_test) CommandEnded: {'returncode': 0}
+[23.798636] (-) TimerEvent: {}
+[23.838203] (self_test) JobEnded: {'identifier': 'self_test', 'rc': 0}
+[23.838848] (diagnostics) JobStarted: {'identifier': 'diagnostics'}
+[23.848435] (diagnostics) JobProgress: {'identifier': 'diagnostics', 'progress': 'cmake'}
+[23.848725] (diagnostics) Command: {'cmd': ['/usr/bin/cmake', '/home/cairlab/diagnostics/diagnostics', '-DCMAKE_INSTALL_PREFIX=/home/cairlab/diagnostics/install/diagnostics'], 'cwd': '/home/cairlab/diagnostics/build/diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble')]), 'shell': False}
+[23.898771] (-) TimerEvent: {}
+[23.903855] (diagnostics) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[23.960710] (diagnostics) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[23.966694] (diagnostics) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[23.998920] (-) TimerEvent: {}
+[24.024082] (diagnostics) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[24.029996] (diagnostics) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[24.030194] (diagnostics) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[24.030504] (diagnostics) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[24.032879] (diagnostics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[24.099035] (-) TimerEvent: {}
+[24.100599] (diagnostics) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[24.106670] (diagnostics) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[24.106941] (diagnostics) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[24.107353] (diagnostics) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[24.109448] (diagnostics) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[24.199142] (-) TimerEvent: {}
+[24.248283] (diagnostics) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[24.299266] (-) TimerEvent: {}
+[24.376128] (diagnostics) StdoutLine: {'line': b'-- Configuring done\n'}
+[24.378501] (diagnostics) StdoutLine: {'line': b'-- Generating done\n'}
+[24.379202] (diagnostics) StdoutLine: {'line': b'-- Build files have been written to: /home/cairlab/diagnostics/build/diagnostics\n'}
+[24.384064] (diagnostics) CommandEnded: {'returncode': 0}
+[24.384635] (diagnostics) JobProgress: {'identifier': 'diagnostics', 'progress': 'build'}
+[24.384800] (diagnostics) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cairlab/diagnostics/build/diagnostics', '--', '-j12', '-l12'], 'cwd': '/home/cairlab/diagnostics/build/diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble')]), 'shell': False}
+[24.399375] (-) TimerEvent: {}
+[24.411144] (diagnostics) CommandEnded: {'returncode': 0}
+[24.426482] (diagnostics) JobProgress: {'identifier': 'diagnostics', 'progress': 'install'}
+[24.426592] (diagnostics) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cairlab/diagnostics/build/diagnostics'], 'cwd': '/home/cairlab/diagnostics/build/diagnostics', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cairlab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cairlab/diagnostics/install/diagnostic_updater/lib:/home/cairlab/diagnostics/install/diagnostic_aggregator/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cairlab'), ('OLDPWD', '/home/cairlab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2465'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cairlab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cairlab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cairlab-System-Product-Name:@/tmp/.ICE-unix/2447,unix/cairlab-System-Product-Name:/tmp/.ICE-unix/2447'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/48742aad_bdbb_446f_80b8_1e82757df84a'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SE2Z71'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1111'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cairlab/diagnostics/build/diagnostics'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cairlab/diagnostics/install/diagnostic_common_diagnostics/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_updater/local/lib/python3.10/dist-packages:/home/cairlab/diagnostics/install/diagnostic_aggregator/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/cairlab/diagnostics/install/self_test:/home/cairlab/diagnostics/install/diagnostic_common_diagnostics:/home/cairlab/diagnostics/install/diagnostic_updater:/home/cairlab/diagnostics/install/diagnostic_aggregator:/opt/ros/humble')]), 'shell': False}
+[24.433180] (diagnostics) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[24.433440] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/ament_index/resource_index/package_run_dependencies/diagnostics\n'}
+[24.433988] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/ament_index/resource_index/parent_prefix_path/diagnostics\n'}
+[24.434202] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/environment/ament_prefix_path.sh\n'}
+[24.434375] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/environment/ament_prefix_path.dsv\n'}
+[24.434543] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/environment/path.sh\n'}
+[24.434707] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/environment/path.dsv\n'}
+[24.434918] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/local_setup.bash\n'}
+[24.435009] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/local_setup.sh\n'}
+[24.435077] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/local_setup.zsh\n'}
+[24.435125] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/local_setup.dsv\n'}
+[24.435188] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.dsv\n'}
+[24.435287] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/ament_index/resource_index/packages/diagnostics\n'}
+[24.435408] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/cmake/diagnosticsConfig.cmake\n'}
+[24.435531] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/cmake/diagnosticsConfig-version.cmake\n'}
+[24.435636] (diagnostics) StdoutLine: {'line': b'-- Installing: /home/cairlab/diagnostics/install/diagnostics/share/diagnostics/package.xml\n'}
+[24.437237] (diagnostics) CommandEnded: {'returncode': 0}
+[24.472799] (diagnostics) JobEnded: {'identifier': 'diagnostics', 'rc': 0}
+[24.475896] (-) EventReactorShutdown: {}

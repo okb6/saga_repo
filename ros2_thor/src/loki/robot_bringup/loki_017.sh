@@ -1,0 +1,11 @@
+export ROBOT_NO=017
+export USE_ENCLOSURE_BOARD=true
+export USE_FRONT_LASER=false
+export USE_BACK_LASER=false
+export RTK_IP="192.168.0.50"
+export RTK_PORT="21098"
+export VPN_BASE_ADDR="10.8.1.0"
+export LIGHTS_RELAY="/enclosure_board_serial/switch_rl3"
+export AC_RELAY="/enclosure_board_serial/switch_rl5"
+export CAN_INTERFACE_TYPE="socketcan"
+export CAN_INTERFACE_NAME="can0"

@@ -1,0 +1,23 @@
+/twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        topic   : dummy_navigation/cmd_vel
+        timeout : 0.5
+        priority: 10
+      joystick:
+          topic   : teleop_joy/cmd_vel
+          timeout : 0.5
+          priority: 100
+      keyboard:
+        topic   : turtle1/cmd_vel
+        timeout : 0.5
+        priority: 80
+      mv_bs_vel:
+        topic   : nav_vel
+        timeout : 0.5
+        priority: 60
+      esd:
+        topic   : lock_vel
+        timeout : 0.5
+        priority: 255
