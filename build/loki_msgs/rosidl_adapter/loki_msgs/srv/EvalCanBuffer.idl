@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from loki_msgs/srv/EvalCanBuffer.srv
+// generated code does not contain a copyright notice
+
+#include "loki_msgs/msg/CANFrame.idl"
+
+module loki_msgs {
+  module srv {
+    struct EvalCanBuffer_Request {
+      sequence<loki_msgs::msg::CANFrame> can_msgs_base;
+
+      sequence<loki_msgs::msg::CANFrame> can_msgs_device;
+    };
+    struct EvalCanBuffer_Response {
+      sequence<loki_msgs::msg::CANFrame> can_msgs_base;
+
+      sequence<loki_msgs::msg::CANFrame> can_msgs_device;
+    };
+  };
+};

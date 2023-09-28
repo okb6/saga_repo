@@ -21,7 +21,7 @@ class BaseDriver(Node):
         # Initialize ROS parameters
         rate_val = self.get_parameter("rate").get_parameter_value().integer_value
         can_interface_type = self.get_parameter('can_interface_type').get_parameter_value().string_value
-        can_interface_name = self.get_parameter('can_interface_name').get_parameter_value().string_value
+        can_interface_name = self.get_parameter('can_interface_name').get_parameter_value().string_value #fix this parameter calling not right
 
         # Initialize CAN interface type
         if can_interface_type == "socketcan":
@@ -73,7 +73,6 @@ class BaseDriver(Node):
         
         #Subscribers
         self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
-        self.can_device_t_sub = self.create_subscription(CANFrame, 'can_frames_devices_t', self.canDeviceTCallback, 100)
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
 
         #Publishers
@@ -83,9 +82,6 @@ class BaseDriver(Node):
         self.odom_pub = self.create_publisher(Odometry, 'odomery/base_raw', 1)
         self.motor_controller_data_pub = self.create_publisher(ControllerArray, 'motor_controller_data', 1)
         self.battery_pub = self.create_publisher(BatteryArray, 'battery_data', 1)
-        # self.can_base_pub = self.create_publisher(CANFrame, 'can_frames_base_r', 10)
-        self.can_base_command_pub = self.create_publisher(CANFrame, 'can_frames_base_t', 10)
-        # self.can_device_pub = self.create_publisher(CANFrame, 'can_frames_device_r', 100)
         self.io_pub = self.create_publisher(IOArray, 'io_data', 1)
         self.base_command_msg = self.create_publisher(BaseState, 'BasePub', 100)
         self.sim_command_msg = self.create_publisher(BaseState, 'simbasestate', 100)
@@ -98,7 +94,6 @@ class BaseDriver(Node):
         self.server_reset_odom = self.create_service(Trigger, 'reset_base_odom', self.srv_Callback_Reset_odom)
         self.server_set_drive_params = self.create_service(DriveParams, 'set_drive_params', self.srv_callback_set_drive_params)
         self.server_safety_stop = self.create_service(SetBool, 'safety_stop', self.srv_callback_safety_stop)
-        self.server_mute_device_commands = self.create_service(SetBool, 'mute_extra_can_device_commands', self.srv_callback_mute_device_commands)
 
         #Clients
         self.cli_initPltf = self.create_client(InitPltf, 'initpltf')
@@ -145,69 +140,121 @@ class BaseDriver(Node):
         if self.broadcast_tf:
             self.get_logger().warn("Tmp msg: enable_odom_tf is true! If you want to broadcast your own odom frame, set param to false. Default value is true")
             self.get_logger().info("Broadcasting odometry frame to robot: %s ->base_link" %(self.frame_id.c_str()))
-        
-        #DRIVE PARAMS
-        self.motor_drives = []
-        self.joint_names = ''
-        self.motor_drive_index = 0
 
-        while True:
-            self.drive_name = 'motor_drives/drive{}'.format(self.motor_drive_index).string_value 
-            self.steering_name = self.get_parameter(self.drive_name + '/steering_name').string_value
-            self.wheel_name = self.get_parameter(self.drive_name + '/wheel_name').string_value
+        #Parameters from Robot017
+        #MOTOR DRIVES
+        drive0 = {}
+        drive1 = {}
+        drive2 = {}
+        drive3 = {}
+        self.motor_drives = [drive0, drive1, drive2, drive3]
+        self.joint_names = []
+        for i in range(4):
+            getnode = "motor_drives.drive{}.node".format(i)
+            getx = "motor_drives.drive{}.x".format(i)
+            gety = "motor_drives.drive{}.y".format(i)
 
-            if self.get_parameter(self.drive_name.str(), self.t_drive_params):
-                self.motor_drives.append(self.t_drive_params)
-                self.joint_names.append(self.steering_name.str())
-                self.joint_names.append(self.wheel_name.str())
-                self.motor_drive_index += 1
-            else:
-                break
-        
-        #BATTERY PARAMS
-        self.batteries = []
-        self.battery_index = 0
+            self.declare_parameter(getnode, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getx, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(gety, rclpy.Parameter.Type.DOUBLE)
 
-        while True:
-            self.battery_name = 'batteries/bat{}'.format(self.battery_index)
-           
-            if self.get_paremeter(self.battery_name.str(), self.t_battery_params): 
-                self.batteries.append(self.t_battery_params)
-                self.battery_index += 1
-            else:
-                break
+            node = self.get_parameter(getnode).value
+            xmd = self.get_parameter(getx).value
+            ymd = self.get_parameter(gety).value
 
-        #IO PARAMS
-        self.io_index = 0
-        self.ios = []
+            steering_name = "steering{}".format(i)
+            self.joint_names.append(steering_name)
 
-        while True:
-            self.io_name = 'io/io{}'.format(self.io_index)
+            wheel_name = "wheel{}".format(i)
+            self.joint_names.append(wheel_name)
 
-            if self.get_parameter(self.io_name.str(), self.t_io_params):
-                self.ios.append(self.t_io_params)
-            else:
-                break
+            if i == 0:
+                self.motor_drives.drive0 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+            elif i == 1:
+                self.motor_drives.drive1 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+            elif i == 2: 
+                self.motor_drives.drive2 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+            elif i == 3:
+                self.motor_drives.drive3 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+
+
+        bat0 = {}
+        bat1 = {}
+        self.batteries = [bat0, bat1]
+        for j in range(2):
+            getid = "batteries.bat{}.id".format(j)
+            gettype = "batteries.bat{}.type".format(j)
+            batx = "batteries.bat{}.x".format(j)
+            baty = "batteries.bat{}.y".format(j)
+            batyaw = "batteries.bat{}.yaw".format(j)
+            batz = "batteries.bat{}.z".format(j)
+            getmesh = "batteries.bat{}.bat_mesh".format(j)
+
+            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batyaw, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batz, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getmesh, rclpy.Parameter.Type.DOUBLE)
+
+            id = self.get_parameter(getid).value
+            btype = self.get_parameter(gettype).value
+            bx = self.get_parameter(batx).value
+            by = self.get_parameter(baty).value
+            byaw = self.get_parameter(batyaw).value
+            bz = self.get_parameter(batz).value
+            bmesh = self.get_parameter(getmesh).value
+
+            if j == 0:
+                self.batteries.bat0 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
+            elif j == 1:
+                self.batteries.bat1 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
+        io0 = {}
+        io1 = {}
+        self.ios = [io0, io1]
+        for k in range(2):
+            get_io_id = "io.io{}.id".format(k)
+            get_io_type = "io.io{}.type".format(k)
+            get_rl0 = "io.io{}.rl0_init_state".format(k)
+            get_rl1 = "io.io{}.rl1_init_state".format(k)
+
+            self.declare_parameter(get_io_id, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_io_type, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_rl0, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_rl1, rclpy.Parameter.Type.INTEGER)
+
+            io_id = self.get_parameter(get_io_id).value 
+            io_type = self.get_parameter(get_io_type).value 
+            io_rl0 = self.get_parameter(get_rl0).value 
+            io_rl1 = self.get_parameter(get_rl1).value
+
+            if k == 0:
+                self.ios.io0 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
+            elif k == 1:
+                self.ios.io1 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
+            
 
         #MISC Variables
+        drive_mode = 0
+        prop_speed = []
+        prop_pos = []
+        steer_speed = []
+        steer_max_speed = []
+        channel = []
+        self.latest_base_command = PyBaseState(drive_mode, prop_speed, prop_pos, steer_speed, steer_max_speed, channel)
+        self.basestatemsg = PyBaseState(drive_mode, prop_speed, prop_pos, steer_speed, steer_max_speed, channel)
+
         self.emergency_stop = False
-        self.latest_base_command = PyBaseState()
-        self.basestatemsg = PyBaseState()
         self.latest_base_command_time = self.get_clock().now()
         self.command_timeout_time = 0.5
-        self.mute_device_commands = False
-        self.can_device_t_frame_count = 0
 
-        if self.get_parameter("base_calculator").get_parameter_value():
-            self.pltf_clc_type = self.get_parameter("base_calculator").value
-            self.get_logger().info(f"Using base calculator plugin: {self.pltf_clc_type}")
-        else:
-            self.get_logger().info("No base calculator type found on parameter server. Using standard plugin.")
+        self.pltf_clc_type = PltfClcStd()
 
-        self.loadClcPlugin(self.pltf_clc_itf)
+        self.loadClcPlugin()
 
     def loadClcPlugin(self):
-        self.success = True
+        success = True
 
         try:
             self.pltf_clc_type.initialize(self.motor_drives)
@@ -216,10 +263,12 @@ class BaseDriver(Node):
         except:
             self.get_logger().error("The plugin failed to load for some reason.")
             sucess = False
+
+        return success
     
     def initPltf(self, can_interface_type, can_interface_name): 
         ret = self.client_init_pltf(can_interface_type, can_interface_name)
-        self.set_bool_map = []
+        self.set_bool_map = {}
         self.set_bool_map = self.client_get_set_bool()
         
         for key, service_name in self.set_bool_map.items():
@@ -232,28 +281,16 @@ class BaseDriver(Node):
     
     
     def client_init_pltf(self, can_interface_type, can_interface_name):
-        motor_drives_string = self.motor_drives.keys()
-        motor_drive_values = self.motor_drives.items()
-        batteries_string = self.batteries.keys()
-        batteries_values = self.batteries.items()
-        ios_string = self.ios.keys()
-        ios_values = self.ios.items()
 
         InitPltf.Request().can_interface_type = can_interface_type
         InitPltf.Request().batteries_values = can_interface_name
-        InitPltf.Request().motor_drives_string = motor_drives_string
-        InitPltf.Request().motor_drive_values = motor_drive_values
-        InitPltf.Request().batteries_string = batteries_string
-        InitPltf.Request().batteries_values = batteries_values
-        InitPltf.Request().ios_string = ios_string
-        InitPltf.Request().ios_values = ios_values
 
         Future = self.cli_initPltf.call_async(InitPltf.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
         return response
 
-    def client_get_set_bool(self): #check with Jmoon to see if this is correct
+    def client_get_set_bool(self):
         set_bool = 1
 
         GetSetBool.Request().set_bool = set_bool
@@ -266,16 +303,14 @@ class BaseDriver(Node):
         
         if len(set_bool_string) == len(set_bool_values):
             for i in set_bool_string:
-                self.set_bool_map.update({set_bool_string[i], set_bool_values[i]})
+                self.set_bool_map[set_bool_string[i]] = (set_bool_values[i])
         else:
             self.get_logger().error("Bool map does not have equal key to element amounts")
         
         return
 
     def evalCanBuffer(self):
-        self.can_msgs_base = []
-        self.can_msgs_device = []
-        self.client_eval_can_buffer(self.can_msgs_base, self.can_msgs_device)
+        self.client_eval_can_buffer()
     
     def client_eval_can_buffer(self):
         bool_eval = 1
@@ -283,8 +318,6 @@ class BaseDriver(Node):
         Future = self.cli_eval_can_buffer.call_async(EvalCanBuffer.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
-        self.can_msgs_base = response.can_msgs_base
-        self.can_msgs_device = response.can_msgs_device
         return
 
            
@@ -309,8 +342,6 @@ class BaseDriver(Node):
         
 
     def handleFeedback(self):
-        base_state = PyBaseState()
-
         self.client_get_base_state()
 
         base_state = self.basestatemsg #I believe there are unnecessary msg to basesate to basestate to msg conversions that might be able to change in teh c++ seciton
@@ -365,21 +396,14 @@ class BaseDriver(Node):
         
         self.joint_state_pub.publish(joint_state_msg)
 
-        # #motor controller data
-        # controller_array.header.stamp = self.get_clock().now()
-        # self.motor_controller_data_pub.publish(controller_array)
 
         #Battery Feedback
         batt = 1
         self.client_get_All_battery_vars(batt)
-        # self.batteryVarsToMsg(batt_vars, batt_array_msg)
-        # self.battery_pub.publish(batt_array_msg) #CHECK TO MAKE SURE
 
         #IO Feedback
         states = 1
         self.client_io_states_to_msg(states)
-        # self.ioStatesToMsg(io_states, io_states_msg)
-        # self.io_pub.publish(io_states_msg)
 
     def client_get_All_battery_vars(self, batt):
         BatteryVars.Request().batt = batt
@@ -411,14 +435,6 @@ class BaseDriver(Node):
         odom_msg.header.frame_id = self.frame_id
         self.odom_pub.publish(odom_msg)
 
-    def canDeviceTCallback(self, can_msg):
-        self.can_device_t_frame_count += 1  # Increment the frame count
-
-        can_frame = self.loki_can_devices.CANFrame()
-        self.canFrameFromMsg(can_msg, can_frame)
-
-        self.can_device_t_frames.append(can_frame)
-        self.can_device_t_frames = self.can_device_t_frames[:self.can_device_t_frame_count]
 
     def sendDriveCommands(self):
         if (self.get_clock().now() > self.latest_base_command_time + self.command_timeout_time) or self.emergency_stop:
@@ -440,17 +456,11 @@ class BaseDriver(Node):
         
 
     def sendDeviceCommands(self):
-        if self.can_device_t_frame_count < 100:
-            if not self.mute_device_commands:
-                for can_frame in self.can_device_t_frames:
-                    self.client_send_device_commands(can_frame)
-        else:
-            self.get_logger().warn("Too many CAN device msgs in queue")
-        self.can_device_t_frame_count = 0
-        self.can_device_t_frame = []
+        self.client_send_device_commands()
 
-    def client_send_device_commands(self, can_frame):
-        DeviceCmds.Request().commands = can_frame
+
+    def client_send_device_commands(self):
+        DeviceCmds.Request.set = 1
         Future = self.cli_send_device_commands.call_async(DeviceCmds.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
@@ -575,7 +585,6 @@ class BaseDriver(Node):
                 self.motor_drives_[request.params[i].index][request.params[i].type] = request.params[i].value
                 response.status += 1
             else:
-                all_params_ok = False
                 response.message = "One or more params could not be set"
 
         self.pltf_clc_type.setParams(self.motor_drives)
@@ -619,23 +628,6 @@ class BaseDriver(Node):
         response.success = True
         response.message = message
 
-    def srv_callback_mute_device_commands(self, request, response):
-        message = ''
-        self.mute_device_commands = request.data
-
-        if self.mute_device_commands:
-            message = "muting CAN commands to non drive/battery devices"
-            self.get_logger().info("Unmuting CAN commands to non drive/battery devices")
-
-        else:
-            message = "unmuting CAN commands to non drive/battery devices"
-            self.get_logger().info("Unmuting CAN commands to non drive/battery devices")
-        
-        self.can_device_t_frame_count = 0
-        self.can_device_t_frame = []
-
-        response.success = True
-        response.message = message 
     
     def srv_callback_io_set_bool(self, request, response, unique_service_id):
         success = True
@@ -657,19 +649,6 @@ class BaseDriver(Node):
         response = Future.result()
         return response
 
-    def canFrameFromMsg(self, can_msg_in, can_frame_out): #fix this since i communicates with socketcan needs to probalbly be in c++
-        can_frame_out = canframe()
-        can_frame_out.setId(can_msg_in.id)
-        can_frame_out.setLength(can_msg_in.length)
-        can_frame_out.setBytes(can_msg_in.data[0],
-                                can_msg_in.data[1],
-                                can_msg_in.data[2],
-                                can_msg_in.data[3],
-                                can_msg_in.data[4],
-                                can_msg_in.data[5],
-                                can_msg_in.data[6],
-                                can_msg_in.data[7]
-                                )
         
 
     def baseStateToMsg(self, time, base_state_in, base_state_out):

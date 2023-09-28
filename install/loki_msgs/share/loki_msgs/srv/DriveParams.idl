@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from loki_msgs/srv/DriveParams.srv
+// generated code does not contain a copyright notice
+
+#include "loki_msgs/msg/DriveParam.idl"
+
+module loki_msgs {
+  module srv {
+    struct DriveParams_Request {
+      sequence<loki_msgs::msg::DriveParam> params;
+
+      int32 can_id;
+    };
+    struct DriveParams_Response {
+      string message;
+
+      int32 status;
+    };
+  };
+};

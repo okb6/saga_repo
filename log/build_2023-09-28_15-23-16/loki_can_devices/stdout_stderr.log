@@ -1,0 +1,16 @@
+[ 81%] Built target can
+[35m[1mConsolidate compiler generated dependencies of target pytocpp[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/pytocpp.dir/src/py_to_cpp.cpp.o[0m
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:[m[K In member function ‘[01m[Kbool PyToCpp::srvCallbackMuteDeviceCommands(std::shared_ptr<std_srvs::srv::SetBool_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::SetBool_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:605:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class std::shared_ptr<std_srvs::srv::SetBool_Request_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Kdata[m[K’
+  605 |             mute_device_commands_ = request.[01;31m[Kdata[m[K;
+      |                                             [01;31m[K^~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:620:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<std_srvs::srv::SetBool_Response_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Ksuccess[m[K’
+  620 |             response.[01;31m[Ksuccess[m[K = true;
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:621:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<std_srvs::srv::SetBool_Response_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Kmessage[m[K’
+  621 |             response.[01;31m[Kmessage[m[K = message.str();
+      |                      [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pytocpp.dir/build.make:76: CMakeFiles/pytocpp.dir/src/py_to_cpp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/pytocpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

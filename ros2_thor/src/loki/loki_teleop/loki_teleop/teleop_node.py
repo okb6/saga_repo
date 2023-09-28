@@ -12,7 +12,10 @@ class TeleopNode(Node):
         super().__init__('teleop_node')
         self.get_logger().info("started Teleop Node")
 
-        params_loaded = self.lookupParameters()
+        self.axis_map = {}
+        self.button_map = {}
+
+        params_loaded = self.lookupParameters()      
 
         if params_loaded:
             self.get_logger().info("Parameters read from ROS parameter server")
@@ -57,38 +60,75 @@ class TeleopNode(Node):
         self.a = (self.ang_max - self.ang_min) / (1 - self.deadzone)
         self.b = self.ang_min - self.deadzone * self.a
 
+        
+
     def lookupParameters(self):
         self.get_logger().info("Looking up Paramters")
         trigger_string_map = ''
         params_loaded = True
 
         #Lookup turning radius
-        self.declare_parameter(
-            paramters=[
-                ('turn_calc_w', self.Default_Turning_Calc)
-                ('turn_calc_1', self.Default_Turning_Calc)
-            ]
-        )
+        self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('turn_calc_1', rclpy.Parameter.Type.DOUBLE)
 
         self.turn_calc_w = self.get_parameter('turn_calc_w').value
         self.turn_calc_1 = self.get_parameter('turn_calc_1').value
+
         self.get_logger().info('min turning w: %f, min turning 1: %f' %self.turn_calc_w %self.turn_calc_1)
 
         #Lookup axis and button map
-        self.declare_parameter(
-            paramters=[
-                ('axis_map')
-                ('axis_vx')
-                ('axis_wz')
-                ('button_map')
-            ]
-        )
-        self.axis_map = self.get_parameter('axis_map').value
-        self.axis_vx = self.get_parameter('axis_vx').value
-        self.axis_wz = self.get_parameter('axis_wz').value
-        self.button_map = self.get_parameter('button_map').value
+        self.declare_parameter('axis_map.axis_vx', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_vy', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_wz', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_turn_left', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_turn_right', rclpy.Parameter.Type.INTEGER)
 
-        if len(self.axis_map) == 0 and len(self.axis_vx) == 0 and len(self.axis_wz) == 0:
+        axis_vx = self.get_parameter('axis_map.axis_vx').value
+        axis_vy = self.get_parameter('axis_map.axis_vy').value
+        axis_wz = self.get_parameter('axis_map.axis_wz').value 
+        axis_turn_left = self.get_parameter('axis_map.axis_turn_left').value 
+        axis_turn_right = self.get_parameter('axis_map.axis_turn_right').value
+
+        self.axis_map = {'axis_vx':axis_vx, 'axis_vy':axis_vy, 'axis_wz':axis_wz, 'axis_turn_left':axis_turn_left, 'axis_turn_right':axis_turn_right}
+
+        self.declare_parameter('button_map.button_less_gain', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_more_gain', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_function', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_teleop_lock', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_left', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_forward', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_0', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_1', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_2', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_3', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_4', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_5', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_6', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_7', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_8', rclpy.Parameter.Type.INTEGER)
+
+        less_gain = self.get_parameter('button_map.button_less_gain').value
+        more_gain = self.get_parameter('button_map.button_more_gain').value
+        function = self.get_parameter('button_map.button_function').value
+        teleop_lock = self.get_parameter('button_map.button_teleop_lock').value
+        left = self.get_parameter('button_map.button_left').value
+        forward = self.get_parameter('button_map.button_forward').value
+        b0 = self.get_parameter('button_map.button_0').value
+        b1 = self.get_parameter('button_map.button_1').value
+        b2 = self.get_parameter('button_map.button_2').value
+        b3 = self.get_parameter('button_map.button_3').value
+        b4 = self.get_parameter('button_map.button_4').value
+        b5 = self.get_parameter('button_map.button_5').value
+        b6 = self.get_parameter('button_map.button_6').value
+        b7 = self.get_parameter('button_map.button_7').value
+        b8 = self.get_parameter('button_map.button_8').value
+
+        self.button_map = {'button_less_gain':less_gain, 'button_more_gain':more_gain, 'button_function':function, 'button_teleop_lock':teleop_lock, 'button_left':left, 'button_forward':forward, 'button_0':b0, 'button_1':b1, 'button_2':b2, 'button_3':b3, 'button_4':b4, 'button_5':b5, 'button_6':b6, 'button_7':b7, 'button_8':b8}
+
+
+
+
+        if len(self.axis_map) == 0:
             params_loaded = False
         elif len(self.button_map) == 0:
             self.get_logger().info("No button map on parameter server")
@@ -98,49 +138,52 @@ class TeleopNode(Node):
         for key, value in self.button_map.items():
             if value > self.number_of_buttons:
                 self.number_of_buttons = value
+
         
-        # Turning safety button
-        if self.get_parameter('button_turning_safety').get_parameter_value().bool_value:
-            self.button_turning_safety = True
-        self.get_logger().info("button_turning_safety selected: %s", str(self.button_turning_safety))
+        ##WORK ON THIS TOM##
+        
+        # # Turning safety button
+        # if self.get_parameter('button_turning_safety').get_parameter_value().bool_value:
+        #     self.button_turning_safety = True
+        # self.get_logger().info("button_turning_safety selected: %s", str(self.button_turning_safety))
 
-        # Lookup homing button combination
-        if self.get_parameter('home_buttons').get_parameter_value().bool_value:
-            self.home_buttons = True
-        self.get_logger().info("homing_buttons selected: %s", str(self.home_buttons))
+        # # Lookup homing button combination
+        # if self.get_parameter('home_buttons').get_parameter_value().bool_value:
+        #     self.home_buttons = True
+        # self.get_logger().info("homing_buttons selected: %s", str(self.home_buttons))
 
-        # Lookup omni button combination
-        if self.get_parameter('omni_buttons').get_parameter_value().bool_value:
-            self.omni_buttons = True
-        self.get_logger().info("omni_buttons selected: %s", str(self.omni_buttons))
+        # # Lookup omni button combination
+        # if self.get_parameter('omni_buttons').get_parameter_value().bool_value:
+        #     self.omni_buttons = True
+        # self.get_logger().info("omni_buttons selected: %s", str(self.omni_buttons))
 
-        #Lookup trigger services
-        trigger_string_map = self.get_parameter('trigger_map').get_parameter_value().string_map_value
-        for key, value in trigger_string_map.items():
-            if value:
-                self.get_logger().info("%s mapped to <function> + <%s>", value, key)
-                self.custom_trigger_map[key] = self.create_client(Trigger, value)
+        # #Lookup trigger services
+        # trigger_string_map = self.get_parameter('trigger_map').get_parameter_value().string_map_value
+        # for key, value in trigger_string_map.items():
+        #     if value:
+        #         self.get_logger().info("%s mapped to <function> + <%s>", value, key)
+        #         self.custom_trigger_map[key] = self.create_client(Trigger, value)
 
-        # Default velocity gain buttons
-        if self.get_parameter('kv_default_buttons').get_parameter_value().bool_value:
-            self.kv_default_buttons = True
-        self.get_logger().info("Default velocity gain buttons selected: %s", str(self.kv_default_buttons))
+        # # Default velocity gain buttons
+        # if self.get_parameter('kv_default_buttons').get_parameter_value().bool_value:
+        #     self.kv_default_buttons = True
+        # self.get_logger().info("Default velocity gain buttons selected: %s", str(self.kv_default_buttons))
 
-        # Parameters for gains
-        self.kv_min = self.get_parameter('gains/kv_min').get_parameter_value().double_value
-        self.kv_max = self.get_parameter('gains/kv_max').get_parameter_value().double_value
-        self.dkv = self.get_parameter('gains/kv_increment').get_parameter_value().double_value
-        self.kv_default = self.get_parameter('gains/kv_default').get_parameter_value().double_value
-        self.kv = self.kv_default
+        # # Parameters for gains
+        # self.kv_min = self.get_parameter('gains/kv_min').get_parameter_value().double_value
+        # self.kv_max = self.get_parameter('gains/kv_max').get_parameter_value().double_value
+        # self.dkv = self.get_parameter('gains/kv_increment').get_parameter_value().double_value
+        # self.kv_default = self.get_parameter('gains/kv_default').get_parameter_value().double_value
+        # self.kv = self.kv_default
 
-        # Drive mode buttons
-        if (
-            self.get_parameter('mode_forward_buttons').get_parameter_value().bool_value
-            and self.get_parameter('mode_left_buttons').get_parameter_value().bool_value
-        ):
-            self.mode_forward_buttons = True
-            self.mode_left_buttons = True
-        self.get_logger().info("Drive mode buttons selected: %s", str(self.mode_forward_buttons and self.mode_left_buttons))
+        # # Drive mode buttons
+        # if (
+        #     self.get_parameter('mode_forward_buttons').get_parameter_value().bool_value
+        #     and self.get_parameter('mode_left_buttons').get_parameter_value().bool_value
+        # ):
+        #     self.mode_forward_buttons = True
+        #     self.mode_left_buttons = True
+        # self.get_logger().info("Drive mode buttons selected: %s", str(self.mode_forward_buttons and self.mode_left_buttons))
         
         return params_loaded
     

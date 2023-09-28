@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from loki_msgs/msg/BatteryData.msg
+// generated code does not contain a copyright notice
+
+#include "loki_msgs/msg/BatteryAlarms.idl"
+
+module loki_msgs {
+  module msg {
+    module BatteryData_Constants {
+      const int16 STATUS_OFFLINE = -99;
+      const int16 STATUS_ONLINE = -98;
+    };
+    struct BatteryData {
+      int16 battery_id;
+
+      int16 battery_state;
+
+      sequence<double> temperatures;
+
+      loki_msgs::msg::BatteryAlarms battery_alarms;
+
+      boolean charge_fet_on;
+
+      boolean discharge_fet_on;
+
+      double battery_voltage;
+
+      double battery_current;
+
+      int16 state_of_charge;
+
+      int16 state_of_health;
+
+      int16 cycle_count;
+
+      int16 battery_capacity;
+    };
+  };
+};

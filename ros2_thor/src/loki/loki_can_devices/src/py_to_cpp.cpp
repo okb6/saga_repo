@@ -1,5 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include <iostream>
+#include "std_srvs/srv/set_bool.hpp"
 
 #include "loki_msgs/srv/battery_vars.hpp"
 #include "loki_msgs/srv/cont_array.hpp"
@@ -19,7 +20,7 @@
 #include "loki_msgs/srv/state_base.hpp"
 #include "loki_msgs/srv/states_of_io.hpp"
 #include "loki_msgs/srv/drive_cmds.hpp"
-#include "loki_can_devices/can_ctrl_pltf.h"
+// #include "loki_can_devices/can_ctrl_pltf.h"
 #include "loki_msgs/srv/set_bools.hpp"
 #include "loki_msgs/srv/init_pltf.hpp"
 #include "loki_msgs/srv/get_set_bool.hpp"
@@ -34,20 +35,22 @@
 #include "loki_msgs/msg/base_state.hpp"
 #include "loki_msgs/srv/params.hpp"
 
-#include <can_ctrl_pltf.h>
-#include <can_frame.h>
-
+#include <loki_can_devices/can_ctrl_pltf.h>
+#include <loki_can_devices/can_frame.h>
 
 #include <memory>
 #include <string>
 #include <map>
-#include <time.hpp>
-#include <iostream>
+#include <ctime>
 
-CanCtrlPltf::BaseState base_command_out;
+CanCtrlPltf::BaseState base_command_out_;
 std::vector<std::map<std::string, double> > motor_drives_;
 std::vector<std::map<std::string, double> > batteries_;
 std::vector<std::map<std::string, int> > ios_;
+CanCtrlPltf *can_ctrl_pltf_;
+int can_device_t_frame_count_;
+std::vector<CanFrame> can_device_t_frames_;
+bool mute_device_commands_;
 
 
 class PyToCpp : public rclcpp::Node {
@@ -70,6 +73,7 @@ class PyToCpp : public rclcpp::Node {
             srv15_ = create_service<loki_msgs::srv::DriveCmds>("drivecmds", std::bind(&PyToCpp::server_drive_cmds, this, std::placeholders::_1, std::placeholders::_2));
             srv16_ = create_service<loki_msgs::srv::InitPltf>("initpltf", std::bind(&PyToCpp::server_init_pltf, this, std::placeholders::_1, std::placeholders::_2));
             srv17_ = create_service<loki_msgs::srv::GetSetBool>("GetSetBool", std::bind(&PyToCpp::server_get_set_bool, this, std::placeholders::_1, std::placeholders::_2));
+            srv18_ = create_service<std_srvs::srv::SetBool>("mute_extra_can_device_commands", std::bind(&PyToCpp::srvCallbackMuteDeviceCommands, this, std::placeholders::_1, std::placeholders::_2));
 
             pub1_ = create_publisher<loki_msgs::msg::CANFrame>("can_frames_device_r", 100);
             pub2_ = create_publisher<loki_msgs::msg::CANFrame>("can_frames_base_r", 100);
@@ -78,8 +82,9 @@ class PyToCpp : public rclcpp::Node {
             pub5_ = create_publisher<loki_msgs::msg::BatteryArray>("batery_data", 1);
             pub6_ = create_publisher<loki_msgs::msg::BaseState>("msgtobasestate", 100);
 
-            sub1_ = create_subscription<loki_msgs::msg::BaseState>("BasePub", 100, std::bind(&PyToCpp::CommandsMsgtoBaseState, this, 1));
-            sub2_ = create_subscription<loki_msgs::msg::BaseState>("simbasestate", 100, std::bind(&PyToCpp::CommandsMsgtoSimState, this, 1));
+            sub1_ = create_subscription<loki_msgs::msg::BaseState>("BasePub", 100, std::bind(&PyToCpp::CommandsMsgtoBaseState, this, std::placeholders::_1));
+            sub2_ = create_subscription<loki_msgs::msg::BaseState>("simbasestate", 100, std::bind(&PyToCpp::CommandsMsgtoSimState, this, std::placeholders::_1));
+            sub3_ = create_subscription<loki_msgs::msg::CANFrame>("can_frames_device_t", 100, std::bind(&PyToCpp::canDeviceTCallback, this, std::placeholders::_1));
 
             can_ctrl_pltf_ = new CanCtrlPltf();
 
@@ -216,7 +221,7 @@ class PyToCpp : public rclcpp::Node {
                 batx = "batteries.bat"+ sbat+ ".x";
                 baty = "batteries.bat"+ sbat+ ".y";
                 batyaw = "batteries.bat"+ sbat+ ".yaw";
-                batz = "batteries.bat"+ sbat+ ".x";
+                batz = "batteries.bat"+ sbat+ ".z";
                 getmesh = "batteries.bat"+ sbat+ ".bat_mesh";
 
                 declare_parameter(getid, 0);
@@ -258,9 +263,10 @@ class PyToCpp : public rclcpp::Node {
                     batteries_.push_back(bat1);
                 }
 
+
             }
 
-            //IO PARAMS
+            //IO PARAMS//
             std::string get_io_id;
             std::string get_io_type;
             std::string get_rl0;
@@ -308,14 +314,16 @@ class PyToCpp : public rclcpp::Node {
                 }
 
             }
+            
+            can_device_t_frame_count_ = 0;
 
 
 
-        };
+        }
 
         ~PyToCpp(){
             delete can_ctrl_pltf_;
-        };
+        }
 
 
 
@@ -340,6 +348,7 @@ class PyToCpp : public rclcpp::Node {
         rclcpp::Service<loki_msgs::srv::DriveCmds>::SharedPtr srv15_;
         rclcpp::Service<loki_msgs::srv::InitPltf>::SharedPtr srv16_;
         rclcpp::Service<loki_msgs::srv::GetSetBool>::SharedPtr srv17_;
+        rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr srv18_;
 
         rclcpp::Publisher<loki_msgs::msg::CANFrame>::SharedPtr pub1_;
         rclcpp::Publisher<loki_msgs::msg::CANFrame>::SharedPtr pub2_;
@@ -350,11 +359,13 @@ class PyToCpp : public rclcpp::Node {
 
         rclcpp::Subscription<loki_msgs::msg::BaseState>::SharedPtr sub1_;
         rclcpp::Subscription<loki_msgs::msg::BaseState>::SharedPtr sub2_;
+        rclcpp::Subscription<loki_msgs::msg::CANFrame>::SharedPtr sub3_;
+        
 
-        CanCtrlPltf *can_ctrl_pltf_;
+        // CanCtrlPltf *can_ctrl_pltf_;
 
-        void server_get_set_bool(const std::shared_ptr<loki_msgs::srv::GetSetBool::Request> request,
-                        std::shared_ptr<loki_msgs::srv::GetSetBool::Response> response){
+        bool server_get_set_bool(const std::shared_ptr<loki_msgs::srv::GetSetBool::Request> request,
+                        const std::shared_ptr<loki_msgs::srv::GetSetBool::Response> response){
             
             std::map<int, std::string> set_bool_map;
             if (request->set_bool == 1){
@@ -370,21 +381,23 @@ class PyToCpp : public rclcpp::Node {
 
                 response->set_bool_strings = set_bool_string;
                 response->set_bool_values = set_bool_values;
-            };
+            }
 
-        };
+            return true;
+        }
 
-        void server_init_pltf(const std::shared_ptr<loki_msgs::srv::InitPltf::Request> request,
-                        std::shared_ptr<loki_msgs::srv::InitPltf::Response> response){
+        bool server_init_pltf(const std::shared_ptr<loki_msgs::srv::InitPltf::Request> request,
+                        const std::shared_ptr<loki_msgs::srv::InitPltf::Response> response){
             
 
             bool ret = can_ctrl_pltf_->initPltf(request->can_interface_type, request->can_interface_name, motor_drives_, batteries_, ios_);
             response->initpltf = ret;
+            return true;
 
-        };
+        }
 
-        void server_eval_can_buffer(const std::shared_ptr<loki_msgs::srv::EvalCanBuffer::Request> request,
-                                    std::shared_ptr<loki_msgs::srv::EvalCanBuffer::Response> response){
+        bool server_eval_can_buffer(const std::shared_ptr<loki_msgs::srv::EvalCanBuffer::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::EvalCanBuffer::Response> response){
             std::vector<CanFrame> can_msgs_base;
             std::vector<CanFrame> can_msgs_device;
             can_ctrl_pltf_->evalCanBuffer(can_msgs_base, can_msgs_device);
@@ -403,10 +416,12 @@ class PyToCpp : public rclcpp::Node {
                 canFrameToMsg(*can_frame, can_msg); 
                 pub1_->publish(can_msg);
             }
+
+            return true;
         }
 
-        void server_controller_array(const std::shared_ptr<loki_msgs::srv::ContArray::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::ContArray::Response> response){
+        bool server_controller_array(const std::shared_ptr<loki_msgs::srv::ContArray::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::ContArray::Response> response){
             if (request->on == 1 ){
                 std::vector<CanDriveItf::ControllerVars> controller_vars_all_drives;
                 loki_msgs::msg::ControllerArray controller_array;
@@ -424,17 +439,21 @@ class PyToCpp : public rclcpp::Node {
                 pub3_->publish(controller_array);
                 
             }
+
+            return true;
         }
 
-        void server_controller_map(const std::shared_ptr<loki_msgs::srv::CotMap::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::CotMap::Response> response){
+        bool server_controller_map(const std::shared_ptr<loki_msgs::srv::CotMap::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::CotMap::Response> response){
             std::vector<std::string> setup_map;
             can_ctrl_pltf_->getControllerSetupMap(request->can_id, request->setup_map);
-            response->setup_map = setup_map;                                    //make sure that this is also put in the python side
+            response->setup_map = setup_map;
+            
+            return true; //make sure this is set up on python side
         }
 
-        void server_battery_variable(const std::shared_ptr<loki_msgs::srv::BatteryVars::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::BatteryVars::Response> response){
+        bool server_battery_variable(const std::shared_ptr<loki_msgs::srv::BatteryVars::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::BatteryVars::Response> response){
             if (request->batt == 1){
             std::vector<CanBatteryItf::BatteryVars> batt_vars;
             loki_msgs::msg::BatteryArray batt_array_msg;
@@ -442,74 +461,106 @@ class PyToCpp : public rclcpp::Node {
             batteryVarsToMsg(batt_vars, batt_array_msg);
             pub5_->publish(batt_array_msg);
             }
+
+            return true;
         }
 
-        void server_drive_cmds(const std::shared_ptr<loki_msgs::srv::DriveCmds::Request> request,
-                                std::shared_ptr<loki_msgs::srv::DriveCmds::Response> response){
+        bool server_drive_cmds(const std::shared_ptr<loki_msgs::srv::DriveCmds::Request> request,
+                            const std::shared_ptr<loki_msgs::srv::DriveCmds::Response> response){
             if (request->commands == 1){
-                can_ctrl_pltf_->sendCommandsToAllDrives(base_command_out);
+                can_ctrl_pltf_->sendCommandsToAllDrives(base_command_out_);
             }
+
+            return true;
         
         }
 
-        void server_device_cmds(const std::shared_ptr<loki_msgs::srv::DeviceCmds::Request> request,
-                                std::shared_ptr<loki_msgs::srv::DeviceCmds::Response> response){
-            can_ctrl_pltf_->sendDeviceCommand(request->can_frame);
+        bool server_device_cmds(const std::shared_ptr<loki_msgs::srv::DeviceCmds::Request> request,
+                                const std::shared_ptr<loki_msgs::srv::DeviceCmds::Response> response){
+            if (request->set = 1){
+                if (can_device_t_frame_count_ < 100){
+                    if (!mute_device_commands_){
+                        for (std::vector<CanFrame>::iterator can_frame = can_device_t_frames_.begin(); can_frame != can_device_t_frames_.end(); ++can_frame)
+                        {
+                            can_ctrl_pltf_->sendDeviceCommand(*can_frame);
+                        }
+                    }
+                }
+                else {
+                    RCLCPP_WARN(this->get_logger(), "Too many CAN device msgs in queue");
+                }
+            }
+
+            can_device_t_frame_count_ = 0;
+            can_device_t_frames_.resize(0);
+
+            return true;
         }
 
-        void server_simulate_drive(const std::shared_ptr<loki_msgs::srv::SimDrive::Request> request,
-                                    std::shared_ptr<loki_msgs::srv::SimDrive::Request> response){
+        bool server_simulate_drive(const std::shared_ptr<loki_msgs::srv::SimDrive::Request> request,
+                                    std::shared_ptr<loki_msgs::srv::SimDrive::Response> response){
             if (request->commands == 1){
                 
-                can_ctrl_pltf_->simulateAllDrives(base_command_out);
+                can_ctrl_pltf_->simulateAllDrives(base_command_out_);
             }
+
+            return true;
         }
 
-        void server_position_zero_all(const std::shared_ptr<loki_msgs::srv::PosZeroAll::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::PosZeroAll::Response> response){
+        bool server_position_zero_all(const std::shared_ptr<loki_msgs::srv::PosZeroAll::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::PosZeroAll::Response> response){
             if(request->zeroall){
                 can_ctrl_pltf_->setCurrentPosAsZeroAll();
             }
+
+            return true;
         } //Add zeroall to base_driver
 
-        void server_position_zero(const std::shared_ptr<loki_msgs::srv::PosZero::Request> request,
-                                    std::shared_ptr<loki_msgs::srv::PosZero::Response> response){
+        bool server_position_zero(const std::shared_ptr<loki_msgs::srv::PosZero::Request> request,
+                                const std::shared_ptr<loki_msgs::srv::PosZero::Response> response){
             can_ctrl_pltf_->setCurrentPosAsZero(request->can_id);
+
+            return true;
         }
 
-        void server_home_steering_all(const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::HomesteeringAll::Response> response){
+        bool server_home_steering_all(const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Response> response){
             bool success;
             if(request->homesteering){
                 can_ctrl_pltf_->homeSteeringAll();
             }
-            response->success = success;       
+            response->success = success;
+            return true;      
         }
 
-        void server_motor_controller(const std::shared_ptr<loki_msgs::srv::MotCot::Request> request,
-                                        std::shared_ptr<loki_msgs::srv::MotCot::Response> response){
+        bool server_motor_controller(const std::shared_ptr<loki_msgs::srv::MotCot::Request> request,
+                                    const std::shared_ptr<loki_msgs::srv::MotCot::Response> response){
             can_ctrl_pltf_->setupMotorController(request->can_id, request->setup_id, request->setup_value);
+
+            return true;
         }
 
-        void server_drive_params(const std::shared_ptr<loki_msgs::srv::Params::Request> request,
-                                    std::shared_ptr<loki_msgs::srv::Params::Response> response){
+        bool server_drive_params(const std::shared_ptr<loki_msgs::srv::Params::Request> request,
+                                const std::shared_ptr<loki_msgs::srv::Params::Response> response){
             
             if(request->set){
                 can_ctrl_pltf_->setParams(motor_drives_);
             }
+            return true;
         }
 
-        void server_call_set_bool_service(const std::shared_ptr<loki_msgs::srv::SetBools::Request> request,
-                                            std::shared_ptr<loki_msgs::srv::SetBools::Response> response){
+        bool server_call_set_bool_service(const std::shared_ptr<loki_msgs::srv::SetBools::Request> request,
+                                        const std::shared_ptr<loki_msgs::srv::SetBools::Response> response){
             bool success;
             std::string message;
             can_ctrl_pltf_->callSetBoolService(request->unique_service_id, request->value, request->success, request->message);
             response->success = success;
             response->message = message;
+            return true;
         }
 
-        void server_base_state(const std::shared_ptr<loki_msgs::srv::StateBase::Request> request,
-                                std::shared_ptr<loki_msgs::srv::StateBase::Response> response){
+        bool server_base_state(const std::shared_ptr<loki_msgs::srv::StateBase::Request> request,
+                            const std::shared_ptr<loki_msgs::srv::StateBase::Response> response){
             if (request->base_state == 1){
                 CanCtrlPltf::BaseState get_base_state;
                 loki_msgs::msg::BaseState msg;
@@ -523,21 +574,67 @@ class PyToCpp : public rclcpp::Node {
                 success = true;
                 response->success;
             }
+            return true;
 
         }
 
-        void server_io_state(const std::shared_ptr<loki_msgs::srv::StatesOfIO::Request> request,
-                                std::shared_ptr<loki_msgs::srv::StatesOfIO::Response> response){
+        bool server_io_state(const std::shared_ptr<loki_msgs::srv::StatesOfIO::Request> request,
+                            const std::shared_ptr<loki_msgs::srv::StatesOfIO::Response> response){
             if (request->states == 1){
                 std::vector<CanIOItf::IOState> io_states;
                 loki_msgs::msg::IOArray io_states_msg;
                 can_ctrl_pltf_->getIOStates(io_states);
                 ioStatesToMsg(io_states, io_states_msg);
                 pub4_->publish(io_states_msg);
-            }             
+            }
+            return true;          
+        }
+
+        void canDeviceTCallback(const loki_msgs::msg::CANFrame can_msg){
+            can_device_t_frame_count_++;
+            CanFrame can_frame;
+            canFrameFromMsg(can_msg, can_frame);
+
+            can_device_t_frames_.push_back(can_frame);
+            can_device_t_frames_.resize(can_device_t_frame_count_);
         }
 
 
+        bool srvCallbackMuteDeviceCommands(const std::shared_ptr<std_srvs::srv::SetBool::Request> request, std::shared_ptr<std_srvs::srv::SetBool::Response> response){
+            std::stringstream message;
+            mute_device_commands_ = request->data;
+
+            if (mute_device_commands_)
+            {
+                message << "Muting CAN commands to non drive/battery devices";
+                RCLCPP_INFO(this->get_logger(), "Muting CAN commands to non drive/battery devices");
+            }
+            else{
+                message << "Unmuting CAN commands to non drive/battery devices";
+                RCLCPP_INFO(this->get_logger(), "Unmuting CAN commands to non drive/battery devices");
+            }
+
+            can_device_t_frame_count_ = 0;
+            can_device_t_frames_.resize(0);
+
+            response->success = true;
+            response->message = message.str();
+            return true;
+        }
+
+        void canFrameFromMsg(loki_msgs::msg::CANFrame can_msg_in, CanFrame& can_frame_out){
+            can_frame_out.setId(can_msg_in.id);
+            can_frame_out.setLength(can_msg_in.length);
+            can_frame_out.setBytes(can_msg_in.data[0],
+                                    can_msg_in.data[1],
+                                    can_msg_in.data[2],
+                                    can_msg_in.data[3],
+                                    can_msg_in.data[4],
+                                    can_msg_in.data[5],
+                                    can_msg_in.data[6],
+                                    can_msg_in.data[7]
+            );
+        }
 
         void canFrameToMsg(CanFrame can_frame_in, 
                                 loki_msgs::msg::CANFrame& can_msg_out)
@@ -614,17 +711,41 @@ class PyToCpp : public rclcpp::Node {
                 state_msg.imu.orientation.y = elem.imu.orientation[1];
                 state_msg.imu.orientation.z = elem.imu.orientation[2];
                 state_msg.imu.orientation.w = elem.imu.orientation[3];
-                state_msg.imu.orientation_covariance = elem.imu.orientation_covariance;
+                state_msg.imu.orientation_covariance[0] = elem.imu.orientation_covariance[0];
+                state_msg.imu.orientation_covariance[1] = elem.imu.orientation_covariance[1];
+                state_msg.imu.orientation_covariance[2] = elem.imu.orientation_covariance[2];
+                state_msg.imu.orientation_covariance[3] = elem.imu.orientation_covariance[3];
+                state_msg.imu.orientation_covariance[4] = elem.imu.orientation_covariance[4];
+                state_msg.imu.orientation_covariance[5] = elem.imu.orientation_covariance[5];
+                state_msg.imu.orientation_covariance[6] = elem.imu.orientation_covariance[6];
+                state_msg.imu.orientation_covariance[7] = elem.imu.orientation_covariance[7];
+                state_msg.imu.orientation_covariance[8] = elem.imu.orientation_covariance[8];
 
                 state_msg.imu.angular_velocity.x = elem.imu.angular_velocity[0];
                 state_msg.imu.angular_velocity.y = elem.imu.angular_velocity[1];
                 state_msg.imu.angular_velocity.z = elem.imu.angular_velocity[2];
-                state_msg.imu.angular_velocity_covariance = elem.imu.angular_velocity_covariance;
+                state_msg.imu.angular_velocity_covariance[0] = elem.imu.angular_velocity_covariance[0];
+                state_msg.imu.angular_velocity_covariance[1] = elem.imu.angular_velocity_covariance[1];
+                state_msg.imu.angular_velocity_covariance[2] = elem.imu.angular_velocity_covariance[2];
+                state_msg.imu.angular_velocity_covariance[3] = elem.imu.angular_velocity_covariance[3];
+                state_msg.imu.angular_velocity_covariance[4] = elem.imu.angular_velocity_covariance[4];
+                state_msg.imu.angular_velocity_covariance[5] = elem.imu.angular_velocity_covariance[5];
+                state_msg.imu.angular_velocity_covariance[6] = elem.imu.angular_velocity_covariance[6];
+                state_msg.imu.angular_velocity_covariance[7] = elem.imu.angular_velocity_covariance[7];
+                state_msg.imu.angular_velocity_covariance[8] = elem.imu.angular_velocity_covariance[8];
 
                 state_msg.imu.linear_acceleration.x = elem.imu.linear_acceleration[0];
                 state_msg.imu.linear_acceleration.y = elem.imu.linear_acceleration[1];
                 state_msg.imu.linear_acceleration.z = elem.imu.linear_acceleration[2];
-                state_msg.imu.linear_acceleration_covariance = elem.imu.linear_acceleration_covariance; //boost array not std array
+                state_msg.imu.linear_acceleration_covariance[0] = elem.imu.linear_acceleration_covariance[0];
+                state_msg.imu.linear_acceleration_covariance[1] = elem.imu.linear_acceleration_covariance[1];
+                state_msg.imu.linear_acceleration_covariance[2] = elem.imu.linear_acceleration_covariance[2];
+                state_msg.imu.linear_acceleration_covariance[3] = elem.imu.linear_acceleration_covariance[3];
+                state_msg.imu.linear_acceleration_covariance[4] = elem.imu.linear_acceleration_covariance[4];
+                state_msg.imu.linear_acceleration_covariance[5] = elem.imu.linear_acceleration_covariance[5];
+                state_msg.imu.linear_acceleration_covariance[6] = elem.imu.linear_acceleration_covariance[6];
+                state_msg.imu.linear_acceleration_covariance[7] = elem.imu.linear_acceleration_covariance[7];
+                state_msg.imu.linear_acceleration_covariance[8] = elem.imu.linear_acceleration_covariance[8];
 
                 io_msg_out.io_states.push_back(state_msg);
 
@@ -673,7 +794,7 @@ class PyToCpp : public rclcpp::Node {
 
             }
 
-        void CommandsMsgtoBaseState(const loki_msgs::msg::BaseState & msg) const
+        void CommandsMsgtoBaseState(const loki_msgs::msg::BaseState & msg)
         {
             CanCtrlPltf::BaseState latest_base_command;
 
@@ -684,7 +805,7 @@ class PyToCpp : public rclcpp::Node {
             latest_base_command.steer_pos = msg.steer_pos;
             latest_base_command.steer_max_speed = msg.steer_max_speed;
             latest_base_command.channel = msg.channel;
-            base_command_out = latest_base_command;
+            base_command_out_ = latest_base_command;
 
         }
 
@@ -698,7 +819,7 @@ class PyToCpp : public rclcpp::Node {
             msg.channel = basestate.channel;
         }
 
-        void CommandsMsgtoSimState(const loki_msgs::msg::BaseState & msg) const
+        void CommandsMsgtoSimState(const loki_msgs::msg::BaseState & msg) 
         {
             CanCtrlPltf::BaseState latest_base_command;
 
@@ -709,7 +830,7 @@ class PyToCpp : public rclcpp::Node {
             latest_base_command.steer_pos = msg.steer_pos;
             latest_base_command.steer_max_speed = msg.steer_max_speed;
             latest_base_command.channel = msg.channel;
-            base_command_out = latest_base_command;
+            base_command_out_ = latest_base_command;
 
         }
 

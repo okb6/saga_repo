@@ -1,0 +1,22 @@
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::initialize(std::string)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   33 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::writeMsg(CanFrame)[m[K’:
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:140:34:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getId()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kcanid_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  140 |      .can_id = [01;35m[Kcan_frame_wr.getId()[m[K,
+      |                [01;35m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:141:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getLength()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[K__u8[m[K’ {aka ‘[01m[Kunsigned char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  141 |      .can_dlc = [01;35m[Kcan_frame_wr.getLength()[m[K,
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+/usr/bin/ld: libcan.so: undefined reference to `boost::thread::start_thread_noexcept()'
+/usr/bin/ld: libcan.so: undefined reference to `boost::thread::detach()'
+/usr/bin/ld: libcan.so: undefined reference to `boost::detail::thread_data_base::~thread_data_base()'
+/usr/bin/ld: libcan.so: undefined reference to `boost::this_thread::interruption_point()'
+/usr/bin/ld: libcan.so: undefined reference to `vtable for boost::detail::thread_data_base'
+/usr/bin/ld: libcan.so: undefined reference to `boost::detail::get_current_thread_data()'
+/usr/bin/ld: libcan.so: undefined reference to `typeinfo for boost::detail::thread_data_base'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/pytocpp.dir/build.make:184: pytocpp] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/pytocpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

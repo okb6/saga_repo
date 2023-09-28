@@ -53,6 +53,8 @@
     <remap from="can_interface_name" to="$(var can_interface_name)" /> -->
   <!-- </include> -->
 
+  <include file="$(find-pkg-share loki_can_devices)/launch/pytocpp.launch.py"/>
+
   <!-- teleop bringup -->
   <include file="$(find-pkg-share loki_teleop)/launch/teleop.launch" if="$(var with_teleoperation)"/>
     <!-- <remap from="joy_dev" to="$(var joy_dev)" />

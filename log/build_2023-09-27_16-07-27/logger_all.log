@@ -1,0 +1,508 @@
+[0.852s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'loki_can_devices']
+[0.852s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['loki_can_devices'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f33ff207700>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f33ff207190>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f33ff207190>>)
+[0.898s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.899s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.899s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.899s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.899s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.899s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.899s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cairlab/Documents/GitHub/saga_repo'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ignore_ament_install'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['colcon_pkg']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'colcon_pkg'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['colcon_meta']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'colcon_meta'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['ros']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ros'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['cmake', 'python']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'cmake'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'python'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['python_setup_py']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'python_setup_py'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['ignore', 'ignore_ament_install']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ignore'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ignore_ament_install'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['colcon_pkg']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'colcon_pkg'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['colcon_meta']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'colcon_meta'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['ros']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ros'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['cmake', 'python']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'cmake'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'python'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['python_setup_py']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'python_setup_py'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'ignore'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'ignore_ament_install'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['colcon_pkg']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'colcon_pkg'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['colcon_meta']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'colcon_meta'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['ros']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'ros'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['cmake', 'python']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'cmake'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'python'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extensions ['python_setup_py']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces) by extension 'python_setup_py'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extension 'ignore'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extension 'ignore_ament_install'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extensions ['colcon_pkg']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extension 'colcon_pkg'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extensions ['colcon_meta']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extension 'colcon_meta'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extensions ['ros']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/actionlib_msgs) by extension 'ros'
+[0.915s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/actionlib_msgs' with type 'ros.ament_cmake' and name 'actionlib_msgs'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extension 'ignore'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extension 'ignore_ament_install'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extensions ['colcon_pkg']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extension 'colcon_pkg'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extensions ['colcon_meta']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extension 'colcon_meta'
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extensions ['ros']
+[0.915s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/common_interfaces) by extension 'ros'
+[0.916s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/common_interfaces' with type 'ros.ament_cmake' and name 'common_interfaces'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extension 'ignore'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extension 'ignore_ament_install'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extensions ['colcon_pkg']
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extension 'colcon_pkg'
+[0.916s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extensions ['colcon_meta']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extension 'colcon_meta'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extensions ['ros']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/diagnostic_msgs) by extension 'ros'
+[0.917s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/diagnostic_msgs' with type 'ros.ament_cmake' and name 'diagnostic_msgs'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'ignore'
+[0.917s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'ignore_ament_install'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['colcon_pkg']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'colcon_pkg'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['colcon_meta']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'colcon_meta'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['ros']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'ros'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['cmake', 'python']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'cmake'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'python'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extensions ['python_setup_py']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/docs) by extension 'python_setup_py'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extension 'ignore'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extension 'ignore_ament_install'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extensions ['colcon_pkg']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extension 'colcon_pkg'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extensions ['colcon_meta']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extension 'colcon_meta'
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extensions ['ros']
+[0.918s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/geometry_msgs) by extension 'ros'
+[0.919s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/geometry_msgs' with type 'ros.ament_cmake' and name 'geometry_msgs'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extension 'ignore'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extension 'ignore_ament_install'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extensions ['colcon_pkg']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extension 'colcon_pkg'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extensions ['colcon_meta']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extension 'colcon_meta'
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extensions ['ros']
+[0.919s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/nav_msgs) by extension 'ros'
+[0.920s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/nav_msgs' with type 'ros.ament_cmake' and name 'nav_msgs'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extension 'ignore'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extension 'ignore_ament_install'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extensions ['colcon_pkg']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extension 'colcon_pkg'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extensions ['colcon_meta']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extension 'colcon_meta'
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extensions ['ros']
+[0.920s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs) by extension 'ros'
+[0.921s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/sensor_msgs' with type 'ros.ament_cmake' and name 'sensor_msgs'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extensions ['ignore', 'ignore_ament_install']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extension 'ignore'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extension 'ignore_ament_install'
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extensions ['colcon_pkg']
+[0.921s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extension 'colcon_pkg'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extensions ['colcon_meta']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extension 'colcon_meta'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extensions ['ros']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/sensor_msgs_py) by extension 'ros'
+[0.922s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/sensor_msgs_py' with type 'ros.ament_python' and name 'sensor_msgs_py'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extension 'ignore'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extension 'ignore_ament_install'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extensions ['colcon_pkg']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extension 'colcon_pkg'
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extensions ['colcon_meta']
+[0.922s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extension 'colcon_meta'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extensions ['ros']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/shape_msgs) by extension 'ros'
+[0.923s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/shape_msgs' with type 'ros.ament_cmake' and name 'shape_msgs'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extension 'ignore_ament_install'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extensions ['colcon_pkg']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extension 'colcon_pkg'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extensions ['colcon_meta']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extension 'colcon_meta'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extensions ['ros']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_msgs) by extension 'ros'
+[0.924s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/std_msgs' with type 'ros.ament_cmake' and name 'std_msgs'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extensions ['ignore', 'ignore_ament_install']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extension 'ignore'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extension 'ignore_ament_install'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extensions ['colcon_pkg']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extension 'colcon_pkg'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extensions ['colcon_meta']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extension 'colcon_meta'
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extensions ['ros']
+[0.924s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/std_srvs) by extension 'ros'
+[0.925s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/std_srvs' with type 'ros.ament_cmake' and name 'std_srvs'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extension 'ignore'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extension 'ignore_ament_install'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extensions ['colcon_pkg']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extension 'colcon_pkg'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extensions ['colcon_meta']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extension 'colcon_meta'
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extensions ['ros']
+[0.925s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/stereo_msgs) by extension 'ros'
+[0.926s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/stereo_msgs' with type 'ros.ament_cmake' and name 'stereo_msgs'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extension 'ignore'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extension 'ignore_ament_install'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extensions ['colcon_pkg']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extension 'colcon_pkg'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extensions ['colcon_meta']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extension 'colcon_meta'
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extensions ['ros']
+[0.926s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/trajectory_msgs) by extension 'ros'
+[0.927s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/trajectory_msgs' with type 'ros.ament_cmake' and name 'trajectory_msgs'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extension 'ignore'
+[0.927s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extension 'ignore_ament_install'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extensions ['colcon_pkg']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extension 'colcon_pkg'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extensions ['colcon_meta']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extension 'colcon_meta'
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extensions ['ros']
+[0.928s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/common_interfaces/visualization_msgs) by extension 'ros'
+[0.929s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/common_interfaces/visualization_msgs' with type 'ros.ament_cmake' and name 'visualization_msgs'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['ignore', 'ignore_ament_install']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'ignore'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'ignore_ament_install'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['colcon_pkg']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'colcon_pkg'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['colcon_meta']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'colcon_meta'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['ros']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'ros'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['cmake', 'python']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'cmake'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'python'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extensions ['python_setup_py']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics) by extension 'python_setup_py'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extensions ['ignore', 'ignore_ament_install']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extensions ['colcon_pkg']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extension 'colcon_pkg'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extensions ['colcon_meta']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extension 'colcon_meta'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extensions ['ros']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_aggregator) by extension 'ros'
+[0.930s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/diagnostics/diagnostic_aggregator' with type 'ros.ament_cmake' and name 'diagnostic_aggregator'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extensions ['ignore', 'ignore_ament_install']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extension 'ignore'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extension 'ignore_ament_install'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extensions ['colcon_pkg']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extension 'colcon_pkg'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extensions ['colcon_meta']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extension 'colcon_meta'
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extensions ['ros']
+[0.931s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_common_diagnostics) by extension 'ros'
+[0.932s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/diagnostics/diagnostic_common_diagnostics' with type 'ros.ament_cmake' and name 'diagnostic_common_diagnostics'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extensions ['ignore', 'ignore_ament_install']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extension 'ignore'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extension 'ignore_ament_install'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extensions ['colcon_pkg']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extension 'colcon_pkg'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extensions ['colcon_meta']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extension 'colcon_meta'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extensions ['ros']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostic_updater) by extension 'ros'
+[0.933s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/diagnostics/diagnostic_updater' with type 'ros.ament_cmake' and name 'diagnostic_updater'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extensions ['ignore', 'ignore_ament_install']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extension 'ignore'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extension 'ignore_ament_install'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extensions ['colcon_pkg']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extension 'colcon_pkg'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extensions ['colcon_meta']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extension 'colcon_meta'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extensions ['ros']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/diagnostics) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/diagnostics/diagnostics' with type 'ros.ament_cmake' and name 'diagnostics'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/install) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/install) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/install) ignored
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/log) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/log) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/log) ignored
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extension 'ignore_ament_install'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/diagnostics/self_test) by extension 'ros'
+[0.936s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/diagnostics/self_test' with type 'ros.ament_cmake' and name 'self_test'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ros'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['cmake', 'python']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'cmake'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'python'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['python_setup_py']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'python_setup_py'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'colcon_meta'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['ros']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ros'
+[0.938s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_base' with type 'ros.ament_python' and name 'loki_base'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ignore'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ignore_ament_install'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['colcon_pkg']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'colcon_pkg'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['colcon_meta']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ros'
+[0.940s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_bringup' with type 'ros.ament_cmake' and name 'loki_bringup'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['ignore', 'ignore_ament_install']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ignore'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ignore_ament_install'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['colcon_pkg']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'colcon_pkg'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['colcon_meta']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'colcon_meta'
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['ros']
+[0.940s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ros'
+[0.941s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_can_devices' with type 'ros.ament_cmake' and name 'loki_can_devices'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['ignore', 'ignore_ament_install']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ignore'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ignore_ament_install'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['colcon_pkg']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'colcon_pkg'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['colcon_meta']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'colcon_meta'
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['ros']
+[0.941s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ros'
+[0.942s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_description' with type 'ros.ament_cmake' and name 'loki_description'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ignore'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ignore_ament_install'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['colcon_pkg']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'colcon_pkg'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['colcon_meta']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'colcon_meta'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['ros']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ros'
+[0.943s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_msgs' with type 'ros.ament_cmake' and name 'loki_msgs'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ignore'
+[0.943s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ignore_ament_install'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['colcon_pkg']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'colcon_pkg'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['colcon_meta']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'colcon_meta'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['ros']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ros'
+[0.944s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_simulator' with type 'ros.ament_cmake' and name 'loki_simulator'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ignore'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ignore_ament_install'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['colcon_pkg']
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'colcon_pkg'
+[0.944s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['colcon_meta']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'colcon_meta'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['ros']
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ros'
+[0.945s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_teleop' with type 'ros.ament_python' and name 'loki_teleop'
+[0.945s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ignore'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ignore_ament_install'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['colcon_pkg']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'colcon_pkg'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['colcon_meta']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'colcon_meta'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['ros']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ros'
+[0.946s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_twist_mux' with type 'ros.ament_cmake' and name 'loki_twist_mux'
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.946s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ignore'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ignore_ament_install'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['colcon_pkg']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'colcon_pkg'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['colcon_meta']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'colcon_meta'
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['ros']
+[0.947s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ros'
+[0.948s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/rasberry_gazebo' with type 'ros.ament_cmake' and name 'rasberry_gazebo'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ignore'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ignore_ament_install'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['colcon_pkg']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'colcon_pkg'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['colcon_meta']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'colcon_meta'
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['ros']
+[0.948s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ros'
+[0.949s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/robot_bringup' with type 'ros.ament_cmake' and name 'robot_bringup'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extension 'ignore'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extension 'ignore_ament_install'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extensions ['colcon_pkg']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extension 'colcon_pkg'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extensions ['colcon_meta']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extension 'colcon_meta'
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extensions ['ros']
+[0.949s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/twist_mux) by extension 'ros'
+[0.950s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/twist_mux' with type 'ros.ament_cmake' and name 'twist_mux'
+[0.950s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.950s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.950s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.950s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.950s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_description' in 'ros2_thor/src/loki/loki_description'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'std_msgs' in 'ros2_thor/src/common_interfaces/std_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'std_srvs' in 'ros2_thor/src/common_interfaces/std_srvs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'actionlib_msgs' in 'ros2_thor/src/common_interfaces/actionlib_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'geometry_msgs' in 'ros2_thor/src/common_interfaces/geometry_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'diagnostic_msgs' in 'ros2_thor/src/common_interfaces/diagnostic_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'nav_msgs' in 'ros2_thor/src/common_interfaces/nav_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sensor_msgs' in 'ros2_thor/src/common_interfaces/sensor_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'shape_msgs' in 'ros2_thor/src/common_interfaces/shape_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'trajectory_msgs' in 'ros2_thor/src/common_interfaces/trajectory_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'diagnostic_aggregator' in 'ros2_thor/src/diagnostics/diagnostic_aggregator'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'diagnostic_updater' in 'ros2_thor/src/diagnostics/diagnostic_updater'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_msgs' in 'ros2_thor/src/loki/loki_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rasberry_gazebo' in 'ros2_thor/src/loki/rasberry_gazebo'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'sensor_msgs_py' in 'ros2_thor/src/common_interfaces/sensor_msgs_py'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'stereo_msgs' in 'ros2_thor/src/common_interfaces/stereo_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'visualization_msgs' in 'ros2_thor/src/common_interfaces/visualization_msgs'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'common_interfaces' in 'ros2_thor/src/common_interfaces/common_interfaces'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'diagnostic_common_diagnostics' in 'ros2_thor/src/diagnostics/diagnostic_common_diagnostics'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'self_test' in 'ros2_thor/src/diagnostics/self_test'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'twist_mux' in 'ros2_thor/src/twist_mux'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'diagnostics' in 'ros2_thor/src/diagnostics/diagnostics'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_base' in 'ros2_thor/src/loki/loki_base'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_teleop' in 'ros2_thor/src/loki/loki_teleop'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_twist_mux' in 'ros2_thor/src/loki/loki_twist_mux'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_simulator' in 'ros2_thor/src/loki/loki_simulator'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'robot_bringup' in 'ros2_thor/src/loki/robot_bringup'
+[1.008s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'loki_bringup' in 'ros2_thor/src/loki/loki_bringup'
+[1.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.060s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 374 installed packages in /opt/ros/humble
+[1.062s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_args' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_target' from command line to 'None'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_clean_cache' from command line to 'False'
+[1.154s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_clean_first' from command line to 'False'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_force_configure' from command line to 'False'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'ament_cmake_args' from command line to 'None'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'catkin_cmake_args' from command line to 'None'
+[1.155s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.155s] DEBUG:colcon.colcon_core.verb:Building package 'loki_can_devices' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices', 'merge_install': False, 'path': '/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices', 'symlink_install': False, 'test_result_base': None}
+[1.170s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.183s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.184s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices' with build type 'ament_cmake'
+[1.184s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices'
+[1.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.200s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.200s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices': AMENT_PREFIX_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/loki_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/loki_description:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices -- -j12 -l12
+[21.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices' returned '2': AMENT_PREFIX_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/loki_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/loki_description:/opt/ros/humble LD_LIBRARY_PATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/nav_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/local/lib/python3.10/dist-packages:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices -- -j12 -l12
+[21.837s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_can_devices)
+[21.851s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake module files
+[21.852s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake config files
+[21.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'cmake_prefix_path')
+[21.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.ps1'
+[21.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.dsv'
+[21.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.sh'
+[21.866s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/lib'
+[21.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'ld_library_path_lib')
+[21.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.ps1'
+[21.880s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.dsv'
+[21.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.sh'
+[21.880s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[21.880s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/lib/pkgconfig/loki_can_devices.pc'
+[21.881s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/lib/python3.10/site-packages'
+[21.881s] Level 1:colcon.colcon_core.environment:checking '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[21.894s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.ps1'
+[21.895s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.dsv'
+[21.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.sh'
+[21.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.bash'
+[21.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.zsh'
+[21.897s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cairlab/Documents/GitHub/saga_repo/install/loki_can_devices/share/colcon-core/packages/loki_can_devices)
+[21.908s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[21.908s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[21.908s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[21.908s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[21.927s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[21.927s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[21.927s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[21.936s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[21.955s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/Documents/GitHub/saga_repo/install/local_setup.ps1'
+[21.956s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/Documents/GitHub/saga_repo/install/_local_setup_util_ps1.py'
+[21.956s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/Documents/GitHub/saga_repo/install/setup.ps1'
+[21.974s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/Documents/GitHub/saga_repo/install/local_setup.sh'
+[21.975s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cairlab/Documents/GitHub/saga_repo/install/_local_setup_util_sh.py'
+[21.976s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/Documents/GitHub/saga_repo/install/setup.sh'
+[21.990s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/Documents/GitHub/saga_repo/install/local_setup.bash'
+[21.991s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/Documents/GitHub/saga_repo/install/setup.bash'
+[22.005s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cairlab/Documents/GitHub/saga_repo/install/local_setup.zsh'
+[22.005s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cairlab/Documents/GitHub/saga_repo/install/setup.zsh'

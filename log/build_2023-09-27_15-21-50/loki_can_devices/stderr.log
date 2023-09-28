@@ -1,0 +1,19 @@
+[31mCMake Error at /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake:141 (find_package):
+  Could not find a package configuration file provided by "boost_data_time"
+  (requested version 1.74.0) with any of the following names:
+
+    boost_data_timeConfig.cmake
+    boost_data_time-config.cmake
+
+  Add the installation prefix of "boost_data_time" to CMAKE_PREFIX_PATH or
+  set "boost_data_time_DIR" to a directory containing one of the above files.
+  If "boost_data_time" provides a separate development package or SDK, be
+  sure it has been installed.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake:258 (boost_find_component)
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:594 (find_package)
+  ConfigExtras.cmake:1 (find_package)
+  CMakeLists.txt:11 (include)
+
+[0m
+gmake: *** [Makefile:497: cmake_check_build_system] Error 1

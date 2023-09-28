@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rasberry_gazebo</name>
+  <version>2.0.0</version>
+  <description>The rasberry_gazebo package</description>
+  <maintainer email="okb6@cornell.edu">TODO</maintainer>
+  <license>Proprietary</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>robot_localization</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>control_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>tf2</depend>
+  <depend>xacro</depend>
+  <depend>gazebo_ros</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros                                                                 
+        gazebo_plugin_path="${prefix}/lib"
+        gazebo_model_path="${prefix}/models" 
+        gazebo_media_path="${prefix}" />
+    <!-- Other tools can request additional information be placed here -->
+    
+    </export>
+</package>
