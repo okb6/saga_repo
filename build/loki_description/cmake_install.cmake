@@ -47,7 +47,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description/launch"
     "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description/meshes"
     "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description/urdf"
-    "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description/config"
     )
 endif()
 

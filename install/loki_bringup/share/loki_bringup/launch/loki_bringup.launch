@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="robot_name" default="" />
+  <arg name="tf_prefix" default="" />
+  <arg name="robot_model" />
+  <arg name="model_extras" default="" />
+  <arg name="simple_sim" />
+  <arg name="enable_odom_tf" default="True" />
+  <arg name="odom_frame_id" default="odom" />
+  <arg name="can_interface_type" default=""/>
+  <arg name="can_interface_name" default=""/>
+
+  <group unless="$(eval arg('tf_prefix') == '')" namespace="$(var robot_name)">
+    <!-- model bringup -->
+    <include file="$(find-pkg-share loki_description)/launch/model.launch">
+      <let name="robot_name" value="$(var robot_name)" />
+      <let name="tf_prefix" value="$(var tf_prefix)/" />
+      <let name="robot_model" value="$(var robot_model)" />
+      <let name="model_extras" value="$(var model_extras)" />
+    </include>
+
+
+    <!-- base bringup-->
+    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch">
+      <let name="robot_model" value="$(var robot_model)" />
+      <let name="tf_prefix" value="$(var tf_prefix)/" />
+      <let name="simple_sim" value="$(var simple_sim)" />
+      <arg name="enable_odom_tf" default="$(var enable_odom_tf)" />
+      <let name="odom_frame_id" value="$(var odom_frame_id)" />
+      <let name="can_interface_type" value="$(var can_interface_type)" />
+      <let name="can_interface_name" value="$(var can_interface_name)" />
+    </include>
+  </group>
+  <group if="$(eval arg('tf_prefix') == '')" >
+    <!-- model bringup -->
+    <include file="$(find-pkg-share loki_description)/launch/model.launch">
+      <let name="robot_name" value="$(var robot_name)" />
+      <let name="tf_prefix" value="$(var tf_prefix)" />
+      <let name="robot_model" value="$(var robot_model)" />
+      <let name="model_extras" value="$(var model_extras)" />
+    </include>
+
+
+    <!-- base bringup-->
+    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch">
+      <let name="robot_model" value="$(var robot_model)" />
+      <let name="tf_prefix" value="$(var tf_prefix)" />
+      <let name="simple_sim" value="$(var simple_sim)" />
+      <let name="enable_odom_tf" default="$(var enable_odom_tf)" />
+      <let name="odom_frame_id" value="$(var odom_frame_id)" />
+      <let name="can_interface_type" value="$(var can_interface_type)" />
+      <let name="can_interface_name" value="$(var can_interface_name)" />
+    </include>
+  </group>
+
+ <!--spawn gazebo world-->
+  <include file= "$(find-pkg-share rasberry_gazebo)/launch/world.launch" if="$(var simple_sim)">
+    <arg name="world" default="$(var world)"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+   <let name="gui" value="$(var with_gui)"/>
+  </include>
+
+  <!--spawn robot-->
+  <node pkg="gazebo_ros" exec="spawn_model" name="spawner" args="-urdf -param /robot_description -model thorvald_ii -x $(var start_pose_x) -y $(var start_pose_y) -z $(var start_pose_z) -R $(var  start_pose_R)  -P $(var start_pose_P)  -Y $(var start_pose_Y)" if="$(var simple_sim)"/>
+</launch>
+

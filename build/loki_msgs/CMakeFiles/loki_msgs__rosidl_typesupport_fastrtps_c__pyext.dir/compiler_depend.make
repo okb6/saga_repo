@@ -245,7 +245,7 @@ CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
   rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__type_support.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
@@ -291,9 +291,9 @@ CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
   rosidl_generator_c/loki_msgs/msg/detail/io_array__type_support.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_array__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__type_support.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.h \
@@ -395,8 +395,6 @@ rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.h:
 
-rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h:
-
 rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.h:
@@ -424,8 +422,6 @@ rosidl_generator_c/loki_msgs/srv/detail/cont_array__type_support.h:
 rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/battery_vars__type_support.h:
-
-rosidl_generator_c/loki_msgs/srv/detail/switch_bool__struct.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/switch_bool__type_support.h:
 
@@ -459,9 +455,11 @@ rosidl_generator_c/loki_msgs/msg/detail/io_state__type_support.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
+rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/io_state__struct.h:
 
@@ -564,6 +562,8 @@ rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__type_support.h:
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h:
 
 /usr/include/python3.10/modsupport.h:
 
@@ -710,8 +710,6 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c:
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -999,8 +997,6 @@ rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.h:
 
 /usr/include/python3.10/pythonrun.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h:
-
 /usr/include/python3.10/descrobject.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
@@ -1060,6 +1056,10 @@ rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__type_support.h:
 /usr/include/python3.10/intrcheck.h:
 
 /usr/include/python3.10/import.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/switch_bool__struct.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 
 /usr/include/python3.10/cpython/import.h:
 

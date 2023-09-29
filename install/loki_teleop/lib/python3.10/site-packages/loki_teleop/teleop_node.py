@@ -12,7 +12,11 @@ class TeleopNode(Node):
         super().__init__('teleop_node')
         self.get_logger().info("started Teleop Node")
 
-        params_loaded = self.lookupParameters()
+        self.axis_map = {}
+        self.button_map = {}
+        self.custom_trigger_map = {}
+
+        params_loaded = self.lookupParameters()      
 
         if params_loaded:
             self.get_logger().info("Parameters read from ROS parameter server")
@@ -57,38 +61,76 @@ class TeleopNode(Node):
         self.a = (self.ang_max - self.ang_min) / (1 - self.deadzone)
         self.b = self.ang_min - self.deadzone * self.a
 
+        
+
     def lookupParameters(self):
+
         self.get_logger().info("Looking up Paramters")
         trigger_string_map = ''
         params_loaded = True
 
         #Lookup turning radius
-        self.declare_parameter(
-            paramters=[
-                ('turn_calc_w', self.Default_Turning_Calc)
-                ('turn_calc_1', self.Default_Turning_Calc)
-            ]
-        )
+        self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('turn_calc_1', rclpy.Parameter.Type.DOUBLE)
 
         self.turn_calc_w = self.get_parameter('turn_calc_w').value
         self.turn_calc_1 = self.get_parameter('turn_calc_1').value
+
         self.get_logger().info('min turning w: %f, min turning 1: %f' %self.turn_calc_w %self.turn_calc_1)
 
         #Lookup axis and button map
-        self.declare_parameter(
-            paramters=[
-                ('axis_map')
-                ('axis_vx')
-                ('axis_wz')
-                ('button_map')
-            ]
-        )
-        self.axis_map = self.get_parameter('axis_map').value
-        self.axis_vx = self.get_parameter('axis_vx').value
-        self.axis_wz = self.get_parameter('axis_wz').value
-        self.button_map = self.get_parameter('button_map').value
+        self.declare_parameter('axis_map.axis_vx', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_vy', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_wz', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_turn_left', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('axis_map.axis_turn_right', rclpy.Parameter.Type.INTEGER)
 
-        if len(self.axis_map) == 0 and len(self.axis_vx) == 0 and len(self.axis_wz) == 0:
+        axis_vx = self.get_parameter('axis_map.axis_vx').value
+        axis_vy = self.get_parameter('axis_map.axis_vy').value
+        axis_wz = self.get_parameter('axis_map.axis_wz').value 
+        axis_turn_left = self.get_parameter('axis_map.axis_turn_left').value 
+        axis_turn_right = self.get_parameter('axis_map.axis_turn_right').value
+
+        self.axis_map = {'axis_vx':axis_vx, 'axis_vy':axis_vy, 'axis_wz':axis_wz, 'axis_turn_left':axis_turn_left, 'axis_turn_right':axis_turn_right}
+
+        self.declare_parameter('button_map.button_less_gain', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_more_gain', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_function', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_teleop_lock', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_left', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_forward', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_0', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_1', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_2', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_3', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_4', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_5', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_6', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_7', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('button_map.button_8', rclpy.Parameter.Type.INTEGER)
+
+        less_gain = self.get_parameter('button_map.button_less_gain').value
+        more_gain = self.get_parameter('button_map.button_more_gain').value
+        function = self.get_parameter('button_map.button_function').value
+        teleop_lock = self.get_parameter('button_map.button_teleop_lock').value
+        left = self.get_parameter('button_map.button_left').value
+        forward = self.get_parameter('button_map.button_forward').value
+        b0 = self.get_parameter('button_map.button_0').value
+        b1 = self.get_parameter('button_map.button_1').value
+        b2 = self.get_parameter('button_map.button_2').value
+        b3 = self.get_parameter('button_map.button_3').value
+        b4 = self.get_parameter('button_map.button_4').value
+        b5 = self.get_parameter('button_map.button_5').value
+        b6 = self.get_parameter('button_map.button_6').value
+        b7 = self.get_parameter('button_map.button_7').value
+        b8 = self.get_parameter('button_map.button_8').value
+
+        self.button_map = {'button_less_gain':less_gain, 'button_more_gain':more_gain, 'button_function':function, 'button_teleop_lock':teleop_lock, 'button_left':left, 'button_forward':forward, 'button_0':b0, 'button_1':b1, 'button_2':b2, 'button_3':b3, 'button_4':b4, 'button_5':b5, 'button_6':b6, 'button_7':b7, 'button_8':b8}
+
+
+
+
+        if len(self.axis_map) == 0:
             params_loaded = False
         elif len(self.button_map) == 0:
             self.get_logger().info("No button map on parameter server")
@@ -98,52 +140,73 @@ class TeleopNode(Node):
         for key, value in self.button_map.items():
             if value > self.number_of_buttons:
                 self.number_of_buttons = value
+
         
-        # Turning safety button
-        if self.get_parameter('button_turning_safety').get_parameter_value().bool_value:
-            self.button_turning_safety = True
-        self.get_logger().info("button_turning_safety selected: %s", str(self.button_turning_safety))
+        #Turning safety button
+        self.declare_parameter('button_turning_safety', rclpy.Parameter.Type.INTEGER)
+        self.button_turning_safety = self.get_parameter('button_turning_safety').value
 
-        # Lookup homing button combination
-        if self.get_parameter('home_buttons').get_parameter_value().bool_value:
-            self.home_buttons = True
-        self.get_logger().info("homing_buttons selected: %s", str(self.home_buttons))
+        #lookup homing button combination
+        self.declare_parameter('home_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
+        self.home_buttons = self.get_parameter('home_buttons').value
 
-        # Lookup omni button combination
-        if self.get_parameter('omni_buttons').get_parameter_value().bool_value:
-            self.omni_buttons = True
-        self.get_logger().info("omni_buttons selected: %s", str(self.omni_buttons))
+        #lookup omni button combination
+        self.declare_parameter('omni_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
+        self.omni_buttons = self.get_parameter('omni_buttons').value 
 
-        #Lookup trigger services
-        trigger_string_map = self.get_parameter('trigger_map').get_parameter_value().string_map_value
-        for key, value in trigger_string_map.items():
-            if value:
-                self.get_logger().info("%s mapped to <function> + <%s>", value, key)
-                self.custom_trigger_map[key] = self.create_client(Trigger, value)
+        #lookup kvbuttons
+        self.declare_parameter('kv_default_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
+        self.kv_default_buttons = self.get_parameter('kv-default_buttons')
 
-        # Default velocity gain buttons
-        if self.get_parameter('kv_default_buttons').get_parameter_value().bool_value:
-            self.kv_default_buttons = True
-        self.get_logger().info("Default velocity gain buttons selected: %s", str(self.kv_default_buttons))
+        #mode left and mode forward buttons
+        self.declare_parameter('mode_left_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
+        self.declare_parameter('mode_forward_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
+        self.mode_forward_buttons = self.get_parameter('mode_forward_buttons').value
+        self.mode_left_buttons = self.get_parameter('mode_left_buttons').value
 
-        # Parameters for gains
-        self.kv_min = self.get_parameter('gains/kv_min').get_parameter_value().double_value
-        self.kv_max = self.get_parameter('gains/kv_max').get_parameter_value().double_value
-        self.dkv = self.get_parameter('gains/kv_increment').get_parameter_value().double_value
-        self.kv_default = self.get_parameter('gains/kv_default').get_parameter_value().double_value
+        #Trigger map
+        self.declare_parameter('triger_map.button_0', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_1', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_2', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_3', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_4', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_5', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('triger_map.button_6', rclpy.Parameter.Type.STRING)
+
+        tb0 = self.get_parameter('trigger_map.button_0').value
+        tb1 = self.get_parameter('trigger_map.button_1').value
+        tb2 = self.get_parameter('trigger_map.button_2').value
+        tb3 = self.get_parameter('trigger_map.button_3').value
+        tb4 = self.get_parameter('trigger_map.button_4').value
+        tb5 = self.get_parameter('trigger_map.button_5').value
+        tb6 = self.get_parameter('trigger_map.button_6').value
+
+        trigger_string_map = {'button_0':tb0, 'button2':tb2, 'button3':tb3, 'button4':tb4, 'button5':tb5, 'button6':tb6}
+        
+        for l in range(7):
+            button = 'button_{}'.format(l)
+            if not len(trigger_string_map[button]) == 0:
+                topic = trigger_string_map[button]
+                self.custom_trigger_map[button] = self.create_client(Trigger, topic)
+
+        
+        #Get Gains
+        self.declare_parameter('gains.kv_default', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('gains.kv_min', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('gains.kv_max', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('gains.kv_increment', rclpy.Parameter.Type.DOUBLE)
+
+        self.kv_default = self.get_parameter('gains.kv_default').value
+        self.kv_min = self.get_parameter('gains.kv_min').value
+        self.kv_max = self.get_parameter('gains.kv_max').value
+        self.dkv = self.get_parameter('gains.kv_increment').value
+
         self.kv = self.kv_default
 
-        # Drive mode buttons
-        if (
-            self.get_parameter('mode_forward_buttons').get_parameter_value().bool_value
-            and self.get_parameter('mode_left_buttons').get_parameter_value().bool_value
-        ):
-            self.mode_forward_buttons = True
-            self.mode_left_buttons = True
-        self.get_logger().info("Drive mode buttons selected: %s", str(self.mode_forward_buttons and self.mode_left_buttons))
-        
         return params_loaded
     
+
+
     def buttonifyAxes(self, axes_in):
         buttoned = []
         thresh = 0.9
@@ -154,6 +217,8 @@ class TeleopNode(Node):
             else:
                 buttoned.append(0)
         return buttoned
+    
+
     
     def evaluateButtonPress(self, button_combo):
         button_combo_pressed = True
@@ -169,6 +234,8 @@ class TeleopNode(Node):
         else:
             return False
         
+
+        
     def evaluateButtonPress(self, button):
         button_pressed = True
         previous_button_pressed = True
@@ -179,6 +246,8 @@ class TeleopNode(Node):
             return True
         else:
             return False
+        
+
 
     def srv_Callback_Block_Auto(self, request, response):
         message = ''
@@ -200,6 +269,8 @@ class TeleopNode(Node):
         response.message = message
         return response
     
+
+    
     def srv_Callback_Set_Auto_Mode(self, request, response):
         message = ''
         self.teleop_lock_on = request.data
@@ -217,11 +288,10 @@ class TeleopNode(Node):
         response.message = message
         return response
     
+
+    
     def joy_callback(self, joy):
         mode = self.previous_drive_mode
-        vx = None
-        vy = None
-        wz = None
         
         self.buttons.clear()
         self.axes.clear()
@@ -261,19 +331,24 @@ class TeleopNode(Node):
                 button_pressed = self.buttons[button_index] and not self.previous_buttons[button_index]
                 
                 if button_pressed:
-                    srv = Trigger.Request()
+                    future = 0
+                    future = self.custom_trigger_map[key].call_async()
+                    rclpy.spin_until_future_complete(self, future)
+                    
                     self.get_logger().info("calling service %s" %str(key))
 
-                if service_client.call(srv):
-                    self.get_logger().info("finished Calling")
-                else:
-                    self.get_logger().info("callling service failed")
+                    if not future == 0:
+                        self.get_logger().info("finished Calling")
+                    else:
+                        self.get_logger().info("callling service failed")
                 
         elif self.evaluateButtonPress(self.home_buttons):
-            srv = Trigger.Request()
+            future = 0
+            future = self.home_client.call_async()
+            rclpy.spin_until_future_complete(self, future)
             self.get_logger().info("calling service: home_steering")
             
-            if self.home_client.call(srv):
+            if not future == 0:
                 self.get_logger().info("finished calling")
             else:
                 self.get_logger().info("calling homing service failed")
@@ -294,7 +369,7 @@ class TeleopNode(Node):
             self.previous_non_turn_mode = self.Mode_Left
         elif self.evaluateButtonPress(self.omni_buttons):
             mode = self.Mode_omni
-            self.previous_non_turn_mode = self.Mode_omni
+            self.previous_non_turn_mode = self.Mode_Forward
         
         #############
         ####Gains####
@@ -379,6 +454,9 @@ class TeleopNode(Node):
 
         for i in range(len(self.number_of_buttons)):
             self.previous_buttons[i]= self.buttons[i]
+
+
+
         
 def main(args=None):
     rclpy.init(args=args)

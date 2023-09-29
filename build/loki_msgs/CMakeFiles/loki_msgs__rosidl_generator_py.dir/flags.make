@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"loki_msgs\" -Dloki_msgs__rosidl_generator_py_EXPORTS
 
-C_INCLUDES = -I/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c -I/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py -I/usr/include/python3.10 -isystem /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs -isystem /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs
+C_INCLUDES = -I/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c -I/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py -I/usr/include/python3.10 -isystem /opt/ros/humble/include/std_msgs -isystem /opt/ros/humble/include/builtin_interfaces -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rcutils -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/sensor_msgs -isystem /opt/ros/humble/include/geometry_msgs
 
 C_FLAGS = -fPIC -Wall -Wextra
 

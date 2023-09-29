@@ -208,7 +208,7 @@ CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/
  /usr/include/python3.10/numpy/__multiarray_api.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
  /home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/battery_array__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \

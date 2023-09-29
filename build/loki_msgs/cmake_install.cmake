@@ -70,7 +70,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_c.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_c.so")
@@ -97,7 +97,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_c.so")
@@ -128,7 +128,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_cpp.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_fastrtps_cpp.so")
@@ -155,7 +155,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_c.so")
@@ -178,7 +178,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_c.so")
@@ -205,7 +205,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_cpp.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_introspection_cpp.so")
@@ -228,7 +228,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_cpp.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_typesupport_cpp.so")
@@ -275,7 +275,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so")
@@ -298,7 +298,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so")
@@ -321,7 +321,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/local/lib/python3.10/dist-packages/loki_msgs/loki_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so")
@@ -344,7 +344,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_py.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_py.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_msgs:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libloki_msgs__rosidl_generator_py.so")

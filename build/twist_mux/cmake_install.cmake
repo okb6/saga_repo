@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_mux")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_mux"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/visualization_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_mux")
@@ -74,7 +74,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_marker")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_marker"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/visualization_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/diagnostic_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/twist_mux/twist_marker")

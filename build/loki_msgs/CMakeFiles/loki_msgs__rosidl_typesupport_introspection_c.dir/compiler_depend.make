@@ -64,16 +64,16 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/base_state__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
 
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_alarms__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_alarms__type_support.c \
@@ -203,18 +203,18 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/battery_array__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/loki_msgs/msg/detail/battery_data__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/battery_data.h \
   rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.h \
   rosidl_generator_c/loki_msgs/msg/detail/battery_data__type_support.h \
@@ -420,7 +420,7 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/controller_array__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
@@ -429,12 +429,12 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   rosidl_generator_c/loki_msgs/msg/detail/controller_state__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/motor_state__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/controller_data.h \
   rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.h \
   rosidl_generator_c/loki_msgs/msg/detail/controller_data__type_support.h \
@@ -990,20 +990,20 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_array__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/io_state.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.h \
   rosidl_generator_c/loki_msgs/msg/detail/io_state__type_support.h \
@@ -1074,19 +1074,19 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   rosidl_generator_c/loki_msgs/msg/detail/io_state__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/imu.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__functions.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
 
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__type_support.c \
   /usr/include/stdc-predef.h \
@@ -1218,16 +1218,16 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__struct.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
-  /home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
 
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/battery_vars__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/srv/detail/battery_vars__type_support.c \
@@ -1564,12 +1564,6 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/srv/detail/device_cmds__struct.h \
-  rosidl_generator_c/loki_msgs/msg/detail/can_frame__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/loki_msgs/msg/can_frame.h \
-  rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.h \
-  rosidl_generator_c/loki_msgs/msg/detail/can_frame__type_support.h \
-  rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__rosidl_typesupport_introspection_c.h \
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/digital_write__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/srv/detail/digital_write__type_support.c \
@@ -2734,6 +2728,8 @@ rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.h:
 
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_c.h:
+
 rosidl_generator_c/loki_msgs/srv/detail/sim_drive__struct.h:
 
 /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/field_types.h:
@@ -2748,10 +2744,6 @@ rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_param__rosidl_type
 
 rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__struct.h:
 
-rosidl_generator_c/loki_msgs/msg/detail/controller_config__struct.h:
-
-rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h:
-
 rosidl_generator_c/loki_msgs/msg/detail/controller_array__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
@@ -2760,21 +2752,11 @@ rosidl_generator_c/loki_msgs/msg/detail/controller_array__struct.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_array__rosidl_typesupport_introspection_c.h:
 
-rosidl_generator_c/loki_msgs/srv/detail/switch_bool__struct.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_state__rosidl_typesupport_introspection_c.h:
-
 rosidl_generator_c/loki_msgs/msg/detail/io_state__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/can_frame__struct.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__rosidl_typesupport_introspection_c.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__type_support.c:
-
-/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_data__type_support.c:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_data__type_support.h:
 
@@ -2792,19 +2774,43 @@ rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_alarms__rosidl_t
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero_all__rosidl_typesupport_introspection_c.h:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
+
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_array__type_support.c:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_data__type_support.c:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/controller_config__struct.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_alarms__type_support.c:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h:
+rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__rosidl_typesupport_introspection_c.h:
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__functions.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__type_support.c:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/switch_bool__struct.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_state__rosidl_typesupport_introspection_c.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h:
 
@@ -2813,12 +2819,6 @@ rosidl_generator_c/loki_msgs/srv/detail/cot_map__struct.h:
 rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.h:
 
 /usr/include/alloca.h:
-
-/opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/identifier.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
@@ -2831,6 +2831,8 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/set_bools__rosidl_typesu
 rosidl_generator_c/loki_msgs/msg/motor_state.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__rosidl_typesupport_introspection_c.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__struct.h:
 
@@ -2845,6 +2847,12 @@ rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_data__type_suppo
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/sim_drive__rosidl_typesupport_introspection_c.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__struct.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero_all__type_support.c:
 
@@ -2862,13 +2870,9 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/digital_write__type_supp
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h:
-
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/base_state__type_support.c:
 
 rosidl_generator_c/loki_msgs/msg/detail/controller_data__type_support.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/header.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.h:
 
@@ -2880,7 +2884,9 @@ rosidl_typesupport_introspection_c/loki_msgs/msg/detail/base_state__rosidl_types
 
 rosidl_generator_c/loki_msgs/msg/detail/io_state__type_support.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -2906,11 +2912,19 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/device_cmds__rosidl_type
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_data__rosidl_typesupport_introspection_c.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
 rosidl_generator_c/loki_msgs/msg/controller_config.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/switch_bool__rosidl_typesupport_introspection_c.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_info__rosidl_typesupport_introspection_c.h:
+
+/usr/include/endian.h:
+
+/usr/include/stdint.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/device_cmds__struct.h:
 
@@ -2926,8 +2940,6 @@ rosidl_generator_c/loki_msgs/msg/detail/controller_config__type_support.h:
 
 /usr/include/features.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__type_support.h:
-
 /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/visibility_control.h:
 
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
@@ -2937,6 +2949,8 @@ rosidl_generator_c/loki_msgs/msg/detail/controller_config__type_support.h:
 rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.h:
 
 /usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.h:
 
@@ -2988,6 +3002,10 @@ rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_data__rosidl_typesupport_introspection_c.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__type_support.h:
@@ -3006,25 +3024,13 @@ rosidl_generator_c/loki_msgs/msg/battery_alarms.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.h:
 
-/usr/include/endian.h:
-
-/usr/include/stdint.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_array__type_support.c:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/imu.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.h:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/init_pltf__rosidl_typesupport_introspection_c.h:
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_array__type_support.c:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_params__rosidl_typesupport_introspection_c.h:
 
@@ -3068,17 +3074,9 @@ rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/io_array__struct.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_data__rosidl_typesupport_introspection_c.h:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-rosidl_generator_c/loki_msgs/srv/detail/params__struct.h:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.h:
 
@@ -3088,33 +3086,17 @@ rosidl_generator_c/loki_msgs/srv/detail/states_of_io__struct.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_state__type_support.c:
 
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__functions.h:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__functions.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/params__rosidl_typesupport_introspection_c.h:
+/opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/identifier.h:
 
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/cont_array__rosidl_typesupport_introspection_c.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_data__rosidl_typesupport_introspection_c.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/detail/imu__rosidl_typesupport_introspection_c.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h:
-
-/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.h:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__type_support.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__type_support.c:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/thorvald_io__type_support.c:
 
 rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.h:
-
-rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__struct.h:
 
@@ -3158,8 +3140,6 @@ rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/device_cmds__type_support.c:
 
-rosidl_generator_c/loki_msgs/msg/can_frame.h:
-
 rosidl_generator_c/loki_msgs/srv/detail/digital_write__struct.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.h:
@@ -3170,15 +3150,21 @@ rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__struct.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/header.h:
+
 rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/drive_param__type_support.h:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/eval_can_buffer__type_support.c:
 
 rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__struct.h:
+
+rosidl_generator_c/loki_msgs/msg/can_frame.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/get_set_bool__type_support.c:
 
@@ -3187,6 +3173,8 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/get_set_bool__type_suppo
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/battery_vars__type_support.c:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/states_of_io__type_support.c:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/get_set_bool__rosidl_typesupport_introspection_c.h:
 
@@ -3198,6 +3186,8 @@ rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__struct.h:
 
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/init_pltf__rosidl_typesupport_introspection_c.h:
+
 rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.h:
@@ -3206,9 +3196,17 @@ rosidl_generator_c/loki_msgs/srv/detail/mot_cot__struct.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.h:
 
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/cont_array__rosidl_typesupport_introspection_c.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/params__rosidl_typesupport_introspection_c.h:
+
 rosidl_generator_c/loki_msgs/msg/io_state.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/params__functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/params__struct.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero__rosidl_typesupport_introspection_c.h:
 
@@ -3239,7 +3237,3 @@ rosidl_generator_c/loki_msgs/srv/detail/state_base__struct.h:
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_params__type_support.c:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/states_of_io__rosidl_typesupport_introspection_c.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.h:

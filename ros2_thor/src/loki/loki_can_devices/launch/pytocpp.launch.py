@@ -8,7 +8,7 @@ def generate_launch_description():
 
     config = os.path.join(
         get_package_share_directory('loki_base'),
-        'config'
+        'config',
         'robot_017.yaml'
     )
 

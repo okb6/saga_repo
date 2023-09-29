@@ -42,10 +42,6 @@ class Metaclass_DeviceCmds_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__device_cmds__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__device_cmds__request
 
-            from loki_msgs.msg import CANFrame
-            if CANFrame.__class__._TYPE_SUPPORT is None:
-                CANFrame.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,22 +55,22 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
     """Message class 'DeviceCmds_Request'."""
 
     __slots__ = [
-        '_can_frame',
+        '_set',
     ]
 
     _fields_and_field_types = {
-        'can_frame': 'sequence<loki_msgs/CANFrame>',
+        'set': 'int32',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['loki_msgs', 'msg'], 'CANFrame')),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.can_frame = kwargs.get('can_frame', [])
+        self.set = kwargs.get('set', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -105,7 +101,7 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.can_frame != other.can_frame:
+        if self.set != other.set:
             return False
         return True
 
@@ -114,29 +110,20 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def can_frame(self):
-        """Message field 'can_frame'."""
-        return self._can_frame
+    @builtins.property  # noqa: A003
+    def set(self):  # noqa: A003
+        """Message field 'set'."""
+        return self._set
 
-    @can_frame.setter
-    def can_frame(self, value):
+    @set.setter  # noqa: A003
+    def set(self, value):  # noqa: A003
         if __debug__:
-            from loki_msgs.msg import CANFrame
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, CANFrame) for v in value) and
-                 True), \
-                "The 'can_frame' field must be a set or sequence and each value of type 'CANFrame'"
-        self._can_frame = value
+                isinstance(value, int), \
+                "The 'set' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'set' field must be an integer in [-2147483648, 2147483647]"
+        self._set = value
 
 
 # Import statements for member types

@@ -21,7 +21,7 @@ set(dependencies
 # Generate the executable or libraries if needed
 
 # Install launch files, meshes, URDF, and config files
-install(DIRECTORY launch meshes urdf config
+install(DIRECTORY launch meshes urdf 
   DESTINATION share/${PROJECT_NAME}
 )
 

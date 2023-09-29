@@ -62,7 +62,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcan.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcan.so"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcan.so")
@@ -85,7 +85,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/loki_can_devices/pytocpp")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/loki_can_devices/pytocpp"
-         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices:/home/cairlab/Documents/GitHub/saga_repo/install/std_srvs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/sensor_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/geometry_msgs/lib:/home/cairlab/Documents/GitHub/saga_repo/install/std_msgs/lib:/opt/ros/humble/lib:/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:"
+         OLD_RPATH "/home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices:/opt/ros/humble/lib:/home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/loki_can_devices/pytocpp")

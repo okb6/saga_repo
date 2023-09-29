@@ -16,14 +16,6 @@
 #include "loki_msgs/srv/detail/device_cmds__struct.h"
 #include "loki_msgs/srv/detail/device_cmds__functions.h"
 
-#include "rosidl_runtime_c/primitives_sequence.h"
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
-// Nested array functions includes
-#include "loki_msgs/msg/detail/can_frame__functions.h"
-// end nested array functions include
-bool loki_msgs__msg__can_frame__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * loki_msgs__msg__can_frame__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool loki_msgs__srv__device_cmds__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -58,37 +50,13 @@ bool loki_msgs__srv__device_cmds__request__convert_from_py(PyObject * _pymsg, vo
     assert(strncmp("loki_msgs.srv._device_cmds.DeviceCmds_Request", full_classname_dest, 45) == 0);
   }
   loki_msgs__srv__DeviceCmds_Request * ros_message = _ros_message;
-  {  // can_frame
-    PyObject * field = PyObject_GetAttrString(_pymsg, "can_frame");
+  {  // set
+    PyObject * field = PyObject_GetAttrString(_pymsg, "set");
     if (!field) {
       return false;
     }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'can_frame'");
-    if (!seq_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_ssize_t size = PySequence_Size(field);
-    if (-1 == size) {
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    if (!loki_msgs__msg__CANFrame__Sequence__init(&(ros_message->can_frame), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create loki_msgs__msg__CANFrame__Sequence ros_message");
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    loki_msgs__msg__CANFrame * dest = ros_message->can_frame.data;
-    for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!loki_msgs__msg__can_frame__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-    }
-    Py_DECREF(seq_field);
+    assert(PyLong_Check(field));
+    ros_message->set = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -113,28 +81,11 @@ PyObject * loki_msgs__srv__device_cmds__request__convert_to_py(void * raw_ros_me
     }
   }
   loki_msgs__srv__DeviceCmds_Request * ros_message = (loki_msgs__srv__DeviceCmds_Request *)raw_ros_message;
-  {  // can_frame
+  {  // set
     PyObject * field = NULL;
-    size_t size = ros_message->can_frame.size;
-    field = PyList_New(size);
-    if (!field) {
-      return NULL;
-    }
-    loki_msgs__msg__CANFrame * item;
-    for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->can_frame.data[i]);
-      PyObject * pyitem = loki_msgs__msg__can_frame__convert_to_py(item);
-      if (!pyitem) {
-        Py_DECREF(field);
-        return NULL;
-      }
-      int rc = PyList_SetItem(field, i, pyitem);
-      (void)rc;
-      assert(rc == 0);
-    }
-    assert(PySequence_Check(field));
+    field = PyLong_FromLong(ros_message->set);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "can_frame", field);
+      int rc = PyObject_SetAttrString(_pymessage, "set", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
