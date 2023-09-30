@@ -13,7 +13,7 @@ def generate_launch_description():
     )
 
     pycppnode = Node(
-        package="src",
+        package="loki_can_devices",
         executable="py_to_cpp",
         name="py_to_cpp",
         parameters= [config]
