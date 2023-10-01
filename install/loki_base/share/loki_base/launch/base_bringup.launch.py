@@ -47,7 +47,7 @@ def generate_launch_description():
         can_name_launch_value,
         can_type_launch_value,
         odom_frame_launch_value,
-        # config
+        config
         ],
     )
 
