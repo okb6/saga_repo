@@ -190,7 +190,7 @@ class BaseDriver(Node):
             batz = "batteries.bat{}.z".format(j)
             getmesh = "batteries.bat{}.bat_mesh".format(j)
 
-            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getid, rclpy.Parameter.Type.INTEGER)
             self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)

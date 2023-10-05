@@ -16,7 +16,7 @@ def generate_launch_description():
         'robot_017.yaml'
     )
 
-    robot_mode_launch_arg = DeclareLaunchArgument("robot_model", default_value=TextSubstitution(text=""))
+    robot_mode_launch_arg = DeclareLaunchArgument("robot_model", default_value=TextSubstitution(text="$(find-pkg-share loki_base)/config/robot_017.yaml"))
     simple_sim_launch_arg = DeclareLaunchArgument("simple_sim", default_value=TextSubstitution(text="false"))    
     enable_odom_launch_arg = DeclareLaunchArgument("enable_odom_tf", default_value=TextSubstitution(text="true"))    
     odom_frame_launch_arg = DeclareLaunchArgument("odom_frame_id", default_value=TextSubstitution(text="odom"))    
@@ -24,12 +24,6 @@ def generate_launch_description():
     can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text=""))
     joint_states_launch_arg = DeclareLaunchArgument("joint_states_remap_to", default_value=TextSubstitution(text=""))
 
-    robot_model_launch_value= LaunchConfiguration("robot_model")
-    simple_sim_launch_value= LaunchConfiguration("simple_sim")
-    enable_odom_tf_launch_value= LaunchConfiguration("enable_odom_tf")
-    can_name_launch_value= LaunchConfiguration("can_interface_name")
-    can_type_launch_value= LaunchConfiguration("can_interface_type")
-    odom_frame_launch_value= LaunchConfiguration("odom_frame_id")
     joint_states_launch_value= LaunchConfiguration("joint_states_remap_to")
 
 
@@ -41,12 +35,12 @@ def generate_launch_description():
     remappings=[('cmd_vel', 'twist_mux/cmd_vel'),
                 ('joint_states', joint_states_launch_value)],
     parameters=[
-        robot_model_launch_value,
-        simple_sim_launch_value,
-        enable_odom_tf_launch_value,
-        can_name_launch_value,
-        can_type_launch_value,
-        odom_frame_launch_value,
+        {"robot_model": LaunchConfiguration("robot_model"),
+        "simple_sim": LaunchConfiguration("simple_sim"),
+        "enable_odom_tf": LaunchConfiguration("enable_odom_tf"),
+        "can_interface_name": LaunchConfiguration("can_interface_name"),
+        "can_interface_type": LaunchConfiguration("odom_frame_id"),
+        "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to")},
         config
         ],
     )
