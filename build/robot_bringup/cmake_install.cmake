@@ -43,10 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_bringup" TYPE DIRECTORY FILES
-    "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup/launch"
-    "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup/config"
-    )
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_bringup" TYPE DIRECTORY FILES "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

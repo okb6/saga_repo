@@ -6,6 +6,7 @@ from geometry_msgs.msg import Twist
 from std_msgs.msg import Bool
 from std_srvs.srv import Trigger, SetBool
 from rclpy.node import Node
+import numpy
 
 class TeleopNode(Node):
     def __init__(self):
@@ -29,14 +30,14 @@ class TeleopNode(Node):
 
         #PUBLISHERS
         self.twist_pub = self.create_publisher(Twist, 'cmd_vel', 1)
-        self.lock_pub = self.create_publsher(Bool, 'joy_priority', 1)
+        self.lock_pub = self.create_publisher(Bool, 'joy_priority', 1)
 
         #Clients
         self.home_client = self.create_client(Trigger, 'home_steering')
 
         #Services
-        self.block_auto_mode_srv = self.create_service(Bool, 'block_auto_mode', self.srv_Callback_Block_Auto)
-        self.set_auto_mode_srv = self.create_service(Bool, 'set_auto_mode', self.srv_Callback_Set_Auto_mode)
+        self.block_auto_mode_srv = self.create_service(SetBool, 'block_auto_mode', self.srv_Callback_Block_Auto)
+        self.set_auto_mode_srv = self.create_service(SetBool, 'set_auto_mode', self.srv_Callback_Set_Auto_Mode)
 
         #Initializing Variables
         self.m_pi = math.pi
@@ -47,6 +48,7 @@ class TeleopNode(Node):
 
         self.previous_drive_mode = self.Mode_Forward
         self.previous_non_turn_mode = self.Mode_Forward
+        self.previous_buttons = numpy.array([])
         self.previous_buttons.resize(self.number_of_buttons)
         self.turning_buttons_initiated = False
         self.Default_Turning_Calc = 1.0
@@ -71,12 +73,12 @@ class TeleopNode(Node):
 
         #Lookup turning radius
         self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
-        self.declare_parameter('turn_calc_1', rclpy.Parameter.Type.DOUBLE)
+        self.declare_parameter('turn_calc_l', rclpy.Parameter.Type.DOUBLE)
 
         self.turn_calc_w = self.get_parameter('turn_calc_w').value
-        self.turn_calc_1 = self.get_parameter('turn_calc_1').value
+        self.turn_calc_1 = self.get_parameter('turn_calc_l').value
 
-        self.get_logger().info('min turning w: %f, min turning 1: %f' %self.turn_calc_w %self.turn_calc_1)
+        self.get_logger().info('min turning w: {}, min turning 1: {}'.format(self.turn_calc_w, self.turn_calc_1) )
 
         #Lookup axis and button map
         self.declare_parameter('axis_map.axis_vx', rclpy.Parameter.Type.INTEGER)
@@ -156,7 +158,7 @@ class TeleopNode(Node):
 
         #lookup kvbuttons
         self.declare_parameter('kv_default_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
-        self.kv_default_buttons = self.get_parameter('kv-default_buttons')
+        self.kv_default_buttons = self.get_parameter('kv_default_buttons')
 
         #mode left and mode forward buttons
         self.declare_parameter('mode_left_buttons', rclpy.Parameter.Type.INTEGER_ARRAY)
@@ -165,13 +167,13 @@ class TeleopNode(Node):
         self.mode_left_buttons = self.get_parameter('mode_left_buttons').value
 
         #Trigger map
-        self.declare_parameter('triger_map.button_0', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_1', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_2', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_3', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_4', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_5', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('triger_map.button_6', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_0', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_1', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_2', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_3', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_4', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_5', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('trigger_map.button_6', rclpy.Parameter.Type.STRING)
 
         tb0 = self.get_parameter('trigger_map.button_0').value
         tb1 = self.get_parameter('trigger_map.button_1').value
@@ -181,7 +183,7 @@ class TeleopNode(Node):
         tb5 = self.get_parameter('trigger_map.button_5').value
         tb6 = self.get_parameter('trigger_map.button_6').value
 
-        trigger_string_map = {'button_0':tb0, 'button2':tb2, 'button3':tb3, 'button4':tb4, 'button5':tb5, 'button6':tb6}
+        trigger_string_map = {'button_0':tb0, 'button_1':tb1, 'button_2':tb2, 'button_3':tb3, 'button_4':tb4, 'button_5':tb5, 'button_6':tb6}
         
         for l in range(7):
             button = 'button_{}'.format(l)

@@ -12,6 +12,7 @@ from loki_base.pltf_clc_std import PltfClcStd
 import numpy as np
 from loki_base.Py_Base_State import PyBaseState
 from loki_base.canframe import canframe
+import numpy
 
 class BaseDriver(Node):
 
@@ -19,9 +20,13 @@ class BaseDriver(Node):
         super().__init__('base_driver')
 
         # Initialize ROS parameters
-        rate_val = self.get_parameter("rate").get_parameter_value().integer_value
-        can_interface_type = self.get_parameter('can_interface_type').get_parameter_value().string_value
-        can_interface_name = self.get_parameter('can_interface_name').get_parameter_value().string_value #fix this parameter calling not right
+        # self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
+        self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('can_interface_name', rclpy.Parameter.Type.STRING)
+
+        # rate_val = self.get_parameter('rate').value
+        can_interface_type = self.get_parameter('can_interface_type').value 
+        can_interface_name = self.get_parameter('can_interface_name').value
 
         # Initialize CAN interface type
         if can_interface_type == "socketcan":
@@ -34,37 +39,13 @@ class BaseDriver(Node):
         self.get_logger().info(f"Using CAN interface {can_interface_name}")
 
         # Initialize BaseDriver with CAN interface
-        base_driver = BaseDriver()
-        if not base_driver.initPltf(interface_type, can_interface_name):
-            self.get_logger().error("Failed to initialize robot base.")
-            return
+        # base_driver = BaseDriver()
 
-        self.rate = self.create_rate(rate_val)  # Create rate control object
+        self.rate = self.create_rate(10)  # Create rate control object
 
         # Determine if we're in simulation mode
-        simple_sim = self.get_parameter('simple_sim').get_parameter_value().bool_value
-
-        if simple_sim:
-            self.get_logger().info("Simulating feedback")
-
-            while rclpy.ok():
-                base_driver.publish_joint_commands()
-                base_driver.sendSimCommands()
-                base_driver.handleFeedback()
-                rclpy.spin_once()
-                self.rate.sleep()
-
-        else:
-            self.get_logger().info("Assuming feedback from real robot")
-
-            while rclpy.ok():
-                base_driver.publish_joint_commands()
-                base_driver.sendDriveCommands()
-                base_driver.sendDeviceCommands()
-                base_driver.evalCanBuffer()
-                base_driver.handleFeedback()
-                rclpy.spin_once()
-                self.rate.sleep()
+        self.declare_parameter('simple_sim', rclpy.Parameter.Type.BOOL)
+        simple_sim = self.get_parameter('simple_sim').value
 
         #initializing variables
         self.has_gazebo = False
@@ -114,13 +95,24 @@ class BaseDriver(Node):
         self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
         self.cli_set_drive_params = self.create_client(Params, 'params')
 
+        if not self.initPltf(interface_type, can_interface_name):
+            self.get_logger().error("Failed to initialize robot base.")
+            return
+
 
 
         #TF2 Params
-        self.tf_prefix = self.get_parameter('tf_prefix').get_parameter_value().string_value
-        self.frame_id = self.get_parameter('odom_frame_id').get_parameter_value().string_value
-        self.broadcast_tf = self.get_parameter('enable_odom_tf').get_parameter_value().bool_value
-        self.allow_geometry_odometry = self.get_parameter('passthrough_gazebo_odometry').get_parameter_value().bool_value #How to  default values?
+        self.declare_parameter('tf_prefix', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('odom_frame_id', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('enable_odom_tf', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('passthrough_gazebo_odometry', rclpy.Parameter.Type.BOOL)
+        self.declare_parameter('twist_covariance', rclpy.Parameter.Type.DOUBLE_ARRAY)      
+
+
+        self.tf_prefix = self.get_parameter('tf_prefix').value
+        self.frame_id = self.get_parameter('odom_frame_id').value
+        self.broadcast_tf = self.get_parameter('enable_odom_tf').value
+        self.allow_geometry_odometry = self.get_parameter('passthrough_gazebo_odometry').value
         self.twist_cov_default_array = np.array([0.001,0,0,0,0,0,
                                         0,0.001,0,0,0,0,
                                         0,0,0.001,0,0,0,
@@ -129,9 +121,9 @@ class BaseDriver(Node):
                                         0,0,0,0,0,0.03])
                                         #is this how you do it
 
-        self.twist_cov_default_vector = list(self.twist_cov_default_array)
-        self.twist_cov_vector = self.get_parameter('twist_covariance').get_parameter_value().double_value
-        self.twist_cov_vector = self.twist_cov
+        self.twist_cov_default_vector = numpy.array(self.twist_cov_default_array).flatten()
+        cov_vector = self.get_parameter('twist_covariance').value
+        self.twist_cov_vector = numpy.array(cov_vector).flatten()
         self.pose_cov = self.twist_cov
 
         if self.allow_geometry_odometry:
@@ -190,7 +182,7 @@ class BaseDriver(Node):
             batz = "batteries.bat{}.z".format(j)
             getmesh = "batteries.bat{}.bat_mesh".format(j)
 
-            self.declare_parameter(getid, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)
@@ -251,6 +243,31 @@ class BaseDriver(Node):
 
         self.pltf_clc_type = PltfClcStd()
 
+
+        if simple_sim:
+            self.get_logger().info("Simulating feedback")
+
+            while rclpy.ok():
+                self.publish_joint_commands()
+                self.sendSimCommands()
+                self.handleFeedback()
+                rclpy.spin_once()
+                self.rate.sleep()
+
+        else:
+            self.get_logger().info("Assuming feedback from real robot")
+
+            while rclpy.ok():
+                self.publish_joint_commands()
+                self.sendDriveCommands()
+                self.sendDeviceCommands()
+                self.evalCanBuffer()
+                self.handleFeedback()
+                rclpy.spin_once()
+                self.rate.sleep()
+
+
+
         self.loadClcPlugin()
 
     def loadClcPlugin(self):
@@ -283,7 +300,7 @@ class BaseDriver(Node):
     def client_init_pltf(self, can_interface_type, can_interface_name):
 
         InitPltf.Request().can_interface_type = can_interface_type
-        InitPltf.Request().batteries_values = can_interface_name
+        InitPltf.Request().can_interface_name = can_interface_name
 
         Future = self.cli_initPltf.call_async(InitPltf.Request())
         rclpy.spin_until_future_complete(self, Future)
@@ -712,6 +729,7 @@ def main(args=None):
     rclpy.init(args=args)
     node = BaseDriver()
     rclpy.spin(node)
+    node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

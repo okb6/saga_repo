@@ -224,13 +224,13 @@ class PyToCpp : public rclcpp::Node {
                 batz = "batteries.bat"+ sbat+ ".z";
                 getmesh = "batteries.bat"+ sbat+ ".bat_mesh";
 
-                declare_parameter(getid, 0);
-                declare_parameter(gettype, 1);
+                declare_parameter(getid, 0.0);
+                declare_parameter(gettype, 1.0);
                 declare_parameter(batx, 0.0);
                 declare_parameter(baty, 0.7500);
-                declare_parameter(batyaw, 0);
+                declare_parameter(batyaw, 0.0);
                 declare_parameter(batz, 0.75721);
-                declare_parameter(getmesh, 0);
+                declare_parameter(getmesh, 0.0);
 
                 get_parameter(getid, bat_id);
                 get_parameter(gettype, bat_type);

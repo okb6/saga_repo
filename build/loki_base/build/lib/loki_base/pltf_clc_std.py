@@ -6,7 +6,7 @@ import random
 
 class PltfClcStd:
     def __init__(self):
-        super().__init__('pltf_clc_std')
+        # super().__init__('pltf_clc_std')
 
         #Variables
         self.mpi = math.pi
