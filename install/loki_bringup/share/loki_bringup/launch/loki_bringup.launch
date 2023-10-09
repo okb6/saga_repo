@@ -14,7 +14,7 @@
 
   <group unless="$(eval arg('tf_prefix') == '')" namespace="$(var robot_name)">
     <!-- model bringup -->
-    <include file="$(find-pkg-share loki_description)/launch/model.launch">
+    <include file="$(find-pkg-share loki_description)/launch/model.launch.py">
       <let name="robot_name" value="$(var robot_name)" />
       <let name="tf_prefix" value="$(var tf_prefix)/" />
       <let name="robot_model" value="$(var robot_model)" />
@@ -35,7 +35,7 @@
   </group>
   <group if="$(eval arg('tf_prefix') == '')" >
     <!-- model bringup -->
-    <include file="$(find-pkg-share loki_description)/launch/model.launch">
+    <include file="$(find-pkg-share loki_description)/launch/model.launch.py">
       <let name="robot_name" value="$(var robot_name)" />
       <let name="tf_prefix" value="$(var tf_prefix)" />
       <let name="robot_model" value="$(var robot_model)" />

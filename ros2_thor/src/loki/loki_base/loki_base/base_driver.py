@@ -19,9 +19,13 @@ class BaseDriver(Node):
         super().__init__('base_driver')
 
         # Initialize ROS parameters
-        rate_val = self.get_parameter("rate").get_parameter_value().integer_value
-        can_interface_type = self.get_parameter('can_interface_type').get_parameter_value().string_value
-        can_interface_name = self.get_parameter('can_interface_name').get_parameter_value().string_value #fix this parameter calling not right
+        rate_val = self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
+        can_interface_name = self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
+        can_interface_type = self.declare_parameter('can_interface_name', rclpy.Parameter.Type.STRING)
+
+        rate_val = self.get_parameter("rate").value()
+        can_interface_type = self.get_parameter('can_interface_type').value #fix favlues
+        can_interface_name = self.get_parameter('can_interface_name').value
 
         # Initialize CAN interface type
         if can_interface_type == "socketcan":
@@ -190,7 +194,7 @@ class BaseDriver(Node):
             batz = "batteries.bat{}.z".format(j)
             getmesh = "batteries.bat{}.bat_mesh".format(j)
 
-            self.declare_parameter(getid, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)

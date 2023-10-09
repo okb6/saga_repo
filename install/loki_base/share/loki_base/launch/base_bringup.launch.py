@@ -24,7 +24,6 @@ def generate_launch_description():
     can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text=""))
     joint_states_launch_arg = DeclareLaunchArgument("joint_states_remap_to", default_value=TextSubstitution(text=""))
 
-    joint_states_launch_value= LaunchConfiguration("joint_states_remap_to")
 
 
     basedriver = Node(
@@ -33,7 +32,7 @@ def generate_launch_description():
     executable="base_driver",
     name="base_driver",
     remappings=[('cmd_vel', 'twist_mux/cmd_vel'),
-                ('joint_states', joint_states_launch_value)],
+                ('joint_states', "base_driver/joint_states")],
     parameters=[
         {"robot_model": LaunchConfiguration("robot_model"),
         "simple_sim": LaunchConfiguration("simple_sim"),
