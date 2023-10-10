@@ -43,24 +43,24 @@ teleop_node:
 
     # Button that must be pressed when turning in place
     
-    button_turning_safety: 3 #Y
+    button_turning_safety: button_3 #Y
 
 
     # Button combination for homing
     # Buttons must be pressed at the same time
 
-    home_buttons: [0, 3] #A and Y together
+    home_buttons: [button_0, button_3] #A and Y together
 
 
     # Button combination for cahnging to omni mode
     # Buttons must be pressed at the same time
 
-    omni_buttons: [1, 2] #B and X together
+    omni_buttons: [button_1, button_2] #B and X together
 
-    kv_default_buttons: [4, 5] #LB and RB
+    kv_default_buttons: [button_4, button_5] #LB and RB
 
-    mode_left_buttons: [7, 11] #Button function and button left (start and Left)
-    mode_forward_buttons: [7, 13] #button function and button forward (start and up)
+    mode_left_buttons: [button_7, button_left] #Button function and button left (start and Left)
+    mode_forward_buttons: [button_7, button_forward] #button function and button forward (start and up)
 
     trigger_map: 
       button_0: "release_esd_lock"

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices
 
 # Utility rule file for loki_can_devices_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/loki_can_devices_uninstall.dir/compiler_depend.make
 include CMakeFiles/loki_can_devices_uninstall.dir/progress.make
 
 CMakeFiles/loki_can_devices_uninstall:
-	/usr/bin/cmake -P /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 loki_can_devices_uninstall: CMakeFiles/loki_can_devices_uninstall
 loki_can_devices_uninstall: CMakeFiles/loki_can_devices_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/loki_can_devices_uninstall.dir/clean:
 .PHONY : CMakeFiles/loki_can_devices_uninstall.dir/clean
 
 CMakeFiles/loki_can_devices_uninstall.dir/depend:
-	cd /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices /home/cairlab/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles/loki_can_devices_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles/loki_can_devices_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_can_devices_uninstall.dir/depend
 

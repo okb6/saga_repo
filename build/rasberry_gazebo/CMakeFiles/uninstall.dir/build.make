@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cairlab/Documents/GitHub/saga_repo/build/rasberry_gazebo
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/cairlab/Documents/GitHub/saga_repo/build/rasberry_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo /home/cairlab/Documents/GitHub/saga_repo/build/rasberry_gazebo /home/cairlab/Documents/GitHub/saga_repo/build/rasberry_gazebo /home/cairlab/Documents/GitHub/saga_repo/build/rasberry_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo /home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo /home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo /home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

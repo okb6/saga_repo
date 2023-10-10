@@ -1,7 +1,7 @@
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp \
  /usr/include/stdc-predef.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -190,14 +190,14 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_itf.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_itf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/CanDriveItf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/CanDriveItf.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/node_handle.h \
@@ -207,8 +207,8 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_itf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_itf.h \
  /usr/include/boost/array.hpp /usr/include/boost/detail/workaround.hpp \
  /usr/include/boost/config/workaround.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
@@ -243,7 +243,7 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/RoboteqFbl2360.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/RoboteqFbl2360.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -663,35 +663,35 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/RoboteqFbl2360Diff.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/can_frame.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/RoboteqFbl2360Diff.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__functions.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__type_support.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/kc_battery.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_v1pcb.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_v1uv.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/controller_array.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__functions.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__type_support.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/kc_battery.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_v1pcb.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_v1uv.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/controller_array.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_data__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_config__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_state__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_status_flag__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/motor_state__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__functions.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__type_support.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/battery_array.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_data__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_alarms__struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__functions.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__type_support.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_data__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_config__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_state__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_status_flag__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/motor_state__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__functions.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/controller_array__type_support.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/battery_array.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_data__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_alarms__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__functions.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/battery_array__type_support.h \
  /usr/include/boost/thread/mutex.hpp \
  /usr/include/boost/thread/detail/platform.hpp \
  /usr/include/boost/config/requires_threads.hpp \

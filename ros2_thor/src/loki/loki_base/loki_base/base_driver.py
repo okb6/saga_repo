@@ -19,6 +19,17 @@ class BaseDriver(Node):
     def __init__(self):
         super().__init__('base_driver')
 
+        #MISC Variables
+        drive_mode = 0
+        self.latest_base_command = PyBaseState()
+        self.basestatemsg = PyBaseState()
+
+        self.emergency_stop = False
+        self.latest_base_command_time = self.get_clock().now()
+        self.command_timeout_time = 0.5
+
+        self.pltf_clc_type = PltfClcStd()
+
         # Initialize ROS parameters
         # self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
         self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
@@ -53,7 +64,6 @@ class BaseDriver(Node):
         
         
         #Subscribers
-        self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
 
         #Publishers
@@ -73,7 +83,7 @@ class BaseDriver(Node):
         self.server_home_steering = self.create_service(Trigger, 'home_steering', self.srv_callback_home_steering )
         self.server_current_pos_zero = self.create_service(CanID, 'set_home_count_current_pos_zero', self.srv_callback_curent_pos_zero)
         self.server_reset_odom = self.create_service(Trigger, 'reset_base_odom', self.srv_Callback_Reset_odom)
-        self.server_set_drive_params = self.create_service(DriveParams, 'set_drive_params', self.srv_callback_set_drive_params)
+        # self.server_set_drive_params = self.create_service(DriveParams, 'set_drive_params', self.srv_callback_set_drive_params) #no client?? will make regular funciton
         self.server_safety_stop = self.create_service(SetBool, 'safety_stop', self.srv_callback_safety_stop)
 
         #Clients
@@ -227,27 +237,16 @@ class BaseDriver(Node):
                 self.ios.io1 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
             
 
-        #MISC Variables
-        drive_mode = 0
-        prop_speed = []
-        prop_pos = []
-        steer_speed = []
-        steer_max_speed = []
-        channel = []
-        self.latest_base_command = PyBaseState(drive_mode, prop_speed, prop_pos, steer_speed, steer_max_speed, channel)
-        self.basestatemsg = PyBaseState(drive_mode, prop_speed, prop_pos, steer_speed, steer_max_speed, channel)
 
-        self.emergency_stop = False
-        self.latest_base_command_time = self.get_clock().now()
-        self.command_timeout_time = 0.5
-
-        self.pltf_clc_type = PltfClcStd()
-
+        self.loadClcPlugin()
+        #throwing weird error about motor drives but is fixed if put down here
+        self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
 
         if simple_sim:
             self.get_logger().info("Simulating feedback")
 
             while rclpy.ok():
+                self.set_drive_params()
                 self.publish_joint_commands()
                 self.sendSimCommands()
                 self.handleFeedback()
@@ -258,6 +257,7 @@ class BaseDriver(Node):
             self.get_logger().info("Assuming feedback from real robot")
 
             while rclpy.ok():
+                self.set_drive_params()
                 self.publish_joint_commands()
                 self.sendDriveCommands()
                 self.sendDeviceCommands()
@@ -268,14 +268,14 @@ class BaseDriver(Node):
 
 
 
-        self.loadClcPlugin()
+        
 
     def loadClcPlugin(self):
         success = True
 
         try:
             self.pltf_clc_type.initialize(self.motor_drives)
-            self.pltf_clc_type.calculateCommand(0,0,0, self.latest_base_command)
+            self.pltf_clc_type.calculateCommand(0,0,0, self.motor_drives, self.latest_base_command)
         
         except:
             self.get_logger().error("The plugin failed to load for some reason.")
@@ -377,7 +377,7 @@ class BaseDriver(Node):
         yaw = 0.0
 
         if not self.has_gazebo:
-            if self.pltf_clc_itf.calculate_Odometry(base_state, vx, vy, wz, x, y, yaw):
+            if self.pltf_clc_itf.calculateOdometry(base_state, vx, vy, wz, x, y, yaw, self.motor_drives):
                 odom_msg.header.frame_id = self.frame_id
                 odom_msg.child_frame_id = "base_link"
                 odom_msg.header.stamp = self.get_clock().now()
@@ -439,7 +439,7 @@ class BaseDriver(Node):
     
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
-        self.latest_base_command = self.pltf_clc_type.calculateCommand(twist_in.linear.x, twist_in.linear.y, twist_in.angular.z)
+        self.pltf_clc_type.calculateCommand(twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
 
     def gazebo_odom_callback(self, odom_in):
         last_gazebo_odom = odom_in
@@ -594,17 +594,17 @@ class BaseDriver(Node):
         response.sucess = True
         response.message = "Resetting base odometry. x = 0, y = 0, yaw = 0"
 
-    def srv_callback_set_drive_params(self, request, response):
-        num_drives = len(self.motor_drives)
+    def set_drive_params(self):
+        # num_drives = len(self.motor_drives)
 
-        for i in range(len(request.params)):
-            if 0 <= request.params[i].index < num_drives and request.params[i].type in self.motor_drives_[request.params[i].index]:
-                self.motor_drives_[request.params[i].index][request.params[i].type] = request.params[i].value
-                response.status += 1
-            else:
-                response.message = "One or more params could not be set"
+        # for i in range(len(request.params)):
+        #     if 0 <= request.params[i].index < num_drives and request.params[i].type in self.motor_drives_[request.params[i].index]:
+        #         self.motor_drives_[request.params[i].index][request.params[i].type] = request.params[i].value
+        #         response.status += 1
+        #     else:
+        #         response.message = "One or more params could not be set"
 
-        self.pltf_clc_type.setParams(self.motor_drives)
+        # self.pltf_clc_type.setParams(self.motor_drives)
         self.client_set_drive_params()
 
     def client_set_drive_params(self):

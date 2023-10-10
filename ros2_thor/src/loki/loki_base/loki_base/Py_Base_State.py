@@ -2,10 +2,16 @@ import rclpy
 
 
 class PyBaseState():
-    def __init__(self, drive_mode, prop_speed, prop_pos, steer_speed, steer_pos, steer_max_speed, channel):
-        self.drive_mode = drive_mode
-        self.prop_speed = prop_speed
-        self.prop_pos = prop_pos
-        self.steer_speed = steer_speed
-        self.steer_max_speed = steer_max_speed
-        self.channel = channel
+    def __init__(self):
+        
+        PyBaseState.drive_mode = 0
+        PyBaseState.prop_speed = [1, 2, 3, 4]
+        PyBaseState.prop_pos = []
+        PyBaseState.steer_speed = []
+        PyBaseState.steer_pos = [1, 2, 3, 4]
+        PyBaseState.steer_max_speed = []
+        PyBaseState.channel = []
+
+
+
+

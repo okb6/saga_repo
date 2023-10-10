@@ -1,5 +1,5 @@
 CMakeFiles/can.dir/src/kc_battery.cpp.o: \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp \
  /usr/include/stdc-predef.h /usr/include/assert.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -8,8 +8,8 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/kc_battery.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/kc_battery.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -45,7 +45,7 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -80,11 +80,11 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/ctime \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/can_frame.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__struct.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__struct.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__functions.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__functions.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstdlib \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -106,11 +106,11 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
- /home/cairlab/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__type_support.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
+ /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/include/loki_msgs/loki_msgs/msg/detail/can_frame__type_support.h \
  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
- /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \

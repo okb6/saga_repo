@@ -10,6 +10,7 @@ class PltfClcStd:
 
         #Variables
         self.mpi = math.pi
+        self.number_of_drives = 4
 
     
     def initialize(self, motor_drives):
@@ -20,8 +21,7 @@ class PltfClcStd:
         self.setParams(motor_drives)
     
     def setParams(self, motor_drives):
-        self.motor_drives = motor_drives
-        self.number_of_drives = len(self.motor_drives)
+        self.number_of_drives = len(motor_drives)
 
         for drive in motor_drives:
             angle = -self.normalize_angle_half_pi(math.atan2(drive["x"], drive["y"]))
@@ -32,7 +32,11 @@ class PltfClcStd:
             angle += self.mpi/2 * (-1 * angle/abs(angle))
         return angle
     
-    def calculateCommand(self, vx, vy, wz, joint_states_out):
+    def calculateCommand(self, vx, vy, wz, motor_drives, joint_states_out):
+
+        self.number_of_drives = len(motor_drives)
+        self.motor_drives = motor_drives
+
         speed = [0.0] * self.number_of_drives
         steering = [0.0] * self.number_of_drives
         drive_steer = [0.0] * self.number_of_drives
@@ -80,7 +84,10 @@ class PltfClcStd:
             joint_states_out.prop_speed[i] = 0
         return joint_states_out
     
-    def calculateOdometry(self, joint_states_in, vx, vy, wz, x, y, yaw):
+    def calculateOdometry(self, joint_states_in, vx, vy, wz, x, y, yaw, motor_drives):
+        self.number_of_drives = len(motor_drives)
+        self.motor_drives = motor_drives
+        
         joint_states_in.prop_speed.append[self.number_of_drives]
         joint_states_in.prop_pos.append[self.number_of_drives]
         joint_states_in.steer_pos.append[self.number_of_drives]

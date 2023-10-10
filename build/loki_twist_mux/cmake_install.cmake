@@ -1,8 +1,8 @@
-# Install script for directory: /home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux
+# Install script for directory: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cairlab/Documents/GitHub/saga_repo/install/loki_twist_mux")
+  set(CMAKE_INSTALL_PREFIX "/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,17 +44,17 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE DIRECTORY FILES
-    "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/launch"
-    "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/config"
+    "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/launch"
+    "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/config"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/loki_twist_mux")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/loki_twist_mux")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/loki_twist_mux")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/loki_twist_mux")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -62,7 +62,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux/environment" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux/environment" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,42 +70,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux/environment" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux/environment" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/packages/loki_twist_mux")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_index/share/ament_index/resource_index/packages/loki_twist_mux")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux/cmake" TYPE FILE FILES
-    "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_core/loki_twist_muxConfig.cmake"
-    "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_core/loki_twist_muxConfig-version.cmake"
+    "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_core/loki_twist_muxConfig.cmake"
+    "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_core/loki_twist_muxConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/cairlab/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_twist_mux" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -116,5 +116,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cairlab/Documents/GitHub/saga_repo/build/loki_twist_mux/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
