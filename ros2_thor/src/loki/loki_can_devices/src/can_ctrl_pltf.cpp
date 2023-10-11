@@ -24,6 +24,10 @@ CanCtrlPltf::~CanCtrlPltf()
     motor_controllers_.clear();   
 }
 
+bool
+CanCtrlPltf::init_can(){
+  return true;
+}
 
 void 
 CanCtrlPltf::evalCanBuffer(std::vector<CanFrame>& can_msgs_base,

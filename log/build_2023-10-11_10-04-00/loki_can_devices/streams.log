@@ -1,0 +1,44 @@
+[0.041s] Invoking command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[0.108s] [ 81%] Built target can
+[0.130s] [35m[1mConsolidate compiler generated dependencies of target pytocpp[0m
+[0.168s] [ 90%] [32mBuilding CXX object CMakeFiles/pytocpp.dir/src/py_to_cpp.cpp.o[0m
+[6.133s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:[m[K In constructor ‘[01m[KPyToCpp::PyToCpp()[m[K’:
+[6.133s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:322:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kset[m[K’ was not declared in this scope
+[6.133s]   322 |             [01;31m[Kset[m[K = init_can_ctrl();
+[6.133s]       |             [01;31m[K^~~[m[K
+[6.133s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:322:13:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[6.133s] In file included from [01m[K/usr/include/c++/11/set:61[m[K,
+[6.133s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[6.133s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.133s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.133s]                  from [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:1[m[K:
+[6.133s] [01m[K/usr/include/c++/11/bits/stl_set.h:94:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::set[m[K’
+[6.133s]    94 |     class [01;36m[Kset[m[K
+[6.134s]       |           [01;36m[K^~~[m[K
+[6.134s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[6.134s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.134s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.134s]                  from [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:1[m[K:
+[6.134s] [01m[K/usr/include/c++/11/set:78:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::set[m[K’
+[6.134s]    78 |       using [01;36m[Kset[m[K = std::set<_Key, _Cmp, polymorphic_allocator<_Key>>;
+[6.134s]       |             [01;36m[K^~~[m[K
+[6.134s] In file included from [01m[K/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:52[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/lexical_cast/try_lexical_convert.hpp:44[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/lexical_cast.hpp:32[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/format_date_parser.hpp:14[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/date_generator_parser.hpp:20[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/date_facet.hpp:25[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/gregorian/gregorian_io.hpp:16[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/gregorian/gregorian.hpp:31[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/posix_time/time_formatters.hpp:12[m[K,
+[6.134s]                  from [01m[K/usr/include/boost/date_time/posix_time/posix_time.hpp:24[m[K,
+[6.134s]                  from [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h:31[m[K,
+[6.134s]                  from [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h:5[m[K,
+[6.134s]                  from [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/py_to_cpp.cpp:38[m[K:
+[6.134s] [01m[K/usr/include/boost/container/container_fwd.hpp:142:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::container::set[m[K’
+[6.134s]   142 | class [01;36m[Kset[m[K;
+[6.134s]       |       [01;36m[K^~~[m[K
+[12.078s] gmake[2]: *** [CMakeFiles/pytocpp.dir/build.make:76: CMakeFiles/pytocpp.dir/src/py_to_cpp.cpp.o] Error 1
+[12.078s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/pytocpp.dir/all] Error 2
+[12.078s] gmake: *** [Makefile:146: all] Error 2
+[12.081s] Invoked command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices' returned '2': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8

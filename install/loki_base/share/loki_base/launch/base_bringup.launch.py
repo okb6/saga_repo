@@ -20,7 +20,7 @@ def generate_launch_description():
     simple_sim_launch_arg = DeclareLaunchArgument("simple_sim", default_value=TextSubstitution(text="false"))    
     enable_odom_launch_arg = DeclareLaunchArgument("enable_odom_tf", default_value=TextSubstitution(text="true"))    
     odom_frame_launch_arg = DeclareLaunchArgument("odom_frame_id", default_value=TextSubstitution(text="odom"))    
-    can_name_launch_arg = DeclareLaunchArgument("can_interface_name", default_value=TextSubstitution(text=""))    
+    can_name_launch_arg = DeclareLaunchArgument("can_interface_name", default_value=TextSubstitution(text="can0"))    
     can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text=""))
     joint_states_launch_arg = DeclareLaunchArgument("joint_states_remap_to", default_value=TextSubstitution(text=""))
 
@@ -44,6 +44,8 @@ def generate_launch_description():
         "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to")},
         config
         ],
+    output = 'screen'
+
     )
 
     ld.add_action(robot_mode_launch_arg)

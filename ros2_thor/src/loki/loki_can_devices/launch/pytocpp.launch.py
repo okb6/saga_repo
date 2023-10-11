@@ -16,7 +16,8 @@ def generate_launch_description():
         package="loki_can_devices",
         executable="pytocpp",
         name="py_to_cpp",
-        parameters= [config]
+        parameters= [config],
+        output = 'screen'
     )
 
     ld.add_action(pycppnode)

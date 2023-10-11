@@ -1,0 +1,26 @@
+[0.042s] Invoking command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[0.093s] [  9%] [32mBuilding CXX object CMakeFiles/can.dir/src/can_line_socketcan.cpp.o[0m
+[0.094s] [ 18%] [32mBuilding CXX object CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o[0m
+[3.056s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::initialize(std::string)[m[K’:
+[3.056s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[3.056s]    33 | [01;35m[K}[m[K
+[3.056s]       | [01;35m[K^[m[K
+[3.059s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::writeMsg(CanFrame)[m[K’:
+[3.059s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:140:34:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getId()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kcanid_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.059s]   140 |      .can_id = [01;35m[Kcan_frame_wr.getId()[m[K,
+[3.059s]       |                [01;35m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[3.059s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:141:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getLength()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[K__u8[m[K’ {aka ‘[01m[Kunsigned char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.059s]   141 |      .can_dlc = [01;35m[Kcan_frame_wr.getLength()[m[K,
+[3.059s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[3.097s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp:[m[K In member function ‘[01m[Kbool CanCtrlPltf::init_can()[m[K’:
+[3.097s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp:29:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[3.097s]    29 |   return true
+[3.097s]       |              [01;31m[K^[m[K
+[3.097s]       |              [32m[K;[m[K
+[3.097s]    30 | [32m[K}[m[K
+[3.097s]       | [32m[K~[m[K             
+[3.993s] gmake[2]: *** [CMakeFiles/can.dir/build.make:174: CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o] Error 1
+[3.993s] gmake[2]: *** Waiting for unfinished jobs....
+[4.094s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/can.dir/all] Error 2
+[4.094s] gmake: *** [Makefile:146: all] Error 2
+[4.096s] Invoked command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices' returned '2': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8

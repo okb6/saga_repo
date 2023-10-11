@@ -47,7 +47,7 @@ public:
   */
   enum CanAdapters
   {
-    CAN_ITF_SOCKETCAN,
+    CAN_ITF_SOCKETCAN
   };
  /**
   * TODO: add description
@@ -77,6 +77,8 @@ public:
   * \param motor_drives A vector of module parameter maps
   * \param battery_map
   */
+  bool init_can();
+
   bool initPltf(int can_interface_type, std::string can_interface_name, 
                 std::vector<std::map<std::string, double> > motor_drives, 
                 std::vector<std::map<std::string, double> > battery_map,

@@ -41,7 +41,7 @@ class BaseDriver(Node):
 
         # Initialize CAN interface type
         if can_interface_type == "socketcan":
-            interface_type = 4
+            interface_type = 0
         else:
             self.get_logger().error(
                 "Invalid or missing 'can_interface_type' parameter.")
@@ -105,9 +105,15 @@ class BaseDriver(Node):
         self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
         self.cli_set_drive_params = self.create_client(Params, 'params')
 
+        self.initPltf(interface_type, can_interface_name)
+
+
         if not self.initPltf(interface_type, can_interface_name):
             self.get_logger().error("Failed to initialize robot base.")
             return
+        else:
+            self.get_logger().info("Initialized Robot Base")
+       
 
 
 
@@ -276,6 +282,7 @@ class BaseDriver(Node):
         try:
             self.pltf_clc_type.initialize(self.motor_drives)
             self.pltf_clc_type.calculateCommand(0,0,0, self.motor_drives, self.latest_base_command)
+            self.get_logger().info("The plugin was successful to load")
         
         except:
             self.get_logger().error("The plugin failed to load for some reason.")
@@ -298,6 +305,7 @@ class BaseDriver(Node):
     
     
     def client_init_pltf(self, can_interface_type, can_interface_name):
+        self.get_logger().info('running init pltf')
 
         InitPltf.Request().can_interface_type = can_interface_type
         InitPltf.Request().can_interface_name = can_interface_name
@@ -579,9 +587,9 @@ class BaseDriver(Node):
 
     
     def srv_callback_home_steering(self, request, response):
-        self.get_logger().info("homiing steering")
+        self.get_logger().info("homing steering")
 
-        if self.homesteeringAll():
+        if self.homeSteeringAll():
             response.success = True
             response.message = "homing commands sent"
         else:

@@ -88,6 +88,8 @@ class PyToCpp : public rclcpp::Node {
 
             can_ctrl_pltf_ = new CanCtrlPltf();
 
+            RCLCPP_INFO(this->get_logger(), "Starting PyToCpp");
+
             //Parameters from robot017
             //get motor_drives parameters
             std::string getnode;
@@ -317,6 +319,14 @@ class PyToCpp : public rclcpp::Node {
             
             can_device_t_frame_count_ = 0;
 
+            bool set = init_can_ctrl();
+            if ((set)){
+                RCLCPP_INFO(this->get_logger(), "Can_ctrl did was set up");
+            }
+            else{
+                RCLCPP_INFO(this->get_logger(), "Starting PyToCpp");
+            }
+
 
 
         }
@@ -364,6 +374,16 @@ class PyToCpp : public rclcpp::Node {
 
         // CanCtrlPltf *can_ctrl_pltf_;
 
+        bool init_can_ctrl(){
+            bool set = can_ctrl_pltf_->init_can();
+            if (set){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
         bool server_get_set_bool(const std::shared_ptr<loki_msgs::srv::GetSetBool::Request> request,
                         const std::shared_ptr<loki_msgs::srv::GetSetBool::Response> response){
             
@@ -391,6 +411,7 @@ class PyToCpp : public rclcpp::Node {
             
 
             bool ret = can_ctrl_pltf_->initPltf(request->can_interface_type, request->can_interface_name, motor_drives_, batteries_, ios_);
+            RCLCPP_INFO(this->get_logger(), "Calling InitPltf");
             response->initpltf = ret;
             return true;
 
@@ -528,6 +549,12 @@ class PyToCpp : public rclcpp::Node {
             bool success;
             if(request->homesteering){
                 can_ctrl_pltf_->homeSteeringAll();
+            }
+            if (success){
+                RCLCPP_INFO(this->get_logger(), "Homing Successful");
+            }
+            else{
+                RCLCPP_WARN(this->get_logger(), "Homing Failed");
             }
             response->success = success;
             return true;      
