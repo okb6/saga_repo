@@ -23,7 +23,9 @@ def generate_launch_description():
     can_name_launch_arg = DeclareLaunchArgument("can_interface_name", default_value=TextSubstitution(text="can0"))    
     can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text=""))
     joint_states_launch_arg = DeclareLaunchArgument("joint_states_remap_to", default_value=TextSubstitution(text=""))
-
+    tf_prefix_launch_arg = DeclareLaunchArgument("tf_prefix", default_value=TextSubstitution(text=""))
+    passthrough_gazebo_launch_arg = DeclareLaunchArgument("passthrough_gazebo_odometry", default_value=TextSubstitution(text="false"))
+    # twist_cov_launch_arg = DeclareLaunchArgument("twist_covariance", default_value=[])
 
 
 
@@ -41,7 +43,11 @@ def generate_launch_description():
             "odom_frame_id": LaunchConfiguration("odom_frame_id"),
             "can_interface_name": LaunchConfiguration("can_interface_name"),
             "can_interface_type": LaunchConfiguration("can_interface_type"),
-            "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to")},
+            "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to"),
+            "tf_prefix": LaunchConfiguration("tf_prefix"),
+            "passthrough_gazebo_odometry": LaunchConfiguration("passthrough_gazebo_odometry"),
+            # "twist_covariance": LaunchConfiguration("twist_covariance")
+            },
             config
             ],
         output = 'screen'
@@ -55,5 +61,8 @@ def generate_launch_description():
     ld.add_action(can_type_launch_arg)
     ld.add_action(can_name_launch_arg)
     ld.add_action(joint_states_launch_arg)
+    ld.add_action(tf_prefix_launch_arg)
+    ld.add_action(passthrough_gazebo_launch_arg)
+    # ld.add_action(twist_cov_launch_arg)
     ld.add_action(basedriver)
     return ld

@@ -161,6 +161,27 @@ class BaseDriver(Node):
             elif k == 1:
                 io1 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
                 self.ios.append(io0)
+
+
+        #TF2 Params
+        self.declare_parameter('tf_prefix', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('odom_frame_id', rclpy.Parameter.Type.STRING)
+        self.declare_parameter('enable_odom_tf', rclpy.Parameter.Type.BOOL)
+        self.declare_parameter('passthrough_gazebo_odometry', rclpy.Parameter.Type.BOOL)
+        # self.declare_parameter('twist_covariance', rclpy.Parameter.Type.DOUBLE_ARRAY)      
+
+
+        self.tf_prefix = self.get_parameter('tf_prefix').value
+        self.frame_id = self.get_parameter('odom_frame_id').value
+        self.broadcast_tf = self.get_parameter('enable_odom_tf').value
+        self.allow_geometry_odometry = self.get_parameter('passthrough_gazebo_odometry').value
+        # self.twist_cov_default_array = np.array([0.001,0,0,0,0,0,
+        #                                 0,0.001,0,0,0,0,
+        #                                 0,0,0.001,0,0,0,
+        #                                 0,0,0,0.001,0,0,
+        #                                 0,0,0,0,0.001,0,
+        #                                 0,0,0,0,0,0.03])
+        #                                 #is this how you do it
         
         #Subscribers
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
@@ -207,50 +228,35 @@ class BaseDriver(Node):
         # self.initPltf(interface_type, can_interface_name)
 
 
-        if not self.initPltf(interface_type, can_interface_name):
-            self.get_logger().error("Failed to initialize robot base.")
-            return
-        else:
-            self.get_logger().info("Initialized Robot Base")
+        # if not self.initPltf(interface_type, can_interface_name):
+        #     self.get_logger().error("Failed to initialize robot base.")
+        #     return
+        # else:
+        #     self.get_logger().info("Initialized Robot Base")
        
 
-        #TF2 Params
-        self.declare_parameter('tf_prefix', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('odom_frame_id', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('enable_odom_tf', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('passthrough_gazebo_odometry', rclpy.Parameter.Type.BOOL)
-        self.declare_parameter('twist_covariance', rclpy.Parameter.Type.DOUBLE_ARRAY)      
-
-
-        self.tf_prefix = self.get_parameter('tf_prefix').value
-        self.frame_id = self.get_parameter('odom_frame_id').value
-        self.broadcast_tf = self.get_parameter('enable_odom_tf').value
-        self.allow_geometry_odometry = self.get_parameter('passthrough_gazebo_odometry').value
-        self.twist_cov_default_array = np.array([0.001,0,0,0,0,0,
-                                        0,0.001,0,0,0,0,
-                                        0,0,0.001,0,0,0,
-                                        0,0,0,0.001,0,0,
-                                        0,0,0,0,0.001,0,
-                                        0,0,0,0,0,0.03])
-                                        #is this how you do it
-
-        self.twist_cov_default_vector = numpy.array(self.twist_cov_default_array).flatten()
-        cov_vector = self.get_parameter('twist_covariance').value
-        self.twist_cov_vector = numpy.array(cov_vector).flatten()
-        self.pose_cov = self.twist_cov
+        # self.twist_cov_default_vector = numpy.array(self.twist_cov_default_array).flatten()
+        # cov_vector = self.get_parameter('twist_covariance').value
+        # self.twist_cov_vector = numpy.array(cov_vector).flatten()
+        # self.pose_cov = self.twist_cov
 
         if self.allow_geometry_odometry:
             self.gazebo_odom_sub = self.create_subscription(Odometry, 'odometry/gazebo', 1, self.gazebo_odom_callback)
         
         if self.broadcast_tf:
             self.get_logger().warn("Tmp msg: enable_odom_tf is true! If you want to broadcast your own odom frame, set param to false. Default value is true")
-            self.get_logger().info("Broadcasting odometry frame to robot: %s ->base_link" %(self.frame_id.c_str()))
+            self.get_logger().info("Broadcasting odometry frame to robot: {} ->base_link" .format(self.frame_id))
 
         self.loadClcPlugin()
         #throwing weird error about motor drives but is fixed if put down here
         self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
 
         self.initPltf(interface_type, can_interface_name)
+        if not self.initPltf(interface_type, can_interface_name):
+            self.get_logger().error("Failed to initialize robot base.")
+            return
+        else:
+            self.get_logger().info("Initialized Robot Base")
 
         if simple_sim:
             self.get_logger().info("Simulating feedback")
