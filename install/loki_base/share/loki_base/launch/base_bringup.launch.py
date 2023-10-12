@@ -28,23 +28,23 @@ def generate_launch_description():
 
 
     basedriver = Node(
-    package="loki_base",
-    namespace="",
-    executable="base_driver",
-    name="base_driver",
-    remappings=[('cmd_vel', 'twist_mux/cmd_vel'),
-                ('joint_states', "base_driver/joint_states")],
-    parameters=[
-        {"robot_model": LaunchConfiguration("robot_model"),
-        "simple_sim": LaunchConfiguration("simple_sim"),
-        "enable_odom_tf": LaunchConfiguration("enable_odom_tf"),
-        "odom_frame_id": LaunchConfiguration("odom_frame_id"),
-        "can_interface_name": LaunchConfiguration("can_interface_name"),
-        "can_interface_type": LaunchConfiguration("can_interface_type"),
-        "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to")},
-        config
-        ],
-    output = 'screen'
+        package="loki_base",
+        namespace="",
+        executable="base_driver",
+        name="base_driver",
+        remappings=[('cmd_vel', 'twist_mux/cmd_vel'),
+                    ('joint_states', "base_driver/joint_states")],
+        parameters=[
+            {"robot_model": LaunchConfiguration("robot_model"),
+            "simple_sim": LaunchConfiguration("simple_sim"),
+            "enable_odom_tf": LaunchConfiguration("enable_odom_tf"),
+            "odom_frame_id": LaunchConfiguration("odom_frame_id"),
+            "can_interface_name": LaunchConfiguration("can_interface_name"),
+            "can_interface_type": LaunchConfiguration("can_interface_type"),
+            "joint_states_remap_to": LaunchConfiguration("joint_states_remap_to")},
+            config
+            ],
+        output = 'screen'
 
     )
 

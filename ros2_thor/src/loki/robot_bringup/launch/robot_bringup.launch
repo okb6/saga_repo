@@ -15,8 +15,8 @@
   <arg name="joy_autorepeat_rate" default="20.0" />
   <arg name="joy_deadzone" default="0.2" />
 
-  <arg name="can_interface_type" default="enc_pcb_v1rev6" />
-  <arg name="can_interface_name" default="/dev/ttyUSB0" />
+  <arg name="can_interface_type" default="socketcan" />
+  <arg name="can_interface_name" default="can0" />
 
   <!-- Robot starting pose arguments for simulation  -->
   <arg name="start_pose_x" default="0" if="$(var simple_sim)"/>

@@ -411,7 +411,6 @@ class PyToCpp : public rclcpp::Node {
             
 
             bool ret = can_ctrl_pltf_->initPltf(request->can_interface_type, request->can_interface_name, motor_drives_, batteries_, ios_);
-            RCLCPP_INFO(this->get_logger(), "Calling InitPltf");
             response->initpltf = ret;
             return true;
 

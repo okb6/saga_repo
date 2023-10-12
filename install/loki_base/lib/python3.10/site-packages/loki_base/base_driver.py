@@ -61,7 +61,106 @@ class BaseDriver(Node):
         #initializing variables
         self.has_gazebo = False
         self.pltf_clc_type = PltfClcStd()
-        
+
+        #Parameters from Robot017
+        #MOTOR DRIVES
+        drive0 = {}
+        drive1 = {}
+        drive2 = {}
+        drive3 = {}
+        self.motor_drives = []
+        self.joint_names = []
+        for i in range(4):
+            getnode = "motor_drives.drive{}.node".format(i)
+            getx = "motor_drives.drive{}.x".format(i)
+            gety = "motor_drives.drive{}.y".format(i)
+
+            self.declare_parameter(getnode, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getx, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(gety, rclpy.Parameter.Type.DOUBLE)
+
+            node = self.get_parameter(getnode).value
+            xmd = self.get_parameter(getx).value
+            ymd = self.get_parameter(gety).value
+
+            steering_name = "steering{}".format(i)
+            self.joint_names.append(steering_name)
+
+            wheel_name = "wheel{}".format(i)
+            self.joint_names.append(wheel_name)
+
+            if i == 0:
+                drive0 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+                self.motor_drives.append(drive0)
+            elif i == 1:
+                drive1 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+                self.motor_drives.append(drive1)
+            elif i == 2: 
+                drive2 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+                self.motor_drives.append(drive2)
+            elif i == 3:
+                drive3 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
+                self.motor_drives.append(drive3)
+
+        bat0 = {}
+        bat1 = {}
+        self.batteries = []
+        for j in range(2):
+            getid = "batteries.bat{}.id".format(j)
+            gettype = "batteries.bat{}.type".format(j)
+            batx = "batteries.bat{}.x".format(j)
+            baty = "batteries.bat{}.y".format(j)
+            batyaw = "batteries.bat{}.yaw".format(j)
+            batz = "batteries.bat{}.z".format(j)
+            getmesh = "batteries.bat{}.bat_mesh".format(j)
+
+            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batyaw, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(batz, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getmesh, rclpy.Parameter.Type.DOUBLE)
+
+            id = self.get_parameter(getid).value
+            btype = self.get_parameter(gettype).value
+            bx = self.get_parameter(batx).value
+            by = self.get_parameter(baty).value
+            byaw = self.get_parameter(batyaw).value
+            bz = self.get_parameter(batz).value
+            bmesh = self.get_parameter(getmesh).value
+
+            if j == 0:
+                bat0 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
+                self.batteries.append(bat0)
+            elif j == 1:
+                bat1 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
+                self.batteries.append(bat1)
+        io0 = {}
+        io1 = {}
+        self.ios = []
+        for k in range(2):
+            get_io_id = "io.io{}.id".format(k)
+            get_io_type = "io.io{}.type".format(k)
+            get_rl0 = "io.io{}.rl0_init_state".format(k)
+            get_rl1 = "io.io{}.rl1_init_state".format(k)
+
+            self.declare_parameter(get_io_id, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_io_type, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_rl0, rclpy.Parameter.Type.INTEGER)
+            self.declare_parameter(get_rl1, rclpy.Parameter.Type.INTEGER)
+
+            io_id = self.get_parameter(get_io_id).value 
+            io_type = self.get_parameter(get_io_type).value 
+            io_rl0 = self.get_parameter(get_rl0).value 
+            io_rl1 = self.get_parameter(get_rl1).value
+
+            if k == 0:
+                io0 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
+                self.ios.append(io0)
+            elif k == 1:
+                io1 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
+                self.ios.append(io0)
         
         #Subscribers
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
@@ -105,7 +204,7 @@ class BaseDriver(Node):
         self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
         self.cli_set_drive_params = self.create_client(Params, 'params')
 
-        self.initPltf(interface_type, can_interface_name)
+        # self.initPltf(interface_type, can_interface_name)
 
 
         if not self.initPltf(interface_type, can_interface_name):
@@ -114,8 +213,6 @@ class BaseDriver(Node):
         else:
             self.get_logger().info("Initialized Robot Base")
        
-
-
 
         #TF2 Params
         self.declare_parameter('tf_prefix', rclpy.Parameter.Type.STRING)
@@ -149,104 +246,11 @@ class BaseDriver(Node):
             self.get_logger().warn("Tmp msg: enable_odom_tf is true! If you want to broadcast your own odom frame, set param to false. Default value is true")
             self.get_logger().info("Broadcasting odometry frame to robot: %s ->base_link" %(self.frame_id.c_str()))
 
-        #Parameters from Robot017
-        #MOTOR DRIVES
-        drive0 = {}
-        drive1 = {}
-        drive2 = {}
-        drive3 = {}
-        self.motor_drives = [drive0, drive1, drive2, drive3]
-        self.joint_names = []
-        for i in range(4):
-            getnode = "motor_drives.drive{}.node".format(i)
-            getx = "motor_drives.drive{}.x".format(i)
-            gety = "motor_drives.drive{}.y".format(i)
-
-            self.declare_parameter(getnode, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(getx, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(gety, rclpy.Parameter.Type.DOUBLE)
-
-            node = self.get_parameter(getnode).value
-            xmd = self.get_parameter(getx).value
-            ymd = self.get_parameter(gety).value
-
-            steering_name = "steering{}".format(i)
-            self.joint_names.append(steering_name)
-
-            wheel_name = "wheel{}".format(i)
-            self.joint_names.append(wheel_name)
-
-            if i == 0:
-                self.motor_drives.drive0 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
-            elif i == 1:
-                self.motor_drives.drive1 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
-            elif i == 2: 
-                self.motor_drives.drive2 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
-            elif i == 3:
-                self.motor_drives.drive3 = {'Node':node, 'x':xmd, 'y':ymd, 'type':0, 'leg_mesh':0, 'r_wheel':0.2, 'w_wheel':0.16, 'prp_gr_rt':42, 'prp_enc_rt':1024, 'prp_max_rpm':3000, 'prp_sim_a':1.5, 'str_gr_rt':42.8571429, 'str_enc_ppr':1024, 'str_lim':3.078027759, 'str_sim_v':4}
-
-
-        bat0 = {}
-        bat1 = {}
-        self.batteries = [bat0, bat1]
-        for j in range(2):
-            getid = "batteries.bat{}.id".format(j)
-            gettype = "batteries.bat{}.type".format(j)
-            batx = "batteries.bat{}.x".format(j)
-            baty = "batteries.bat{}.y".format(j)
-            batyaw = "batteries.bat{}.yaw".format(j)
-            batz = "batteries.bat{}.z".format(j)
-            getmesh = "batteries.bat{}.bat_mesh".format(j)
-
-            self.declare_parameter(getid, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(gettype, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(batx, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(baty, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(batyaw, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(batz, rclpy.Parameter.Type.DOUBLE)
-            self.declare_parameter(getmesh, rclpy.Parameter.Type.DOUBLE)
-
-            id = self.get_parameter(getid).value
-            btype = self.get_parameter(gettype).value
-            bx = self.get_parameter(batx).value
-            by = self.get_parameter(baty).value
-            byaw = self.get_parameter(batyaw).value
-            bz = self.get_parameter(batz).value
-            bmesh = self.get_parameter(getmesh).value
-
-            if j == 0:
-                self.batteries.bat0 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
-            elif j == 1:
-                self.batteries.bat1 = {'id':id, 'type':btype, 'x':bx, 'y':by, 'yaw':byaw, 'z':bz, 'bat_mesh':bmesh}
-        io0 = {}
-        io1 = {}
-        self.ios = [io0, io1]
-        for k in range(2):
-            get_io_id = "io.io{}.id".format(k)
-            get_io_type = "io.io{}.type".format(k)
-            get_rl0 = "io.io{}.rl0_init_state".format(k)
-            get_rl1 = "io.io{}.rl1_init_state".format(k)
-
-            self.declare_parameter(get_io_id, rclpy.Parameter.Type.INTEGER)
-            self.declare_parameter(get_io_type, rclpy.Parameter.Type.INTEGER)
-            self.declare_parameter(get_rl0, rclpy.Parameter.Type.INTEGER)
-            self.declare_parameter(get_rl1, rclpy.Parameter.Type.INTEGER)
-
-            io_id = self.get_parameter(get_io_id).value 
-            io_type = self.get_parameter(get_io_type).value 
-            io_rl0 = self.get_parameter(get_rl0).value 
-            io_rl1 = self.get_parameter(get_rl1).value
-
-            if k == 0:
-                self.ios.io0 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
-            elif k == 1:
-                self.ios.io1 = {'id':io_id, 'type':io_type, 'rl0_init_state':io_rl0, 'rl1_init_state':io_rl1}
-            
-
-
         self.loadClcPlugin()
         #throwing weird error about motor drives but is fixed if put down here
         self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
+
+        self.initPltf(interface_type, can_interface_name)
 
         if simple_sim:
             self.get_logger().info("Simulating feedback")
@@ -305,7 +309,7 @@ class BaseDriver(Node):
     
     
     def client_init_pltf(self, can_interface_type, can_interface_name):
-        self.get_logger().info('running init pltf')
+        self.get_logger().info('Initializing Platform...')
 
         InitPltf.Request().can_interface_type = can_interface_type
         InitPltf.Request().can_interface_name = can_interface_name
