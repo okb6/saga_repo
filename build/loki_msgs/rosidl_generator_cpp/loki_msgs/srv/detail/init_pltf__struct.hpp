@@ -38,43 +38,25 @@ struct InitPltf_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->can_interface_type = 0l;
-      this->can_interface_name = "";
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   explicit InitPltf_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : can_interface_name(_alloc)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->can_interface_type = 0l;
-      this->can_interface_name = "";
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _can_interface_type_type =
-    int32_t;
-  _can_interface_type_type can_interface_type;
-  using _can_interface_name_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _can_interface_name_type can_interface_name;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__can_interface_type(
-    const int32_t & _arg)
-  {
-    this->can_interface_type = _arg;
-    return *this;
-  }
-  Type & set__can_interface_name(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
-  {
-    this->can_interface_name = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -118,10 +100,7 @@ struct InitPltf_Request_
   // comparison operators
   bool operator==(const InitPltf_Request_ & other) const
   {
-    if (this->can_interface_type != other.can_interface_type) {
-      return false;
-    }
-    if (this->can_interface_name != other.can_interface_name) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;

@@ -21,7 +21,7 @@ def generate_launch_description():
     enable_odom_launch_arg = DeclareLaunchArgument("enable_odom_tf", default_value=TextSubstitution(text="true"))    
     odom_frame_launch_arg = DeclareLaunchArgument("odom_frame_id", default_value=TextSubstitution(text="odom"))    
     can_name_launch_arg = DeclareLaunchArgument("can_interface_name", default_value=TextSubstitution(text="can0"))    
-    can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text=""))
+    can_type_launch_arg = DeclareLaunchArgument("can_interface_type", default_value=TextSubstitution(text="socketcan"))
     joint_states_launch_arg = DeclareLaunchArgument("joint_states_remap_to", default_value=TextSubstitution(text=""))
     tf_prefix_launch_arg = DeclareLaunchArgument("tf_prefix", default_value=TextSubstitution(text=""))
     passthrough_gazebo_launch_arg = DeclareLaunchArgument("passthrough_gazebo_odometry", default_value=TextSubstitution(text="false"))

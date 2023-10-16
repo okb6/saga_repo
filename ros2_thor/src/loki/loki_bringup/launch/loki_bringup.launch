@@ -9,8 +9,8 @@
   <arg name="simple_sim" />
   <arg name="enable_odom_tf" default="True" />
   <arg name="odom_frame_id" default="odom" />
-  <arg name="can_interface_type" default=""/>
-  <arg name="can_interface_name" default=""/>
+  <arg name="can_interface_type" default="socketcan"/>
+  <arg name="can_interface_name" default="can0"/>
 
   <group unless="$(eval arg('tf_prefix') == '')" namespace="$(var robot_name)">
     <!-- model bringup -->

@@ -20,7 +20,7 @@ extern "C"
 /// Struct defined in srv/GetSetBool in the package loki_msgs.
 typedef struct loki_msgs__srv__GetSetBool_Request
 {
-  int32_t set_bool;
+  uint8_t structure_needs_at_least_one_member;
 } loki_msgs__srv__GetSetBool_Request;
 
 // Struct for a sequence of loki_msgs__srv__GetSetBool_Request.

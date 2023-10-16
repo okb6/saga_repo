@@ -5,8 +5,6 @@
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -55,22 +53,18 @@ class GetSetBool_Request(metaclass=Metaclass_GetSetBool_Request):
     """Message class 'GetSetBool_Request'."""
 
     __slots__ = [
-        '_set_bool',
     ]
 
     _fields_and_field_types = {
-        'set_bool': 'int32',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.set_bool = kwargs.get('set_bool', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,8 +95,6 @@ class GetSetBool_Request(metaclass=Metaclass_GetSetBool_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.set_bool != other.set_bool:
-            return False
         return True
 
     @classmethod
@@ -110,29 +102,13 @@ class GetSetBool_Request(metaclass=Metaclass_GetSetBool_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def set_bool(self):
-        """Message field 'set_bool'."""
-        return self._set_bool
-
-    @set_bool.setter
-    def set_bool(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'set_bool' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'set_bool' field must be an integer in [-2147483648, 2147483647]"
-        self._set_bool = value
-
 
 # Import statements for member types
 
 # Member 'set_bool_values'
 import array  # noqa: E402, I100
 
-# already imported above
-# import builtins
+import builtins  # noqa: E402, I100
 
 # already imported above
 # import rosidl_parser.definition

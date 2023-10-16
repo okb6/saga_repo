@@ -1,2 +1,0 @@
-int32 can_interface_type
-string can_interface_name

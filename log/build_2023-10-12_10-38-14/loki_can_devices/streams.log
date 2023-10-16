@@ -1,0 +1,64 @@
+[0.044s] Invoking command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[0.091s] [  9%] [32mBuilding CXX object CMakeFiles/can.dir/src/can_line_socketcan.cpp.o[0m
+[0.091s] [ 18%] [32mBuilding CXX object CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o[0m
+[3.187s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::initialize(std::string)[m[K’:
+[3.187s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:33:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[3.187s]    33 | [01;35m[K}[m[K
+[3.187s]       | [01;35m[K^[m[K
+[3.190s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:[m[K In member function ‘[01m[Kbool CanLineSocketcan::writeMsg(CanFrame)[m[K’:
+[3.191s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:140:34:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getId()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kcanid_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.191s]   140 |      .can_id = [01;35m[Kcan_frame_wr.getId()[m[K,
+[3.191s]       |                [01;35m[K~~~~~~~~~~~~~~~~~~^~[m[K
+[3.191s] [01m[K/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp:141:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Kcan_frame_wr.CanFrame::getLength()[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[K__u8[m[K’ {aka ‘[01m[Kunsigned char[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.191s]   141 |      .can_dlc = [01;35m[Kcan_frame_wr.getLength()[m[K,
+[3.191s]       |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[4.827s] [ 27%] [32m[1mLinking CXX shared library libcan.so[0m
+[5.014s] [ 81%] Built target can
+[5.042s] [ 90%] [32mBuilding CXX object CMakeFiles/pytocpp.dir/src/py_to_cpp.cpp.o[0m
+[23.140s] [100%] [32m[1mLinking CXX executable pytocpp[0m
+[24.384s] [100%] Built target pytocpp
+[24.392s] Invoked command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices' returned '0': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[24.429s] Invoking command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices
+[24.434s] -- Install configuration: ""
+[24.434s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include
+[24.434s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices
+[24.434s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/kc_battery.h
+[24.434s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/RoboteqFbl2360.h
+[24.434s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_frame.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_line_socketcan.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_battery_itf.h
+[24.435s] -- Installing: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/RoboteqFbl2360Diff.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_io_v1uv.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_io_itf.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_line_itf.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/CanDriveItf.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/include/loki_can_devices/can_io_v1pcb.h
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/launch
+[24.435s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/launch/pytocpp.launch.py
+[24.435s] -- Installing: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib/libcan.so
+[24.436s] -- Set runtime path of "/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib/libcan.so" to ""
+[24.436s] -- Installing: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib/loki_can_devices/pytocpp
+[24.446s] -- Set runtime path of "/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib/loki_can_devices/pytocpp" to ""
+[24.446s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/library_path.sh
+[24.446s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/library_path.dsv
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/ament_index/resource_index/package_run_dependencies/loki_can_devices
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/ament_index/resource_index/parent_prefix_path/loki_can_devices
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/ament_prefix_path.sh
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/ament_prefix_path.dsv
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/path.sh
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/environment/path.dsv
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/local_setup.bash
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/local_setup.sh
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/local_setup.zsh
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/local_setup.dsv
+[24.447s] -- Installing: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.dsv
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/ament_index/resource_index/packages/loki_can_devices
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/ConfigExtras.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/ament_cmake_export_libraries-extras.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/loki_can_devicesConfig.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/cmake/loki_can_devicesConfig-version.cmake
+[24.447s] -- Up-to-date: /home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.xml
+[24.448s] Invoked command in '/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices' returned '0': CMAKE_PREFIX_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs:/home/loki/Documents/GitHub/saga_repo/install/loki_description:/home/loki/Documents/GitHub/saga_repo/install/loki_bringup:/home/loki/Documents/GitHub/saga_repo/install/robot_bringup:/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo:/home/loki/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/loki/Documents/GitHub/saga_repo/install/loki_simulator:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices:/home/loki/Documents/GitHub/saga_repo/install/loki_teleop:/home/loki/Documents/GitHub/saga_repo/install/loki_base:/opt/ros/humble LD_LIBRARY_PATH=/home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib:/home/loki/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices

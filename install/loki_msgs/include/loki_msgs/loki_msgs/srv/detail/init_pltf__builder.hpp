@@ -18,42 +18,6 @@ namespace loki_msgs
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_InitPltf_Request_can_interface_name
-{
-public:
-  explicit Init_InitPltf_Request_can_interface_name(::loki_msgs::srv::InitPltf_Request & msg)
-  : msg_(msg)
-  {}
-  ::loki_msgs::srv::InitPltf_Request can_interface_name(::loki_msgs::srv::InitPltf_Request::_can_interface_name_type arg)
-  {
-    msg_.can_interface_name = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::InitPltf_Request msg_;
-};
-
-class Init_InitPltf_Request_can_interface_type
-{
-public:
-  Init_InitPltf_Request_can_interface_type()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_InitPltf_Request_can_interface_name can_interface_type(::loki_msgs::srv::InitPltf_Request::_can_interface_type_type arg)
-  {
-    msg_.can_interface_type = std::move(arg);
-    return Init_InitPltf_Request_can_interface_name(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::InitPltf_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -64,7 +28,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::InitPltf_Request>()
 {
-  return loki_msgs::srv::builder::Init_InitPltf_Request_can_interface_type();
+  return ::loki_msgs::srv::InitPltf_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace loki_msgs

@@ -16,9 +16,6 @@
 #include "loki_msgs/srv/detail/init_pltf__struct.h"
 #include "loki_msgs/srv/detail/init_pltf__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
-
 
 ROSIDL_GENERATOR_C_EXPORT
 bool loki_msgs__srv__init_pltf__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -53,30 +50,7 @@ bool loki_msgs__srv__init_pltf__request__convert_from_py(PyObject * _pymsg, void
     assert(strncmp("loki_msgs.srv._init_pltf.InitPltf_Request", full_classname_dest, 41) == 0);
   }
   loki_msgs__srv__InitPltf_Request * ros_message = _ros_message;
-  {  // can_interface_type
-    PyObject * field = PyObject_GetAttrString(_pymsg, "can_interface_type");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->can_interface_type = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // can_interface_name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "can_interface_name");
-    if (!field) {
-      return false;
-    }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->can_interface_name, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
-    Py_DECREF(field);
-  }
+  ros_message->structure_needs_at_least_one_member = 0;
 
   return true;
 }
@@ -98,35 +72,7 @@ PyObject * loki_msgs__srv__init_pltf__request__convert_to_py(void * raw_ros_mess
       return NULL;
     }
   }
-  loki_msgs__srv__InitPltf_Request * ros_message = (loki_msgs__srv__InitPltf_Request *)raw_ros_message;
-  {  // can_interface_type
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->can_interface_type);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "can_interface_type", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // can_interface_name
-    PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->can_interface_name.data,
-      strlen(ros_message->can_interface_name.data),
-      "replace");
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "can_interface_name", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
+  (void)raw_ros_message;
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

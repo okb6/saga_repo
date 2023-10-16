@@ -50,15 +50,7 @@ bool loki_msgs__srv__get_set_bool__request__convert_from_py(PyObject * _pymsg, v
     assert(strncmp("loki_msgs.srv._get_set_bool.GetSetBool_Request", full_classname_dest, 46) == 0);
   }
   loki_msgs__srv__GetSetBool_Request * ros_message = _ros_message;
-  {  // set_bool
-    PyObject * field = PyObject_GetAttrString(_pymsg, "set_bool");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->set_bool = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
+  ros_message->structure_needs_at_least_one_member = 0;
 
   return true;
 }
@@ -80,18 +72,7 @@ PyObject * loki_msgs__srv__get_set_bool__request__convert_to_py(void * raw_ros_m
       return NULL;
     }
   }
-  loki_msgs__srv__GetSetBool_Request * ros_message = (loki_msgs__srv__GetSetBool_Request *)raw_ros_message;
-  {  // set_bool
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->set_bool);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "set_bool", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
+  (void)raw_ros_message;
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

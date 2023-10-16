@@ -28,26 +28,26 @@ class BaseDriver(Node):
         self.latest_base_command_time = self.get_clock().now()
         self.command_timeout_time = 0.5
 
-        self.pltf_clc_type = PltfClcStd()
+        # PltfClcStd = PltfClcStd()
 
-        # Initialize ROS parameters
-        # self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
-        self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
-        self.declare_parameter('can_interface_name', rclpy.Parameter.Type.STRING)
+        # # Initialize ROS parameters
+        # # self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
+        # self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
+        # self.declare_parameter('can_interface_name', rclpy.Parameter.Type.STRING)
 
-        # rate_val = self.get_parameter('rate').value
-        can_interface_type = self.get_parameter('can_interface_type').value 
-        can_interface_name = self.get_parameter('can_interface_name').value
+        # # rate_val = self.get_parameter('rate').value
+        # can_interface_type = self.get_parameter('can_interface_type').value 
+        # can_interface_name = self.get_parameter('can_interface_name').value
 
-        # Initialize CAN interface type
-        if can_interface_type == "socketcan":
-            interface_type = 0
-        else:
-            self.get_logger().error(
-                "Invalid or missing 'can_interface_type' parameter.")
-            return
+        # # Initialize CAN interface type
+        # if can_interface_type == "socketcan":
+        #     interface_type = 0
+        # else:
+        #     self.get_logger().error(
+        #         "Invalid or missing 'can_interface_type' parameter.")
+        #     return
 
-        self.get_logger().info(f"Using CAN interface {can_interface_name}")
+        # self.get_logger().info(f"Using CAN interface {can_interface_name}")
 
         # Initialize BaseDriver with CAN interface
         # base_driver = BaseDriver()
@@ -60,7 +60,7 @@ class BaseDriver(Node):
 
         #initializing variables
         self.has_gazebo = False
-        self.pltf_clc_type = PltfClcStd()
+        # PltfClcStd = PltfClcStd()
 
         #Parameters from Robot017
         #MOTOR DRIVES
@@ -185,6 +185,7 @@ class BaseDriver(Node):
         
         #Subscribers
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
+        self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
 
         #Publishers
         self.joint_command_pub = self.create_publisher(BaseState, 'joint_commands', 1)
@@ -222,7 +223,7 @@ class BaseDriver(Node):
         self.cli_home_steering_all = self.create_client(HomesteeringAll, 'homesteeringall')
         self.cli_setup_motor_controller = self.create_client(MotCot, 'motcot')
         self.cli_get_controller_setup_map = self.create_client(CotMap, 'cotmap')
-        self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
+        # self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
         self.cli_set_drive_params = self.create_client(Params, 'params')
 
         # self.initPltf(interface_type, can_interface_name)
@@ -242,43 +243,54 @@ class BaseDriver(Node):
 
         if self.allow_geometry_odometry:
             self.gazebo_odom_sub = self.create_subscription(Odometry, 'odometry/gazebo', 1, self.gazebo_odom_callback)
+
+
         
         if self.broadcast_tf:
             self.get_logger().warn("Tmp msg: enable_odom_tf is true! If you want to broadcast your own odom frame, set param to false. Default value is true")
             self.get_logger().info("Broadcasting odometry frame to robot: {} ->base_link" .format(self.frame_id))
 
-        self.loadClcPlugin()
-        #throwing weird error about motor drives but is fixed if put down here
-        self.twist_sub = self.create_subscription(Twist, 'cmd_vel', self.twist_callback, 1)
 
-        self.initPltf(interface_type, can_interface_name)
-        if not self.initPltf(interface_type, can_interface_name):
+
+        self.loadClcPlugin()
+
+
+
+        if not self.initPltf():
             self.get_logger().error("Failed to initialize robot base.")
-            return
+
         else:
             self.get_logger().info("Initialized Robot Base")
+
+
 
         if simple_sim:
             self.get_logger().info("Simulating feedback")
 
             while rclpy.ok():
+
                 self.set_drive_params()
                 self.publish_joint_commands()
                 self.sendSimCommands()
                 self.handleFeedback()
-                rclpy.spin_once()
-                self.rate.sleep()
+                # rclpy.spin_once()
+                # self.rate.sleep()
 
         else:
             self.get_logger().info("Assuming feedback from real robot")
 
             while rclpy.ok():
+
+
+                self.get_logger().info("hello")
+
                 self.set_drive_params()
                 self.publish_joint_commands()
                 self.sendDriveCommands()
                 self.sendDeviceCommands()
                 self.evalCanBuffer()
                 self.handleFeedback()
+
                 rclpy.spin_once()
                 self.rate.sleep()
 
@@ -288,61 +300,67 @@ class BaseDriver(Node):
 
     def loadClcPlugin(self):
         success = True
+        motor_drives = self.motor_drives
 
-        try:
-            self.pltf_clc_type.initialize(self.motor_drives)
-            self.pltf_clc_type.calculateCommand(0,0,0, self.motor_drives, self.latest_base_command)
+        if PltfClcStd.initialize(PltfClcStd, self, motor_drives) and PltfClcStd.calculateCommand(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command):
             self.get_logger().info("The plugin was successful to load")
         
-        except:
+        else:
             self.get_logger().error("The plugin failed to load for some reason.")
             sucess = False
 
         return success
     
-    def initPltf(self, can_interface_type, can_interface_name): 
-        ret = self.client_init_pltf(can_interface_type, can_interface_name)
-        self.set_bool_map = {}
-        self.set_bool_map = self.client_get_set_bool()
+    def initPltf(self):
+        ret = self.client_init_pltf()
+        if ret:
+            self.get_logger().info("Robot is Initialized")
+        else:
+            self.get_logger().error("Robot failed to initialize")
+            return False
         
-        for key, service_name in self.set_bool_map.items():
-            srv = self.create_service(
-                SetBool, service_name, self.srv_callback_io_set_bool)
-            self.servers_io.append(srv)
-            self.get_logger().info(f"Advertised service: {service_name}")
+        # self.set_bool_map = {}
+        if not self.client_get_set_bool():
+            self.get_logger().error("setting bool map failed")
+
         
-        return ret
+        # for key, service_name in self.set_bool_map.items():
+        #     srv = self.create_service(
+        #         SetBool, service_name, self.srv_callback_io_set_bool)
+        #     self.servers_io.append(srv)
+        #     self.get_logger().info(f"Advertised service: {service_name}")
+        
+        return True
     
     
-    def client_init_pltf(self, can_interface_type, can_interface_name):
+    def client_init_pltf(self):
         self.get_logger().info('Initializing Platform...')
-
-        InitPltf.Request().can_interface_type = can_interface_type
-        InitPltf.Request().can_interface_name = can_interface_name
-
         Future = self.cli_initPltf.call_async(InitPltf.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
         return response
 
     def client_get_set_bool(self):
-        set_bool = 1
-
-        GetSetBool.Request().set_bool = set_bool
+        self.get_logger().info("HEYYE")
 
         Future = self.cli_get_set_bool.call_async(GetSetBool.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
-        set_bool_string = response.set_bool_string
-        set_bool_values = response.set_bool_values
+
+        if not response:
+            return False
+        # set_bool_string = response.set_bool_strings
+        # set_bool_values = response.set_bool_values
+        # i = 0
         
-        if len(set_bool_string) == len(set_bool_values):
-            for i in set_bool_string:
-                self.set_bool_map[set_bool_string[i]] = (set_bool_values[i])
-        else:
-            self.get_logger().error("Bool map does not have equal key to element amounts")
+        # if len(set_bool_string) == len(set_bool_values):
+        #     while i < len(set_bool_values):
+        #         self.set_bool_map[set_bool_string[i]] = set_bool_values[i]
+        # else:
+        #     self.get_logger().error("Bool map does not have equal key to element amounts")
+        #     return False
         
-        return
+        return True
 
     def evalCanBuffer(self):
         self.client_eval_can_buffer()
@@ -457,7 +475,7 @@ class BaseDriver(Node):
     
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
-        self.pltf_clc_type.calculateCommand(twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
+        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
 
     def gazebo_odom_callback(self, odom_in):
         last_gazebo_odom = odom_in
@@ -472,13 +490,15 @@ class BaseDriver(Node):
 
 
     def sendDriveCommands(self):
+        self.get_logger().info("are you wroking")
         if (self.get_clock().now() > self.latest_base_command_time + self.command_timeout_time) or self.emergency_stop:
-            self.pltf_clc_type.setZeroSpeed(self.latest_base_command)
+            self.altest_base_command = PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
 
         self.client_send_drive_commands()
 
 
     def client_send_drive_commands(self):
+        self.get_logger().info('do you work')
         commands = 1
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
@@ -505,7 +525,7 @@ class BaseDriver(Node):
         current_time = self.get_clock().now()
         
         if current_time > self.latest_base_command_time + self.command_timeout_time:
-            self.pltf_clc_type.setZeroSpeed(self.latest_base_command)
+            PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
         self.client_simulate_All_Drives(self.latest_base_command)
 
     def client_simulate_All_Drives(self):
@@ -608,7 +628,7 @@ class BaseDriver(Node):
 
     def srv_Callback_Reset_odom(self, request, response):
         self.get_logger().info("Resetting base odometry. x=0, y=0, yaw=0")
-        self.pltf_clc_type.zeroOdometryPose()
+        PltfClcStd.zeroOdometryPose(PltfClcStd)
         response.sucess = True
         response.message = "Resetting base odometry. x = 0, y = 0, yaw = 0"
 
@@ -622,7 +642,7 @@ class BaseDriver(Node):
         #     else:
         #         response.message = "One or more params could not be set"
 
-        # self.pltf_clc_type.setParams(self.motor_drives)
+        PltfClcStd.setParams(PltfClcStd, self.motor_drives)
         self.client_set_drive_params()
 
     def client_set_drive_params(self):
@@ -664,25 +684,25 @@ class BaseDriver(Node):
         response.message = message
 
     
-    def srv_callback_io_set_bool(self, request, response, unique_service_id):
-        success = True
-        message = ''
-        data = request.data
+    # def srv_callback_io_set_bool(self, request, response, unique_service_id):
+    #     success = True
+    #     message = ''
+    #     data = request.data
 
-        boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
-        response.success = boolservice.success
-        response.message = boolservice.message
-        self.get_logger().info(message)
+    #     boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
+    #     response.success = boolservice.success
+    #     response.message = boolservice.message
+    #     self.get_logger().info(message)
     
-    def client_call_set_bool_service(self, unique_service_id, data, success, message):
-        SetBools.Request().unique_service_id = unique_service_id
-        SetBools.Request().value = data
-        SetBools.Request().data = success
-        SetBools.Request().data = message
-        Future = self.cli_call_set_bool.call_async(SetBools.Request())
-        rclpy.spin_until_future_complete(self, Future)
-        response = Future.result()
-        return response
+    # def client_call_set_bool_service(self, unique_service_id, data, success, message):
+    #     SetBools.Request().unique_service_id = unique_service_id
+    #     SetBools.Request().value = data
+    #     SetBools.Request().data = success
+    #     SetBools.Request().data = message
+    #     Future = self.cli_call_set_bool.call_async(SetBools.Request())
+    #     rclpy.spin_until_future_complete(self, Future)
+    #     response = Future.result()
+    #     return response
 
         
 
@@ -747,6 +767,7 @@ def main(args=None):
     rclpy.init(args=args)
     node = BaseDriver()
     rclpy.spin(node)
+
     node.destroy_node()
     rclpy.shutdown()
 

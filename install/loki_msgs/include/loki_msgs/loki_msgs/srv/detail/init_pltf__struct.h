@@ -17,15 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'can_interface_name'
-#include "rosidl_runtime_c/string.h"
-
 /// Struct defined in srv/InitPltf in the package loki_msgs.
 typedef struct loki_msgs__srv__InitPltf_Request
 {
-  int32_t can_interface_type;
-  rosidl_runtime_c__String can_interface_name;
+  uint8_t structure_needs_at_least_one_member;
 } loki_msgs__srv__InitPltf_Request;
 
 // Struct for a sequence of loki_msgs__srv__InitPltf_Request.

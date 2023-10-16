@@ -51,6 +51,8 @@ CanCtrlPltf *can_ctrl_pltf_;
 int can_device_t_frame_count_;
 std::vector<CanFrame> can_device_t_frames_;
 bool mute_device_commands_;
+std::string can_interface_name_;
+int can_interface_type_;
 
 
 class PyToCpp : public rclcpp::Node {
@@ -72,7 +74,7 @@ class PyToCpp : public rclcpp::Node {
             srv14_ = create_service<loki_msgs::srv::Params>("Params", std::bind(&PyToCpp::server_drive_params, this, std::placeholders::_1, std::placeholders::_2));
             srv15_ = create_service<loki_msgs::srv::DriveCmds>("drivecmds", std::bind(&PyToCpp::server_drive_cmds, this, std::placeholders::_1, std::placeholders::_2));
             srv16_ = create_service<loki_msgs::srv::InitPltf>("initpltf", std::bind(&PyToCpp::server_init_pltf, this, std::placeholders::_1, std::placeholders::_2));
-            srv17_ = create_service<loki_msgs::srv::GetSetBool>("GetSetBool", std::bind(&PyToCpp::server_get_set_bool, this, std::placeholders::_1, std::placeholders::_2));
+            srv17_ = create_service<loki_msgs::srv::GetSetBool>("getsetbool", std::bind(&PyToCpp::server_get_set_bool, this, std::placeholders::_1, std::placeholders::_2));
             srv18_ = create_service<std_srvs::srv::SetBool>("mute_extra_can_device_commands", std::bind(&PyToCpp::srvCallbackMuteDeviceCommands, this, std::placeholders::_1, std::placeholders::_2));
 
             pub1_ = create_publisher<loki_msgs::msg::CANFrame>("can_frames_device_r", 100);
@@ -91,6 +93,15 @@ class PyToCpp : public rclcpp::Node {
             RCLCPP_INFO(this->get_logger(), "Starting PyToCpp");
 
             //Parameters from robot017
+
+            //can details
+            declare_parameter("can_interface_name", "can0");
+            declare_parameter("can_interface_type", 0);
+
+            get_parameter("can_interface_name", can_interface_name_);
+            get_parameter("can_interface_type", can_interface_type_);
+
+            
             //get motor_drives parameters
             std::string getnode;
             std::string getx;
@@ -321,10 +332,10 @@ class PyToCpp : public rclcpp::Node {
 
             bool set = init_can_ctrl();
             if ((set)){
-                RCLCPP_INFO(this->get_logger(), "Can_ctrl did was set up");
+                RCLCPP_INFO(this->get_logger(), "Can_ctrl was set up");
             }
             else{
-                RCLCPP_INFO(this->get_logger(), "Starting PyToCpp");
+                RCLCPP_INFO(this->get_logger(), "can ctrl was not set up. Fix Connection to can libraries");
             }
 
 
@@ -359,6 +370,8 @@ class PyToCpp : public rclcpp::Node {
         rclcpp::Service<loki_msgs::srv::InitPltf>::SharedPtr srv16_;
         rclcpp::Service<loki_msgs::srv::GetSetBool>::SharedPtr srv17_;
         rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr srv18_;
+        rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr srv19_;
+        std::vector<rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr servers_io_;
 
         rclcpp::Publisher<loki_msgs::msg::CANFrame>::SharedPtr pub1_;
         rclcpp::Publisher<loki_msgs::msg::CANFrame>::SharedPtr pub2_;
@@ -388,29 +401,38 @@ class PyToCpp : public rclcpp::Node {
                         const std::shared_ptr<loki_msgs::srv::GetSetBool::Response> response){
             
             std::map<int, std::string> set_bool_map;
-            if (request->set_bool == 1){
-                can_ctrl_pltf_->getSetBoolServices(set_bool_map);
-                std::vector<int> set_bool_values;
-                for (auto it = set_bool_map.begin(); it != set_bool_map.end(); it++) {
-                    set_bool_values.push_back(it->first);
-                }
-                std::vector<std::string> set_bool_string;
-                for (auto it = set_bool_map.begin(); it != set_bool_map.end(); it++) {
-                    set_bool_string.push_back(it->second);
-                }
 
-                response->set_bool_strings = set_bool_string;
-                response->set_bool_values = set_bool_values;
+            RCLCPP_INFO(this->get_logger(), "HEY");
+
+            can_ctrl_pltf_->getSetBoolServices(set_bool_map);
+
+            for (auto& elem : set_bool_map){
+                servers_io_.push_back(create_service<std_srvs::srv::SetBool>(elem.second, std::bind(&PyToCpp::srvCallbackIOSetBool, this, std::placeholders::_1, std::placeholders::_2, elem.first)));
             }
+            
 
             return true;
+        }
+
+        bool srvCallbackIOSetBool(const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
+                                    const const std::shared_ptr<std_srvs::srv::SetBool::Response> response,
+                                    int unique_service_id){
+            
+            bool success;
+            std::string message;
+
+            can_ctrl_pltf_->callSetBoolService(unique_service_id, req.data, success, message);
+            res.success = success;
+            res.message = message;
+            RCLCPP_INFO(this->get_logger(), message);
+            return success;
         }
 
         bool server_init_pltf(const std::shared_ptr<loki_msgs::srv::InitPltf::Request> request,
                         const std::shared_ptr<loki_msgs::srv::InitPltf::Response> response){
             
-
-            bool ret = can_ctrl_pltf_->initPltf(request->can_interface_type, request->can_interface_name, motor_drives_, batteries_, ios_);
+            
+            bool ret = can_ctrl_pltf_->initPltf(can_interface_type_, can_interface_name_, motor_drives_, batteries_, ios_);
             response->initpltf = ret;
             return true;
 

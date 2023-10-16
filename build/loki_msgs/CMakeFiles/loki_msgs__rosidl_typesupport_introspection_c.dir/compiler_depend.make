@@ -2047,9 +2047,6 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/mot_cot__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/srv/detail/mot_cot__type_support.c \

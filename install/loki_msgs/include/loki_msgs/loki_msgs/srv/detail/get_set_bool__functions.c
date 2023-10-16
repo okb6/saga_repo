@@ -16,7 +16,7 @@ loki_msgs__srv__GetSetBool_Request__init(loki_msgs__srv__GetSetBool_Request * ms
   if (!msg) {
     return false;
   }
-  // set_bool
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -26,7 +26,7 @@ loki_msgs__srv__GetSetBool_Request__fini(loki_msgs__srv__GetSetBool_Request * ms
   if (!msg) {
     return;
   }
-  // set_bool
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -35,8 +35,8 @@ loki_msgs__srv__GetSetBool_Request__are_equal(const loki_msgs__srv__GetSetBool_R
   if (!lhs || !rhs) {
     return false;
   }
-  // set_bool
-  if (lhs->set_bool != rhs->set_bool) {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -50,8 +50,8 @@ loki_msgs__srv__GetSetBool_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // set_bool
-  output->set_bool = input->set_bool;
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 

@@ -12,10 +12,6 @@
 #include "loki_msgs/srv/detail/init_pltf__struct.h"
 
 
-// Include directives for member types
-// Member `can_interface_name`
-#include "rosidl_runtime_c/string_functions.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -35,33 +31,16 @@ void loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitP
   loki_msgs__srv__InitPltf_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitPltf_Request_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitPltf_Request_message_member_array[1] = {
   {
-    "can_interface_type",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs__srv__InitPltf_Request, can_interface_type),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "can_interface_name",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(loki_msgs__srv__InitPltf_Request, can_interface_name),  // bytes offset in struct
+    offsetof(loki_msgs__srv__InitPltf_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -75,7 +54,7 @@ static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__InitPlt
 static const rosidl_typesupport_introspection_c__MessageMembers loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitPltf_Request_message_members = {
   "loki_msgs__srv",  // message namespace
   "InitPltf_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(loki_msgs__srv__InitPltf_Request),
   loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitPltf_Request_message_member_array,  // message members
   loki_msgs__srv__InitPltf_Request__rosidl_typesupport_introspection_c__InitPltf_Request_init_function,  // function to initialize message memory (memory has to be allocated)

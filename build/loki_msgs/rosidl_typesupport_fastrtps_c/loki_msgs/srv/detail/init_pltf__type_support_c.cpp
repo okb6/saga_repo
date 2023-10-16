@@ -34,8 +34,6 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // can_interface_name
-#include "rosidl_runtime_c/string_functions.h"  // can_interface_name
 
 // forward declare type support functions
 
@@ -51,23 +49,9 @@ static bool _InitPltf_Request__cdr_serialize(
     return false;
   }
   const _InitPltf_Request__ros_msg_type * ros_message = static_cast<const _InitPltf_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_interface_type
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << ros_message->can_interface_type;
-  }
-
-  // Field name: can_interface_name
-  {
-    const rosidl_runtime_c__String * str = &ros_message->can_interface_name;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -82,25 +66,9 @@ static bool _InitPltf_Request__cdr_deserialize(
     return false;
   }
   _InitPltf_Request__ros_msg_type * ros_message = static_cast<_InitPltf_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_interface_type
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr >> ros_message->can_interface_type;
-  }
-
-  // Field name: can_interface_name
-  {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->can_interface_name.data) {
-      rosidl_runtime_c__String__init(&ros_message->can_interface_name);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->can_interface_name,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'can_interface_name'\n");
-      return false;
-    }
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -120,16 +88,12 @@ size_t get_serialized_size_loki_msgs__srv__InitPltf_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name can_interface_type
+  // field.name structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->can_interface_type);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name can_interface_name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->can_interface_name.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -157,24 +121,11 @@ size_t max_serialized_size_loki_msgs__srv__InitPltf_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: can_interface_type
+  // member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: can_interface_name
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;

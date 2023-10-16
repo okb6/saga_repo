@@ -10,22 +10,13 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `can_interface_name`
-#include "rosidl_runtime_c/string_functions.h"
-
 bool
 loki_msgs__srv__InitPltf_Request__init(loki_msgs__srv__InitPltf_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // can_interface_type
-  // can_interface_name
-  if (!rosidl_runtime_c__String__init(&msg->can_interface_name)) {
-    loki_msgs__srv__InitPltf_Request__fini(msg);
-    return false;
-  }
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -35,9 +26,7 @@ loki_msgs__srv__InitPltf_Request__fini(loki_msgs__srv__InitPltf_Request * msg)
   if (!msg) {
     return;
   }
-  // can_interface_type
-  // can_interface_name
-  rosidl_runtime_c__String__fini(&msg->can_interface_name);
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -46,14 +35,8 @@ loki_msgs__srv__InitPltf_Request__are_equal(const loki_msgs__srv__InitPltf_Reque
   if (!lhs || !rhs) {
     return false;
   }
-  // can_interface_type
-  if (lhs->can_interface_type != rhs->can_interface_type) {
-    return false;
-  }
-  // can_interface_name
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->can_interface_name), &(rhs->can_interface_name)))
-  {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -67,14 +50,8 @@ loki_msgs__srv__InitPltf_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // can_interface_type
-  output->can_interface_type = input->can_interface_type;
-  // can_interface_name
-  if (!rosidl_runtime_c__String__copy(
-      &(input->can_interface_name), &(output->can_interface_name)))
-  {
-    return false;
-  }
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 

@@ -350,6 +350,7 @@ class TeleopNode(Node):
                         self.get_logger().info("callling service failed")
                 
         elif self.evaluateButtonPressCombo(self.home_buttons):
+            self.get_logger().info("calling homiing")
 
             future = self.home_client.call_async(Trigger.Request())
             rclpy.spin_until_future_complete(self, future)
@@ -373,6 +374,7 @@ class TeleopNode(Node):
             mode = self.Mode_Forward
             self.previous_non_turn_mode = self.Mode_Forward
         elif self.evaluateButtonPressCombo(self.mode_left_buttons):
+            self.get_logger().info("mode_left")
             mode = self.Mode_Left
             self.previous_non_turn_mode = self.Mode_Left
         elif self.evaluateButtonPressCombo(self.omni_buttons):
@@ -423,7 +425,7 @@ class TeleopNode(Node):
                 wz = 0.0
             elif axis_wz > 0:
                 ang = self.a * self.axis_wz + self.b
-                self.get_logger().info('{}'.format(ang))
+                # self.get_logger().info('{}'.format(ang))
                 radius = self.turn_calc_1 / (math.tan(ang)) + self.turn_calc_w
                 wz = axis_v_primary / radius
             else:

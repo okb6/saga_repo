@@ -18,26 +18,6 @@ namespace loki_msgs
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_GetSetBool_Request_set_bool
-{
-public:
-  Init_GetSetBool_Request_set_bool()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::loki_msgs::srv::GetSetBool_Request set_bool(::loki_msgs::srv::GetSetBool_Request::_set_bool_type arg)
-  {
-    msg_.set_bool = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::GetSetBool_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -48,7 +28,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::GetSetBool_Request>()
 {
-  return loki_msgs::srv::builder::Init_GetSetBool_Request_set_bool();
+  return ::loki_msgs::srv::GetSetBool_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace loki_msgs

@@ -24,45 +24,17 @@ inline void to_flow_style_yaml(
   const InitPltf_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: can_interface_type
-  {
-    out << "can_interface_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_interface_type, out);
-    out << ", ";
-  }
-
-  // member: can_interface_name
-  {
-    out << "can_interface_name: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_interface_name, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const InitPltf_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: can_interface_type
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "can_interface_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_interface_type, out);
-    out << "\n";
-  }
-
-  // member: can_interface_name
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "can_interface_name: ";
-    rosidl_generator_traits::value_to_yaml(msg.can_interface_name, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const InitPltf_Request & msg, bool use_flow_style = false)
@@ -111,11 +83,11 @@ inline const char * name<loki_msgs::srv::InitPltf_Request>()
 
 template<>
 struct has_fixed_size<loki_msgs::srv::InitPltf_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<loki_msgs::srv::InitPltf_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<loki_msgs::srv::InitPltf_Request>

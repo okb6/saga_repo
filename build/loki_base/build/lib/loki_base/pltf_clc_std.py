@@ -5,27 +5,30 @@ import math
 import random
 
 class PltfClcStd:
-    def __init__(self):
-        # super().__init__('pltf_clc_std')
-
-        #Variables
-        self.mpi = math.pi
-        self.number_of_drives = 4
-
     
-    def initialize(self, motor_drives):
+    def initialize(self, BaseDriver, motor_drives):
+
+        self.mpi = math.pi 
+        self.turning_angles = []
+        self.number_of_drives = 4
         self.robot_x = 0
         self.robot_y = 0
         self.robot_yaw = 0
-        self.previous_odom_timestep = self.get_clock().now()
-        self.setParams(motor_drives)
+        self.previous_odom_timestep = BaseDriver.get_clock().now()
+
+        if self.setParams(self, motor_drives):
+            return True
+
+    
     
     def setParams(self, motor_drives):
         self.number_of_drives = len(motor_drives)
 
         for drive in motor_drives:
-            angle = -self.normalize_angle_half_pi(math.atan2(drive["x"], drive["y"]))
-            self.turning_angles.append(angle)
+            input_angle = math.atan2(drive["x"], drive["y"])
+            final_angle = -self.normalize_angle_half_pi(self, input_angle)
+            self.turning_angles.append(final_angle)
+        return True
     
     def normalize_angle_half_pi(self, angle):
         while abs(angle) > self.mpi/2:
@@ -45,6 +48,8 @@ class PltfClcStd:
         if wz != 0:
             turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2))/wz
             turn_rad_ang = math.atan2(vy,vx)
+            print("d{}".format(turn_rad_d))
+            print("ang{}".format(turn_rad_ang))
 
             turn_rad_x = - turn_rad_d * math.sin(turn_rad_ang)
             turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
@@ -77,6 +82,54 @@ class PltfClcStd:
             joint_states_out.steer_pos[i] = steering[i]
             joint_states_out.prop_speed[i] = speed[i]
         
+        return True
+
+    def calc_commands(self, vx, vy, wz, motor_drives, joint_states_out):
+        self.number_of_drives = len(motor_drives)
+        self.motor_drives = motor_drives
+
+        speed = [0.0] * self.number_of_drives
+        steering = [0.0] * self.number_of_drives
+        drive_steer = [0.0] * self.number_of_drives
+        mode_speed = [0.0] * self.number_of_drives
+
+        if wz != 0:
+            turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2))/wz
+            turn_rad_ang = math.atan2(vy,vx)
+            print("d{}".format(turn_rad_d))
+            print("ang{}".format(turn_rad_ang))
+
+            turn_rad_x = - turn_rad_d * math.sin(turn_rad_ang)
+            turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
+
+            for i in range(self.number_of_drives):
+                drive_x = self.motor_drives[i]["x"]
+                drive_y = self.motor_drives[i]["y"]
+                
+                drive_steer[i] = math.atan2(turn_rad_y - drive_y, turn_rad_x - drive_x) + math.pi * (wz < 0)
+                drive_steer[i] = math.atan2(math.sin(drive_steer[i]), math.cos(drive_steer[i]))  # Normalize angle between -π and π
+                
+                distance = math.sqrt((turn_rad_x - drive_x) ** 2 + (turn_rad_y - drive_y) ** 2)
+                mode_speed[i] = distance * abs(wz)
+
+            for i in range(self.number_of_drives):
+                steering[i] = drive_steer[i]
+                speed[i] = mode_speed[i]
+        
+        else:
+            for i in range(self.number_of_drives):
+                steering[i] = math.atan2(vy,vx)
+                speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
+        
+        joint_states_out.prop_speed.append(self.number_of_drives)
+        joint_states_out.steer_pos.append(self.number_of_drives)
+        joint_states_out.steer_max_speed.append(self.number_of_drives)
+        joint_states_out.channel.append(self.number_of_drives)
+
+        for i in range(self.number_of_drives):
+            joint_states_out.steer_pos[i] = steering[i]
+            joint_states_out.prop_speed[i] = speed[i]
+
         return joint_states_out
     
     def setZeroSpeed(self, joint_states_out):

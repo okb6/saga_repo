@@ -47,10 +47,8 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
  /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /usr/include/assert.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/assert.h \
+ /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
@@ -67,5 +65,4 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
  /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
- /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+ /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h

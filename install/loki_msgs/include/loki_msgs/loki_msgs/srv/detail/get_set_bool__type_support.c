@@ -33,14 +33,14 @@ void loki_msgs__srv__GetSetBool_Request__rosidl_typesupport_introspection_c__Get
 
 static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__GetSetBool_Request__rosidl_typesupport_introspection_c__GetSetBool_Request_message_member_array[1] = {
   {
-    "set_bool",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs__srv__GetSetBool_Request, set_bool),  // bytes offset in struct
+    offsetof(loki_msgs__srv__GetSetBool_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

@@ -6,9 +6,7 @@
 module loki_msgs {
   module srv {
     struct InitPltf_Request {
-      int32 can_interface_type;
-
-      string can_interface_name;
+      uint8 structure_needs_at_least_one_member;
     };
     struct InitPltf_Response {
       boolean initpltf;

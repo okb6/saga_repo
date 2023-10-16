@@ -38,7 +38,7 @@ struct GetSetBool_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->set_bool = 0l;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
@@ -48,22 +48,15 @@ struct GetSetBool_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->set_bool = 0l;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _set_bool_type =
-    int32_t;
-  _set_bool_type set_bool;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__set_bool(
-    const int32_t & _arg)
-  {
-    this->set_bool = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -107,7 +100,7 @@ struct GetSetBool_Request_
   // comparison operators
   bool operator==(const GetSetBool_Request_ & other) const
   {
-    if (this->set_bool != other.set_bool) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;

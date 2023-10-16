@@ -7383,11 +7383,8 @@ CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/
   /usr/include/python3.10/numpy/__multiarray_api.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/loki_msgs/srv/detail/init_pltf__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.h \
-  rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
+  rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h
 
 CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_mot_cot_s.c.o: rosidl_generator_py/loki_msgs/srv/_mot_cot_s.c \
   /usr/include/stdc-predef.h \
