@@ -17,16 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-#include "loki_msgs/msg/detail/can_frame__struct.h"
-
 /// Struct defined in srv/EvalCanBuffer in the package loki_msgs.
 typedef struct loki_msgs__srv__EvalCanBuffer_Request
 {
-  loki_msgs__msg__CANFrame__Sequence can_msgs_base;
-  loki_msgs__msg__CANFrame__Sequence can_msgs_device;
+  uint8_t structure_needs_at_least_one_member;
 } loki_msgs__srv__EvalCanBuffer_Request;
 
 // Struct for a sequence of loki_msgs__srv__EvalCanBuffer_Request.
@@ -42,17 +36,10 @@ typedef struct loki_msgs__srv__EvalCanBuffer_Request__Sequence
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-// already included above
-// #include "loki_msgs/msg/detail/can_frame__struct.h"
-
 /// Struct defined in srv/EvalCanBuffer in the package loki_msgs.
 typedef struct loki_msgs__srv__EvalCanBuffer_Response
 {
-  loki_msgs__msg__CANFrame__Sequence can_msgs_base;
-  loki_msgs__msg__CANFrame__Sequence can_msgs_device;
+  bool response;
 } loki_msgs__srv__EvalCanBuffer_Response;
 
 // Struct for a sequence of loki_msgs__srv__EvalCanBuffer_Response.

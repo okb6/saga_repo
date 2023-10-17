@@ -5,8 +5,6 @@
 
 # Import statements for member types
 
-import builtins  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -55,22 +53,18 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
     """Message class 'DeviceCmds_Request'."""
 
     __slots__ = [
-        '_set',
     ]
 
     _fields_and_field_types = {
-        'set': 'int32',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.set = kwargs.get('set', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,8 +95,6 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.set != other.set:
-            return False
         return True
 
     @classmethod
@@ -110,23 +102,10 @@ class DeviceCmds_Request(metaclass=Metaclass_DeviceCmds_Request):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property  # noqa: A003
-    def set(self):  # noqa: A003
-        """Message field 'set'."""
-        return self._set
-
-    @set.setter  # noqa: A003
-    def set(self, value):  # noqa: A003
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'set' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'set' field must be an integer in [-2147483648, 2147483647]"
-        self._set = value
-
 
 # Import statements for member types
+
+import builtins  # noqa: E402, I100
 
 # already imported above
 # import rosidl_parser.definition
@@ -177,18 +156,22 @@ class DeviceCmds_Response(metaclass=Metaclass_DeviceCmds_Response):
     """Message class 'DeviceCmds_Response'."""
 
     __slots__ = [
+        '_response',
     ]
 
     _fields_and_field_types = {
+        'response': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.response = kwargs.get('response', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -219,12 +202,27 @@ class DeviceCmds_Response(metaclass=Metaclass_DeviceCmds_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.response != other.response:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def response(self):
+        """Message field 'response'."""
+        return self._response
+
+    @response.setter
+    def response(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'response' field must be of type 'bool'"
+        self._response = value
 
 
 class Metaclass_DeviceCmds(type):

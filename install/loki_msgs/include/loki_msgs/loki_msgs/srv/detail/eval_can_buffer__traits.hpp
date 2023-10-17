@@ -14,11 +14,6 @@
 #include "loki_msgs/srv/detail/eval_can_buffer__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-#include "loki_msgs/msg/detail/can_frame__traits.hpp"
-
 namespace loki_msgs
 {
 
@@ -29,85 +24,17 @@ inline void to_flow_style_yaml(
   const EvalCanBuffer_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: can_msgs_base
-  {
-    if (msg.can_msgs_base.size() == 0) {
-      out << "can_msgs_base: []";
-    } else {
-      out << "can_msgs_base: [";
-      size_t pending_items = msg.can_msgs_base.size();
-      for (auto item : msg.can_msgs_base) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: can_msgs_device
-  {
-    if (msg.can_msgs_device.size() == 0) {
-      out << "can_msgs_device: []";
-    } else {
-      out << "can_msgs_device: [";
-      size_t pending_items = msg.can_msgs_device.size();
-      for (auto item : msg.can_msgs_device) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const EvalCanBuffer_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: can_msgs_base
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.can_msgs_base.size() == 0) {
-      out << "can_msgs_base: []\n";
-    } else {
-      out << "can_msgs_base:\n";
-      for (auto item : msg.can_msgs_base) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: can_msgs_device
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.can_msgs_device.size() == 0) {
-      out << "can_msgs_device: []\n";
-    } else {
-      out << "can_msgs_device:\n";
-      for (auto item : msg.can_msgs_device) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const EvalCanBuffer_Request & msg, bool use_flow_style = false)
@@ -156,23 +83,17 @@ inline const char * name<loki_msgs::srv::EvalCanBuffer_Request>()
 
 template<>
 struct has_fixed_size<loki_msgs::srv::EvalCanBuffer_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<loki_msgs::srv::EvalCanBuffer_Request>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<loki_msgs::srv::EvalCanBuffer_Request>
   : std::true_type {};
 
 }  // namespace rosidl_generator_traits
-
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-// already included above
-// #include "loki_msgs/msg/detail/can_frame__traits.hpp"
 
 namespace loki_msgs
 {
@@ -185,39 +106,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: can_msgs_base
+  // member: response
   {
-    if (msg.can_msgs_base.size() == 0) {
-      out << "can_msgs_base: []";
-    } else {
-      out << "can_msgs_base: [";
-      size_t pending_items = msg.can_msgs_base.size();
-      for (auto item : msg.can_msgs_base) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: can_msgs_device
-  {
-    if (msg.can_msgs_device.size() == 0) {
-      out << "can_msgs_device: []";
-    } else {
-      out << "can_msgs_device: [";
-      size_t pending_items = msg.can_msgs_device.size();
-      for (auto item : msg.can_msgs_device) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "response: ";
+    rosidl_generator_traits::value_to_yaml(msg.response, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -226,42 +118,14 @@ inline void to_block_style_yaml(
   const EvalCanBuffer_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: can_msgs_base
+  // member: response
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.can_msgs_base.size() == 0) {
-      out << "can_msgs_base: []\n";
-    } else {
-      out << "can_msgs_base:\n";
-      for (auto item : msg.can_msgs_base) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: can_msgs_device
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.can_msgs_device.size() == 0) {
-      out << "can_msgs_device: []\n";
-    } else {
-      out << "can_msgs_device:\n";
-      for (auto item : msg.can_msgs_device) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
+    out << "response: ";
+    rosidl_generator_traits::value_to_yaml(msg.response, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
@@ -311,11 +175,11 @@ inline const char * name<loki_msgs::srv::EvalCanBuffer_Response>()
 
 template<>
 struct has_fixed_size<loki_msgs::srv::EvalCanBuffer_Response>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<loki_msgs::srv::EvalCanBuffer_Response>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<loki_msgs::srv::EvalCanBuffer_Response>

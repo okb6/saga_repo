@@ -25,8 +25,6 @@ CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/sr
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/can_frame__struct.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__type_support.h \
  /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \

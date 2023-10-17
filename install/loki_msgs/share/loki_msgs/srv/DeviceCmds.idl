@@ -6,10 +6,10 @@
 module loki_msgs {
   module srv {
     struct DeviceCmds_Request {
-      int32 set;
+      uint8 structure_needs_at_least_one_member;
     };
     struct DeviceCmds_Response {
-      uint8 structure_needs_at_least_one_member;
+      boolean response;
     };
   };
 };

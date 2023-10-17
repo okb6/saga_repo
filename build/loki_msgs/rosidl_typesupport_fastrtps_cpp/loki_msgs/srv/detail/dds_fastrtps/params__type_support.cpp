@@ -32,8 +32,8 @@ cdr_serialize(
   const loki_msgs::srv::Params_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: set
-  cdr << (ros_message.set ? true : false);
+  // Member: structure_needs_at_least_one_member
+  cdr << ros_message.structure_needs_at_least_one_member;
   return true;
 }
 
@@ -43,12 +43,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   loki_msgs::srv::Params_Request & ros_message)
 {
-  // Member: set
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.set = tmp ? true : false;
-  }
+  // Member: structure_needs_at_least_one_member
+  cdr >> ros_message.structure_needs_at_least_one_member;
 
   return true;
 }
@@ -66,9 +62,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: set
+  // Member: structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message.set);
+    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -94,7 +90,7 @@ max_serialized_size_Params_Request(
   is_plain = true;
 
 
-  // Member: set
+  // Member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
@@ -232,8 +228,8 @@ cdr_serialize(
   const loki_msgs::srv::Params_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: response
+  cdr << (ros_message.response ? true : false);
   return true;
 }
 
@@ -243,8 +239,12 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   loki_msgs::srv::Params_Response & ros_message)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr >> ros_message.structure_needs_at_least_one_member;
+  // Member: response
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.response = tmp ? true : false;
+  }
 
   return true;
 }
@@ -262,9 +262,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: response
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message.response);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -290,7 +290,7 @@ max_serialized_size_Params_Response(
   is_plain = true;
 
 
-  // Member: structure_needs_at_least_one_member
+  // Member: response
   {
     size_t array_size = 1;
 

@@ -33,14 +33,14 @@ void loki_msgs__srv__Params_Request__rosidl_typesupport_introspection_c__Params_
 
 static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__Params_Request__rosidl_typesupport_introspection_c__Params_Request_message_member_array[1] = {
   {
-    "set",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    "structure_needs_at_least_one_member",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs__srv__Params_Request, set),  // bytes offset in struct
+    offsetof(loki_msgs__srv__Params_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -121,14 +121,14 @@ void loki_msgs__srv__Params_Response__rosidl_typesupport_introspection_c__Params
 
 static rosidl_typesupport_introspection_c__MessageMember loki_msgs__srv__Params_Response__rosidl_typesupport_introspection_c__Params_Response_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "response",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs__srv__Params_Response, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(loki_msgs__srv__Params_Response, response),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

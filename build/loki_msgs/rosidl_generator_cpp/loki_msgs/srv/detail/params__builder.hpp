@@ -18,26 +18,6 @@ namespace loki_msgs
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_Params_Request_set
-{
-public:
-  Init_Params_Request_set()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  ::loki_msgs::srv::Params_Request set(::loki_msgs::srv::Params_Request::_set_type arg)
-  {
-    msg_.set = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::Params_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -48,7 +28,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::Params_Request>()
 {
-  return loki_msgs::srv::builder::Init_Params_Request_set();
+  return ::loki_msgs::srv::Params_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace loki_msgs
@@ -60,6 +40,26 @@ namespace loki_msgs
 namespace srv
 {
 
+namespace builder
+{
+
+class Init_Params_Response_response
+{
+public:
+  Init_Params_Response_response()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::loki_msgs::srv::Params_Response response(::loki_msgs::srv::Params_Response::_response_type arg)
+  {
+    msg_.response = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::loki_msgs::srv::Params_Response msg_;
+};
+
+}  // namespace builder
 
 }  // namespace srv
 
@@ -70,7 +70,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::Params_Response>()
 {
-  return ::loki_msgs::srv::Params_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return loki_msgs::srv::builder::Init_Params_Response_response();
 }
 
 }  // namespace loki_msgs

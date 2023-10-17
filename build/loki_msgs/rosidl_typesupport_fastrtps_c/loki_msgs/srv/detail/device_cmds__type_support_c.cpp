@@ -49,9 +49,9 @@ static bool _DeviceCmds_Request__cdr_serialize(
     return false;
   }
   const _DeviceCmds_Request__ros_msg_type * ros_message = static_cast<const _DeviceCmds_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: set
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << ros_message->set;
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -66,9 +66,9 @@ static bool _DeviceCmds_Request__cdr_deserialize(
     return false;
   }
   _DeviceCmds_Request__ros_msg_type * ros_message = static_cast<_DeviceCmds_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: set
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr >> ros_message->set;
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -88,9 +88,9 @@ size_t get_serialized_size_loki_msgs__srv__DeviceCmds_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name set
+  // field.name structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->set);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -121,12 +121,11 @@ size_t max_serialized_size_loki_msgs__srv__DeviceCmds_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: set
+  // member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;
@@ -227,9 +226,9 @@ static bool _DeviceCmds_Response__cdr_serialize(
     return false;
   }
   const _DeviceCmds_Response__ros_msg_type * ros_message = static_cast<const _DeviceCmds_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: response
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    cdr << (ros_message->response ? true : false);
   }
 
   return true;
@@ -244,9 +243,11 @@ static bool _DeviceCmds_Response__cdr_deserialize(
     return false;
   }
   _DeviceCmds_Response__ros_msg_type * ros_message = static_cast<_DeviceCmds_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: response
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->response = tmp ? true : false;
   }
 
   return true;
@@ -266,9 +267,9 @@ size_t get_serialized_size_loki_msgs__srv__DeviceCmds_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
+  // field.name response
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message->response);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -299,7 +300,7 @@ size_t max_serialized_size_loki_msgs__srv__DeviceCmds_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: structure_needs_at_least_one_member
+  // member: response
   {
     size_t array_size = 1;
 

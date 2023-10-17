@@ -49,9 +49,9 @@ static bool _Params_Request__cdr_serialize(
     return false;
   }
   const _Params_Request__ros_msg_type * ros_message = static_cast<const _Params_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: set
+  // Field name: structure_needs_at_least_one_member
   {
-    cdr << (ros_message->set ? true : false);
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -66,11 +66,9 @@ static bool _Params_Request__cdr_deserialize(
     return false;
   }
   _Params_Request__ros_msg_type * ros_message = static_cast<_Params_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: set
+  // Field name: structure_needs_at_least_one_member
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->set = tmp ? true : false;
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -90,9 +88,9 @@ size_t get_serialized_size_loki_msgs__srv__Params_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name set
+  // field.name structure_needs_at_least_one_member
   {
-    size_t item_size = sizeof(ros_message->set);
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -123,7 +121,7 @@ size_t max_serialized_size_loki_msgs__srv__Params_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: set
+  // member: structure_needs_at_least_one_member
   {
     size_t array_size = 1;
 
@@ -228,9 +226,9 @@ static bool _Params_Response__cdr_serialize(
     return false;
   }
   const _Params_Response__ros_msg_type * ros_message = static_cast<const _Params_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: response
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    cdr << (ros_message->response ? true : false);
   }
 
   return true;
@@ -245,9 +243,11 @@ static bool _Params_Response__cdr_deserialize(
     return false;
   }
   _Params_Response__ros_msg_type * ros_message = static_cast<_Params_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: response
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->response = tmp ? true : false;
   }
 
   return true;
@@ -267,9 +267,9 @@ size_t get_serialized_size_loki_msgs__srv__Params_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
+  // field.name response
   {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message->response);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -300,7 +300,7 @@ size_t max_serialized_size_loki_msgs__srv__Params_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: structure_needs_at_least_one_member
+  // member: response
   {
     size_t array_size = 1;
 

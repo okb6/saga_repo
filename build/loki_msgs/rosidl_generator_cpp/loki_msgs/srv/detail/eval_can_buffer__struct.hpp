@@ -15,11 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-#include "loki_msgs/msg/detail/can_frame__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__loki_msgs__srv__EvalCanBuffer_Request __attribute__((deprecated))
 #else
@@ -40,36 +35,28 @@ struct EvalCanBuffer_Request_
 
   explicit EvalCanBuffer_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->structure_needs_at_least_one_member = 0;
+    }
   }
 
   explicit EvalCanBuffer_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->structure_needs_at_least_one_member = 0;
+    }
   }
 
   // field types and members
-  using _can_msgs_base_type =
-    std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>>;
-  _can_msgs_base_type can_msgs_base;
-  using _can_msgs_device_type =
-    std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>>;
-  _can_msgs_device_type can_msgs_device;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__can_msgs_base(
-    const std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>> & _arg)
-  {
-    this->can_msgs_base = _arg;
-    return *this;
-  }
-  Type & set__can_msgs_device(
-    const std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>> & _arg)
-  {
-    this->can_msgs_device = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -113,10 +100,7 @@ struct EvalCanBuffer_Request_
   // comparison operators
   bool operator==(const EvalCanBuffer_Request_ & other) const
   {
-    if (this->can_msgs_base != other.can_msgs_base) {
-      return false;
-    }
-    if (this->can_msgs_device != other.can_msgs_device) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;
@@ -138,12 +122,6 @@ using EvalCanBuffer_Request =
 }  // namespace loki_msgs
 
 
-// Include directives for member types
-// Member 'can_msgs_base'
-// Member 'can_msgs_device'
-// already included above
-// #include "loki_msgs/msg/detail/can_frame__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__loki_msgs__srv__EvalCanBuffer_Response __attribute__((deprecated))
 #else
@@ -164,34 +142,33 @@ struct EvalCanBuffer_Response_
 
   explicit EvalCanBuffer_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->response = false;
+    }
   }
 
   explicit EvalCanBuffer_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    (void)_init;
     (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->response = false;
+    }
   }
 
   // field types and members
-  using _can_msgs_base_type =
-    std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>>;
-  _can_msgs_base_type can_msgs_base;
-  using _can_msgs_device_type =
-    std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>>;
-  _can_msgs_device_type can_msgs_device;
+  using _response_type =
+    bool;
+  _response_type response;
 
   // setters for named parameter idiom
-  Type & set__can_msgs_base(
-    const std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>> & _arg)
+  Type & set__response(
+    const bool & _arg)
   {
-    this->can_msgs_base = _arg;
-    return *this;
-  }
-  Type & set__can_msgs_device(
-    const std::vector<loki_msgs::msg::CANFrame_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<loki_msgs::msg::CANFrame_<ContainerAllocator>>> & _arg)
-  {
-    this->can_msgs_device = _arg;
+    this->response = _arg;
     return *this;
   }
 
@@ -237,10 +214,7 @@ struct EvalCanBuffer_Response_
   // comparison operators
   bool operator==(const EvalCanBuffer_Response_ & other) const
   {
-    if (this->can_msgs_base != other.can_msgs_base) {
-      return false;
-    }
-    if (this->can_msgs_device != other.can_msgs_device) {
+    if (this->response != other.response) {
       return false;
     }
     return true;

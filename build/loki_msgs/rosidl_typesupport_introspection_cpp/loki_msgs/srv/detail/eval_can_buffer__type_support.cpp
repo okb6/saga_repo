@@ -37,137 +37,30 @@ void EvalCanBuffer_Request_fini_function(void * message_memory)
   typed_message->~EvalCanBuffer_Request();
 }
 
-size_t size_function__EvalCanBuffer_Request__can_msgs_base(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__EvalCanBuffer_Request__can_msgs_base(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__EvalCanBuffer_Request__can_msgs_base(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__EvalCanBuffer_Request__can_msgs_base(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(
-    get_const_function__EvalCanBuffer_Request__can_msgs_base(untyped_member, index));
-  auto & value = *reinterpret_cast<loki_msgs::msg::CANFrame *>(untyped_value);
-  value = item;
-}
-
-void assign_function__EvalCanBuffer_Request__can_msgs_base(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<loki_msgs::msg::CANFrame *>(
-    get_function__EvalCanBuffer_Request__can_msgs_base(untyped_member, index));
-  const auto & value = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(untyped_value);
-  item = value;
-}
-
-void resize_function__EvalCanBuffer_Request__can_msgs_base(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__EvalCanBuffer_Request__can_msgs_device(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__EvalCanBuffer_Request__can_msgs_device(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__EvalCanBuffer_Request__can_msgs_device(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__EvalCanBuffer_Request__can_msgs_device(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(
-    get_const_function__EvalCanBuffer_Request__can_msgs_device(untyped_member, index));
-  auto & value = *reinterpret_cast<loki_msgs::msg::CANFrame *>(untyped_value);
-  value = item;
-}
-
-void assign_function__EvalCanBuffer_Request__can_msgs_device(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<loki_msgs::msg::CANFrame *>(
-    get_function__EvalCanBuffer_Request__can_msgs_device(untyped_member, index));
-  const auto & value = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(untyped_value);
-  item = value;
-}
-
-void resize_function__EvalCanBuffer_Request__can_msgs_device(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  member->resize(size);
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember EvalCanBuffer_Request_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember EvalCanBuffer_Request_message_member_array[1] = {
   {
-    "can_msgs_base",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "structure_needs_at_least_one_member",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<loki_msgs::msg::CANFrame>(),  // members of sub message
-    true,  // is array
+    nullptr,  // members of sub message
+    false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs::srv::EvalCanBuffer_Request, can_msgs_base),  // bytes offset in struct
+    offsetof(loki_msgs::srv::EvalCanBuffer_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     nullptr,  // default value
-    size_function__EvalCanBuffer_Request__can_msgs_base,  // size() function pointer
-    get_const_function__EvalCanBuffer_Request__can_msgs_base,  // get_const(index) function pointer
-    get_function__EvalCanBuffer_Request__can_msgs_base,  // get(index) function pointer
-    fetch_function__EvalCanBuffer_Request__can_msgs_base,  // fetch(index, &value) function pointer
-    assign_function__EvalCanBuffer_Request__can_msgs_base,  // assign(index, value) function pointer
-    resize_function__EvalCanBuffer_Request__can_msgs_base  // resize(index) function pointer
-  },
-  {
-    "can_msgs_device",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<loki_msgs::msg::CANFrame>(),  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(loki_msgs::srv::EvalCanBuffer_Request, can_msgs_device),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__EvalCanBuffer_Request__can_msgs_device,  // size() function pointer
-    get_const_function__EvalCanBuffer_Request__can_msgs_device,  // get_const(index) function pointer
-    get_function__EvalCanBuffer_Request__can_msgs_device,  // get(index) function pointer
-    fetch_function__EvalCanBuffer_Request__can_msgs_device,  // fetch(index, &value) function pointer
-    assign_function__EvalCanBuffer_Request__can_msgs_device,  // assign(index, value) function pointer
-    resize_function__EvalCanBuffer_Request__can_msgs_device  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers EvalCanBuffer_Request_message_members = {
   "loki_msgs::srv",  // message namespace
   "EvalCanBuffer_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(loki_msgs::srv::EvalCanBuffer_Request),
   EvalCanBuffer_Request_message_member_array,  // message members
   EvalCanBuffer_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -263,137 +156,30 @@ void EvalCanBuffer_Response_fini_function(void * message_memory)
   typed_message->~EvalCanBuffer_Response();
 }
 
-size_t size_function__EvalCanBuffer_Response__can_msgs_base(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__EvalCanBuffer_Response__can_msgs_base(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__EvalCanBuffer_Response__can_msgs_base(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__EvalCanBuffer_Response__can_msgs_base(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(
-    get_const_function__EvalCanBuffer_Response__can_msgs_base(untyped_member, index));
-  auto & value = *reinterpret_cast<loki_msgs::msg::CANFrame *>(untyped_value);
-  value = item;
-}
-
-void assign_function__EvalCanBuffer_Response__can_msgs_base(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<loki_msgs::msg::CANFrame *>(
-    get_function__EvalCanBuffer_Response__can_msgs_base(untyped_member, index));
-  const auto & value = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(untyped_value);
-  item = value;
-}
-
-void resize_function__EvalCanBuffer_Response__can_msgs_base(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__EvalCanBuffer_Response__can_msgs_device(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__EvalCanBuffer_Response__can_msgs_device(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__EvalCanBuffer_Response__can_msgs_device(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__EvalCanBuffer_Response__can_msgs_device(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(
-    get_const_function__EvalCanBuffer_Response__can_msgs_device(untyped_member, index));
-  auto & value = *reinterpret_cast<loki_msgs::msg::CANFrame *>(untyped_value);
-  value = item;
-}
-
-void assign_function__EvalCanBuffer_Response__can_msgs_device(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<loki_msgs::msg::CANFrame *>(
-    get_function__EvalCanBuffer_Response__can_msgs_device(untyped_member, index));
-  const auto & value = *reinterpret_cast<const loki_msgs::msg::CANFrame *>(untyped_value);
-  item = value;
-}
-
-void resize_function__EvalCanBuffer_Response__can_msgs_device(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<loki_msgs::msg::CANFrame> *>(untyped_member);
-  member->resize(size);
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember EvalCanBuffer_Response_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember EvalCanBuffer_Response_message_member_array[1] = {
   {
-    "can_msgs_base",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "response",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<loki_msgs::msg::CANFrame>(),  // members of sub message
-    true,  // is array
+    nullptr,  // members of sub message
+    false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs::srv::EvalCanBuffer_Response, can_msgs_base),  // bytes offset in struct
+    offsetof(loki_msgs::srv::EvalCanBuffer_Response, response),  // bytes offset in struct
     nullptr,  // default value
-    size_function__EvalCanBuffer_Response__can_msgs_base,  // size() function pointer
-    get_const_function__EvalCanBuffer_Response__can_msgs_base,  // get_const(index) function pointer
-    get_function__EvalCanBuffer_Response__can_msgs_base,  // get(index) function pointer
-    fetch_function__EvalCanBuffer_Response__can_msgs_base,  // fetch(index, &value) function pointer
-    assign_function__EvalCanBuffer_Response__can_msgs_base,  // assign(index, value) function pointer
-    resize_function__EvalCanBuffer_Response__can_msgs_base  // resize(index) function pointer
-  },
-  {
-    "can_msgs_device",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<loki_msgs::msg::CANFrame>(),  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(loki_msgs::srv::EvalCanBuffer_Response, can_msgs_device),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__EvalCanBuffer_Response__can_msgs_device,  // size() function pointer
-    get_const_function__EvalCanBuffer_Response__can_msgs_device,  // get_const(index) function pointer
-    get_function__EvalCanBuffer_Response__can_msgs_device,  // get(index) function pointer
-    fetch_function__EvalCanBuffer_Response__can_msgs_device,  // fetch(index, &value) function pointer
-    assign_function__EvalCanBuffer_Response__can_msgs_device,  // assign(index, value) function pointer
-    resize_function__EvalCanBuffer_Response__can_msgs_device  // resize(index) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers EvalCanBuffer_Response_message_members = {
   "loki_msgs::srv",  // message namespace
   "EvalCanBuffer_Response",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(loki_msgs::srv::EvalCanBuffer_Response),
   EvalCanBuffer_Response_message_member_array,  // message members
   EvalCanBuffer_Response_init_function,  // function to initialize message memory (memory has to be allocated)

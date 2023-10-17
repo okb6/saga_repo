@@ -3,6 +3,7 @@ import time
 import angles
 import math
 import random
+import numpy
 
 class PltfClcStd:
     
@@ -73,10 +74,10 @@ class PltfClcStd:
                 steering[i] = math.atan2(vy,vx)
                 speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
         
-        joint_states_out.prop_speed.append(self.number_of_drives)
-        joint_states_out.steer_pos.append(self.number_of_drives)
-        joint_states_out.steer_max_speed.append(self.number_of_drives)
-        joint_states_out.channel.append(self.number_of_drives)
+        numpy.resize(joint_states_out.prop_speed, self.number_of_drives)
+        numpy.resize(joint_states_out.steer_pos, self.number_of_drives)
+        numpy.resize(joint_states_out.steer_max_speed, self.number_of_drives)
+        numpy.resize(joint_states_out.channel, self.number_of_drives)
 
         for i in range(self.number_of_drives):
             joint_states_out.steer_pos[i] = steering[i]

@@ -24,28 +24,17 @@ inline void to_flow_style_yaml(
   const Params_Request & msg,
   std::ostream & out)
 {
-  out << "{";
-  // member: set
-  {
-    out << "set: ";
-    rosidl_generator_traits::value_to_yaml(msg.set, out);
-  }
-  out << "}";
+  (void)msg;
+  out << "null";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const Params_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: set
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "set: ";
-    rosidl_generator_traits::value_to_yaml(msg.set, out);
-    out << "\n";
-  }
+  (void)msg;
+  (void)indentation;
+  out << "null\n";
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const Params_Request & msg, bool use_flow_style = false)
@@ -116,17 +105,28 @@ inline void to_flow_style_yaml(
   const Params_Response & msg,
   std::ostream & out)
 {
-  (void)msg;
-  out << "null";
+  out << "{";
+  // member: response
+  {
+    out << "response: ";
+    rosidl_generator_traits::value_to_yaml(msg.response, out);
+  }
+  out << "}";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const Params_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  (void)msg;
-  (void)indentation;
-  out << "null\n";
+  // member: response
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "response: ";
+    rosidl_generator_traits::value_to_yaml(msg.response, out);
+    out << "\n";
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const Params_Response & msg, bool use_flow_style = false)

@@ -50,15 +50,7 @@ bool loki_msgs__srv__device_cmds__request__convert_from_py(PyObject * _pymsg, vo
     assert(strncmp("loki_msgs.srv._device_cmds.DeviceCmds_Request", full_classname_dest, 45) == 0);
   }
   loki_msgs__srv__DeviceCmds_Request * ros_message = _ros_message;
-  {  // set
-    PyObject * field = PyObject_GetAttrString(_pymsg, "set");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->set = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
+  ros_message->structure_needs_at_least_one_member = 0;
 
   return true;
 }
@@ -80,18 +72,7 @@ PyObject * loki_msgs__srv__device_cmds__request__convert_to_py(void * raw_ros_me
       return NULL;
     }
   }
-  loki_msgs__srv__DeviceCmds_Request * ros_message = (loki_msgs__srv__DeviceCmds_Request *)raw_ros_message;
-  {  // set
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->set);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "set", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
+  (void)raw_ros_message;
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;
@@ -145,7 +126,15 @@ bool loki_msgs__srv__device_cmds__response__convert_from_py(PyObject * _pymsg, v
     assert(strncmp("loki_msgs.srv._device_cmds.DeviceCmds_Response", full_classname_dest, 46) == 0);
   }
   loki_msgs__srv__DeviceCmds_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // response
+    PyObject * field = PyObject_GetAttrString(_pymsg, "response");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->response = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -167,7 +156,18 @@ PyObject * loki_msgs__srv__device_cmds__response__convert_to_py(void * raw_ros_m
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  loki_msgs__srv__DeviceCmds_Response * ros_message = (loki_msgs__srv__DeviceCmds_Response *)raw_ros_message;
+  {  // response
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->response ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "response", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

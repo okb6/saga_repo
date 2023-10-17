@@ -6,10 +6,10 @@
 module loki_msgs {
   module srv {
     struct Params_Request {
-      boolean set;
+      uint8 structure_needs_at_least_one_member;
     };
     struct Params_Response {
-      uint8 structure_needs_at_least_one_member;
+      boolean response;
     };
   };
 };

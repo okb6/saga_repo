@@ -38,7 +38,7 @@ struct DeviceCmds_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->set = 0l;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
@@ -48,22 +48,15 @@ struct DeviceCmds_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->set = 0l;
+      this->structure_needs_at_least_one_member = 0;
     }
   }
 
   // field types and members
-  using _set_type =
-    int32_t;
-  _set_type set;
+  using _structure_needs_at_least_one_member_type =
+    uint8_t;
+  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
 
-  // setters for named parameter idiom
-  Type & set__set(
-    const int32_t & _arg)
-  {
-    this->set = _arg;
-    return *this;
-  }
 
   // constant declarations
 
@@ -107,7 +100,7 @@ struct DeviceCmds_Request_
   // comparison operators
   bool operator==(const DeviceCmds_Request_ & other) const
   {
-    if (this->set != other.set) {
+    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
       return false;
     }
     return true;
@@ -152,7 +145,7 @@ struct DeviceCmds_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->response = false;
     }
   }
 
@@ -162,15 +155,22 @@ struct DeviceCmds_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->response = false;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _response_type =
+    bool;
+  _response_type response;
 
+  // setters for named parameter idiom
+  Type & set__response(
+    const bool & _arg)
+  {
+    this->response = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -214,7 +214,7 @@ struct DeviceCmds_Response_
   // comparison operators
   bool operator==(const DeviceCmds_Response_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->response != other.response) {
       return false;
     }
     return true;

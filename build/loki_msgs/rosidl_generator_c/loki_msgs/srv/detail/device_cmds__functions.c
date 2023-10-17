@@ -16,7 +16,7 @@ loki_msgs__srv__DeviceCmds_Request__init(loki_msgs__srv__DeviceCmds_Request * ms
   if (!msg) {
     return false;
   }
-  // set
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -26,7 +26,7 @@ loki_msgs__srv__DeviceCmds_Request__fini(loki_msgs__srv__DeviceCmds_Request * ms
   if (!msg) {
     return;
   }
-  // set
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -35,8 +35,8 @@ loki_msgs__srv__DeviceCmds_Request__are_equal(const loki_msgs__srv__DeviceCmds_R
   if (!lhs || !rhs) {
     return false;
   }
-  // set
-  if (lhs->set != rhs->set) {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -50,8 +50,8 @@ loki_msgs__srv__DeviceCmds_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // set
-  output->set = input->set;
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 
@@ -241,7 +241,7 @@ loki_msgs__srv__DeviceCmds_Response__init(loki_msgs__srv__DeviceCmds_Response * 
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // response
   return true;
 }
 
@@ -251,7 +251,7 @@ loki_msgs__srv__DeviceCmds_Response__fini(loki_msgs__srv__DeviceCmds_Response * 
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // response
 }
 
 bool
@@ -260,8 +260,8 @@ loki_msgs__srv__DeviceCmds_Response__are_equal(const loki_msgs__srv__DeviceCmds_
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // response
+  if (lhs->response != rhs->response) {
     return false;
   }
   return true;
@@ -275,8 +275,8 @@ loki_msgs__srv__DeviceCmds_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // response
+  output->response = input->response;
   return true;
 }
 

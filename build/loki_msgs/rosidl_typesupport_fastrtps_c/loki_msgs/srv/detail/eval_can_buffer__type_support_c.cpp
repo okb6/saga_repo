@@ -34,20 +34,8 @@ extern "C"
 {
 #endif
 
-#include "loki_msgs/msg/detail/can_frame__functions.h"  // can_msgs_base, can_msgs_device
 
 // forward declare type support functions
-size_t get_serialized_size_loki_msgs__msg__CANFrame(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_loki_msgs__msg__CANFrame(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame)();
 
 
 using _EvalCanBuffer_Request__ros_msg_type = loki_msgs__srv__EvalCanBuffer_Request;
@@ -61,42 +49,9 @@ static bool _EvalCanBuffer_Request__cdr_serialize(
     return false;
   }
   const _EvalCanBuffer_Request__ros_msg_type * ros_message = static_cast<const _EvalCanBuffer_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_msgs_base
+  // Field name: structure_needs_at_least_one_member
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    size_t size = ros_message->can_msgs_base.size;
-    auto array_ptr = ros_message->can_msgs_base.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: can_msgs_device
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    size_t size = ros_message->can_msgs_device.size;
-    auto array_ptr = ros_message->can_msgs_device.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
-    }
+    cdr << ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -111,58 +66,9 @@ static bool _EvalCanBuffer_Request__cdr_deserialize(
     return false;
   }
   _EvalCanBuffer_Request__ros_msg_type * ros_message = static_cast<_EvalCanBuffer_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_msgs_base
+  // Field name: structure_needs_at_least_one_member
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->can_msgs_base.data) {
-      loki_msgs__msg__CANFrame__Sequence__fini(&ros_message->can_msgs_base);
-    }
-    if (!loki_msgs__msg__CANFrame__Sequence__init(&ros_message->can_msgs_base, size)) {
-      fprintf(stderr, "failed to create array for field 'can_msgs_base'");
-      return false;
-    }
-    auto array_ptr = ros_message->can_msgs_base.data;
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: can_msgs_device
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->can_msgs_device.data) {
-      loki_msgs__msg__CANFrame__Sequence__fini(&ros_message->can_msgs_device);
-    }
-    if (!loki_msgs__msg__CANFrame__Sequence__init(&ros_message->can_msgs_device, size)) {
-      fprintf(stderr, "failed to create array for field 'can_msgs_device'");
-      return false;
-    }
-    auto array_ptr = ros_message->can_msgs_device.data;
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
-    }
+    cdr >> ros_message->structure_needs_at_least_one_member;
   }
 
   return true;
@@ -182,29 +88,11 @@ size_t get_serialized_size_loki_msgs__srv__EvalCanBuffer_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name can_msgs_base
+  // field.name structure_needs_at_least_one_member
   {
-    size_t array_size = ros_message->can_msgs_base.size;
-    auto array_ptr = ros_message->can_msgs_base.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_loki_msgs__msg__CANFrame(
-        &array_ptr[index], current_alignment);
-    }
-  }
-  // field.name can_msgs_device
-  {
-    size_t array_size = ros_message->can_msgs_device.size;
-    auto array_ptr = ros_message->can_msgs_device.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_loki_msgs__msg__CANFrame(
-        &array_ptr[index], current_alignment);
-    }
+    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   return current_alignment - initial_alignment;
@@ -233,43 +121,11 @@ size_t max_serialized_size_loki_msgs__srv__EvalCanBuffer_Request(
   full_bounded = true;
   is_plain = true;
 
-  // member: can_msgs_base
+  // member: structure_needs_at_least_one_member
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_loki_msgs__msg__CANFrame(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-  // member: can_msgs_device
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_loki_msgs__msg__CANFrame(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;
@@ -355,21 +211,8 @@ extern "C"
 {
 #endif
 
-// already included above
-// #include "loki_msgs/msg/detail/can_frame__functions.h"  // can_msgs_base, can_msgs_device
 
 // forward declare type support functions
-size_t get_serialized_size_loki_msgs__msg__CANFrame(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_loki_msgs__msg__CANFrame(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame)();
 
 
 using _EvalCanBuffer_Response__ros_msg_type = loki_msgs__srv__EvalCanBuffer_Response;
@@ -383,42 +226,9 @@ static bool _EvalCanBuffer_Response__cdr_serialize(
     return false;
   }
   const _EvalCanBuffer_Response__ros_msg_type * ros_message = static_cast<const _EvalCanBuffer_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_msgs_base
+  // Field name: response
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    size_t size = ros_message->can_msgs_base.size;
-    auto array_ptr = ros_message->can_msgs_base.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: can_msgs_device
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    size_t size = ros_message->can_msgs_device.size;
-    auto array_ptr = ros_message->can_msgs_device.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
-    }
+    cdr << (ros_message->response ? true : false);
   }
 
   return true;
@@ -433,58 +243,11 @@ static bool _EvalCanBuffer_Response__cdr_deserialize(
     return false;
   }
   _EvalCanBuffer_Response__ros_msg_type * ros_message = static_cast<_EvalCanBuffer_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: can_msgs_base
+  // Field name: response
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->can_msgs_base.data) {
-      loki_msgs__msg__CANFrame__Sequence__fini(&ros_message->can_msgs_base);
-    }
-    if (!loki_msgs__msg__CANFrame__Sequence__init(&ros_message->can_msgs_base, size)) {
-      fprintf(stderr, "failed to create array for field 'can_msgs_base'");
-      return false;
-    }
-    auto array_ptr = ros_message->can_msgs_base.data;
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: can_msgs_device
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, loki_msgs, msg, CANFrame
-      )()->data);
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->can_msgs_device.data) {
-      loki_msgs__msg__CANFrame__Sequence__fini(&ros_message->can_msgs_device);
-    }
-    if (!loki_msgs__msg__CANFrame__Sequence__init(&ros_message->can_msgs_device, size)) {
-      fprintf(stderr, "failed to create array for field 'can_msgs_device'");
-      return false;
-    }
-    auto array_ptr = ros_message->can_msgs_device.data;
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
-    }
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->response = tmp ? true : false;
   }
 
   return true;
@@ -504,29 +267,11 @@ size_t get_serialized_size_loki_msgs__srv__EvalCanBuffer_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name can_msgs_base
+  // field.name response
   {
-    size_t array_size = ros_message->can_msgs_base.size;
-    auto array_ptr = ros_message->can_msgs_base.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_loki_msgs__msg__CANFrame(
-        &array_ptr[index], current_alignment);
-    }
-  }
-  // field.name can_msgs_device
-  {
-    size_t array_size = ros_message->can_msgs_device.size;
-    auto array_ptr = ros_message->can_msgs_device.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_loki_msgs__msg__CANFrame(
-        &array_ptr[index], current_alignment);
-    }
+    size_t item_size = sizeof(ros_message->response);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
   return current_alignment - initial_alignment;
@@ -555,43 +300,11 @@ size_t max_serialized_size_loki_msgs__srv__EvalCanBuffer_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: can_msgs_base
+  // member: response
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_loki_msgs__msg__CANFrame(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-  // member: can_msgs_device
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_loki_msgs__msg__CANFrame(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;

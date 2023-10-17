@@ -39,14 +39,14 @@ void DeviceCmds_Request_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember DeviceCmds_Request_message_member_array[1] = {
   {
-    "set",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    "structure_needs_at_least_one_member",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs::srv::DeviceCmds_Request, set),  // bytes offset in struct
+    offsetof(loki_msgs::srv::DeviceCmds_Request, structure_needs_at_least_one_member),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -158,14 +158,14 @@ void DeviceCmds_Response_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember DeviceCmds_Response_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    "response",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(loki_msgs::srv::DeviceCmds_Response, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(loki_msgs::srv::DeviceCmds_Response, response),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

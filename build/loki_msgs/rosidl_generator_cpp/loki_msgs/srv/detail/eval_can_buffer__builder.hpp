@@ -18,42 +18,6 @@ namespace loki_msgs
 namespace srv
 {
 
-namespace builder
-{
-
-class Init_EvalCanBuffer_Request_can_msgs_device
-{
-public:
-  explicit Init_EvalCanBuffer_Request_can_msgs_device(::loki_msgs::srv::EvalCanBuffer_Request & msg)
-  : msg_(msg)
-  {}
-  ::loki_msgs::srv::EvalCanBuffer_Request can_msgs_device(::loki_msgs::srv::EvalCanBuffer_Request::_can_msgs_device_type arg)
-  {
-    msg_.can_msgs_device = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::EvalCanBuffer_Request msg_;
-};
-
-class Init_EvalCanBuffer_Request_can_msgs_base
-{
-public:
-  Init_EvalCanBuffer_Request_can_msgs_base()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_EvalCanBuffer_Request_can_msgs_device can_msgs_base(::loki_msgs::srv::EvalCanBuffer_Request::_can_msgs_base_type arg)
-  {
-    msg_.can_msgs_base = std::move(arg);
-    return Init_EvalCanBuffer_Request_can_msgs_device(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::EvalCanBuffer_Request msg_;
-};
-
-}  // namespace builder
 
 }  // namespace srv
 
@@ -64,7 +28,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::EvalCanBuffer_Request>()
 {
-  return loki_msgs::srv::builder::Init_EvalCanBuffer_Request_can_msgs_base();
+  return ::loki_msgs::srv::EvalCanBuffer_Request(rosidl_runtime_cpp::MessageInitialization::ZERO);
 }
 
 }  // namespace loki_msgs
@@ -79,32 +43,16 @@ namespace srv
 namespace builder
 {
 
-class Init_EvalCanBuffer_Response_can_msgs_device
+class Init_EvalCanBuffer_Response_response
 {
 public:
-  explicit Init_EvalCanBuffer_Response_can_msgs_device(::loki_msgs::srv::EvalCanBuffer_Response & msg)
-  : msg_(msg)
-  {}
-  ::loki_msgs::srv::EvalCanBuffer_Response can_msgs_device(::loki_msgs::srv::EvalCanBuffer_Response::_can_msgs_device_type arg)
-  {
-    msg_.can_msgs_device = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::loki_msgs::srv::EvalCanBuffer_Response msg_;
-};
-
-class Init_EvalCanBuffer_Response_can_msgs_base
-{
-public:
-  Init_EvalCanBuffer_Response_can_msgs_base()
+  Init_EvalCanBuffer_Response_response()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_EvalCanBuffer_Response_can_msgs_device can_msgs_base(::loki_msgs::srv::EvalCanBuffer_Response::_can_msgs_base_type arg)
+  ::loki_msgs::srv::EvalCanBuffer_Response response(::loki_msgs::srv::EvalCanBuffer_Response::_response_type arg)
   {
-    msg_.can_msgs_base = std::move(arg);
-    return Init_EvalCanBuffer_Response_can_msgs_device(msg_);
+    msg_.response = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -122,7 +70,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::EvalCanBuffer_Response>()
 {
-  return loki_msgs::srv::builder::Init_EvalCanBuffer_Response_can_msgs_base();
+  return loki_msgs::srv::builder::Init_EvalCanBuffer_Response_response();
 }
 
 }  // namespace loki_msgs

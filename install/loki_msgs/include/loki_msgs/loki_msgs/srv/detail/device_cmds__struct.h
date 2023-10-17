@@ -20,7 +20,7 @@ extern "C"
 /// Struct defined in srv/DeviceCmds in the package loki_msgs.
 typedef struct loki_msgs__srv__DeviceCmds_Request
 {
-  int32_t set;
+  uint8_t structure_needs_at_least_one_member;
 } loki_msgs__srv__DeviceCmds_Request;
 
 // Struct for a sequence of loki_msgs__srv__DeviceCmds_Request.
@@ -39,7 +39,7 @@ typedef struct loki_msgs__srv__DeviceCmds_Request__Sequence
 /// Struct defined in srv/DeviceCmds in the package loki_msgs.
 typedef struct loki_msgs__srv__DeviceCmds_Response
 {
-  uint8_t structure_needs_at_least_one_member;
+  bool response;
 } loki_msgs__srv__DeviceCmds_Response;
 
 // Struct for a sequence of loki_msgs__srv__DeviceCmds_Response.

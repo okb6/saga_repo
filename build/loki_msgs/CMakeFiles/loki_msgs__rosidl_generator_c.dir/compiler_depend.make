@@ -2037,8 +2037,6 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  rosidl_generator_c/loki_msgs/msg/detail/can_frame__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /usr/include/assert.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
@@ -2058,8 +2056,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control.h \
   /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h \
-  /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h \
-  rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.h
+  /opt/ros/humble/include/rcutils/rcutils/types/rcutils_ret.h
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c \
   /usr/include/stdc-predef.h \

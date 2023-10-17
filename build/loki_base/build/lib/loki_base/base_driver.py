@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
 from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, CANFrame
 from sensor_msgs.msg import JointState, Imu
@@ -26,7 +27,7 @@ class BaseDriver(Node):
 
         self.emergency_stop = False
         self.latest_base_command_time = self.get_clock().now()
-        self.command_timeout_time = 0.5
+        self.command_timeout_time = Duration(seconds = 0.5)
 
         # PltfClcStd = PltfClcStd()
 
@@ -223,7 +224,7 @@ class BaseDriver(Node):
         self.cli_home_steering_all = self.create_client(HomesteeringAll, 'homesteeringall')
         self.cli_setup_motor_controller = self.create_client(MotCot, 'motcot')
         self.cli_get_controller_setup_map = self.create_client(CotMap, 'cotmap')
-        self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
+        # self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')
         self.cli_set_drive_params = self.create_client(Params, 'params')
 
         # self.initPltf(interface_type, can_interface_name)
@@ -281,15 +282,14 @@ class BaseDriver(Node):
 
             while rclpy.ok():
 
-
-                self.get_logger().info("hello")
-
                 self.set_drive_params()
+                self.get_logger().info("DID YOU RETURN CORRECTLY")
                 self.publish_joint_commands()
                 self.sendDriveCommands()
                 self.sendDeviceCommands()
                 self.evalCanBuffer()
                 self.handleFeedback()
+
 
                 rclpy.spin_once()
                 self.rate.sleep()
@@ -319,16 +319,17 @@ class BaseDriver(Node):
             self.get_logger().error("Robot failed to initialize")
             return False
         
-        self.set_bool_map = {}
+        # self.set_bool_map = {}
         if not self.client_get_set_bool():
             self.get_logger().error("setting bool map failed")
 
+
         
-        for key, service_name in self.set_bool_map.items():
-            srv = self.create_service(
-                SetBool, service_name, self.srv_callback_io_set_bool)
-            self.servers_io.append(srv)
-            self.get_logger().info(f"Advertised service: {service_name}")
+        # for key, service_name in self.set_bool_map.items():
+        #     srv = self.create_service(
+        #         SetBool, service_name, self.srv_callback_io_set_bool)
+        #     self.servers_io.append(srv)
+        #     self.get_logger().info(f"Advertised service: {service_name}")
         
         return True
     
@@ -346,16 +347,19 @@ class BaseDriver(Node):
         Future = self.cli_get_set_bool.call_async(GetSetBool.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
-        set_bool_string = response.set_bool_strings
-        set_bool_values = response.set_bool_values
-        i = 0
-        
-        if len(set_bool_string) == len(set_bool_values):
-            while i < len(set_bool_values):
-                self.set_bool_map[set_bool_string[i]] = set_bool_values[i]
-        else:
-            self.get_logger().error("Bool map does not have equal key to element amounts")
+
+        if not response:
             return False
+        # set_bool_string = response.set_bool_strings
+        # set_bool_values = response.set_bool_values
+        # i = 0
+        
+        # if len(set_bool_string) == len(set_bool_values):
+        #     while i < len(set_bool_values):
+        #         self.set_bool_map[set_bool_string[i]] = set_bool_values[i]
+        # else:
+        #     self.get_logger().error("Bool map does not have equal key to element amounts")
+        #     return False
         
         return True
 
@@ -367,13 +371,14 @@ class BaseDriver(Node):
         EvalCanBuffer.Request().can_msgs_base = bool_eval
         Future = self.cli_eval_can_buffer.call_async(EvalCanBuffer.Request())
         rclpy.spin_until_future_complete(self, Future)
-        response = Future.result()
+        
         return
 
            
     def publish_joint_commands(self):
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
+        self.get_logger().info("BASE STATE WORKED?")
         self.joint_command_pub.publish(latest_base_command_msg)
 
     def client_get_base_state(self):
@@ -413,7 +418,7 @@ class BaseDriver(Node):
             if self.pltf_clc_itf.calculateOdometry(base_state, vx, vy, wz, x, y, yaw, self.motor_drives):
                 odom_msg.header.frame_id = self.frame_id
                 odom_msg.child_frame_id = "base_link"
-                odom_msg.header.stamp = self.get_clock().now()
+                odom_msg.header.stamp = self.get_clock().now().to_msg()
 
                 odom_msg.pose.pose.position.x = x
                 odom_msg.pose.pose.position.y = y     
@@ -437,7 +442,7 @@ class BaseDriver(Node):
             
         #Joint State
         joint_state_msg = JointState()
-        joint_state_msg.header.stamp = self.get_clock().now()
+        joint_state_msg.header.stamp = self.get_clock().now().to_msg()
         joint_state_msg.name = self.joint_names
 
         for i in range(len(base_state.steer_pos)):
@@ -488,8 +493,9 @@ class BaseDriver(Node):
 
     def sendDriveCommands(self):
         self.get_logger().info("are you wroking")
+
         if (self.get_clock().now() > self.latest_base_command_time + self.command_timeout_time) or self.emergency_stop:
-            self.altest_base_command = PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
+            self.latest_base_command = PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
 
         self.client_send_drive_commands()
 
@@ -503,7 +509,7 @@ class BaseDriver(Node):
         DriveCmds.Request().commands = commands
         Future = self.cli_send_drive_commands.call_async(DriveCmds.Request())
         rclpy.spin_until_future_complete(self, Future)
-        response = Future.Result()
+        response = Future.result()
         return
         
 
@@ -512,7 +518,6 @@ class BaseDriver(Node):
 
 
     def client_send_device_commands(self):
-        DeviceCmds.Request.set = 1
         Future = self.cli_send_device_commands.call_async(DeviceCmds.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
@@ -630,6 +635,7 @@ class BaseDriver(Node):
         response.message = "Resetting base odometry. x = 0, y = 0, yaw = 0"
 
     def set_drive_params(self):
+        self.get_logger().info("DRIVE PARAMS")
         # num_drives = len(self.motor_drives)
 
         # for i in range(len(request.params)):
@@ -640,15 +646,21 @@ class BaseDriver(Node):
         #         response.message = "One or more params could not be set"
 
         PltfClcStd.setParams(PltfClcStd, self.motor_drives)
-        self.client_set_drive_params()
+        self.get_logger().info("DID DRIVE PARAMS WORK")
+        if not self.client_set_drive_params():
+            self.get_logger().info("Set Drive Params failed")
+        else: 
+            self.get_logger().info("Set Drive Params was successful")
+        
+        return
 
     def client_set_drive_params(self):
-        set = True
-        Params.Request().set = set
-        Future = self.cli_set_drive_params.call_async(Params.Request())
+        # set = True
+        # Params.Request().set = set
+        Future = self.cli_set_drive_params.call_async(Params.Request()) #Add return False to check
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
-        return
+        return response
 
 
     def srv_callback_curent_pos_zero(self, request, response):
@@ -681,30 +693,31 @@ class BaseDriver(Node):
         response.message = message
 
     
-    def srv_callback_io_set_bool(self, request, response, unique_service_id):
-        success = True
-        message = ''
-        data = request.data
+    # def srv_callback_io_set_bool(self, request, response, unique_service_id):
+    #     success = True
+    #     message = ''
+    #     data = request.data
 
-        boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
-        response.success = boolservice.success
-        response.message = boolservice.message
-        self.get_logger().info(message)
+    #     boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
+    #     response.success = boolservice.success
+    #     response.message = boolservice.message
+    #     self.get_logger().info(message)
     
-    def client_call_set_bool_service(self, unique_service_id, data, success, message):
-        SetBools.Request().unique_service_id = unique_service_id
-        SetBools.Request().value = data
-        SetBools.Request().data = success
-        SetBools.Request().data = message
-        Future = self.cli_call_set_bool.call_async(SetBools.Request())
-        rclpy.spin_until_future_complete(self, Future)
-        response = Future.result()
-        return response
+    # def client_call_set_bool_service(self, unique_service_id, data, success, message):
+    #     SetBools.Request().unique_service_id = unique_service_id
+    #     SetBools.Request().value = data
+    #     SetBools.Request().data = success
+    #     SetBools.Request().data = message
+    #     Future = self.cli_call_set_bool.call_async(SetBools.Request())
+    #     rclpy.spin_until_future_complete(self, Future)
+    #     response = Future.result()
+    #     return response
 
         
 
     def baseStateToMsg(self, time, base_state_in, base_state_out):
-        base_state_out.header.stamp = time
+        self.get_logger().info("pr speed {}".format(base_state_in.prop_speed))
+        base_state_out.header.stamp = time.to_msg()
         base_state_out.drive_mode = base_state_in.drive_mode
         base_state_out.prop_speed = base_state_in.prop_speed
         base_state_out.prop_pos = base_state_in.prop_pos

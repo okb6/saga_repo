@@ -10,27 +10,13 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `can_msgs_base`
-// Member `can_msgs_device`
-#include "loki_msgs/msg/detail/can_frame__functions.h"
-
 bool
 loki_msgs__srv__EvalCanBuffer_Request__init(loki_msgs__srv__EvalCanBuffer_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__init(&msg->can_msgs_base, 0)) {
-    loki_msgs__srv__EvalCanBuffer_Request__fini(msg);
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__init(&msg->can_msgs_device, 0)) {
-    loki_msgs__srv__EvalCanBuffer_Request__fini(msg);
-    return false;
-  }
+  // structure_needs_at_least_one_member
   return true;
 }
 
@@ -40,10 +26,7 @@ loki_msgs__srv__EvalCanBuffer_Request__fini(loki_msgs__srv__EvalCanBuffer_Reques
   if (!msg) {
     return;
   }
-  // can_msgs_base
-  loki_msgs__msg__CANFrame__Sequence__fini(&msg->can_msgs_base);
-  // can_msgs_device
-  loki_msgs__msg__CANFrame__Sequence__fini(&msg->can_msgs_device);
+  // structure_needs_at_least_one_member
 }
 
 bool
@@ -52,16 +35,8 @@ loki_msgs__srv__EvalCanBuffer_Request__are_equal(const loki_msgs__srv__EvalCanBu
   if (!lhs || !rhs) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__are_equal(
-      &(lhs->can_msgs_base), &(rhs->can_msgs_base)))
-  {
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__are_equal(
-      &(lhs->can_msgs_device), &(rhs->can_msgs_device)))
-  {
+  // structure_needs_at_least_one_member
+  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
     return false;
   }
   return true;
@@ -75,18 +50,8 @@ loki_msgs__srv__EvalCanBuffer_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__copy(
-      &(input->can_msgs_base), &(output->can_msgs_base)))
-  {
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__copy(
-      &(input->can_msgs_device), &(output->can_msgs_device)))
-  {
-    return false;
-  }
+  // structure_needs_at_least_one_member
+  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
   return true;
 }
 
@@ -270,28 +235,13 @@ loki_msgs__srv__EvalCanBuffer_Request__Sequence__copy(
 }
 
 
-// Include directives for member types
-// Member `can_msgs_base`
-// Member `can_msgs_device`
-// already included above
-// #include "loki_msgs/msg/detail/can_frame__functions.h"
-
 bool
 loki_msgs__srv__EvalCanBuffer_Response__init(loki_msgs__srv__EvalCanBuffer_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__init(&msg->can_msgs_base, 0)) {
-    loki_msgs__srv__EvalCanBuffer_Response__fini(msg);
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__init(&msg->can_msgs_device, 0)) {
-    loki_msgs__srv__EvalCanBuffer_Response__fini(msg);
-    return false;
-  }
+  // response
   return true;
 }
 
@@ -301,10 +251,7 @@ loki_msgs__srv__EvalCanBuffer_Response__fini(loki_msgs__srv__EvalCanBuffer_Respo
   if (!msg) {
     return;
   }
-  // can_msgs_base
-  loki_msgs__msg__CANFrame__Sequence__fini(&msg->can_msgs_base);
-  // can_msgs_device
-  loki_msgs__msg__CANFrame__Sequence__fini(&msg->can_msgs_device);
+  // response
 }
 
 bool
@@ -313,16 +260,8 @@ loki_msgs__srv__EvalCanBuffer_Response__are_equal(const loki_msgs__srv__EvalCanB
   if (!lhs || !rhs) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__are_equal(
-      &(lhs->can_msgs_base), &(rhs->can_msgs_base)))
-  {
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__are_equal(
-      &(lhs->can_msgs_device), &(rhs->can_msgs_device)))
-  {
+  // response
+  if (lhs->response != rhs->response) {
     return false;
   }
   return true;
@@ -336,18 +275,8 @@ loki_msgs__srv__EvalCanBuffer_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // can_msgs_base
-  if (!loki_msgs__msg__CANFrame__Sequence__copy(
-      &(input->can_msgs_base), &(output->can_msgs_base)))
-  {
-    return false;
-  }
-  // can_msgs_device
-  if (!loki_msgs__msg__CANFrame__Sequence__copy(
-      &(input->can_msgs_device), &(output->can_msgs_device)))
-  {
-    return false;
-  }
+  // response
+  output->response = input->response;
   return true;
 }
 
