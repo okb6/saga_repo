@@ -150,17 +150,28 @@ inline void to_flow_style_yaml(
   const MotCot_Response & msg,
   std::ostream & out)
 {
-  (void)msg;
-  out << "null";
+  out << "{";
+  // member: setup
+  {
+    out << "setup: ";
+    rosidl_generator_traits::value_to_yaml(msg.setup, out);
+  }
+  out << "}";
 }  // NOLINT(readability/fn_size)
 
 inline void to_block_style_yaml(
   const MotCot_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  (void)msg;
-  (void)indentation;
-  out << "null\n";
+  // member: setup
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "setup: ";
+    rosidl_generator_traits::value_to_yaml(msg.setup, out);
+    out << "\n";
+  }
 }  // NOLINT(readability/fn_size)
 
 inline std::string to_yaml(const MotCot_Response & msg, bool use_flow_style = false)

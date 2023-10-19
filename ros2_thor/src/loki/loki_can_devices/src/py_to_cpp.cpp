@@ -59,7 +59,7 @@ int can_interface_type_;
 class PyToCpp : public rclcpp::Node {
     public:
         PyToCpp() : Node("py_to_cpp") {
-            srv1_ = create_service<loki_msgs::srv::EvalCanBuffer>("evalcanbuffer", std::bind(&PyToCpp::server_eval_can_buffer, this, std::placeholders::_1, std::placeholders::_2));
+            srv1_ = create_service<loki_msgs::srv::EvalCanBuffer>("eval_can_buffer", std::bind(&PyToCpp::server_eval_can_buffer, this, std::placeholders::_1, std::placeholders::_2));
             srv2_ = create_service<loki_msgs::srv::ContArray>("contarray", std::bind(&PyToCpp::server_controller_array, this, std::placeholders::_1, std::placeholders::_2));
             srv3_ = create_service<loki_msgs::srv::CotMap>("cotmap", std::bind(&PyToCpp::server_controller_map, this, std::placeholders::_1, std::placeholders::_2));
             srv4_ = create_service<loki_msgs::srv::BatteryVars>("batteryvars", std::bind(&PyToCpp::server_battery_variable, this, std::placeholders::_1, std::placeholders::_2));
@@ -413,7 +413,6 @@ class PyToCpp : public rclcpp::Node {
                 servers_io_.push_back(create_service<std_srvs::srv::SetBool>(elem.second, std::bind(&PyToCpp::srvCallbackIOSetBool, this, std::placeholders::_1, std::placeholders::_2, elem.first)));
             }
 
-            RCLCPP_INFO(this->get_logger(), "HEY BOO");
             
 
             return true;
@@ -464,12 +463,13 @@ class PyToCpp : public rclcpp::Node {
                 pub1_->publish(can_msg);
             }
 
+            response->response = true;
             return true;
         }
 
         bool server_controller_array(const std::shared_ptr<loki_msgs::srv::ContArray::Request> request,
                                     const std::shared_ptr<loki_msgs::srv::ContArray::Response> response){
-            if (request->on == 1 ){
+
                 std::vector<CanDriveItf::ControllerVars> controller_vars_all_drives;
                 loki_msgs::msg::ControllerArray controller_array;
                 can_ctrl_pltf_->getControllerArray(controller_vars_all_drives);
@@ -485,7 +485,7 @@ class PyToCpp : public rclcpp::Node {
                 controller_array.header.stamp = this->now(); //not sure if this works
                 pub3_->publish(controller_array);
                 
-            }
+
 
             return true;
         }
@@ -494,29 +494,33 @@ class PyToCpp : public rclcpp::Node {
                                     const std::shared_ptr<loki_msgs::srv::CotMap::Response> response){
             std::vector<std::string> setup_map;
             can_ctrl_pltf_->getControllerSetupMap(request->can_id, request->setup_map);
-            response->setup_map = setup_map;
+
+
+            response->setup_map = request->setup_map;
             
             return true; //make sure this is set up on python side
         }
 
         bool server_battery_variable(const std::shared_ptr<loki_msgs::srv::BatteryVars::Request> request,
                                     const std::shared_ptr<loki_msgs::srv::BatteryVars::Response> response){
-            if (request->batt == 1){
+   
             std::vector<CanBatteryItf::BatteryVars> batt_vars;
             loki_msgs::msg::BatteryArray batt_array_msg;
             can_ctrl_pltf_->getAllBatteryVars(batt_vars);
             batteryVarsToMsg(batt_vars, batt_array_msg);
             pub5_->publish(batt_array_msg);
-            }
+            
 
             return true;
         }
 
         bool server_drive_cmds(const std::shared_ptr<loki_msgs::srv::DriveCmds::Request> request,
                             const std::shared_ptr<loki_msgs::srv::DriveCmds::Response> response){
-            if (request->commands == 1){
+
+
+
                 can_ctrl_pltf_->sendCommandsToAllDrives(base_command_out_);
-            }
+            
 
             return true;
         
@@ -548,19 +552,17 @@ class PyToCpp : public rclcpp::Node {
 
         bool server_simulate_drive(const std::shared_ptr<loki_msgs::srv::SimDrive::Request> request,
                                     std::shared_ptr<loki_msgs::srv::SimDrive::Response> response){
-            if (request->commands == 1){
                 
                 can_ctrl_pltf_->simulateAllDrives(base_command_out_);
-            }
 
             return true;
         }
 
         bool server_position_zero_all(const std::shared_ptr<loki_msgs::srv::PosZeroAll::Request> request,
                                     const std::shared_ptr<loki_msgs::srv::PosZeroAll::Response> response){
-            if(request->zeroall){
+
                 can_ctrl_pltf_->setCurrentPosAsZeroAll();
-            }
+    
 
             return true;
         } //Add zeroall to base_driver
@@ -575,9 +577,9 @@ class PyToCpp : public rclcpp::Node {
         bool server_home_steering_all(const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Request> request,
                                     const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Response> response){
             bool success;
-            if(request->homesteering){
+
                 can_ctrl_pltf_->homeSteeringAll();
-            }
+            
             if (success){
                 RCLCPP_INFO(this->get_logger(), "Homing Successful");
             }
@@ -591,6 +593,8 @@ class PyToCpp : public rclcpp::Node {
         bool server_motor_controller(const std::shared_ptr<loki_msgs::srv::MotCot::Request> request,
                                     const std::shared_ptr<loki_msgs::srv::MotCot::Response> response){
             can_ctrl_pltf_->setupMotorController(request->can_id, request->setup_id, request->setup_value);
+
+            response->setup = true;
 
             return true;
         }
@@ -616,7 +620,7 @@ class PyToCpp : public rclcpp::Node {
 
         bool server_base_state(const std::shared_ptr<loki_msgs::srv::StateBase::Request> request,
                             const std::shared_ptr<loki_msgs::srv::StateBase::Response> response){
-            if (request->base_state == 1){
+
                 CanCtrlPltf::BaseState get_base_state;
                 loki_msgs::msg::BaseState msg;
                 bool success;
@@ -628,20 +632,17 @@ class PyToCpp : public rclcpp::Node {
 
                 success = true;
                 response->success;
-            }
             return true;
 
         }
 
         bool server_io_state(const std::shared_ptr<loki_msgs::srv::StatesOfIO::Request> request,
                             const std::shared_ptr<loki_msgs::srv::StatesOfIO::Response> response){
-            if (request->states == 1){
                 std::vector<CanIOItf::IOState> io_states;
                 loki_msgs::msg::IOArray io_states_msg;
                 can_ctrl_pltf_->getIOStates(io_states);
                 ioStatesToMsg(io_states, io_states_msg);
                 pub4_->publish(io_states_msg);
-            }
             return true;          
         }
 

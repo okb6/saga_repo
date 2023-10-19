@@ -257,7 +257,7 @@ loki_msgs__srv__MotCot_Response__init(loki_msgs__srv__MotCot_Response * msg)
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // setup
   return true;
 }
 
@@ -267,7 +267,7 @@ loki_msgs__srv__MotCot_Response__fini(loki_msgs__srv__MotCot_Response * msg)
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // setup
 }
 
 bool
@@ -276,8 +276,8 @@ loki_msgs__srv__MotCot_Response__are_equal(const loki_msgs__srv__MotCot_Response
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // setup
+  if (lhs->setup != rhs->setup) {
     return false;
   }
   return true;
@@ -291,8 +291,8 @@ loki_msgs__srv__MotCot_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // setup
+  output->setup = input->setup;
   return true;
 }
 

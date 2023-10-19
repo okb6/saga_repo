@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.time import Time
 from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
 from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, CANFrame
@@ -240,7 +241,10 @@ class BaseDriver(Node):
         # self.twist_cov_default_vector = numpy.array(self.twist_cov_default_array).flatten()
         # cov_vector = self.get_parameter('twist_covariance').value
         # self.twist_cov_vector = numpy.array(cov_vector).flatten()
-        # self.pose_cov = self.twist_cov
+        self.pose_cov = [0.0] * 36
+        self.twist_cov = [0.0] * 36
+
+        self.pose_cov = self.twist_cov
 
         if self.allow_geometry_odometry:
             self.gazebo_odom_sub = self.create_subscription(Odometry, 'odometry/gazebo', 1, self.gazebo_odom_callback)
@@ -283,16 +287,16 @@ class BaseDriver(Node):
             while rclpy.ok():
 
                 self.set_drive_params()
-                self.get_logger().info("DID YOU RETURN CORRECTLY")
                 self.publish_joint_commands()
                 self.sendDriveCommands()
                 self.sendDeviceCommands()
                 self.evalCanBuffer()
                 self.handleFeedback()
+                # self.get_logger().info("latest_base_command{}".format(self.bsmg.prop_speed))
 
 
-                rclpy.spin_once()
-                self.rate.sleep()
+                # rclpy.spin_once(BaseDriver) 
+                # self.rate.sleep()
 
 
 
@@ -342,7 +346,6 @@ class BaseDriver(Node):
         return response
 
     def client_get_set_bool(self):
-        self.get_logger().info("HEYYE")
 
         Future = self.cli_get_set_bool.call_async(GetSetBool.Request())
         rclpy.spin_until_future_complete(self, Future)
@@ -367,18 +370,16 @@ class BaseDriver(Node):
         self.client_eval_can_buffer()
     
     def client_eval_can_buffer(self):
-        bool_eval = 1
-        EvalCanBuffer.Request().can_msgs_base = bool_eval
         Future = self.cli_eval_can_buffer.call_async(EvalCanBuffer.Request())
         rclpy.spin_until_future_complete(self, Future)
-        
+        response = Future.result()
         return
 
            
     def publish_joint_commands(self):
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
-        self.get_logger().info("BASE STATE WORKED?")
+        self.bsmg = latest_base_command_msg
         self.joint_command_pub.publish(latest_base_command_msg)
 
     def client_get_base_state(self):
@@ -391,7 +392,7 @@ class BaseDriver(Node):
     def client_get_cont_array(self):
         on = 1
         ContArray.Request().on = on
-        Future = self.cli_get_controller_array(ContArray.Request())
+        Future = self.cli_get_controller_array.call_async(ContArray.Request())
         rclpy.spin_until_future_complete(self, Future)
         return
         
@@ -399,7 +400,8 @@ class BaseDriver(Node):
     def handleFeedback(self):
         self.client_get_base_state()
 
-        base_state = self.basestatemsg #I believe there are unnecessary msg to basesate to basestate to msg conversions that might be able to change in teh c++ seciton
+        base_state = self.basestatemsg
+        durat = Duration(seconds = 0.5)
 
         base_state_msg = BaseState()
         self.baseStateToMsg(self.get_clock().now(), base_state, base_state_msg)
@@ -415,18 +417,20 @@ class BaseDriver(Node):
         yaw = 0.0
 
         if not self.has_gazebo:
-            if self.pltf_clc_itf.calculateOdometry(base_state, vx, vy, wz, x, y, yaw, self.motor_drives):
+            if PltfClcStd.calculateOdometry(PltfClcStd, base_state, vx, vy, wz, x, y, yaw, self.motor_drives, self, durat):
                 odom_msg.header.frame_id = self.frame_id
                 odom_msg.child_frame_id = "base_link"
                 odom_msg.header.stamp = self.get_clock().now().to_msg()
 
                 odom_msg.pose.pose.position.x = x
                 odom_msg.pose.pose.position.y = y     
-                odom_msg.pose.pose.position.z = 0
+                odom_msg.pose.pose.position.z = 0.0
             
                 increase_pose_cov = (abs(vx) > 0.005) or (abs(vy) > 0.005) or (abs(wz) > 0.005)
-                for i in range(36):
+                i = 0
+                while i < 36:
                     self.pose_cov[i] = self.pose_cov[i] + self.twist_cov[i] * increase_pose_cov
+                    i += 1
 
                 odom_msg.pose.covariance = self.pose_cov
 
@@ -445,9 +449,12 @@ class BaseDriver(Node):
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
         joint_state_msg.name = self.joint_names
 
-        for i in range(len(base_state.steer_pos)):
+        i = 0
+
+        while i < len(base_state.steer_pos):
             joint_state_msg.position.append(base_state.steer_pos[i])
             joint_state_msg.position.append(base_state.prop_pos[i])
+            i += 1
         
         self.joint_state_pub.publish(joint_state_msg)
 
@@ -462,14 +469,14 @@ class BaseDriver(Node):
 
     def client_get_All_battery_vars(self, batt):
         BatteryVars.Request().batt = batt
-        Future = self.cli_get_all_battery_vars(BatteryVars.Request())
+        Future = self.cli_get_all_battery_vars.call_async(BatteryVars.Request())
         rclpy.spin_until_future_complete(self, Future)
         batt_vars = Future.result()
         return 
         
     def client_io_states_to_msg(self, states):
         StatesOfIO.Request().states = states
-        Future = self.cli_io_states_to_msg(StatesOfIO.Request())
+        Future = self.cli_io_states_to_msg.call_async(StatesOfIO.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
         return
@@ -478,6 +485,8 @@ class BaseDriver(Node):
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
         self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
+        if not twist_in.angular.z == 0:
+            self.get_logger().info("motors help {}".format(self.latest_base_command.steer_pos))
 
     def gazebo_odom_callback(self, odom_in):
         last_gazebo_odom = odom_in
@@ -492,7 +501,6 @@ class BaseDriver(Node):
 
 
     def sendDriveCommands(self):
-        self.get_logger().info("are you wroking")
 
         if (self.get_clock().now() > self.latest_base_command_time + self.command_timeout_time) or self.emergency_stop:
             self.latest_base_command = PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
@@ -501,7 +509,6 @@ class BaseDriver(Node):
 
 
     def client_send_drive_commands(self):
-        self.get_logger().info('do you work')
         commands = 1
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
@@ -585,22 +592,27 @@ class BaseDriver(Node):
     def client_get_controller_setup_map(self, can_id, setup_map):
         CotMap.Request().can_id = can_id
         CotMap.Request().setup_map = setup_map
-        Future = self.cli_get_controller_setup_map.call_async(MotCot.Request())
+        Future = self.cli_get_controller_setup_map.call_async(CotMap.Request())
         rclpy.spin_until_future_complete(self, Future)
         response = Future.result()
+        self.get_logger().info("help")
+        setup_map = response.setup_map
         return
 
     def srv_callback_setup_controller(self, request, response):
         message = ""
         status = 0
 
+
         controller_setup_map_ss = ""
         setup_map = []
         self.client_get_controller_setup_map(request.can_id, setup_map)
+        self.get_logger().info("is this back")
 
         i = 0
-        for i in range(setup_map):
+        while i < range(setup_map):
             controller_setup_map_ss += f"{i:>4}"
+            i += 1
 
         if request.setup_id < 0 and request.setup_id >= len(setup_map):
             message = "invalid setup ID. Try setup ID = 0 for map"
@@ -635,7 +647,6 @@ class BaseDriver(Node):
         response.message = "Resetting base odometry. x = 0, y = 0, yaw = 0"
 
     def set_drive_params(self):
-        self.get_logger().info("DRIVE PARAMS")
         # num_drives = len(self.motor_drives)
 
         # for i in range(len(request.params)):
@@ -646,11 +657,8 @@ class BaseDriver(Node):
         #         response.message = "One or more params could not be set"
 
         PltfClcStd.setParams(PltfClcStd, self.motor_drives)
-        self.get_logger().info("DID DRIVE PARAMS WORK")
         if not self.client_set_drive_params():
             self.get_logger().info("Set Drive Params failed")
-        else: 
-            self.get_logger().info("Set Drive Params was successful")
         
         return
 
@@ -716,7 +724,6 @@ class BaseDriver(Node):
         
 
     def baseStateToMsg(self, time, base_state_in, base_state_out):
-        self.get_logger().info("pr speed {}".format(base_state_in.prop_speed))
         base_state_out.header.stamp = time.to_msg()
         base_state_out.drive_mode = base_state_in.drive_mode
         base_state_out.prop_speed = base_state_in.prop_speed

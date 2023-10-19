@@ -41,7 +41,7 @@ typedef struct loki_msgs__srv__MotCot_Request__Sequence
 /// Struct defined in srv/MotCot in the package loki_msgs.
 typedef struct loki_msgs__srv__MotCot_Response
 {
-  uint8_t structure_needs_at_least_one_member;
+  bool setup;
 } loki_msgs__srv__MotCot_Response;
 
 // Struct for a sequence of loki_msgs__srv__MotCot_Response.

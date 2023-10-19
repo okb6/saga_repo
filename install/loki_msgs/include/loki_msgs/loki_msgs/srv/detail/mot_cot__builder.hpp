@@ -92,6 +92,26 @@ namespace loki_msgs
 namespace srv
 {
 
+namespace builder
+{
+
+class Init_MotCot_Response_setup
+{
+public:
+  Init_MotCot_Response_setup()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::loki_msgs::srv::MotCot_Response setup(::loki_msgs::srv::MotCot_Response::_setup_type arg)
+  {
+    msg_.setup = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::loki_msgs::srv::MotCot_Response msg_;
+};
+
+}  // namespace builder
 
 }  // namespace srv
 
@@ -102,7 +122,7 @@ template<>
 inline
 auto build<::loki_msgs::srv::MotCot_Response>()
 {
-  return ::loki_msgs::srv::MotCot_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return loki_msgs::srv::builder::Init_MotCot_Response_setup();
 }
 
 }  // namespace loki_msgs

@@ -187,11 +187,13 @@ class TeleopNode(Node):
 
         trigger_string_map = {'button_0':tb0, 'button_1':tb1, 'button_2':tb2, 'button_3':tb3, 'button_4':tb4, 'button_5':tb5, 'button_6':tb6}
         
-        for l in range(7):
+        l = 0
+        while l < 7:
             button = 'button_{}'.format(l)
             if not len(trigger_string_map[button]) == 0:
                 topic = trigger_string_map[button]
                 self.custom_trigger_map[button] = self.create_client(Trigger, topic)
+            l += 1
 
         
         #Get Gains
@@ -215,11 +217,13 @@ class TeleopNode(Node):
         buttoned = []
         thresh = 0.9
         i = 0
-        for i in range(len(axes_in)):
+        while i < len(axes_in):
             if axes_in[i] > thresh:
                 buttoned.append(1)
             else:
                 buttoned.append(0)
+
+            i += 1
         return buttoned
     
 
@@ -407,7 +411,7 @@ class TeleopNode(Node):
             vy = 0.0
             
             if self.buttons[self.button_map[self.button_turning_safety]]:
-                wz = (0.5 - 0.5 * self.axes[self.axis_map["axis_turn_left"]]) - (0.5 - 0.5 * self.axes[self.axis_map["axis_turn_right"]])
+                wz = (0.5 - (0.5 * self.axes[self.axis_map["axis_turn_left"]])) - (0.5 - (0.5 * self.axes[self.axis_map["axis_turn_right"]]))
             else:
                 wz = 0
             
@@ -466,8 +470,10 @@ class TeleopNode(Node):
         
         self.previous_drive_mode = mode
 
-        for i in range(self.number_of_buttons):
+        i = 0
+        while i < self.number_of_buttons:
             self.previous_buttons[i]= self.buttons[i]
+            i += 1
 
 
 

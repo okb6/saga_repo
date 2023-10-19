@@ -185,7 +185,15 @@ bool loki_msgs__srv__mot_cot__response__convert_from_py(PyObject * _pymsg, void 
     assert(strncmp("loki_msgs.srv._mot_cot.MotCot_Response", full_classname_dest, 38) == 0);
   }
   loki_msgs__srv__MotCot_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // setup
+    PyObject * field = PyObject_GetAttrString(_pymsg, "setup");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->setup = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -207,7 +215,18 @@ PyObject * loki_msgs__srv__mot_cot__response__convert_to_py(void * raw_ros_messa
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  loki_msgs__srv__MotCot_Response * ros_message = (loki_msgs__srv__MotCot_Response *)raw_ros_message;
+  {  // setup
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->setup ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "setup", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

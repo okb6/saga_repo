@@ -171,6 +171,9 @@ class MotCot_Request(metaclass=Metaclass_MotCot_Request):
 # Import statements for member types
 
 # already imported above
+# import builtins
+
+# already imported above
 # import rosidl_parser.definition
 
 
@@ -219,18 +222,22 @@ class MotCot_Response(metaclass=Metaclass_MotCot_Response):
     """Message class 'MotCot_Response'."""
 
     __slots__ = [
+        '_setup',
     ]
 
     _fields_and_field_types = {
+        'setup': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.setup = kwargs.get('setup', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -261,12 +268,27 @@ class MotCot_Response(metaclass=Metaclass_MotCot_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.setup != other.setup:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def setup(self):
+        """Message field 'setup'."""
+        return self._setup
+
+    @setup.setter
+    def setup(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'setup' field must be of type 'bool'"
+        self._setup = value
 
 
 class Metaclass_MotCot(type):
