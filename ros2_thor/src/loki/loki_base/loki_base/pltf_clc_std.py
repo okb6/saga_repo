@@ -113,16 +113,43 @@ class PltfClcStd:
             while i < self.number_of_drives:
                 drive_x = self.motor_drives[i]["x"]
                 drive_y = self.motor_drives[i]["y"]
-                if wz < 0:
-                    normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y)) + math.pi
-                else:
-                    normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
-
-                steer_ang = self.normalize_angle(normalized_to_be)
+                # if wz < 0:
+                #     normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y)) + math.pi
+                # else:
+                #     normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
                 
-                drive_steer[i] = steer_ang 
-                mode_speed[i] = math.sqrt(pow(turn_rad_x - drive_x, 2) + pow(turn_rad_y - drive_y, 2)) * abs(wz)
+                normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
 
+                steer_ang = self.normalize_angle(self, normalized_to_be)
+                
+                if i == 0:
+                    steer_ang += math.pi
+                elif i == 1:
+                    steer_ang -= math.pi
+
+                # else:
+                #     if i == 3:
+                #         steer_ang -= math.pi
+
+
+
+                
+                drive_steer[i] = steer_ang
+                mode_speed[i] = math.sqrt(pow(turn_rad_x - drive_x, 2) + pow(turn_rad_y - drive_y, 2)) * abs(wz) * (1 - 2 * (abs(drive_steer[i]) > math.pi / 2))
+
+                if i == 0:
+                    mode_speed[i] = -mode_speed[i]
+                elif i == 1:
+                    mode_speed[i] = -mode_speed[i]
+
+                if wz < 0:
+                    mode_speed[i] = -mode_speed[i]
+
+
+                
+
+                
+                
                 i += 1
             
             i = 0
@@ -136,6 +163,10 @@ class PltfClcStd:
             while i < self.number_of_drives:
                 steering[i] = math.atan2(vy,vx)
                 speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
+                if vy != 0 and vy < 0:
+                   if i == 1 or i == 3:
+                    steering[i] -= math.pi
+
                 i += 1
 
 
@@ -143,6 +174,7 @@ class PltfClcStd:
         numpy.resize(joint_states_out.steer_pos, self.number_of_drives)
         numpy.resize(joint_states_out.steer_max_speed, self.number_of_drives)
         numpy.resize(joint_states_out.channel, self.number_of_drives)
+
 
         # joint_states_out.prop_speed = [0.0, 0.0, 0.0, 0.0]
         # joint_states_out.steer_pos = [0.0, 0.0, 0.0, 0.0]
@@ -155,17 +187,20 @@ class PltfClcStd:
             joint_states_out.prop_speed[i] = speed[i]
             i += 1
 
+
         return joint_states_out
 
 
 
                 
     def normalize_angle(self, angle):
-        result = fmod(angle + math.pi, 2.0 * math.pi)
-        if result <= 0.0:
-            return result + math.pi 
-        else:
-            return result - math.pi
+        return math.atan2(math.sin(angle), math.cos(angle))
+        # result = math.fmod(angle + math.pi, 2.0 * math.pi)
+        # if result <= 0.0:
+        #     return result + math.pi
+        #     normalize()
+        # else:
+        #     return result - math.pi
 
     
 
