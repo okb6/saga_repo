@@ -378,7 +378,7 @@ class TeleopNode(Node):
             mode = self.Mode_Forward
             self.previous_non_turn_mode = self.Mode_Forward
         elif self.evaluateButtonPressCombo(self.mode_left_buttons):
-            self.get_logger().info("mode_left")
+            # self.get_logger().info("mode_left")
             mode = self.Mode_Left
             self.previous_non_turn_mode = self.Mode_Left
         elif self.evaluateButtonPressCombo(self.omni_buttons):
@@ -422,8 +422,8 @@ class TeleopNode(Node):
             if axis_v_primary > -self.deadzone and axis_v_primary < self.deadzone:
                 axis_v_primary = 0.0
             
-            axis_v_primary *= self.kv
-            axis_v_secondary *= self.kv
+            axis_v_primary = numpy.array(axis_v_primary) * self.kv
+            axis_v_secondary = numpy.array(axis_v_secondary) * self.kv
 
             if axis_wz > -self.deadzone and axis_wz < self.deadzone:
                 wz = 0.0

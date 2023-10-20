@@ -77,7 +77,7 @@ class BaseDriver(Node):
             getx = "motor_drives.drive{}.x".format(i)
             gety = "motor_drives.drive{}.y".format(i)
 
-            self.declare_parameter(getnode, rclpy.Parameter.Type.DOUBLE)
+            self.declare_parameter(getnode, rclpy.Parameter.Type.INTEGER)
             self.declare_parameter(getx, rclpy.Parameter.Type.DOUBLE)
             self.declare_parameter(gety, rclpy.Parameter.Type.DOUBLE)
 
@@ -306,12 +306,8 @@ class BaseDriver(Node):
         success = True
         motor_drives = self.motor_drives
 
-        if PltfClcStd.initialize(PltfClcStd, self, motor_drives) and PltfClcStd.calculateCommand(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command):
-            self.get_logger().info("The plugin was successful to load")
-        
-        else:
-            self.get_logger().error("The plugin failed to load for some reason.")
-            sucess = False
+        PltfClcStd.initialize(PltfClcStd, self, motor_drives)
+        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command)
 
         return success
     
@@ -485,8 +481,8 @@ class BaseDriver(Node):
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
         self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
-        if not twist_in.angular.z == 0:
-            self.get_logger().info("motors help {}".format(self.latest_base_command.steer_pos))
+        # if not twist_in.angular.z == 0:
+            # self.get_logger().info("motors help {}".format(self.latest_base_command.steer_pos))
 
     def gazebo_odom_callback(self, odom_in):
         last_gazebo_odom = odom_in

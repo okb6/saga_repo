@@ -1,5 +1,6 @@
 import rclpy 
 from rclpy.time import Time
+
 # from rclpy.time import seconds
 import time
 import angles
@@ -38,112 +39,115 @@ class PltfClcStd:
             angle += self.mpi/2 * (-1 * angle/abs(angle))
         return angle
     
-    def calculateCommand(self, vx, vy, wz, motor_drives, joint_states_out):
+    # def calculateCommand(self, vx, vy, wz, motor_drives, joint_states_out):
 
-        self.number_of_drives = len(motor_drives)
-        self.motor_drives = motor_drives
+    #     self.number_of_drives = len(motor_drives)
+    #     self.motor_drives = motor_drives
 
 
-        speed = [0.0] * self.number_of_drives
-        steering = [0.0] * self.number_of_drives
-        drive_steer = [0.0] * self.number_of_drives
-        mode_speed = [0.0] * self.number_of_drives
+    #     speed = [0.0] * self.number_of_drives
+    #     steering = [0.0] * self.number_of_drives
+    #     drive_steer = [0.0] * self.number_of_drives
+    #     mode_speed = [0.0] * self.number_of_drives
 
-        if wz != 0:
-            turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2))/wz
-            turn_rad_ang = math.atan2(vy,vx)
+    #     if wz != 0:
+    #         turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2))/wz
+    #         turn_rad_ang = math.atan2(vy,vx)
 
-            turn_rad_x = - turn_rad_d * math.sin(turn_rad_ang)
-            turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
-            i = 0
-            while i < self.number_of_drives:
-                drive_x = self.motor_drives[i]["x"]
-                drive_y = self.motor_drives[i]["y"]
+    #         turn_rad_x = - turn_rad_d * math.sin(turn_rad_ang)
+    #         turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
+    #         i = 0
+    #         while i < self.number_of_drives:
+    #             drive_x = self.motor_drives[i]["x"]
+    #             drive_y = self.motor_drives[i]["y"]
                 
-                drive_steer[i] = math.atan2(turn_rad_x - drive_x, turn_rad_y - drive_y) - math.pi * (wz < 0)
-                drive_steer[i] = (drive_steer[i] + math.pi) % (2 * math.pi) - math.pi
+    #             drive_steer[i] = math.atan2(turn_rad_x - drive_x, turn_rad_y - drive_y) - math.pi * (wz < 0)
+    #             drive_steer[i] = (drive_steer[i] + math.pi) % (2 * math.pi) - math.pi
                 
-                distance = math.sqrt((turn_rad_x - drive_x) ** 2 + (turn_rad_y - drive_y) ** 2)
-                mode_speed[i] = distance * abs(wz)
-                i += 1
+    #             distance = math.sqrt((turn_rad_x - drive_x) ** 2 + (turn_rad_y - drive_y) ** 2)
+    #             mode_speed[i] = distance * abs(wz)
+    #             i += 1
 
-            i = 0
-            while i < self.number_of_drives:
-                steering[i] = drive_steer[i]
-                speed[i] = mode_speed[i]
-                i += 1
+    #         i = 0
+    #         while i < self.number_of_drives:
+    #             steering[i] = drive_steer[i]
+    #             speed[i] = mode_speed[i]
+    #             i += 1
         
-        else:
-            i = 0
-            while i < self.number_of_drives:
-                steering[i] = math.atan2(vy,vx)
-                speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
-                i += 1
+    #     else:
+    #         i = 0
+    #         while i < self.number_of_drives:
+    #             steering[i] = math.atan2(vy,vx)
+    #             speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
+    #             i += 1
         
-        numpy.resize(joint_states_out.prop_speed, self.number_of_drives)
-        numpy.resize(joint_states_out.prop_pos, self.number_of_drives)
-        numpy.resize(joint_states_out.steer_pos, self.number_of_drives)
-        numpy.resize(joint_states_out.steer_max_speed, self.number_of_drives)
-        numpy.resize(joint_states_out.channel, self.number_of_drives)
+    #     numpy.resize(joint_states_out.prop_speed, self.number_of_drives)
+    #     numpy.resize(joint_states_out.prop_pos, self.number_of_drives)
+    #     numpy.resize(joint_states_out.steer_pos, self.number_of_drives)
+    #     numpy.resize(joint_states_out.steer_max_speed, self.number_of_drives)
+    #     numpy.resize(joint_states_out.channel, self.number_of_drives)
 
-        i = 0
-        while i < self.number_of_drives:
-            joint_states_out.steer_pos[i] = steering[i]
-            joint_states_out.prop_speed[i] = speed[i]
-            i += 1
+    #     i = 0
+    #     while i < self.number_of_drives:
+    #         joint_states_out.steer_pos[i] = steering[i]
+    #         joint_states_out.prop_speed[i] = speed[i]
+    #         i += 1
         
-        return True
+    #     return True
 
     def calc_commands(self, vx, vy, wz, motor_drives, joint_states_out):
-        self.number_of_drives = len(motor_drives)
-        self.motor_drives = motor_drives
+        speed = [0.0, 0.0, 0.0, 0.0]
+        steering = [0.0, 0.0, 0.0, 0.0]
 
+        drive_steer = [0.0, 0.0, 0.0, 0.0]
+        mode_speed = [0.0, 0.0, 0.0, 0.0]
 
-        speed = [0.0] * self.number_of_drives
-        steering = [0.0] * self.number_of_drives
-        drive_steer = [0.0] * self.number_of_drives
-        mode_speed = [0.0] * self.number_of_drives
-
-        if wz != 0:
-            turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2))/wz
+        if not wz == 0:
+            turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2)) / wz 
             turn_rad_ang = math.atan2(vy,vx)
 
-            turn_rad_x = - turn_rad_d * math.sin(turn_rad_ang)
+            turn_rad_x = -turn_rad_d * math.sin(turn_rad_ang)
             turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
 
             i = 0
             while i < self.number_of_drives:
                 drive_x = self.motor_drives[i]["x"]
                 drive_y = self.motor_drives[i]["y"]
+                if wz < 0:
+                    normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y)) + math.pi
+                else:
+                    normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
 
-                print(drive_x)
-                print(drive_y)
+                steer_ang = self.normalize_angle(normalized_to_be)
                 
-                drive_steer[i] = math.atan2(turn_rad_x - drive_x, turn_rad_y - drive_y) - math.pi * (wz < 0)
-                drive_steer[i] = (drive_steer[i] + math.pi) % (2 * math.pi) - math.pi
-                
-                distance = math.sqrt((turn_rad_x - drive_x) ** 2 + (turn_rad_y - drive_y) ** 2)
-                mode_speed[i] = distance * abs(wz)
+                drive_steer[i] = steer_ang 
+                mode_speed[i] = math.sqrt(pow(turn_rad_x - drive_x, 2) + pow(turn_rad_y - drive_y, 2)) * abs(wz)
+
                 i += 1
-
+            
             i = 0
             while i < self.number_of_drives:
                 steering[i] = drive_steer[i]
                 speed[i] = mode_speed[i]
                 i += 1
-        
+
         else:
             i = 0
             while i < self.number_of_drives:
                 steering[i] = math.atan2(vy,vx)
                 speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
                 i += 1
-        
+
+
         numpy.resize(joint_states_out.prop_speed, self.number_of_drives)
         numpy.resize(joint_states_out.steer_pos, self.number_of_drives)
-        numpy.resize(joint_states_out.prop_pos, self.number_of_drives)
         numpy.resize(joint_states_out.steer_max_speed, self.number_of_drives)
         numpy.resize(joint_states_out.channel, self.number_of_drives)
+
+        # joint_states_out.prop_speed = [0.0, 0.0, 0.0, 0.0]
+        # joint_states_out.steer_pos = [0.0, 0.0, 0.0, 0.0]
+        # joint_states_out.steer_max_speed = [0.0, 0.0, 0.0, 0.0]
+        # joint_states_out.channel = [0, 0, 0, 0]
 
         i = 0
         while i < self.number_of_drives:
@@ -152,7 +156,19 @@ class PltfClcStd:
             i += 1
 
         return joint_states_out
+
+
+
+                
+    def normalize_angle(self, angle):
+        result = fmod(angle + math.pi, 2.0 * math.pi)
+        if result <= 0.0:
+            return result + math.pi 
+        else:
+            return result - math.pi
+
     
+
     def setZeroSpeed(self, joint_states_out):
         i = 0
         while i < len(joint_states_out.prop_speed):
