@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="joy_dev" default="/dev/input/js0"/>
+  <arg name="joy_autorepeat_rate" default="20.0" />
+  <arg name="joy_deadzone" default="0.2" />
+  <arg name="teleop_controller" default="$(find-pkg-share loki_teleop)/config/xbox.yaml" />
+
+
+  <node pkg="joy" exec="joy_node" name="joy_node">
+    <param name="dev" value="$(var joy_dev)" />
+    <param name="deadzone" value="$(var joy_deadzone)" />
+    <param name="autorepeat_rate" value="$(var joy_autorepeat_rate)" />
+  </node>
+
+  <node pkg="loki_teleop" exec="teleop_node" name="teleop_node" output="screen">
+    <param from="$(var teleop_controller)" />
+    <remap from="cmd_vel" to="teleop_joy/cmd_vel" />
+    <remap from="joy_priority" to="teleop_joy/joy_priority" />
+    <remap from="home_steering" to="base_driver/home_steering" />
+  </node>
+
+
+</launch>

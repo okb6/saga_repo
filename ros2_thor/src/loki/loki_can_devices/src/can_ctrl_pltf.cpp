@@ -24,6 +24,10 @@ CanCtrlPltf::~CanCtrlPltf()
     motor_controllers_.clear();   
 }
 
+bool
+CanCtrlPltf::init_can(){
+  return true;
+}
 
 void 
 CanCtrlPltf::evalCanBuffer(std::vector<CanFrame>& can_msgs_base,
@@ -284,7 +288,7 @@ CanCtrlPltf::setupMotorController(int can_id, int setup_id, int setup_value)
   }
   else
   {
-    std::cout <<"Index %d is not in the range of motor_controllers_", index;
+    std::cout <<"Index is not in the range of motor_controllers_" << std::endl;
   }
 }
 
@@ -515,11 +519,11 @@ void
 CanCtrlPltf::getControllerSetupMap(int can_id, std::vector<std::string> &setup_map)
 {  
   int index = getMotorControllerIndex(can_id);
-  std::cout << "index: " << index << "\n\n\n\n\n\n\n" << std::endl;
+  std::cout << "index: " << index << std::endl;
   if (index >= 0 && index < motor_controllers_.size())
     setup_map = motor_controllers_[index]->getControllerSetupMap();
   else
-   std::cout <<"Index %d is not in the range of motor_controllers_ for map", index;  
+   std::cout <<"Index is not in the range of motor_controllers_ for map" <<std::endl;  
 }
 
 void

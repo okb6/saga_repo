@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from loki_msgs/msg/ControllerState.msg
+// generated code does not contain a copyright notice
+
+#include "loki_msgs/msg/ControllerStatusFlag.idl"
+
+module loki_msgs {
+  module msg {
+    struct ControllerState {
+      int8 controller_mode;
+
+      float battery_volts;
+
+      float battery_amps;
+
+      sequence<int16> temps;
+
+      sequence<loki_msgs::msg::ControllerStatusFlag> status_flags;
+    };
+  };
+};

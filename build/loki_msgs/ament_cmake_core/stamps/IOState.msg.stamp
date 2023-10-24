@@ -1,0 +1,11 @@
+int16 id
+string name
+string version
+string[] analog_names
+int32[] analog_values
+string[] digital_names
+bool[] digital_values
+float64[] ranges
+float64[] temps
+float64[] humidities
+sensor_msgs/Imu imu

@@ -4,9 +4,12 @@ project(loki_can_devices)
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(angles REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(loki_msgs REQUIRED)
+
+include(ConfigExtras.cmake)
 
 add_library(
   can
@@ -30,8 +33,12 @@ target_include_directories(can
   PUBLIC  
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
+
 target_link_libraries(pytocpp
-  PUBLIC can) 
+  PUBLIC 
+  can
+  ${Boost_LIBRARIES})
+
 
 ament_target_dependencies(
   can
@@ -39,13 +46,15 @@ ament_target_dependencies(
   loki_msgs 
   rclcpp
   angles
-  std_msgs 
+  std_msgs
+  std_srvs
 )
 ament_target_dependencies(
   pytocpp
   PUBLIC
   rclcpp
   loki_msgs
+  std_srvs
 )
 
 
@@ -66,14 +75,15 @@ install(
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib 
   RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
 )
 
 install(TARGETS pytocpp
   DESTINATION lib/${PROJECT_NAME})
 
 
-ament_export_dependencies(loki_msgs rclcpp angles std_msgs)
+ament_export_dependencies(loki_msgs rclcpp angles std_msgs std_srvs)
 ament_export_include_directories("include/${PROJECT_NAME}")
 ament_export_libraries(can)
 
-ament_package()
+ament_package(CONFIG_EXTRAS ConfigExtras.cmake)

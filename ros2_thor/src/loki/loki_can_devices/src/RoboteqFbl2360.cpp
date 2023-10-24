@@ -602,7 +602,7 @@ void RoboteqFbl2360::decouple()
 //-----------------------------------------------
 void RoboteqFbl2360::sendModeCommand(std::vector<CanFrame>& msgs, int mode)
 {
-  std::cout << "Sending mode: %d" << mode << std::endl;
+  std::cout << "Sending mode:" << mode << std::endl;
   CanFrame msg;
   sendPDOdownload(msg, can_headers_.iRxPDO3, mode, mode);
   msgs.push_back(msg);
