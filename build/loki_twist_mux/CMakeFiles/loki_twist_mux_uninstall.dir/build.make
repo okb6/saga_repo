@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux
+CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux
+CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux
 
 # Utility rule file for loki_twist_mux_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/loki_twist_mux_uninstall.dir/compiler_depend.make
 include CMakeFiles/loki_twist_mux_uninstall.dir/progress.make
 
 CMakeFiles/loki_twist_mux_uninstall:
-	/usr/bin/cmake -P /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 loki_twist_mux_uninstall: CMakeFiles/loki_twist_mux_uninstall
 loki_twist_mux_uninstall: CMakeFiles/loki_twist_mux_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/loki_twist_mux_uninstall.dir/clean:
 .PHONY : CMakeFiles/loki_twist_mux_uninstall.dir/clean
 
 CMakeFiles/loki_twist_mux_uninstall.dir/depend:
-	cd /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux /home/loki/Documents/GitHub/saga_repo/build/loki_twist_mux/CMakeFiles/loki_twist_mux_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux/CMakeFiles/loki_twist_mux_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_twist_mux_uninstall.dir/depend
 

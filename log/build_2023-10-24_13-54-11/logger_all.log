@@ -1,0 +1,721 @@
+[0.322s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.322s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff786460940>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff7868bf550>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff7868bf550>>)
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.342s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.342s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/odin/Documents/GitHub/saga_repo'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'ros'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['cmake', 'python']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'cmake'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'python'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extensions ['python_setup_py']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor) by extension 'python_setup_py'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_base) by extension 'ros'
+[0.354s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_base' with type 'ros.ament_python' and name 'loki_base'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['colcon_meta']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'colcon_meta'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extensions ['ros']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_bringup) by extension 'ros'
+[0.355s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_bringup' with type 'ros.ament_cmake' and name 'loki_bringup'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ignore_ament_install'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['colcon_pkg']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_can_devices) by extension 'ros'
+[0.356s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_can_devices' with type 'ros.ament_cmake' and name 'loki_can_devices'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_description) by extension 'ros'
+[0.357s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_description' with type 'ros.ament_cmake' and name 'loki_description'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_msgs) by extension 'ros'
+[0.358s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_msgs' with type 'ros.ament_cmake' and name 'loki_msgs'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ignore_ament_install'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_simulator) by extension 'ros'
+[0.359s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_simulator' with type 'ros.ament_cmake' and name 'loki_simulator'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ignore_ament_install'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_teleop) by extension 'ros'
+[0.360s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_teleop' with type 'ros.ament_python' and name 'loki_teleop'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/loki_twist_mux) by extension 'ros'
+[0.361s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/loki_twist_mux' with type 'ros.ament_cmake' and name 'loki_twist_mux'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['colcon_pkg']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['colcon_meta']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'colcon_meta'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extensions ['ros']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/rasberry_gazebo) by extension 'ros'
+[0.362s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/rasberry_gazebo' with type 'ros.ament_cmake' and name 'rasberry_gazebo'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ignore'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ignore_ament_install'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['colcon_pkg']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'colcon_pkg'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_thor/src/loki/robot_bringup) by extension 'ros'
+[0.369s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_thor/src/loki/robot_bringup' with type 'ros.ament_cmake' and name 'robot_bringup'
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.404s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.404s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_target' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'loki_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.417s] DEBUG:colcon.colcon_core.verb:Building package 'loki_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_description', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description', 'symlink_install': False, 'test_result_base': None}
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_target' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'loki_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.422s] DEBUG:colcon.colcon_core.verb:Building package 'loki_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop', 'symlink_install': False, 'test_result_base': None}
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_target' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_clean_cache' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_clean_first' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'cmake_force_configure' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'ament_cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'catkin_cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'loki_twist_mux' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.426s] DEBUG:colcon.colcon_core.verb:Building package 'loki_twist_mux' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux', 'symlink_install': False, 'test_result_base': None}
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.430s] Level 5:colcon.colcon_core.verb:set package 'rasberry_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.430s] DEBUG:colcon.colcon_core.verb:Building package 'rasberry_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_target' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'loki_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.434s] DEBUG:colcon.colcon_core.verb:Building package 'loki_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_args' from command line to 'None'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_target' from command line to 'None'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_clean_cache' from command line to 'False'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_clean_first' from command line to 'False'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'cmake_force_configure' from command line to 'False'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'ament_cmake_args' from command line to 'None'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'catkin_cmake_args' from command line to 'None'
+[0.439s] Level 5:colcon.colcon_core.verb:set package 'loki_can_devices' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.439s] DEBUG:colcon.colcon_core.verb:Building package 'loki_can_devices' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices', 'symlink_install': False, 'test_result_base': None}
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_args' from command line to 'None'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_target' from command line to 'None'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_clean_cache' from command line to 'False'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_clean_first' from command line to 'False'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'cmake_force_configure' from command line to 'False'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'ament_cmake_args' from command line to 'None'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'catkin_cmake_args' from command line to 'None'
+[0.443s] Level 5:colcon.colcon_core.verb:set package 'loki_base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.443s] DEBUG:colcon.colcon_core.verb:Building package 'loki_base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_base', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_base', 'symlink_install': False, 'test_result_base': None}
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_target' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'loki_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.447s] DEBUG:colcon.colcon_core.verb:Building package 'loki_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.451s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.452s] Level 5:colcon.colcon_core.verb:set package 'robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.452s] DEBUG:colcon.colcon_core.verb:Building package 'robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_target' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'loki_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.456s] DEBUG:colcon.colcon_core.verb:Building package 'loki_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/odin/Documents/GitHub/saga_repo/build/loki_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup', 'merge_install': False, 'path': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.460s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.464s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.465s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description' with build type 'ament_cmake'
+[0.465s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description'
+[0.470s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.471s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.471s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.476s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop' with build type 'ament_python'
+[0.476s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_teleop', 'ament_prefix_path')
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/ament_prefix_path.ps1'
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/ament_prefix_path.dsv'
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/ament_prefix_path.sh'
+[0.486s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.486s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.491s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux' with build type 'ament_cmake'
+[0.491s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux'
+[0.499s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.499s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.504s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo' with build type 'ament_cmake'
+[0.505s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo'
+[0.509s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.509s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_description': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_description -- -j8 -l8
+[0.651s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop'
+[0.656s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.656s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux -- -j8 -l8
+[0.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo -- -j8 -l8
+[0.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_description' returned '0': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_description -- -j8 -l8
+[0.685s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_description': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_description
+[0.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo' returned '0': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo -- -j8 -l8
+[0.696s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_description)
+[0.696s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_description' returned '0': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_description
+[0.707s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description' for CMake module files
+[0.707s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description' for CMake config files
+[0.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_description', 'cmake_prefix_path')
+[0.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.ps1'
+[0.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.dsv'
+[0.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.sh'
+[0.718s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/bin'
+[0.718s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/lib/pkgconfig/loki_description.pc'
+[0.719s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/lib/python3.10/site-packages'
+[0.719s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/bin'
+[0.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.ps1'
+[0.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.dsv'
+[0.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.sh'
+[0.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.bash'
+[0.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.zsh'
+[0.731s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/colcon-core/packages/loki_description)
+[0.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux' returned '0': /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux -- -j8 -l8
+[0.735s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo
+[0.754s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_description)
+[0.762s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description' for CMake module files
+[0.762s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description' for CMake config files
+[0.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_description', 'cmake_prefix_path')
+[0.771s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.ps1'
+[0.771s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.dsv'
+[0.771s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/hook/cmake_prefix_path.sh'
+[0.771s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/bin'
+[0.771s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/lib/pkgconfig/loki_description.pc'
+[0.772s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/lib/python3.10/site-packages'
+[0.772s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_description/bin'
+[0.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.ps1'
+[0.777s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.dsv'
+[0.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.sh'
+[0.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.bash'
+[0.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.zsh'
+[0.778s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_description/share/colcon-core/packages/loki_description)
+[0.779s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs' with build type 'ament_cmake'
+[0.779s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs'
+[0.784s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.784s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.791s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rasberry_gazebo)
+[0.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux
+[0.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo' returned '0': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo' for CMake module files
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo' for CMake config files
+[0.801s] Level 1:colcon.colcon_core.shell:create_environment_hook('rasberry_gazebo', 'cmake_prefix_path')
+[0.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.ps1'
+[0.806s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.dsv'
+[0.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.sh'
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib'
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/bin'
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib/pkgconfig/rasberry_gazebo.pc'
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib/python3.10/site-packages'
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/bin'
+[0.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.ps1'
+[0.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.dsv'
+[0.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.sh'
+[0.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.bash'
+[0.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.zsh'
+[0.814s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/colcon-core/packages/rasberry_gazebo)
+[0.817s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_twist_mux)
+[0.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_msgs -- -j8 -l8
+[0.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux' returned '0': /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux
+[0.823s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux' for CMake module files
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux' for CMake config files
+[0.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_twist_mux', 'cmake_prefix_path')
+[0.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.ps1'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.dsv'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.sh'
+[0.829s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/bin'
+[0.829s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/lib/pkgconfig/loki_twist_mux.pc'
+[0.829s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/lib/python3.10/site-packages'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/bin'
+[0.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.ps1'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.dsv'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.sh'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.bash'
+[0.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.zsh'
+[0.835s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/colcon-core/packages/loki_twist_mux)
+[0.845s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rasberry_gazebo)
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo' for CMake module files
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo' for CMake config files
+[0.851s] Level 1:colcon.colcon_core.shell:create_environment_hook('rasberry_gazebo', 'cmake_prefix_path')
+[0.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.ps1'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.dsv'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/hook/cmake_prefix_path.sh'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/bin'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib/pkgconfig/rasberry_gazebo.pc'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/lib/python3.10/site-packages'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/bin'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.ps1'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.dsv'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.sh'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.bash'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/rasberry_gazebo/package.zsh'
+[0.865s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo/share/colcon-core/packages/rasberry_gazebo)
+[0.872s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_twist_mux)
+[0.886s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux' for CMake module files
+[0.886s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux' for CMake config files
+[0.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_twist_mux', 'cmake_prefix_path')
+[0.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.ps1'
+[0.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.dsv'
+[0.896s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/hook/cmake_prefix_path.sh'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/bin'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/lib/pkgconfig/loki_twist_mux.pc'
+[0.896s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/lib/python3.10/site-packages'
+[0.897s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/bin'
+[0.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.ps1'
+[0.906s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.dsv'
+[0.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.sh'
+[0.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.bash'
+[0.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.zsh'
+[0.908s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/colcon-core/packages/loki_twist_mux)
+[0.911s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop': PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/loki_teleop build --build-base /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build install --record /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log --single-version-externally-managed
+[1.109s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop' returned '0': PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/loki_teleop build --build-base /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build install --record /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log --single-version-externally-managed
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop' for CMake module files
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop' for CMake config files
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib'
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/bin'
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/pkgconfig/loki_teleop.pc'
+[1.117s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages'
+[1.117s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_teleop', 'pythonpath')
+[1.121s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/pythonpath.ps1'
+[1.122s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/pythonpath.dsv'
+[1.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/hook/pythonpath.sh'
+[1.122s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/bin'
+[1.122s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_teleop)
+[1.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/package.ps1'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/package.dsv'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/package.sh'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/package.bash'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/package.zsh'
+[1.128s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/colcon-core/packages/loki_teleop)
+[1.129s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_msgs -- -j8 -l8
+[1.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+[1.694s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_msgs)
+[1.721s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_description /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+[1.722s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs' for CMake module files
+[1.723s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs' for CMake config files
+[1.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_msgs', 'cmake_prefix_path')
+[1.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.ps1'
+[1.728s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.dsv'
+[1.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.sh'
+[1.729s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib'
+[1.729s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_msgs', 'ld_library_path_lib')
+[1.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.ps1'
+[1.734s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.dsv'
+[1.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.sh'
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/bin'
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/pkgconfig/loki_msgs.pc'
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/python3.10/site-packages'
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/bin'
+[1.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.ps1'
+[1.739s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.dsv'
+[1.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.sh'
+[1.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.bash'
+[1.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.zsh'
+[1.740s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/colcon-core/packages/loki_msgs)
+[2.278s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_msgs)
+[2.282s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs' for CMake module files
+[2.283s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs' for CMake config files
+[2.283s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_msgs', 'cmake_prefix_path')
+[2.288s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.ps1'
+[2.288s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.dsv'
+[2.288s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/cmake_prefix_path.sh'
+[2.289s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib'
+[2.289s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_msgs', 'ld_library_path_lib')
+[2.293s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.ps1'
+[2.293s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.dsv'
+[2.294s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/hook/ld_library_path_lib.sh'
+[2.294s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/bin'
+[2.294s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/pkgconfig/loki_msgs.pc'
+[2.294s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/python3.10/site-packages'
+[2.295s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/bin'
+[2.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.ps1'
+[2.299s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.dsv'
+[2.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.sh'
+[2.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.bash'
+[2.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/loki_msgs/package.zsh'
+[2.301s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/share/colcon-core/packages/loki_msgs)
+[2.301s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices' with build type 'ament_cmake'
+[2.301s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices'
+[2.306s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.306s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[2.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices -- -j8 -l8
+[2.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices
+[2.486s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_can_devices)
+[2.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake module files
+[2.492s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake config files
+[2.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'cmake_prefix_path')
+[2.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.ps1'
+[2.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.dsv'
+[2.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.sh'
+[2.497s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib'
+[2.497s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'ld_library_path_lib')
+[2.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.ps1'
+[2.502s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.dsv'
+[2.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.sh'
+[2.502s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[2.503s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib/pkgconfig/loki_can_devices.pc'
+[2.503s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib/python3.10/site-packages'
+[2.503s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[2.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.ps1'
+[2.508s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.dsv'
+[2.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.sh'
+[2.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.bash'
+[2.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.zsh'
+[2.508s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/colcon-core/packages/loki_can_devices)
+[2.544s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_can_devices)
+[2.548s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake module files
+[2.549s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices' for CMake config files
+[2.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'cmake_prefix_path')
+[2.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.ps1'
+[2.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.dsv'
+[2.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/cmake_prefix_path.sh'
+[2.554s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib'
+[2.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_can_devices', 'ld_library_path_lib')
+[2.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.ps1'
+[2.559s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.dsv'
+[2.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/hook/ld_library_path_lib.sh'
+[2.559s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[2.559s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib/pkgconfig/loki_can_devices.pc'
+[2.560s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib/python3.10/site-packages'
+[2.560s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/bin'
+[2.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.ps1'
+[2.564s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.dsv'
+[2.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.sh'
+[2.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.bash'
+[2.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/loki_can_devices/package.zsh'
+[2.566s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/share/colcon-core/packages/loki_can_devices)
+[2.566s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_base' with build type 'ament_python'
+[2.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_base', 'ament_prefix_path')
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/ament_prefix_path.ps1'
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/ament_prefix_path.dsv'
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/ament_prefix_path.sh'
+[2.577s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.577s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.915s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_base'
+[2.919s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.919s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_base': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/build/loki_base/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/loki_base build --build-base /home/odin/Documents/GitHub/saga_repo/build/loki_base/build install --record /home/odin/Documents/GitHub/saga_repo/build/loki_base/install.log --single-version-externally-managed
+[3.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_base' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/build/loki_base/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/loki_base build --build-base /home/odin/Documents/GitHub/saga_repo/build/loki_base/build install --record /home/odin/Documents/GitHub/saga_repo/build/loki_base/install.log --single-version-externally-managed
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base' for CMake module files
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base' for CMake config files
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib'
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base/bin'
+[3.263s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/pkgconfig/loki_base.pc'
+[3.263s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages'
+[3.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_base', 'pythonpath')
+[3.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/pythonpath.ps1'
+[3.268s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/pythonpath.dsv'
+[3.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/hook/pythonpath.sh'
+[3.268s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_base/bin'
+[3.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_base)
+[3.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/package.ps1'
+[3.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/package.dsv'
+[3.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/package.sh'
+[3.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/package.bash'
+[3.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/loki_base/package.zsh'
+[3.275s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_base/share/colcon-core/packages/loki_base)
+[3.275s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup' with build type 'ament_cmake'
+[3.275s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/robot_bringup'
+[3.280s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.280s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.286s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_simulator' with build type 'ament_cmake'
+[3.286s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_simulator'
+[3.291s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.291s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/robot_bringup': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/robot_bringup -- -j8 -l8
+[3.305s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_simulator': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_simulator -- -j8 -l8
+[3.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/robot_bringup -- -j8 -l8
+[3.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_simulator' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_simulator -- -j8 -l8
+[3.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_simulator': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_simulator
+[3.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/robot_bringup': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/robot_bringup
+[3.351s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_simulator)
+[3.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_simulator' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_simulator
+[3.358s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator' for CMake module files
+[3.358s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator' for CMake config files
+[3.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_simulator', 'cmake_prefix_path')
+[3.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.ps1'
+[3.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.dsv'
+[3.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.sh'
+[3.363s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/bin'
+[3.364s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/lib/pkgconfig/loki_simulator.pc'
+[3.364s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/lib/python3.10/site-packages'
+[3.364s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/bin'
+[3.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.ps1'
+[3.369s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.dsv'
+[3.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.sh'
+[3.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.bash'
+[3.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.zsh'
+[3.369s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/colcon-core/packages/loki_simulator)
+[3.370s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[3.371s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/robot_bringup' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/robot_bringup
+[3.376s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup' for CMake module files
+[3.376s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup' for CMake config files
+[3.376s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'cmake_prefix_path')
+[3.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.ps1'
+[3.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.dsv'
+[3.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.sh'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/bin'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/lib/python3.10/site-packages'
+[3.382s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/bin'
+[3.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.ps1'
+[3.387s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.dsv'
+[3.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.sh'
+[3.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.bash'
+[3.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.zsh'
+[3.388s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[3.394s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_simulator)
+[3.398s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator' for CMake module files
+[3.399s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator' for CMake config files
+[3.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_simulator', 'cmake_prefix_path')
+[3.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.ps1'
+[3.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.dsv'
+[3.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/hook/cmake_prefix_path.sh'
+[3.404s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/bin'
+[3.404s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/lib/pkgconfig/loki_simulator.pc'
+[3.405s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/lib/python3.10/site-packages'
+[3.405s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/bin'
+[3.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.ps1'
+[3.410s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.dsv'
+[3.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.sh'
+[3.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.bash'
+[3.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/loki_simulator/package.zsh'
+[3.411s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_simulator/share/colcon-core/packages/loki_simulator)
+[3.416s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bringup)
+[3.420s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup' for CMake module files
+[3.421s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup' for CMake config files
+[3.421s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bringup', 'cmake_prefix_path')
+[3.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.ps1'
+[3.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.dsv'
+[3.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/hook/cmake_prefix_path.sh'
+[3.426s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/bin'
+[3.426s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/lib/pkgconfig/robot_bringup.pc'
+[3.426s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/lib/python3.10/site-packages'
+[3.426s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/bin'
+[3.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.ps1'
+[3.431s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.dsv'
+[3.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.sh'
+[3.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.bash'
+[3.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/robot_bringup/package.zsh'
+[3.432s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/robot_bringup/share/colcon-core/packages/robot_bringup)
+[3.433s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup' with build type 'ament_cmake'
+[3.433s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup'
+[3.438s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.438s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_bringup': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_bringup -- -j8 -l8
+[3.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_bringup' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --build /home/odin/Documents/GitHub/saga_repo/build/loki_bringup -- -j8 -l8
+[3.500s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/odin/Documents/GitHub/saga_repo/build/loki_bringup': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_bringup
+[3.506s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_bringup)
+[3.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/odin/Documents/GitHub/saga_repo/build/loki_bringup' returned '0': AMENT_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_base:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop:/home/odin/Documents/GitHub/saga_repo/install/loki_description CMAKE_PREFIX_PATH=/home/odin/Documents/GitHub/saga_repo/install/robot_bringup:/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs:/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux:/home/odin/Documents/GitHub/saga_repo/install/loki_description LD_LIBRARY_PATH=/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices/lib:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib PYTHONPATH=/home/odin/Documents/GitHub/saga_repo/install/loki_base/lib/python3.10/site-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_msgs/local/lib/python3.10/dist-packages:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages /usr/bin/cmake --install /home/odin/Documents/GitHub/saga_repo/build/loki_bringup
+[3.511s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup' for CMake module files
+[3.512s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup' for CMake config files
+[3.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_bringup', 'cmake_prefix_path')
+[3.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.ps1'
+[3.517s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.dsv'
+[3.517s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.sh'
+[3.517s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/bin'
+[3.517s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/lib/pkgconfig/loki_bringup.pc'
+[3.517s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/lib/python3.10/site-packages'
+[3.518s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/bin'
+[3.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.ps1'
+[3.522s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.dsv'
+[3.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.sh'
+[3.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.bash'
+[3.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.zsh'
+[3.523s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/colcon-core/packages/loki_bringup)
+[3.543s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(loki_bringup)
+[3.548s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup' for CMake module files
+[3.548s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup' for CMake config files
+[3.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('loki_bringup', 'cmake_prefix_path')
+[3.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.ps1'
+[3.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.dsv'
+[3.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/hook/cmake_prefix_path.sh'
+[3.553s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/bin'
+[3.553s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/lib/pkgconfig/loki_bringup.pc'
+[3.554s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/lib/python3.10/site-packages'
+[3.554s] Level 1:colcon.colcon_core.environment:checking '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/bin'
+[3.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.ps1'
+[3.558s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.dsv'
+[3.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.sh'
+[3.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.bash'
+[3.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/loki_bringup/package.zsh'
+[3.559s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/odin/Documents/GitHub/saga_repo/install/loki_bringup/share/colcon-core/packages/loki_bringup)
+[3.559s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.560s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.560s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.560s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.567s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.567s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.567s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.579s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.585s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/odin/Documents/GitHub/saga_repo/install/local_setup.ps1'
+[3.585s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/odin/Documents/GitHub/saga_repo/install/_local_setup_util_ps1.py'
+[3.586s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/odin/Documents/GitHub/saga_repo/install/setup.ps1'
+[3.591s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/odin/Documents/GitHub/saga_repo/install/local_setup.sh'
+[3.592s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/odin/Documents/GitHub/saga_repo/install/_local_setup_util_sh.py'
+[3.592s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/odin/Documents/GitHub/saga_repo/install/setup.sh'
+[3.598s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/odin/Documents/GitHub/saga_repo/install/local_setup.bash'
+[3.598s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/odin/Documents/GitHub/saga_repo/install/setup.bash'
+[3.603s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/odin/Documents/GitHub/saga_repo/install/local_setup.zsh'
+[3.603s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/odin/Documents/GitHub/saga_repo/install/setup.zsh'

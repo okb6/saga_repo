@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
+CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_msgs
+CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
 
 # Utility rule file for ament_cmake_python_copy_loki_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_loki_msgs:
-	/usr/bin/cmake -E copy_directory /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/ament_cmake_python/loki_msgs/loki_msgs
+	/usr/bin/cmake -E copy_directory /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/ament_cmake_python/loki_msgs/loki_msgs
 
 ament_cmake_python_copy_loki_msgs: CMakeFiles/ament_cmake_python_copy_loki_msgs
 ament_cmake_python_copy_loki_msgs: CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/depend:
-	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_loki_msgs.dir/depend
 

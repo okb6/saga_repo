@@ -1,0 +1,221 @@
+[0.000000] (-) TimerEvent: {}
+[0.000186] (loki_description) JobQueued: {'identifier': 'loki_description', 'dependencies': OrderedDict()}
+[0.000378] (loki_teleop) JobQueued: {'identifier': 'loki_teleop', 'dependencies': OrderedDict()}
+[0.000392] (loki_twist_mux) JobQueued: {'identifier': 'loki_twist_mux', 'dependencies': OrderedDict()}
+[0.000404] (rasberry_gazebo) JobQueued: {'identifier': 'rasberry_gazebo', 'dependencies': OrderedDict()}
+[0.000414] (loki_msgs) JobQueued: {'identifier': 'loki_msgs', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description')])}
+[0.000427] (loki_can_devices) JobQueued: {'identifier': 'loki_can_devices', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs')])}
+[0.000440] (loki_base) JobQueued: {'identifier': 'loki_base', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices')])}
+[0.000453] (loki_simulator) JobQueued: {'identifier': 'loki_simulator', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base')])}
+[0.000469] (robot_bringup) JobQueued: {'identifier': 'robot_bringup', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_teleop', '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop'), ('loki_twist_mux', '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base')])}
+[0.000483] (loki_bringup) JobQueued: {'identifier': 'loki_bringup', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_teleop', '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop'), ('loki_twist_mux', '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base'), ('robot_bringup', '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup')])}
+[0.000499] (loki_description) JobStarted: {'identifier': 'loki_description'}
+[0.027810] (loki_teleop) JobStarted: {'identifier': 'loki_teleop'}
+[0.062102] (loki_twist_mux) JobStarted: {'identifier': 'loki_twist_mux'}
+[0.087277] (rasberry_gazebo) JobStarted: {'identifier': 'rasberry_gazebo'}
+[0.100009] (-) TimerEvent: {}
+[0.115162] (loki_description) JobProgress: {'identifier': 'loki_description', 'progress': 'cmake'}
+[0.115325] (loki_description) Command: {'cmd': ['/usr/bin/cmake', '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description', '-DCMAKE_INSTALL_PREFIX=/home/odin/Documents/GitHub/saga_repo/install/loki_description'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.200130] (-) TimerEvent: {}
+[0.300437] (-) TimerEvent: {}
+[0.306910] (loki_twist_mux) JobProgress: {'identifier': 'loki_twist_mux', 'progress': 'cmake'}
+[0.307051] (loki_twist_mux) Command: {'cmd': ['/usr/bin/cmake', '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_twist_mux', '-DCMAKE_INSTALL_PREFIX=/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.308650] (loki_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.308877] (loki_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.308968] (loki_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.309870] (rasberry_gazebo) JobProgress: {'identifier': 'rasberry_gazebo', 'progress': 'cmake'}
+[0.310128] (rasberry_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo', '-DCMAKE_INSTALL_PREFIX=/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.312168] (loki_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.317885] (loki_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.318124] (loki_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.318327] (loki_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.320628] (loki_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.358485] (rasberry_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.366342] (loki_twist_mux) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.400530] (-) TimerEvent: {}
+[0.402404] (rasberry_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.409621] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.418505] (loki_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.420383] (loki_twist_mux) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.427387] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.427765] (loki_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.428004] (loki_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.428338] (loki_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.429942] (loki_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.475675] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.481479] (loki_twist_mux) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.481687] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.482030] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.484121] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500636] (-) TimerEvent: {}
+[0.505839] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.511360] (rasberry_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.511557] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.511839] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.514063] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.559031] (loki_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.569457] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.570071] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.571642] (loki_teleop) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../../build/loki_teleop', 'build', '--build-base', '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build', 'install', '--record', '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log', '--single-version-externally-managed'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'odin', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/odin', 'OLDPWD': '/home/odin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1204', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'odin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'odin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.D332C2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.97', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.575452] (rasberry_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.575691] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.576043] (rasberry_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.577416] (rasberry_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.580226] (loki_twist_mux) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.580525] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.581090] (loki_twist_mux) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.583217] (loki_twist_mux) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600730] (-) TimerEvent: {}
+[0.643525] (loki_description) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:6 (find_package):\n'}
+[0.643843] (loki_description) StderrLine: {'line': b'  By not providing "Findcontroller_manager.cmake" in CMAKE_MODULE_PATH this\n'}
+[0.643951] (loki_description) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[0.644020] (loki_description) StderrLine: {'line': b'  "controller_manager", but CMake did not find one.\n'}
+[0.644094] (loki_description) StderrLine: {'line': b'\n'}
+[0.644164] (loki_description) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[0.644236] (loki_description) StderrLine: {'line': b'  "controller_manager" with any of the following names:\n'}
+[0.644306] (loki_description) StderrLine: {'line': b'\n'}
+[0.644374] (loki_description) StderrLine: {'line': b'    controller_managerConfig.cmake\n'}
+[0.644442] (loki_description) StderrLine: {'line': b'    controller_manager-config.cmake\n'}
+[0.644510] (loki_description) StderrLine: {'line': b'\n'}
+[0.644574] (loki_description) StderrLine: {'line': b'  Add the installation prefix of "controller_manager" to CMAKE_PREFIX_PATH or\n'}
+[0.644649] (loki_description) StderrLine: {'line': b'  set "controller_manager_DIR" to a directory containing one of the above\n'}
+[0.644714] (loki_description) StderrLine: {'line': b'  files.  If "controller_manager" provides a separate development package or\n'}
+[0.644777] (loki_description) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[0.644845] (loki_description) StderrLine: {'line': b'\n'}
+[0.644908] (loki_description) StderrLine: {'line': b'\x1b[0m\n'}
+[0.644970] (loki_description) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.645045] (loki_description) StdoutLine: {'line': b'See also "/home/odin/Documents/GitHub/saga_repo/build/loki_description/CMakeFiles/CMakeOutput.log".\n'}
+[0.647892] (loki_description) CommandEnded: {'returncode': 1}
+[0.687821] (loki_description) JobEnded: {'identifier': 'loki_description', 'rc': 1}
+[0.700817] (-) TimerEvent: {}
+[0.723743] (rasberry_gazebo) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.727304] (loki_twist_mux) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.748312] (loki_teleop) StdoutLine: {'line': b'running egg_info\n'}
+[0.748965] (loki_teleop) StdoutLine: {'line': b'creating ../../../../build/loki_teleop/loki_teleop.egg-info\n'}
+[0.749148] (loki_teleop) StdoutLine: {'line': b'writing ../../../../build/loki_teleop/loki_teleop.egg-info/PKG-INFO\n'}
+[0.749295] (loki_teleop) StdoutLine: {'line': b'writing dependency_links to ../../../../build/loki_teleop/loki_teleop.egg-info/dependency_links.txt\n'}
+[0.749461] (loki_teleop) StdoutLine: {'line': b'writing entry points to ../../../../build/loki_teleop/loki_teleop.egg-info/entry_points.txt\n'}
+[0.749608] (loki_teleop) StdoutLine: {'line': b'writing requirements to ../../../../build/loki_teleop/loki_teleop.egg-info/requires.txt\n'}
+[0.749714] (loki_teleop) StdoutLine: {'line': b'writing top-level names to ../../../../build/loki_teleop/loki_teleop.egg-info/top_level.txt\n'}
+[0.749820] (loki_teleop) StdoutLine: {'line': b"writing manifest file '../../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'\n"}
+[0.750618] (loki_teleop) StdoutLine: {'line': b"reading manifest file '../../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'\n"}
+[0.751094] (loki_teleop) StdoutLine: {'line': b"writing manifest file '../../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'\n"}
+[0.751252] (loki_teleop) StdoutLine: {'line': b'running build\n'}
+[0.751386] (loki_teleop) StdoutLine: {'line': b'running build_py\n'}
+[0.751509] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build\n'}
+[0.751551] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib\n'}
+[0.751676] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib/loki_teleop\n'}
+[0.751758] (loki_teleop) StdoutLine: {'line': b'copying loki_teleop/__init__.py -> /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib/loki_teleop\n'}
+[0.751867] (loki_teleop) StdoutLine: {'line': b'copying loki_teleop/teleop_node.py -> /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib/loki_teleop\n'}
+[0.752030] (loki_teleop) StdoutLine: {'line': b'running install\n'}
+[0.752109] (loki_teleop) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[0.752249] (loki_teleop) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.752310] (loki_teleop) StdoutLine: {'line': b'running install_lib\n'}
+[0.752451] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop\n'}
+[0.752555] (loki_teleop) StdoutLine: {'line': b'copying /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib/loki_teleop/__init__.py -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop\n'}
+[0.752649] (loki_teleop) StdoutLine: {'line': b'copying /home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build/lib/loki_teleop/teleop_node.py -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop\n'}
+[0.752920] (loki_teleop) StdoutLine: {'line': b'byte-compiling /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop/__init__.py to __init__.cpython-310.pyc\n'}
+[0.753069] (loki_teleop) StdoutLine: {'line': b'byte-compiling /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop/teleop_node.py to teleop_node.cpython-310.pyc\n'}
+[0.755241] (loki_teleop) StdoutLine: {'line': b'running install_data\n'}
+[0.755598] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/ament_index\n'}
+[0.755738] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/ament_index/resource_index\n'}
+[0.755852] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/ament_index/resource_index/packages\n'}
+[0.755999] (loki_teleop) StdoutLine: {'line': b'copying resource/loki_teleop -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/ament_index/resource_index/packages\n'}
+[0.756079] (loki_teleop) StdoutLine: {'line': b'copying package.xml -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop\n'}
+[0.756198] (loki_teleop) StdoutLine: {'line': b'creating /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/launch\n'}
+[0.756275] (loki_teleop) StdoutLine: {'line': b'copying launch/teleop.launch -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/launch\n'}
+[0.756355] (loki_teleop) StdoutLine: {'line': b'copying launch/teleop_xbox.launch -> /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/share/loki_teleop/launch\n'}
+[0.756433] (loki_teleop) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.757185] (loki_teleop) StdoutLine: {'line': b'Copying ../../../../build/loki_teleop/loki_teleop.egg-info to /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop-2.0.0-py3.10.egg-info\n'}
+[0.757698] (loki_teleop) StdoutLine: {'line': b'running install_scripts\n'}
+[0.773316] (loki_teleop) StdoutLine: {'line': b'Installing teleop_node script to /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/loki_teleop\n'}
+[0.773558] (loki_teleop) StdoutLine: {'line': b"writing list of installed files to '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log'\n"}
+[0.781740] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.793455] (loki_twist_mux) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.797438] (loki_teleop) JobEnded: {'identifier': 'loki_teleop', 'rc': 'SIGINT'}
+[0.800909] (-) TimerEvent: {}
+[0.808353] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.811276] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.816611] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.820943] (loki_twist_mux) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.823916] (loki_twist_mux) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.825863] (rasberry_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.829676] (loki_twist_mux) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.838688] (loki_twist_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.838802] (rasberry_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.851701] (loki_twist_mux) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.886222] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.887660] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.899059] (loki_twist_mux) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.900497] (loki_twist_mux) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.900995] (-) TimerEvent: {}
+[0.962328] (rasberry_gazebo) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.965566] (loki_twist_mux) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.988901] (loki_twist_mux) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.989415] (rasberry_gazebo) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.001086] (-) TimerEvent: {}
+[1.029018] (loki_twist_mux) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.030781] (rasberry_gazebo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.034798] (loki_twist_mux) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.036392] (rasberry_gazebo) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.085606] (rasberry_gazebo) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.085847] (rasberry_gazebo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.101217] (-) TimerEvent: {}
+[1.103756] (loki_twist_mux) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.104087] (loki_twist_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.136628] (rasberry_gazebo) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.137514] (rasberry_gazebo) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.181041] (loki_twist_mux) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.181900] (loki_twist_mux) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.201305] (-) TimerEvent: {}
+[1.249445] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[1.255292] (rasberry_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:9 (find_package):\n'}
+[1.255391] (rasberry_gazebo) StderrLine: {'line': b'  By not providing "Findcontrol_msgs.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.255436] (rasberry_gazebo) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.255479] (rasberry_gazebo) StderrLine: {'line': b'  "control_msgs", but CMake did not find one.\n'}
+[1.255518] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[1.255556] (rasberry_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by "control_msgs" with\n'}
+[1.255594] (rasberry_gazebo) StderrLine: {'line': b'  any of the following names:\n'}
+[1.255631] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[1.255667] (rasberry_gazebo) StderrLine: {'line': b'    control_msgsConfig.cmake\n'}
+[1.255703] (rasberry_gazebo) StderrLine: {'line': b'    control_msgs-config.cmake\n'}
+[1.255740] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[1.255776] (rasberry_gazebo) StderrLine: {'line': b'  Add the installation prefix of "control_msgs" to CMAKE_PREFIX_PATH or set\n'}
+[1.255811] (rasberry_gazebo) StderrLine: {'line': b'  "control_msgs_DIR" to a directory containing one of the above files.  If\n'}
+[1.255846] (rasberry_gazebo) StderrLine: {'line': b'  "control_msgs" provides a separate development package or SDK, be sure it\n'}
+[1.255882] (rasberry_gazebo) StderrLine: {'line': b'  has been installed.\n'}
+[1.255917] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[1.255951] (rasberry_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.255990] (rasberry_gazebo) StdoutLine: {'line': b'See also "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[1.256029] (rasberry_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[1.260823] (rasberry_gazebo) JobEnded: {'identifier': 'rasberry_gazebo', 'rc': 'SIGINT'}
+[1.293570] (loki_twist_mux) StdoutLine: {'line': b'-- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[1.294285] (loki_twist_mux) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.301465] (-) TimerEvent: {}
+[1.330428] (loki_twist_mux) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (find_package):\n'}
+[1.330572] (loki_twist_mux) StderrLine: {'line': b'  By not providing "Findtwist_mux.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.330619] (loki_twist_mux) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.330658] (loki_twist_mux) StderrLine: {'line': b'  "twist_mux", but CMake did not find one.\n'}
+[1.330695] (loki_twist_mux) StderrLine: {'line': b'\n'}
+[1.330732] (loki_twist_mux) StderrLine: {'line': b'  Could not find a package configuration file provided by "twist_mux" with\n'}
+[1.330769] (loki_twist_mux) StderrLine: {'line': b'  any of the following names:\n'}
+[1.330806] (loki_twist_mux) StderrLine: {'line': b'\n'}
+[1.330842] (loki_twist_mux) StderrLine: {'line': b'    twist_muxConfig.cmake\n'}
+[1.330878] (loki_twist_mux) StderrLine: {'line': b'    twist_mux-config.cmake\n'}
+[1.330914] (loki_twist_mux) StderrLine: {'line': b'\n'}
+[1.330949] (loki_twist_mux) StderrLine: {'line': b'  Add the installation prefix of "twist_mux" to CMAKE_PREFIX_PATH or set\n'}
+[1.330985] (loki_twist_mux) StderrLine: {'line': b'  "twist_mux_DIR" to a directory containing one of the above files.  If\n'}
+[1.331021] (loki_twist_mux) StderrLine: {'line': b'  "twist_mux" provides a separate development package or SDK, be sure it has\n'}
+[1.331056] (loki_twist_mux) StderrLine: {'line': b'  been installed.\n'}
+[1.331091] (loki_twist_mux) StderrLine: {'line': b'\n'}
+[1.331126] (loki_twist_mux) StderrLine: {'line': b'\x1b[0m\n'}
+[1.331161] (loki_twist_mux) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.331203] (loki_twist_mux) StdoutLine: {'line': b'See also "/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux/CMakeFiles/CMakeOutput.log".\n'}
+[1.335795] (loki_twist_mux) JobEnded: {'identifier': 'loki_twist_mux', 'rc': 'SIGINT'}
+[1.346199] (loki_msgs) JobSkipped: {'identifier': 'loki_msgs'}
+[1.346245] (loki_can_devices) JobSkipped: {'identifier': 'loki_can_devices'}
+[1.346259] (loki_base) JobSkipped: {'identifier': 'loki_base'}
+[1.346275] (loki_simulator) JobSkipped: {'identifier': 'loki_simulator'}
+[1.346285] (robot_bringup) JobSkipped: {'identifier': 'robot_bringup'}
+[1.346294] (loki_bringup) JobSkipped: {'identifier': 'loki_bringup'}
+[1.346306] (-) EventReactorShutdown: {}

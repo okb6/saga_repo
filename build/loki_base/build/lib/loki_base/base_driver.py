@@ -531,11 +531,11 @@ class BaseDriver(Node):
         
         if current_time > self.latest_base_command_time + self.command_timeout_time:
             PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
-        self.client_simulate_All_Drives(self.latest_base_command)
+        self.client_simulate_All_Drives()
 
     def client_simulate_All_Drives(self):
         simcommand = BaseState()
-        self.basestate_to_msg(self.latest_base_command_time, self.latest_base_command, simcommand)
+        self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, simcommand)
         self.sim_command_msg.publish(simcommand)
         SimDrive.Request().commands = 1
         Future = self.cli_sim_drive.call_async(SimDrive.Request())

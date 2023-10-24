@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices
+CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices
+CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices
 
 # Include any dependencies generated for this target.
 include CMakeFiles/can.dir/depend.make
@@ -70,116 +70,116 @@ include CMakeFiles/can.dir/progress.make
 include CMakeFiles/can.dir/flags.make
 
 CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp
+CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp
 CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o -MF CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o.d -o CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o -MF CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o.d -o CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp
 
 CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp > CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp > CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.i
 
 CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp -o CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360.cpp -o CMakeFiles/can.dir/src/RoboteqFbl2360.cpp.s
 
 CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp
+CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp
 CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o -MF CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o.d -o CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o -MF CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o.d -o CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp
 
 CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp > CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp > CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.i
 
 CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp -o CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/RoboteqFbl2360Diff.cpp -o CMakeFiles/can.dir/src/RoboteqFbl2360Diff.cpp.s
 
 CMakeFiles/can.dir/src/kc_battery.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/kc_battery.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp
+CMakeFiles/can.dir/src/kc_battery.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp
 CMakeFiles/can.dir/src/kc_battery.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/can.dir/src/kc_battery.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/kc_battery.cpp.o -MF CMakeFiles/can.dir/src/kc_battery.cpp.o.d -o CMakeFiles/can.dir/src/kc_battery.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/can.dir/src/kc_battery.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/kc_battery.cpp.o -MF CMakeFiles/can.dir/src/kc_battery.cpp.o.d -o CMakeFiles/can.dir/src/kc_battery.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp
 
 CMakeFiles/can.dir/src/kc_battery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/kc_battery.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp > CMakeFiles/can.dir/src/kc_battery.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp > CMakeFiles/can.dir/src/kc_battery.cpp.i
 
 CMakeFiles/can.dir/src/kc_battery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/kc_battery.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp -o CMakeFiles/can.dir/src/kc_battery.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp -o CMakeFiles/can.dir/src/kc_battery.cpp.s
 
 CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp
+CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp
 CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o -MF CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o.d -o CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o -MF CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o.d -o CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp
 
 CMakeFiles/can.dir/src/can_io_v1pcb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/can_io_v1pcb.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp > CMakeFiles/can.dir/src/can_io_v1pcb.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp > CMakeFiles/can.dir/src/can_io_v1pcb.cpp.i
 
 CMakeFiles/can.dir/src/can_io_v1pcb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/can_io_v1pcb.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp -o CMakeFiles/can.dir/src/can_io_v1pcb.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp -o CMakeFiles/can.dir/src/can_io_v1pcb.cpp.s
 
 CMakeFiles/can.dir/src/can_io_v1uv.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/can_io_v1uv.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp
+CMakeFiles/can.dir/src/can_io_v1uv.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp
 CMakeFiles/can.dir/src/can_io_v1uv.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/can.dir/src/can_io_v1uv.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_io_v1uv.cpp.o -MF CMakeFiles/can.dir/src/can_io_v1uv.cpp.o.d -o CMakeFiles/can.dir/src/can_io_v1uv.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/can.dir/src/can_io_v1uv.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_io_v1uv.cpp.o -MF CMakeFiles/can.dir/src/can_io_v1uv.cpp.o.d -o CMakeFiles/can.dir/src/can_io_v1uv.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp
 
 CMakeFiles/can.dir/src/can_io_v1uv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/can_io_v1uv.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp > CMakeFiles/can.dir/src/can_io_v1uv.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp > CMakeFiles/can.dir/src/can_io_v1uv.cpp.i
 
 CMakeFiles/can.dir/src/can_io_v1uv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/can_io_v1uv.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp -o CMakeFiles/can.dir/src/can_io_v1uv.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp -o CMakeFiles/can.dir/src/can_io_v1uv.cpp.s
 
 CMakeFiles/can.dir/src/can_frame.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/can_frame.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp
+CMakeFiles/can.dir/src/can_frame.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp
 CMakeFiles/can.dir/src/can_frame.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/can.dir/src/can_frame.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_frame.cpp.o -MF CMakeFiles/can.dir/src/can_frame.cpp.o.d -o CMakeFiles/can.dir/src/can_frame.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/can.dir/src/can_frame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_frame.cpp.o -MF CMakeFiles/can.dir/src/can_frame.cpp.o.d -o CMakeFiles/can.dir/src/can_frame.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp
 
 CMakeFiles/can.dir/src/can_frame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/can_frame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp > CMakeFiles/can.dir/src/can_frame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp > CMakeFiles/can.dir/src/can_frame.cpp.i
 
 CMakeFiles/can.dir/src/can_frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/can_frame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp -o CMakeFiles/can.dir/src/can_frame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp -o CMakeFiles/can.dir/src/can_frame.cpp.s
 
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp
+CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/can.dir/src/can_line_socketcan.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_line_socketcan.cpp.o -MF CMakeFiles/can.dir/src/can_line_socketcan.cpp.o.d -o CMakeFiles/can.dir/src/can_line_socketcan.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/can.dir/src/can_line_socketcan.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_line_socketcan.cpp.o -MF CMakeFiles/can.dir/src/can_line_socketcan.cpp.o.d -o CMakeFiles/can.dir/src/can_line_socketcan.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp
 
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/can_line_socketcan.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp > CMakeFiles/can.dir/src/can_line_socketcan.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp > CMakeFiles/can.dir/src/can_line_socketcan.cpp.i
 
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/can_line_socketcan.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp -o CMakeFiles/can.dir/src/can_line_socketcan.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp -o CMakeFiles/can.dir/src/can_line_socketcan.cpp.s
 
 CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o: CMakeFiles/can.dir/flags.make
-CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp
+CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp
 CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o: CMakeFiles/can.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o -MF CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o.d -o CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o -c /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o -MF CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o.d -o CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o -c /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp
 
 CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp > CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp > CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.i
 
 CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp -o CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_ctrl_pltf.cpp -o CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.s
 
 # Object files for target can
 can_OBJECTS = \
@@ -204,12 +204,12 @@ libcan.so: CMakeFiles/can.dir/src/can_frame.cpp.o
 libcan.so: CMakeFiles/can.dir/src/can_line_socketcan.cpp.o
 libcan.so: CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o
 libcan.so: CMakeFiles/can.dir/build.make
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_fastrtps_c.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_fastrtps_cpp.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_introspection_c.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_introspection_cpp.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_cpp.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_generator_py.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_fastrtps_c.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_fastrtps_cpp.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_introspection_c.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_introspection_cpp.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_cpp.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_generator_py.so
 libcan.so: /opt/ros/humble/lib/librclcpp.so
 libcan.so: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_fastrtps_c.so
 libcan.so: /opt/ros/humble/lib/libstd_srvs__rosidl_typesupport_introspection_c.so
@@ -232,8 +232,8 @@ libcan.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp
 libcan.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 libcan.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 libcan.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_c.so
-libcan.so: /home/loki/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_generator_c.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_typesupport_c.so
+libcan.so: /home/odin/Documents/GitHub/saga_repo/install/loki_msgs/lib/libloki_msgs__rosidl_generator_c.so
 libcan.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
 libcan.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_c.so
 libcan.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_c.so
@@ -299,7 +299,7 @@ libcan.so: /opt/ros/humble/lib/librcpputils.so
 libcan.so: /opt/ros/humble/lib/librcutils.so
 libcan.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 libcan.so: CMakeFiles/can.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libcan.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libcan.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/can.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -311,6 +311,6 @@ CMakeFiles/can.dir/clean:
 .PHONY : CMakeFiles/can.dir/clean
 
 CMakeFiles/can.dir/depend:
-	cd /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices /home/loki/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles/can.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices /home/odin/Documents/GitHub/saga_repo/build/loki_can_devices/CMakeFiles/can.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/can.dir/depend
 

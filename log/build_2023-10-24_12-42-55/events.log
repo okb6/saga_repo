@@ -1,0 +1,748 @@
+[0.000000] (-) TimerEvent: {}
+[0.000490] (loki_description) JobQueued: {'identifier': 'loki_description', 'dependencies': OrderedDict()}
+[0.000665] (loki_teleop) JobQueued: {'identifier': 'loki_teleop', 'dependencies': OrderedDict()}
+[0.000694] (loki_twist_mux) JobQueued: {'identifier': 'loki_twist_mux', 'dependencies': OrderedDict()}
+[0.000708] (rasberry_gazebo) JobQueued: {'identifier': 'rasberry_gazebo', 'dependencies': OrderedDict()}
+[0.000719] (loki_msgs) JobQueued: {'identifier': 'loki_msgs', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description')])}
+[0.000733] (loki_can_devices) JobQueued: {'identifier': 'loki_can_devices', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs')])}
+[0.000746] (loki_base) JobQueued: {'identifier': 'loki_base', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices')])}
+[0.000758] (loki_simulator) JobQueued: {'identifier': 'loki_simulator', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base')])}
+[0.000784] (robot_bringup) JobQueued: {'identifier': 'robot_bringup', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_teleop', '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop'), ('loki_twist_mux', '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base')])}
+[0.000806] (loki_bringup) JobQueued: {'identifier': 'loki_bringup', 'dependencies': OrderedDict([('loki_description', '/home/odin/Documents/GitHub/saga_repo/install/loki_description'), ('loki_teleop', '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop'), ('loki_twist_mux', '/home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux'), ('loki_msgs', '/home/odin/Documents/GitHub/saga_repo/install/loki_msgs'), ('loki_can_devices', '/home/odin/Documents/GitHub/saga_repo/install/loki_can_devices'), ('loki_base', '/home/odin/Documents/GitHub/saga_repo/install/loki_base'), ('robot_bringup', '/home/odin/Documents/GitHub/saga_repo/install/robot_bringup')])}
+[0.000822] (loki_description) JobStarted: {'identifier': 'loki_description'}
+[0.027980] (loki_teleop) JobStarted: {'identifier': 'loki_teleop'}
+[0.063675] (loki_twist_mux) JobStarted: {'identifier': 'loki_twist_mux'}
+[0.090137] (rasberry_gazebo) JobStarted: {'identifier': 'rasberry_gazebo'}
+[0.099936] (-) TimerEvent: {}
+[0.118105] (loki_description) JobProgress: {'identifier': 'loki_description', 'progress': 'cmake'}
+[0.118517] (loki_description) JobProgress: {'identifier': 'loki_description', 'progress': 'build'}
+[0.118989] (loki_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odin/Documents/GitHub/saga_repo/build/loki_description', '--', '-j8', '-l8'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.200068] (-) TimerEvent: {}
+[0.300378] (-) TimerEvent: {}
+[0.312793] (loki_twist_mux) JobProgress: {'identifier': 'loki_twist_mux', 'progress': 'cmake'}
+[0.313229] (loki_twist_mux) JobProgress: {'identifier': 'loki_twist_mux', 'progress': 'build'}
+[0.313532] (loki_twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux', '--', '-j8', '-l8'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.316146] (rasberry_gazebo) JobProgress: {'identifier': 'rasberry_gazebo', 'progress': 'cmake'}
+[0.316571] (rasberry_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo', '-DCMAKE_INSTALL_PREFIX=/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.318865] (loki_description) CommandEnded: {'returncode': 0}
+[0.325453] (rasberry_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.338607] (loki_description) JobProgress: {'identifier': 'loki_description', 'progress': 'install'}
+[0.344811] (loki_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odin/Documents/GitHub/saga_repo/build/loki_description'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.347504] (loki_twist_mux) CommandEnded: {'returncode': 0}
+[0.350808] (loki_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.351077] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/launch\n'}
+[0.351192] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/launch/model.launch\n'}
+[0.351316] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/launch/model.launch.py\n'}
+[0.351390] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes\n'}
+[0.351461] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/tower_modules\n'}
+[0.351534] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/tower_modules/DUMMY-TOWER-MIRROR-M.stl\n'}
+[0.351605] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/tower_modules/DUMMY-TOWER-M.stl\n'}
+[0.351678] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/tower_modules/DUMMY-DRIVE-BRACKET.stl\n'}
+[0.351750] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/clamps\n'}
+[0.351821] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/clamps/DUMMY-T-BRACKET.stl\n'}
+[0.351894] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/clamps/DUMMY-SUSP.stl\n'}
+[0.351965] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules\n'}
+[0.352040] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/836745-5-DUMMY-RevA.stl\n'}
+[0.352115] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/836745-5-DUMMY-MIRROR-RevA.stl\n'}
+[0.352186] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/old\n'}
+[0.352254] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/old/836586-1-DUMMY-RevA.stl\n'}
+[0.352315] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/old/836745-5-DUMMY-RevA.stl\n'}
+[0.352378] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/drive_modules/old/836745-5-DUMMY-MIRROR-RevA.stl\n'}
+[0.352439] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/uv_frame\n'}
+[0.352497] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/uv_frame/uv_arc.STL\n'}
+[0.352556] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/bat_enc_modules\n'}
+[0.352615] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/bat_enc_modules/836586-1-DUMMY-RevA.stl\n'}
+[0.352678] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/hokuyo\n'}
+[0.352779] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/meshes/hokuyo/hokuyo.dae\n'}
+[0.352840] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/urdf\n'}
+[0.352972] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/urdf/thorvald_model.xacro\n'}
+[0.353030] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/urdf/sensor_modules\n'}
+[0.353074] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/urdf/sensor_modules/sensor_frames_example.xacro\n'}
+[0.353118] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/ament_index/resource_index/package_run_dependencies/loki_description\n'}
+[0.353158] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/ament_index/resource_index/parent_prefix_path/loki_description\n'}
+[0.353199] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/environment/ament_prefix_path.sh\n'}
+[0.353249] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/environment/ament_prefix_path.dsv\n'}
+[0.353289] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/environment/path.sh\n'}
+[0.353328] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/environment/path.dsv\n'}
+[0.353367] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/local_setup.bash\n'}
+[0.353408] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/local_setup.sh\n'}
+[0.353449] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/local_setup.zsh\n'}
+[0.353486] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/local_setup.dsv\n'}
+[0.353525] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.dsv\n'}
+[0.353564] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/ament_index/resource_index/packages/loki_description\n'}
+[0.353604] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/cmake/loki_descriptionConfig.cmake\n'}
+[0.353644] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/cmake/loki_descriptionConfig-version.cmake\n'}
+[0.353684] (loki_description) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_description/share/loki_description/package.xml\n'}
+[0.354280] (loki_description) CommandEnded: {'returncode': 0}
+[0.389402] (loki_twist_mux) JobProgress: {'identifier': 'loki_twist_mux', 'progress': 'install'}
+[0.389676] (loki_twist_mux) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_twist_mux'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.400500] (-) TimerEvent: {}
+[0.400763] (loki_twist_mux) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.401040] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/launch\n'}
+[0.401134] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/launch/twist_mux.launch\n'}
+[0.401231] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/config\n'}
+[0.401306] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/config/twist_mux_topics.yaml\n'}
+[0.401384] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/config/twist_mux_locks.yaml\n'}
+[0.401460] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/ament_index/resource_index/package_run_dependencies/loki_twist_mux\n'}
+[0.401572] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/ament_index/resource_index/parent_prefix_path/loki_twist_mux\n'}
+[0.401695] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/environment/ament_prefix_path.sh\n'}
+[0.401768] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/environment/ament_prefix_path.dsv\n'}
+[0.401838] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/environment/path.sh\n'}
+[0.401913] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/environment/path.dsv\n'}
+[0.401985] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/local_setup.bash\n'}
+[0.402234] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/local_setup.sh\n'}
+[0.402738] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/local_setup.zsh\n'}
+[0.402839] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/local_setup.dsv\n'}
+[0.403155] (loki_twist_mux) StdoutLine: {'line': b'-- Installing: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.dsv\n'}
+[0.403398] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/ament_index/resource_index/packages/loki_twist_mux\n'}
+[0.403478] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/cmake/loki_twist_muxConfig.cmake\n'}
+[0.403652] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/cmake/loki_twist_muxConfig-version.cmake\n'}
+[0.403865] (loki_twist_mux) StdoutLine: {'line': b'-- Up-to-date: /home/odin/Documents/GitHub/saga_repo/install/loki_twist_mux/share/loki_twist_mux/package.xml\n'}
+[0.436427] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.443222] (loki_description) JobEnded: {'identifier': 'loki_description', 'rc': 0}
+[0.443869] (loki_msgs) JobStarted: {'identifier': 'loki_msgs'}
+[0.466196] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.467875] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.472457] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.475016] (loki_twist_mux) CommandEnded: {'returncode': 0}
+[0.480577] (rasberry_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.491795] (rasberry_gazebo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500733] (-) TimerEvent: {}
+[0.509838] (loki_msgs) JobProgress: {'identifier': 'loki_msgs', 'progress': 'cmake'}
+[0.510408] (loki_msgs) JobProgress: {'identifier': 'loki_msgs', 'progress': 'build'}
+[0.510815] (loki_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs', '--', '-j8', '-l8'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'odin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/odin'), ('OLDPWD', '/home/odin'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1204'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'odin'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'odin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D332C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/odin/Documents/GitHub/saga_repo/install/loki_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/odin/Documents/GitHub/saga_repo/build/loki_msgs'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/odin/Documents/GitHub/saga_repo/install/loki_description:/opt/ros/humble')]), 'shell': False}
+[0.535081] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.536072] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.571645] (loki_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.578490] (loki_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_loki_msgs\n'}
+[0.580047] (loki_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.591567] (loki_twist_mux) JobEnded: {'identifier': 'loki_twist_mux', 'rc': 0}
+[0.593072] (loki_teleop) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../../build/loki_teleop', 'build', '--build-base', '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/build', 'install', '--record', '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log', '--single-version-externally-managed'], 'cwd': '/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_teleop', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'odin', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/odin', 'OLDPWD': '/home/odin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1204', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'odin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'odin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/odin:@/tmp/.ICE-unix/897,unix/odin:/tmp/.ICE-unix/897', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/030e9d33_5c5a_4864_af83_ecd5557e88f8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.D332C2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.97', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/prefix_override:/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.600833] (-) TimerEvent: {}
+[0.627564] (rasberry_gazebo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.700929] (-) TimerEvent: {}
+[0.742274] (rasberry_gazebo) StdoutLine: {'line': b'-- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.742508] (rasberry_gazebo) StdoutLine: {'line': b'-- Found control_msgs: 4.4.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[0.754997] (loki_teleop) StdoutLine: {'line': b'running egg_info\n'}
+[0.755544] (loki_teleop) StdoutLine: {'line': b'writing ../../../../build/loki_teleop/loki_teleop.egg-info/PKG-INFO\n'}
+[0.755727] (loki_teleop) StdoutLine: {'line': b'writing dependency_links to ../../../../build/loki_teleop/loki_teleop.egg-info/dependency_links.txt\n'}
+[0.755858] (loki_teleop) StdoutLine: {'line': b'writing entry points to ../../../../build/loki_teleop/loki_teleop.egg-info/entry_points.txt\n'}
+[0.755972] (loki_teleop) StdoutLine: {'line': b'writing requirements to ../../../../build/loki_teleop/loki_teleop.egg-info/requires.txt\n'}
+[0.756087] (loki_teleop) StdoutLine: {'line': b'writing top-level names to ../../../../build/loki_teleop/loki_teleop.egg-info/top_level.txt\n'}
+[0.757326] (loki_teleop) StdoutLine: {'line': b"reading manifest file '../../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'\n"}
+[0.757928] (loki_teleop) StdoutLine: {'line': b"writing manifest file '../../../../build/loki_teleop/loki_teleop.egg-info/SOURCES.txt'\n"}
+[0.758054] (loki_teleop) StdoutLine: {'line': b'running build\n'}
+[0.758132] (loki_teleop) StdoutLine: {'line': b'running build_py\n'}
+[0.758391] (loki_teleop) StdoutLine: {'line': b'running install\n'}
+[0.758509] (loki_teleop) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[0.758603] (loki_teleop) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.758781] (loki_teleop) StdoutLine: {'line': b'running install_lib\n'}
+[0.759960] (loki_teleop) StdoutLine: {'line': b'running install_data\n'}
+[0.760394] (loki_teleop) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.761470] (loki_teleop) StdoutLine: {'line': b"removing '/home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop-2.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.761694] (loki_teleop) StdoutLine: {'line': b'Copying ../../../../build/loki_teleop/loki_teleop.egg-info to /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/python3.10/site-packages/loki_teleop-2.0.0-py3.10.egg-info\n'}
+[0.762172] (loki_teleop) StdoutLine: {'line': b'running install_scripts\n'}
+[0.776392] (loki_teleop) StdoutLine: {'line': b'Installing teleop_node script to /home/odin/Documents/GitHub/saga_repo/install/loki_teleop/lib/loki_teleop\n'}
+[0.776758] (loki_teleop) StdoutLine: {'line': b"writing list of installed files to '/home/odin/Documents/GitHub/saga_repo/build/loki_teleop/install.log'\n"}
+[0.794375] (loki_teleop) CommandEnded: {'returncode': 0}
+[0.800995] (-) TimerEvent: {}
+[0.825116] (loki_teleop) JobEnded: {'identifier': 'loki_teleop', 'rc': 0}
+[0.901097] (-) TimerEvent: {}
+[1.001358] (-) TimerEvent: {}
+[1.083700] (rasberry_gazebo) StdoutLine: {'line': b'-- Found tf2: 0.25.4 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.089405] (rasberry_gazebo) StdoutLine: {'line': b'-- Found gazebo_ros_pkgs: 3.7.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)\n'}
+[1.089592] (rasberry_gazebo) StdoutLine: {'line': b'-- Found nav2_map_server: 1.1.12 (/opt/ros/humble/share/nav2_map_server/cmake)\n'}
+[1.101457] (-) TimerEvent: {}
+[1.135797] (loki_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.137312] (loki_msgs) StdoutLine: {'line': b'creating loki_msgs.egg-info\n'}
+[1.137901] (loki_msgs) StdoutLine: {'line': b'writing loki_msgs.egg-info/PKG-INFO\n'}
+[1.138201] (loki_msgs) StdoutLine: {'line': b'writing dependency_links to loki_msgs.egg-info/dependency_links.txt\n'}
+[1.138420] (loki_msgs) StdoutLine: {'line': b'writing top-level names to loki_msgs.egg-info/top_level.txt\n'}
+[1.138764] (loki_msgs) StdoutLine: {'line': b"writing manifest file 'loki_msgs.egg-info/SOURCES.txt'\n"}
+[1.141381] (loki_msgs) StdoutLine: {'line': b"reading manifest file 'loki_msgs.egg-info/SOURCES.txt'\n"}
+[1.142228] (loki_msgs) StdoutLine: {'line': b"writing manifest file 'loki_msgs.egg-info/SOURCES.txt'\n"}
+[1.188636] (loki_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_build_loki_msgs_egg\n'}
+[1.201589] (-) TimerEvent: {}
+[1.301922] (-) TimerEvent: {}
+[1.402245] (-) TimerEvent: {}
+[1.499551] (rasberry_gazebo) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.500515] (rasberry_gazebo) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.502309] (-) TimerEvent: {}
+[1.602525] (-) TimerEvent: {}
+[1.702789] (-) TimerEvent: {}
+[1.803054] (-) TimerEvent: {}
+[1.903310] (-) TimerEvent: {}
+[2.003570] (-) TimerEvent: {}
+[2.103826] (-) TimerEvent: {}
+[2.204074] (-) TimerEvent: {}
+[2.304334] (-) TimerEvent: {}
+[2.404600] (-) TimerEvent: {}
+[2.492398] (rasberry_gazebo) StdoutLine: {'line': b'-- Found navigation2: 1.1.12 (/opt/ros/humble/share/navigation2/cmake)\n'}
+[2.503208] (rasberry_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:18 (find_package):\n'}
+[2.503628] (rasberry_gazebo) StderrLine: {'line': b'  By not providing "Findrobot_localization.cmake" in CMAKE_MODULE_PATH this\n'}
+[2.503714] (rasberry_gazebo) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[2.503784] (rasberry_gazebo) StderrLine: {'line': b'  "robot_localization", but CMake did not find one.\n'}
+[2.503852] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[2.503920] (rasberry_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[2.503988] (rasberry_gazebo) StderrLine: {'line': b'  "robot_localization" with any of the following names:\n'}
+[2.504069] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[2.504134] (rasberry_gazebo) StderrLine: {'line': b'    robot_localizationConfig.cmake\n'}
+[2.504203] (rasberry_gazebo) StderrLine: {'line': b'    robot_localization-config.cmake\n'}
+[2.504273] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[2.504342] (rasberry_gazebo) StderrLine: {'line': b'  Add the installation prefix of "robot_localization" to CMAKE_PREFIX_PATH or\n'}
+[2.504414] (rasberry_gazebo) StderrLine: {'line': b'  set "robot_localization_DIR" to a directory containing one of the above\n'}
+[2.504484] (rasberry_gazebo) StderrLine: {'line': b'  files.  If "robot_localization" provides a separate development package or\n'}
+[2.504554] (rasberry_gazebo) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[2.504626] (-) TimerEvent: {}
+[2.504765] (rasberry_gazebo) StderrLine: {'line': b'\n'}
+[2.504851] (rasberry_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[2.504925] (rasberry_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.505003] (rasberry_gazebo) StdoutLine: {'line': b'See also "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[2.515509] (rasberry_gazebo) CommandEnded: {'returncode': 1}
+[2.563818] (rasberry_gazebo) JobEnded: {'identifier': 'rasberry_gazebo', 'rc': 1}
+[2.604743] (-) TimerEvent: {}
+[2.644377] (loki_msgs) StdoutLine: {'line': b'[  0%] Built target loki_msgs__cpp\n'}
+[2.652372] (loki_msgs) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.652745] (loki_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.665045] (loki_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.704834] (-) TimerEvent: {}
+[2.805097] (-) TimerEvent: {}
+[2.905361] (-) TimerEvent: {}
+[3.005669] (-) TimerEvent: {}
+[3.105956] (-) TimerEvent: {}
+[3.206250] (-) TimerEvent: {}
+[3.219402] (loki_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c.o\x1b[0m\n'}
+[3.219633] (loki_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o\x1b[0m\n'}
+[3.219715] (loki_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o\x1b[0m\n'}
+[3.219777] (loki_msgs) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o\x1b[0m\n'}
+[3.233239] (loki_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o\x1b[0m\n'}
+[3.275356] (loki_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o\x1b[0m\n'}
+[3.275909] (loki_msgs) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o\x1b[0m\n'}
+[3.277339] (loki_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o\x1b[0m\n'}
+[3.279193] (loki_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o\x1b[0m\n'}
+[3.306347] (-) TimerEvent: {}
+[3.326209] (loki_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o\x1b[0m\n'}
+[3.329217] (loki_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o\x1b[0m\n'}
+[3.329444] (loki_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o\x1b[0m\n'}
+[3.329568] (loki_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o\x1b[0m\n'}
+[3.379243] (loki_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o\x1b[0m\n'}
+[3.379440] (loki_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o\x1b[0m\n'}
+[3.382963] (loki_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o\x1b[0m\n'}
+[3.383149] (loki_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o\x1b[0m\n'}
+[3.389210] (loki_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o\x1b[0m\n'}
+[3.406446] (-) TimerEvent: {}
+[3.433502] (loki_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o\x1b[0m\n'}
+[3.436178] (loki_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o\x1b[0m\n'}
+[3.436359] (loki_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o\x1b[0m\n'}
+[3.454152] (loki_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o\x1b[0m\n'}
+[3.495581] (loki_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o\x1b[0m\n'}
+[3.498116] (loki_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o\x1b[0m\n'}
+[3.500405] (loki_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o\x1b[0m\n'}
+[3.506547] (-) TimerEvent: {}
+[3.517887] (loki_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o\x1b[0m\n'}
+[3.528005] (loki_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o\x1b[0m\n'}
+[3.557160] (loki_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o\x1b[0m\n'}
+[3.561352] (loki_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o\x1b[0m\n'}
+[3.570586] (loki_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o\x1b[0m\n'}
+[3.577631] (loki_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o\x1b[0m\n'}
+[3.606644] (-) TimerEvent: {}
+[3.621384] (loki_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o\x1b[0m\n'}
+[3.626704] (loki_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o\x1b[0m\n'}
+[3.631916] (loki_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o\x1b[0m\n'}
+[3.637589] (loki_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o\x1b[0m\n'}
+[3.680957] (loki_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o\x1b[0m\n'}
+[3.688187] (loki_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o\x1b[0m\n'}
+[3.701560] (loki_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o\x1b[0m\n'}
+[3.706473] (loki_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o\x1b[0m\n'}
+[3.706658] (-) TimerEvent: {}
+[3.726417] (loki_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o\x1b[0m\n'}
+[3.806767] (-) TimerEvent: {}
+[3.820365] (loki_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking C shared library libloki_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[3.852459] (loki_msgs) StdoutLine: {'line': b'[ 13%] Built target loki_msgs__rosidl_generator_c\n'}
+[3.861740] (loki_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.864051] (loki_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.867078] (loki_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.906861] (-) TimerEvent: {}
+[4.007128] (-) TimerEvent: {}
+[4.107398] (-) TimerEvent: {}
+[4.207660] (-) TimerEvent: {}
+[4.307928] (-) TimerEvent: {}
+[4.408190] (-) TimerEvent: {}
+[4.508447] (-) TimerEvent: {}
+[4.608707] (-) TimerEvent: {}
+[4.708971] (-) TimerEvent: {}
+[4.809246] (-) TimerEvent: {}
+[4.909523] (-) TimerEvent: {}
+[4.920272] (loki_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/thorvald_io__type_support.cpp.o\x1b[0m\n'}
+[4.920515] (loki_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/base_state__type_support.cpp.o\x1b[0m\n'}
+[4.929046] (loki_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/battery_alarms__type_support.cpp.o\x1b[0m\n'}
+[5.009624] (-) TimerEvent: {}
+[5.109915] (-) TimerEvent: {}
+[5.210208] (-) TimerEvent: {}
+[5.310523] (-) TimerEvent: {}
+[5.366094] (loki_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/battery_array__type_support.cpp.o\x1b[0m\n'}
+[5.410629] (-) TimerEvent: {}
+[5.432256] (loki_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/battery_data__type_support.cpp.o\x1b[0m\n'}
+[5.470751] (loki_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/thorvald_io__type_support.cpp.o\x1b[0m\n'}
+[5.470991] (loki_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/can_frame__type_support.cpp.o\x1b[0m\n'}
+[5.510722] (-) TimerEvent: {}
+[5.611020] (-) TimerEvent: {}
+[5.711330] (-) TimerEvent: {}
+[5.811636] (-) TimerEvent: {}
+[5.869446] (loki_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_array__type_support.cpp.o\x1b[0m\n'}
+[5.911734] (-) TimerEvent: {}
+[5.949821] (loki_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_config__type_support.cpp.o\x1b[0m\n'}
+[5.960678] (loki_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_data__type_support.cpp.o\x1b[0m\n'}
+[6.011836] (-) TimerEvent: {}
+[6.014200] (loki_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/base_state__type_support.cpp.o\x1b[0m\n'}
+[6.111940] (-) TimerEvent: {}
+[6.212235] (-) TimerEvent: {}
+[6.312516] (-) TimerEvent: {}
+[6.399274] (loki_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_info__type_support.cpp.o\x1b[0m\n'}
+[6.412616] (-) TimerEvent: {}
+[6.423426] (loki_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_state__type_support.cpp.o\x1b[0m\n'}
+[6.461225] (loki_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/drive_param__type_support.cpp.o\x1b[0m\n'}
+[6.512713] (-) TimerEvent: {}
+[6.535844] (loki_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/battery_alarms__type_support.cpp.o\x1b[0m\n'}
+[6.612815] (-) TimerEvent: {}
+[6.620361] (loki_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/thorvald_io__type_support.c.o\x1b[0m\n'}
+[6.666597] (loki_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/base_state__type_support.c.o\x1b[0m\n'}
+[6.712919] (-) TimerEvent: {}
+[6.720347] (loki_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_alarms__type_support.c.o\x1b[0m\n'}
+[6.766748] (loki_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_array__type_support.c.o\x1b[0m\n'}
+[6.813037] (-) TimerEvent: {}
+[6.829484] (loki_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_data__type_support.c.o\x1b[0m\n'}
+[6.890927] (loki_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__type_support.c.o\x1b[0m\n'}
+[6.907401] (loki_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/enclosure_state__type_support.cpp.o\x1b[0m\n'}
+[6.913147] (-) TimerEvent: {}
+[6.950847] (loki_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_array__type_support.c.o\x1b[0m\n'}
+[6.956011] (loki_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/base_state__type_support.cpp.o\x1b[0m\n'}
+[6.956217] (loki_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/thorvald_io__type_support.cpp.o\x1b[0m\n'}
+[6.973073] (loki_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/battery_array__type_support.cpp.o\x1b[0m\n'}
+[6.977559] (loki_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/io_array__type_support.cpp.o\x1b[0m\n'}
+[6.994045] (loki_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/battery_alarms__type_support.cpp.o\x1b[0m\n'}
+[6.996158] (loki_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/battery_array__type_support.cpp.o\x1b[0m\n'}
+[7.013258] (-) TimerEvent: {}
+[7.028219] (loki_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/battery_data__type_support.cpp.o\x1b[0m\n'}
+[7.038352] (loki_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_config__type_support.c.o\x1b[0m\n'}
+[7.058869] (loki_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/can_frame__type_support.cpp.o\x1b[0m\n'}
+[7.090170] (loki_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_array__type_support.cpp.o\x1b[0m\n'}
+[7.092372] (loki_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_data__type_support.c.o\x1b[0m\n'}
+[7.113370] (-) TimerEvent: {}
+[7.123660] (loki_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_config__type_support.cpp.o\x1b[0m\n'}
+[7.155817] (loki_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_data__type_support.cpp.o\x1b[0m\n'}
+[7.171716] (loki_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp.o\x1b[0m\n'}
+[7.188815] (loki_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_info__type_support.c.o\x1b[0m\n'}
+[7.200766] (loki_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_info__type_support.cpp.o\x1b[0m\n'}
+[7.213483] (-) TimerEvent: {}
+[7.241882] (loki_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_state__type_support.c.o\x1b[0m\n'}
+[7.244373] (loki_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_param__type_support.c.o\x1b[0m\n'}
+[7.283094] (loki_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/enclosure_state__type_support.c.o\x1b[0m\n'}
+[7.284712] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_state__type_support.cpp.o\x1b[0m\n'}
+[7.313596] (-) TimerEvent: {}
+[7.331958] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_array__type_support.c.o\x1b[0m\n'}
+[7.361270] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/drive_param__type_support.cpp.o\x1b[0m\n'}
+[7.362340] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/enclosure_state__type_support.cpp.o\x1b[0m\n'}
+[7.374523] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_state__type_support.c.o\x1b[0m\n'}
+[7.383046] (loki_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__type_support_c.cpp.o\x1b[0m\n'}
+[7.410265] (loki_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/io_array__type_support.cpp.o\x1b[0m\n'}
+[7.411763] (loki_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/io_state__type_support.cpp.o\x1b[0m\n'}
+[7.413699] (-) TimerEvent: {}
+[7.436519] (loki_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/base_state__type_support_c.cpp.o\x1b[0m\n'}
+[7.440398] (loki_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/motor_state__type_support.c.o\x1b[0m\n'}
+[7.473493] (loki_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/io_state__type_support.cpp.o\x1b[0m\n'}
+[7.474792] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_status_flag__type_support.c.o\x1b[0m\n'}
+[7.478689] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/base_state__type_support.cpp.o\x1b[0m\n'}
+[7.484992] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/battery_data__type_support.cpp.o\x1b[0m\n'}
+[7.510982] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/digital_write__type_support.c.o\x1b[0m\n'}
+[7.513804] (-) TimerEvent: {}
+[7.522013] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/motor_state__type_support.cpp.o\x1b[0m\n'}
+[7.548796] (loki_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/can_id__type_support.c.o\x1b[0m\n'}
+[7.563268] (loki_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/msg/controller_status_flag__type_support.cpp.o\x1b[0m\n'}
+[7.564720] (loki_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/can_frame__type_support.cpp.o\x1b[0m\n'}
+[7.587398] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_params__type_support.c.o\x1b[0m\n'}
+[7.594349] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/digital_write__type_support.cpp.o\x1b[0m\n'}
+[7.613919] (-) TimerEvent: {}
+[7.627493] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/can_id__type_support.cpp.o\x1b[0m\n'}
+[7.628576] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/motor_controller_setup__type_support.c.o\x1b[0m\n'}
+[7.661677] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/drive_params__type_support.cpp.o\x1b[0m\n'}
+[7.666603] (loki_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/switch_bool__type_support.c.o\x1b[0m\n'}
+[7.695574] (loki_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/motor_controller_setup__type_support.cpp.o\x1b[0m\n'}
+[7.704823] (loki_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/battery_vars__type_support.c.o\x1b[0m\n'}
+[7.714032] (-) TimerEvent: {}
+[7.729268] (loki_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/switch_bool__type_support.cpp.o\x1b[0m\n'}
+[7.742427] (loki_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/cont_array__type_support.c.o\x1b[0m\n'}
+[7.762417] (loki_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/battery_vars__type_support.cpp.o\x1b[0m\n'}
+[7.775744] (loki_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_array__type_support.cpp.o\x1b[0m\n'}
+[7.779563] (loki_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/cot_map__type_support.c.o\x1b[0m\n'}
+[7.787487] (loki_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/battery_alarms__type_support.cpp.o\x1b[0m\n'}
+[7.800000] (loki_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/cont_array__type_support.cpp.o\x1b[0m\n'}
+[7.814141] (-) TimerEvent: {}
+[7.821911] (loki_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/device_cmds__type_support.c.o\x1b[0m\n'}
+[7.833261] (loki_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/cot_map__type_support.cpp.o\x1b[0m\n'}
+[7.858438] (loki_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_cmds__type_support.c.o\x1b[0m\n'}
+[7.866906] (loki_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/device_cmds__type_support.cpp.o\x1b[0m\n'}
+[7.895185] (loki_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/eval_can_buffer__type_support.c.o\x1b[0m\n'}
+[7.899584] (loki_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/drive_cmds__type_support.cpp.o\x1b[0m\n'}
+[7.914259] (-) TimerEvent: {}
+[7.932065] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/get_set_bool__type_support.c.o\x1b[0m\n'}
+[7.932302] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/eval_can_buffer__type_support.cpp.o\x1b[0m\n'}
+[7.947614] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_config__type_support.cpp.o\x1b[0m\n'}
+[7.966048] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/get_set_bool__type_support.cpp.o\x1b[0m\n'}
+[7.976568] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/homesteering_all__type_support.c.o\x1b[0m\n'}
+[7.999817] (loki_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/homesteering_all__type_support.cpp.o\x1b[0m\n'}
+[8.013854] (loki_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/init_pltf__type_support.c.o\x1b[0m\n'}
+[8.014324] (-) TimerEvent: {}
+[8.033728] (loki_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/init_pltf__type_support.cpp.o\x1b[0m\n'}
+[8.046013] (loki_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/motor_state__type_support.cpp.o\x1b[0m\n'}
+[8.052606] (loki_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/mot_cot__type_support.c.o\x1b[0m\n'}
+[8.066947] (loki_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/mot_cot__type_support.cpp.o\x1b[0m\n'}
+[8.088580] (loki_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/battery_array__type_support.cpp.o\x1b[0m\n'}
+[8.091029] (loki_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero__type_support.c.o\x1b[0m\n'}
+[8.098386] (loki_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/pos_zero__type_support.cpp.o\x1b[0m\n'}
+[8.114445] (-) TimerEvent: {}
+[8.127558] (loki_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero_all__type_support.c.o\x1b[0m\n'}
+[8.129957] (loki_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/pos_zero_all__type_support.cpp.o\x1b[0m\n'}
+[8.162142] (loki_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/set_bools__type_support.cpp.o\x1b[0m\n'}
+[8.164827] (loki_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/set_bools__type_support.c.o\x1b[0m\n'}
+[8.195437] (loki_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/sim_drive__type_support.cpp.o\x1b[0m\n'}
+[8.202907] (loki_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/sim_drive__type_support.c.o\x1b[0m\n'}
+[8.214560] (-) TimerEvent: {}
+[8.227560] (loki_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/state_base__type_support.cpp.o\x1b[0m\n'}
+[8.240827] (loki_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/state_base__type_support.c.o\x1b[0m\n'}
+[8.260067] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/states_of_io__type_support.cpp.o\x1b[0m\n'}
+[8.278316] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/states_of_io__type_support.c.o\x1b[0m\n'}
+[8.292158] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/params__type_support.cpp.o\x1b[0m\n'}
+[8.314678] (-) TimerEvent: {}
+[8.316033] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/params__type_support.c.o\x1b[0m\n'}
+[8.323925] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/loki_msgs/srv/home_s__type_support.cpp.o\x1b[0m\n'}
+[8.353638] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/srv/detail/home_s__type_support.c.o\x1b[0m\n'}
+[8.356037] (loki_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_data__type_support.cpp.o\x1b[0m\n'}
+[8.356327] (loki_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libloki_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[8.388469] (loki_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_info__type_support.cpp.o\x1b[0m\n'}
+[8.391328] (loki_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/battery_data__type_support.cpp.o\x1b[0m\n'}
+[8.391564] (loki_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking C shared library libloki_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[8.411065] (loki_msgs) StdoutLine: {'line': b'[ 49%] Built target loki_msgs__rosidl_typesupport_c\n'}
+[8.414779] (-) TimerEvent: {}
+[8.419727] (loki_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/can_frame__type_support.cpp.o\x1b[0m\n'}
+[8.435899] (loki_msgs) StdoutLine: {'line': b'[ 49%] Built target loki_msgs__rosidl_typesupport_introspection_c\n'}
+[8.444638] (loki_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_array__type_support.cpp.o\x1b[0m\n'}
+[8.460495] (loki_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_state__type_support.cpp.o\x1b[0m\n'}
+[8.499425] (loki_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/msg/detail/dds_fastrtps/controller_status_flag__type_support.cpp.o\x1b[0m\n'}
+[8.514895] (-) TimerEvent: {}
+[8.554397] (loki_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/battery_alarms__type_support_c.cpp.o\x1b[0m\n'}
+[8.615010] (-) TimerEvent: {}
+[8.689639] (loki_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_config__type_support.cpp.o\x1b[0m\n'}
+[8.715126] (-) TimerEvent: {}
+[8.715420] (loki_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_data__type_support.cpp.o\x1b[0m\n'}
+[8.747997] (loki_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_info__type_support.cpp.o\x1b[0m\n'}
+[8.815252] (-) TimerEvent: {}
+[8.893170] (loki_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/drive_param__type_support.cpp.o\x1b[0m\n'}
+[8.915368] (-) TimerEvent: {}
+[8.939293] (loki_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/digital_write__type_support.cpp.o\x1b[0m\n'}
+[8.983198] (loki_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/enclosure_state__type_support.cpp.o\x1b[0m\n'}
+[8.988281] (loki_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_state__type_support.cpp.o\x1b[0m\n'}
+[9.013748] (loki_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/drive_param__type_support.cpp.o\x1b[0m\n'}
+[9.015458] (-) TimerEvent: {}
+[9.048671] (loki_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/enclosure_state__type_support.cpp.o\x1b[0m\n'}
+[9.115579] (-) TimerEvent: {}
+[9.197248] (loki_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/battery_array__type_support_c.cpp.o\x1b[0m\n'}
+[9.215694] (-) TimerEvent: {}
+[9.288010] (loki_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/io_array__type_support.cpp.o\x1b[0m\n'}
+[9.307152] (loki_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/io_state__type_support.cpp.o\x1b[0m\n'}
+[9.315809] (-) TimerEvent: {}
+[9.320850] (loki_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/io_array__type_support.cpp.o\x1b[0m\n'}
+[9.349090] (loki_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/motor_state__type_support.cpp.o\x1b[0m\n'}
+[9.412905] (loki_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/can_id__type_support.cpp.o\x1b[0m\n'}
+[9.415920] (-) TimerEvent: {}
+[9.516264] (-) TimerEvent: {}
+[9.529463] (loki_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/io_state__type_support.cpp.o\x1b[0m\n'}
+[9.591186] (loki_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/controller_status_flag__type_support.cpp.o\x1b[0m\n'}
+[9.606047] (loki_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/digital_write__type_support.cpp.o\x1b[0m\n'}
+[9.616374] (-) TimerEvent: {}
+[9.649218] (loki_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/can_id__type_support.cpp.o\x1b[0m\n'}
+[9.700291] (loki_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/motor_state__type_support.cpp.o\x1b[0m\n'}
+[9.716484] (-) TimerEvent: {}
+[9.816830] (-) TimerEvent: {}
+[9.891694] (loki_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/drive_params__type_support.cpp.o\x1b[0m\n'}
+[9.892650] (loki_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/drive_params__type_support.cpp.o\x1b[0m\n'}
+[9.902861] (loki_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/motor_controller_setup__type_support.cpp.o\x1b[0m\n'}
+[9.916942] (-) TimerEvent: {}
+[9.953563] (loki_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/switch_bool__type_support.cpp.o\x1b[0m\n'}
+[9.953782] (loki_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/battery_data__type_support_c.cpp.o\x1b[0m\n'}
+[10.017058] (-) TimerEvent: {}
+[10.034931] (loki_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/msg/detail/controller_status_flag__type_support.cpp.o\x1b[0m\n'}
+[10.117173] (-) TimerEvent: {}
+[10.189622] (loki_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/digital_write__type_support.cpp.o\x1b[0m\n'}
+[10.191108] (loki_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/battery_vars__type_support.cpp.o\x1b[0m\n'}
+[10.200106] (loki_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/cont_array__type_support.cpp.o\x1b[0m\n'}
+[10.217288] (-) TimerEvent: {}
+[10.254839] (loki_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/cot_map__type_support.cpp.o\x1b[0m\n'}
+[10.317403] (-) TimerEvent: {}
+[10.417752] (-) TimerEvent: {}
+[10.420107] (loki_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/motor_controller_setup__type_support.cpp.o\x1b[0m\n'}
+[10.458010] (loki_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/can_id__type_support.cpp.o\x1b[0m\n'}
+[10.500911] (loki_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/device_cmds__type_support.cpp.o\x1b[0m\n'}
+[10.505985] (loki_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/drive_cmds__type_support.cpp.o\x1b[0m\n'}
+[10.517865] (-) TimerEvent: {}
+[10.557999] (loki_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/eval_can_buffer__type_support.cpp.o\x1b[0m\n'}
+[10.608456] (loki_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/can_frame__type_support_c.cpp.o\x1b[0m\n'}
+[10.617977] (-) TimerEvent: {}
+[10.640154] (loki_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/drive_params__type_support.cpp.o\x1b[0m\n'}
+[10.718094] (-) TimerEvent: {}
+[10.771198] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/motor_controller_setup__type_support.cpp.o\x1b[0m\n'}
+[10.802887] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/switch_bool__type_support.cpp.o\x1b[0m\n'}
+[10.805833] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/get_set_bool__type_support.cpp.o\x1b[0m\n'}
+[10.818212] (-) TimerEvent: {}
+[10.858595] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/homesteering_all__type_support.cpp.o\x1b[0m\n'}
+[10.876374] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/switch_bool__type_support.cpp.o\x1b[0m\n'}
+[10.886330] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/battery_vars__type_support.cpp.o\x1b[0m\n'}
+[10.918323] (-) TimerEvent: {}
+[11.018644] (-) TimerEvent: {}
+[11.104360] (loki_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/init_pltf__type_support.cpp.o\x1b[0m\n'}
+[11.118755] (-) TimerEvent: {}
+[11.135354] (loki_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/cont_array__type_support.cpp.o\x1b[0m\n'}
+[11.163362] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/mot_cot__type_support.cpp.o\x1b[0m\n'}
+[11.218872] (-) TimerEvent: {}
+[11.226863] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/cot_map__type_support.cpp.o\x1b[0m\n'}
+[11.313394] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/device_cmds__type_support.cpp.o\x1b[0m\n'}
+[11.318990] (-) TimerEvent: {}
+[11.333140] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/battery_vars__type_support.cpp.o\x1b[0m\n'}
+[11.406275] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/pos_zero__type_support.cpp.o\x1b[0m\n'}
+[11.419103] (-) TimerEvent: {}
+[11.464667] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/pos_zero_all__type_support.cpp.o\x1b[0m\n'}
+[11.504431] (loki_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/drive_cmds__type_support.cpp.o\x1b[0m\n'}
+[11.519222] (-) TimerEvent: {}
+[11.579355] (loki_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/eval_can_buffer__type_support.cpp.o\x1b[0m\n'}
+[11.585664] (loki_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_array__type_support_c.cpp.o\x1b[0m\n'}
+[11.619338] (-) TimerEvent: {}
+[11.702367] (loki_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/get_set_bool__type_support.cpp.o\x1b[0m\n'}
+[11.713193] (loki_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/set_bools__type_support.cpp.o\x1b[0m\n'}
+[11.719452] (-) TimerEvent: {}
+[11.739668] (loki_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/homesteering_all__type_support.cpp.o\x1b[0m\n'}
+[11.767616] (loki_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/sim_drive__type_support.cpp.o\x1b[0m\n'}
+[11.785435] (loki_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/cont_array__type_support.cpp.o\x1b[0m\n'}
+[11.819569] (-) TimerEvent: {}
+[11.919911] (-) TimerEvent: {}
+[12.015316] (loki_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/state_base__type_support.cpp.o\x1b[0m\n'}
+[12.019572] (loki_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/init_pltf__type_support.cpp.o\x1b[0m\n'}
+[12.019979] (-) TimerEvent: {}
+[12.073836] (loki_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/states_of_io__type_support.cpp.o\x1b[0m\n'}
+[12.120107] (-) TimerEvent: {}
+[12.167127] (loki_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/mot_cot__type_support.cpp.o\x1b[0m\n'}
+[12.207227] (loki_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/pos_zero__type_support.cpp.o\x1b[0m\n'}
+[12.220220] (-) TimerEvent: {}
+[12.227365] (loki_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_config__type_support_c.cpp.o\x1b[0m\n'}
+[12.240186] (loki_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/cot_map__type_support.cpp.o\x1b[0m\n'}
+[12.319683] (loki_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.o\x1b[0m\n'}
+[12.320297] (-) TimerEvent: {}
+[12.375761] (loki_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o\x1b[0m\n'}
+[12.420416] (-) TimerEvent: {}
+[12.466101] (loki_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/pos_zero_all__type_support.cpp.o\x1b[0m\n'}
+[12.520525] (-) TimerEvent: {}
+[12.598661] (loki_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/set_bools__type_support.cpp.o\x1b[0m\n'}
+[12.620633] (-) TimerEvent: {}
+[12.620989] (loki_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/sim_drive__type_support.cpp.o\x1b[0m\n'}
+[12.643521] (loki_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/state_base__type_support.cpp.o\x1b[0m\n'}
+[12.678601] (loki_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libloki_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[12.705057] (loki_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/states_of_io__type_support.cpp.o\x1b[0m\n'}
+[12.720748] (-) TimerEvent: {}
+[12.732652] (loki_msgs) StdoutLine: {'line': b'[ 73%] Built target loki_msgs__rosidl_typesupport_cpp\n'}
+[12.742074] (loki_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/params__type_support.cpp.o\x1b[0m\n'}
+[12.779579] (loki_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/device_cmds__type_support.cpp.o\x1b[0m\n'}
+[12.820861] (-) TimerEvent: {}
+[12.890102] (loki_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/loki_msgs/srv/detail/home_s__type_support.cpp.o\x1b[0m\n'}
+[12.920974] (-) TimerEvent: {}
+[13.021297] (-) TimerEvent: {}
+[13.024626] (loki_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_data__type_support_c.cpp.o\x1b[0m\n'}
+[13.032884] (loki_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_info__type_support_c.cpp.o\x1b[0m\n'}
+[13.048778] (loki_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_state__type_support_c.cpp.o\x1b[0m\n'}
+[13.066058] (loki_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/drive_param__type_support_c.cpp.o\x1b[0m\n'}
+[13.121409] (-) TimerEvent: {}
+[13.172922] (loki_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/enclosure_state__type_support_c.cpp.o\x1b[0m\n'}
+[13.221527] (-) TimerEvent: {}
+[13.246889] (loki_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/drive_cmds__type_support.cpp.o\x1b[0m\n'}
+[13.321641] (-) TimerEvent: {}
+[13.327995] (loki_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/eval_can_buffer__type_support.cpp.o\x1b[0m\n'}
+[13.409019] (loki_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/io_array__type_support_c.cpp.o\x1b[0m\n'}
+[13.421754] (-) TimerEvent: {}
+[13.431429] (loki_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/io_state__type_support_c.cpp.o\x1b[0m\n'}
+[13.443599] (loki_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/motor_state__type_support_c.cpp.o\x1b[0m\n'}
+[13.521870] (-) TimerEvent: {}
+[13.566082] (loki_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/controller_status_flag__type_support_c.cpp.o\x1b[0m\n'}
+[13.621986] (-) TimerEvent: {}
+[13.669744] (loki_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/digital_write__type_support_c.cpp.o\x1b[0m\n'}
+[13.713121] (loki_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/get_set_bool__type_support.cpp.o\x1b[0m\n'}
+[13.722100] (-) TimerEvent: {}
+[13.738499] (loki_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libloki_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[13.778513] (loki_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/homesteering_all__type_support.cpp.o\x1b[0m\n'}
+[13.795367] (loki_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/can_id__type_support_c.cpp.o\x1b[0m\n'}
+[13.822219] (-) TimerEvent: {}
+[13.825023] (loki_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/drive_params__type_support_c.cpp.o\x1b[0m\n'}
+[13.843144] (loki_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/motor_controller_setup__type_support_c.cpp.o\x1b[0m\n'}
+[13.922335] (-) TimerEvent: {}
+[13.952790] (loki_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/switch_bool__type_support_c.cpp.o\x1b[0m\n'}
+[13.966658] (loki_msgs) StdoutLine: {'line': b'[ 79%] Built target loki_msgs__rosidl_typesupport_introspection_cpp\n'}
+[13.981440] (loki_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/battery_vars__type_support_c.cpp.o\x1b[0m\n'}
+[14.022449] (-) TimerEvent: {}
+[14.122780] (-) TimerEvent: {}
+[14.190528] (loki_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/cont_array__type_support_c.cpp.o\x1b[0m\n'}
+[14.221356] (loki_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/cot_map__type_support_c.cpp.o\x1b[0m\n'}
+[14.222880] (-) TimerEvent: {}
+[14.231015] (loki_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/init_pltf__type_support.cpp.o\x1b[0m\n'}
+[14.237709] (loki_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/device_cmds__type_support_c.cpp.o\x1b[0m\n'}
+[14.289884] (loki_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/mot_cot__type_support.cpp.o\x1b[0m\n'}
+[14.323004] (-) TimerEvent: {}
+[14.361714] (loki_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/drive_cmds__type_support_c.cpp.o\x1b[0m\n'}
+[14.423123] (-) TimerEvent: {}
+[14.523562] (-) TimerEvent: {}
+[14.581432] (loki_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/eval_can_buffer__type_support_c.cpp.o\x1b[0m\n'}
+[14.619724] (loki_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/get_set_bool__type_support_c.cpp.o\x1b[0m\n'}
+[14.623677] (-) TimerEvent: {}
+[14.630028] (loki_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/homesteering_all__type_support_c.cpp.o\x1b[0m\n'}
+[14.641211] (loki_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/init_pltf__type_support_c.cpp.o\x1b[0m\n'}
+[14.680225] (loki_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/pos_zero__type_support.cpp.o\x1b[0m\n'}
+[14.723794] (-) TimerEvent: {}
+[14.748592] (loki_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/mot_cot__type_support_c.cpp.o\x1b[0m\n'}
+[14.749324] (loki_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/pos_zero_all__type_support.cpp.o\x1b[0m\n'}
+[14.755426] (loki_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/pos_zero__type_support_c.cpp.o\x1b[0m\n'}
+[14.823987] (-) TimerEvent: {}
+[14.924651] (-) TimerEvent: {}
+[14.965721] (loki_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/pos_zero_all__type_support_c.cpp.o\x1b[0m\n'}
+[15.009282] (loki_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/set_bools__type_support_c.cpp.o\x1b[0m\n'}
+[15.018652] (loki_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/sim_drive__type_support_c.cpp.o\x1b[0m\n'}
+[15.024836] (-) TimerEvent: {}
+[15.125353] (-) TimerEvent: {}
+[15.128627] (loki_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/set_bools__type_support.cpp.o\x1b[0m\n'}
+[15.140571] (loki_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/state_base__type_support_c.cpp.o\x1b[0m\n'}
+[15.218152] (loki_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/sim_drive__type_support.cpp.o\x1b[0m\n'}
+[15.225524] (-) TimerEvent: {}
+[15.326031] (-) TimerEvent: {}
+[15.350569] (loki_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/states_of_io__type_support_c.cpp.o\x1b[0m\n'}
+[15.408255] (loki_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o\x1b[0m\n'}
+[15.409358] (loki_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.o\x1b[0m\n'}
+[15.414940] (loki_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/state_base__type_support.cpp.o\x1b[0m\n'}
+[15.426143] (-) TimerEvent: {}
+[15.526676] (-) TimerEvent: {}
+[15.527703] (loki_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/states_of_io__type_support.cpp.o\x1b[0m\n'}
+[15.586354] (loki_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/params__type_support.cpp.o\x1b[0m\n'}
+[15.626795] (-) TimerEvent: {}
+[15.671276] (loki_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/loki_msgs/srv/detail/dds_fastrtps/home_s__type_support.cpp.o\x1b[0m\n'}
+[15.726940] (-) TimerEvent: {}
+[15.827431] (-) TimerEvent: {}
+[15.927985] (-) TimerEvent: {}
+[16.006204] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX shared library libloki_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[16.025324] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX shared library libloki_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[16.028173] (-) TimerEvent: {}
+[16.075040] (loki_msgs) StdoutLine: {'line': b'[ 88%] Built target loki_msgs__rosidl_typesupport_fastrtps_c\n'}
+[16.109996] (loki_msgs) StdoutLine: {'line': b'[ 88%] Built target loki_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[16.128265] (-) TimerEvent: {}
+[16.138250] (loki_msgs) StdoutLine: {'line': b'[ 88%] Built target loki_msgs\n'}
+[16.153961] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[16.228396] (-) TimerEvent: {}
+[16.328712] (-) TimerEvent: {}
+[16.428946] (-) TimerEvent: {}
+[16.529250] (-) TimerEvent: {}
+[16.629559] (-) TimerEvent: {}
+[16.729883] (-) TimerEvent: {}
+[16.830190] (-) TimerEvent: {}
+[16.930499] (-) TimerEvent: {}
+[17.030807] (-) TimerEvent: {}
+[17.131115] (-) TimerEvent: {}
+[17.231444] (-) TimerEvent: {}
+[17.331752] (-) TimerEvent: {}
+[17.432072] (-) TimerEvent: {}
+[17.532318] (-) TimerEvent: {}
+[17.632651] (-) TimerEvent: {}
+[17.732883] (-) TimerEvent: {}
+[17.833071] (-) TimerEvent: {}
+[17.933265] (-) TimerEvent: {}
+[18.033435] (-) TimerEvent: {}
+[18.133578] (-) TimerEvent: {}
+[18.233786] (-) TimerEvent: {}
+[18.334020] (-) TimerEvent: {}
+[18.434358] (-) TimerEvent: {}
+[18.534732] (-) TimerEvent: {}
+[18.635051] (-) TimerEvent: {}
+[18.735411] (-) TimerEvent: {}
+[18.835756] (-) TimerEvent: {}
+[18.936122] (-) TimerEvent: {}
+[19.036402] (-) TimerEvent: {}
+[19.136577] (-) TimerEvent: {}
+[19.236769] (-) TimerEvent: {}
+[19.336915] (-) TimerEvent: {}
+[19.437067] (-) TimerEvent: {}
+[19.537215] (-) TimerEvent: {}
+[19.637411] (-) TimerEvent: {}
+[19.656380] (loki_msgs) StdoutLine: {'line': b'[ 88%] Built target loki_msgs__py\n'}
+[19.674052] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_battery_array_s.c.o\x1b[0m\n'}
+[19.674300] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_battery_alarms_s.c.o\x1b[0m\n'}
+[19.674428] (loki_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_base_state_s.c.o\x1b[0m\n'}
+[19.674535] (loki_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_array_s.c.o\x1b[0m\n'}
+[19.674605] (loki_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_config_s.c.o\x1b[0m\n'}
+[19.675405] (loki_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_can_frame_s.c.o\x1b[0m\n'}
+[19.678841] (loki_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_battery_data_s.c.o\x1b[0m\n'}
+[19.685924] (loki_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c.o\x1b[0m\n'}
+[19.737534] (-) TimerEvent: {}
+[19.822997] (loki_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_data_s.c.o\x1b[0m\n'}
+[19.823289] (loki_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_info_s.c.o\x1b[0m\n'}
+[19.824410] (loki_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_state_s.c.o\x1b[0m\n'}
+[19.826053] (loki_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_drive_param_s.c.o\x1b[0m\n'}
+[19.826399] (loki_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_enclosure_state_s.c.o\x1b[0m\n'}
+[19.837719] (-) TimerEvent: {}
+[19.855810] (loki_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_io_array_s.c.o\x1b[0m\n'}
+[19.893660] (loki_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_io_state_s.c.o\x1b[0m\n'}
+[19.937868] (-) TimerEvent: {}
+[19.944237] (loki_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_motor_state_s.c.o\x1b[0m\n'}
+[19.947668] (loki_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c.o\x1b[0m\n'}
+[19.955712] (loki_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_can_id_s.c.o\x1b[0m\n'}
+[19.956099] (loki_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_digital_write_s.c.o\x1b[0m\n'}
+[19.973440] (loki_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_drive_params_s.c.o\x1b[0m\n'}
+[19.978298] (loki_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_motor_controller_setup_s.c.o\x1b[0m\n'}
+[20.038004] (-) TimerEvent: {}
+[20.062610] (loki_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_switch_bool_s.c.o\x1b[0m\n'}
+[20.064777] (loki_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_battery_vars_s.c.o\x1b[0m\n'}
+[20.065083] (loki_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_cont_array_s.c.o\x1b[0m\n'}
+[20.080968] (loki_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_cot_map_s.c.o\x1b[0m\n'}
+[20.082400] (loki_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_device_cmds_s.c.o\x1b[0m\n'}
+[20.106233] (loki_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_drive_cmds_s.c.o\x1b[0m\n'}
+[20.112620] (loki_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_eval_can_buffer_s.c.o\x1b[0m\n'}
+[20.138203] (-) TimerEvent: {}
+[20.183532] (loki_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_get_set_bool_s.c.o\x1b[0m\n'}
+[20.188462] (loki_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_homesteering_all_s.c.o\x1b[0m\n'}
+[20.199021] (loki_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_init_pltf_s.c.o\x1b[0m\n'}
+[20.215724] (loki_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_mot_cot_s.c.o\x1b[0m\n'}
+[20.223022] (loki_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_pos_zero_s.c.o\x1b[0m\n'}
+[20.233881] (loki_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_pos_zero_all_s.c.o\x1b[0m\n'}
+[20.238307] (-) TimerEvent: {}
+[20.242405] (loki_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_set_bools_s.c.o\x1b[0m\n'}
+[20.294783] (loki_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_sim_drive_s.c.o\x1b[0m\n'}
+[20.313029] (loki_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_state_base_s.c.o\x1b[0m\n'}
+[20.317515] (loki_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_states_of_io_s.c.o\x1b[0m\n'}
+[20.320801] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.o\x1b[0m\n'}
+[20.338415] (-) TimerEvent: {}
+[20.340714] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o\x1b[0m\n'}
+[20.438541] (-) TimerEvent: {}
+[20.466004] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[20.505446] (loki_msgs) StdoutLine: {'line': b'[100%] Built target loki_msgs__rosidl_generator_py\n'}
+[20.519426] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[20.519618] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[20.519688] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32mBuilding C object CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[20.538655] (-) TimerEvent: {}
+[20.638958] (-) TimerEvent: {}
+[20.727048] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/loki_msgs/loki_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.727195] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/loki_msgs/loki_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.739086] (-) TimerEvent: {}
+[20.759464] (loki_msgs) StdoutLine: {'line': b'[100%] Built target loki_msgs__rosidl_typesupport_c__pyext\n'}
+[20.759630] (loki_msgs) StdoutLine: {'line': b'[100%] Built target loki_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[20.839183] (-) TimerEvent: {}
+[20.928744] (loki_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/loki_msgs/loki_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[20.939371] (-) TimerEvent: {}
+[20.959629] (loki_msgs) StdoutLine: {'line': b'[100%] Built target loki_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[20.968536] (loki_msgs) JobEnded: {'identifier': 'loki_msgs', 'rc': 'SIGINT'}
+[20.979016] (loki_can_devices) JobSkipped: {'identifier': 'loki_can_devices'}
+[20.979050] (loki_base) JobSkipped: {'identifier': 'loki_base'}
+[20.979063] (loki_simulator) JobSkipped: {'identifier': 'loki_simulator'}
+[20.979073] (robot_bringup) JobSkipped: {'identifier': 'robot_bringup'}
+[20.979083] (loki_bringup) JobSkipped: {'identifier': 'loki_bringup'}
+[20.979093] (-) EventReactorShutdown: {}

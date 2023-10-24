@@ -44,7 +44,7 @@
 
 
     <!-- base bringup-->
-    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch">
+    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch.py">
       <let name="robot_model" value="$(var robot_model)" />
       <let name="tf_prefix" value="$(var tf_prefix)" />
       <let name="simple_sim" value="$(var simple_sim)" />
@@ -56,7 +56,7 @@
   </group>
 
  <!--spawn gazebo world-->
-  <include file= "$(find-pkg-share rasberry_gazebo)/launch/world.launch" if="$(var simple_sim)">
+  <include file= "$(find-pkg-share rasberry_gazebo)/launch/gazebo.launch.py" if="$(var simple_sim)">
     <arg name="world" default="$(var world)"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
    <let name="gui" value="$(var with_gui)"/>
   </include>

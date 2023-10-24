@@ -1,8 +1,8 @@
-# Install script for directory: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo
+# Install script for directory: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/loki/Documents/GitHub/saga_repo/install/rasberry_gazebo")
+  set(CMAKE_INSTALL_PREFIX "/home/odin/Documents/GitHub/saga_repo/install/rasberry_gazebo")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,22 +43,22 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rasberry_gazebo" TYPE PROGRAM FILES "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/scripts/move_base_seq.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rasberry_gazebo" TYPE PROGRAM FILES "/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/scripts/move_base_seq.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE DIRECTORY FILES
-    "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/launch"
-    "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/worlds"
+    "/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/launch"
+    "/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/worlds"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rasberry_gazebo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rasberry_gazebo")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rasberry_gazebo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/rasberry_gazebo")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -66,7 +66,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo/environment" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo/environment" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -74,42 +74,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo/environment" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo/environment" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/packages/rasberry_gazebo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_index/share/ament_index/resource_index/packages/rasberry_gazebo")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo/cmake" TYPE FILE FILES
-    "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_core/rasberry_gazeboConfig.cmake"
-    "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_core/rasberry_gazeboConfig-version.cmake"
+    "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_core/rasberry_gazeboConfig.cmake"
+    "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/ament_cmake_core/rasberry_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rasberry_gazebo" TYPE FILE FILES "/home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/rasberry_gazebo/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -120,5 +120,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/loki/Documents/GitHub/saga_repo/build/rasberry_gazebo/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/odin/Documents/GitHub/saga_repo/build/rasberry_gazebo/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
