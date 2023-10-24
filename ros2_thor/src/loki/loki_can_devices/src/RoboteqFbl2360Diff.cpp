@@ -577,7 +577,7 @@ void RoboteqFbl2360Diff::decouple()
 //-----------------------------------------------
 void RoboteqFbl2360Diff::sendModeCommand(int mode)
 {
-  std::cout << "Sending mode: %d" << mode << std::endl;
+  std::cout << "Sending mode:" << mode << std::endl;
   sendPDOdownload(can_headers_.iRxPDO3, mode, mode);
 }
 

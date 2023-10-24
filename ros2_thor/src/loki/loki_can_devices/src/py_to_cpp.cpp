@@ -578,8 +578,10 @@ class PyToCpp : public rclcpp::Node {
                                     const std::shared_ptr<loki_msgs::srv::HomesteeringAll::Response> response){
             bool success;
 
-                can_ctrl_pltf_->homeSteeringAll();
-            
+
+            can_ctrl_pltf_->homeSteeringAll();
+
+
             if (success){
                 RCLCPP_INFO(this->get_logger(), "Homing Successful");
             }

@@ -114,6 +114,7 @@ rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: rosidl_adapt
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: rosidl_adapter/loki_msgs/srv/StateBase.idl
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: rosidl_adapter/loki_msgs/srv/StatesOfIO.idl
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: rosidl_adapter/loki_msgs/srv/Params.idl
+rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: rosidl_adapter/loki_msgs/srv/HomeS.idl
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -319,6 +320,9 @@ rosidl_typesupport_cpp/loki_msgs/srv/states_of_io__type_support.cpp: rosidl_type
 
 rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp: rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp
+
+rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp: rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp
 
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp.o: rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp
@@ -866,6 +870,20 @@ CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp -o CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.s
 
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o: rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o -MF CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o.d -o CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp
+
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp > CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.i
+
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp -o CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.s
+
 # Object files for target loki_msgs__rosidl_typesupport_cpp
 loki_msgs__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/msg/thorvald_io__type_support.cpp.o" \
@@ -906,7 +924,8 @@ loki_msgs__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/sim_drive__type_support.cpp.o" \
 "CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/state_base__type_support.cpp.o" \
 "CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/states_of_io__type_support.cpp.o" \
-"CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.o"
+"CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.o" \
+"CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o"
 
 # External object files for target loki_msgs__rosidl_typesupport_cpp
 loki_msgs__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
@@ -950,6 +969,7 @@ libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesuppor
 libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/state_base__type_support.cpp.o
 libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/states_of_io__type_support.cpp.o
 libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/params__type_support.cpp.o
+libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp.o
 libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/build.make
 libloki_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 libloki_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
@@ -960,7 +980,7 @@ libloki_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_typesuppo
 libloki_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libloki_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librcutils.so
 libloki_msgs__rosidl_typesupport_cpp.so: CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking CXX shared library libloki_msgs__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX shared library libloki_msgs__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -998,6 +1018,7 @@ CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/drive_params__type_support.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/eval_can_buffer__type_support.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/get_set_bool__type_support.cpp
+CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/home_s__type_support.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/homesteering_all__type_support.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/init_pltf__type_support.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/loki_msgs/srv/mot_cot__type_support.cpp

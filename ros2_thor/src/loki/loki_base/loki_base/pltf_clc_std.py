@@ -102,7 +102,7 @@ class PltfClcStd:
         drive_steer = [0.0, 0.0, 0.0, 0.0]
         mode_speed = [0.0, 0.0, 0.0, 0.0]
 
-        if not wz == 0:
+        if wz != 0 and vx == 0:
             turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2)) / wz 
             turn_rad_ang = math.atan2(vy,vx)
 
@@ -111,12 +111,8 @@ class PltfClcStd:
 
             i = 0
             while i < self.number_of_drives:
-                drive_x = self.motor_drives[i]["x"]
-                drive_y = self.motor_drives[i]["y"]
-                # if wz < 0:
-                #     normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y)) + math.pi
-                # else:
-                #     normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
+                drive_x = motor_drives[i]["x"]
+                drive_y = motor_drives[i]["y"]
                 
                 normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
 
@@ -127,16 +123,10 @@ class PltfClcStd:
                 elif i == 1:
                     steer_ang -= math.pi
 
-                # else:
-                #     if i == 3:
-                #         steer_ang -= math.pi
-
-
-
-                
+                    
                 drive_steer[i] = steer_ang
                 mode_speed[i] = math.sqrt(pow(turn_rad_x - drive_x, 2) + pow(turn_rad_y - drive_y, 2)) * abs(wz) * (1 - 2 * (abs(drive_steer[i]) > math.pi / 2))
-
+                
                 if i == 0:
                     mode_speed[i] = -mode_speed[i]
                 elif i == 1:
@@ -144,13 +134,70 @@ class PltfClcStd:
 
                 if wz < 0:
                     mode_speed[i] = -mode_speed[i]
-
-
-                
-
-                
                 
                 i += 1
+    
+            i = 0
+            while i < self.number_of_drives:
+                steering[i] = drive_steer[i]
+                speed[i] = mode_speed[i]
+                i += 1
+
+        elif wz != 0 and vx != 0:
+
+            vx = vx
+            vy = vy
+
+            turn_rad_d = math.sqrt(pow(vx,2) + pow(vy,2)) / wz 
+            turn_rad_ang = math.atan2(vy,vx)
+            turn_rad_ang = math.atan2(vy,vx)
+
+            turn_rad_x = -turn_rad_d * math.sin(turn_rad_ang)
+            turn_rad_y = turn_rad_d * math.cos(turn_rad_ang)
+
+            i = 0
+            while i < self.number_of_drives:
+                drive_x = motor_drives[i]["x"]
+                drive_y = motor_drives[i]["y"]
+                
+                normalized_to_be = -math.atan2((turn_rad_x - drive_x), (turn_rad_y - drive_y))
+
+                steer_ang = self.normalize_angle(self, normalized_to_be)
+                
+                if (wz > 0 and vx > 0) or (wz < 0 and vx < 0):
+                    if i == 2:
+                        steer_ang += (math.pi)
+                    elif i == 3:
+                        steer_ang -= (math.pi)
+                    if i == 0:
+                        steer_ang -= (math.pi)
+                    elif i == 1:
+                        steer_ang -= (math.pi)
+                
+                elif (wz < 0 and vx > 0) or (wz > 0 and vx < 0):
+                    if i == 0:
+                        steer_ang += (math.pi)
+                    elif i == 1:
+                        steer_ang += (math.pi)
+                        
+                drive_steer[i] = steer_ang
+                mode_speed[i] = math.sqrt(pow(turn_rad_x - drive_x, 2) + pow(turn_rad_y - drive_y, 2)) * abs(wz) * (1 - 2 * (abs(drive_steer[i]) > math.pi / 2))
+
+                if (wz < 0 and vx > 0) or (wz > 0 and vx < 0):
+                    if i == 1:
+                        mode_speed[i] = -mode_speed[i]
+                
+                if vx < 0:
+                    mode_speed[i] = -mode_speed[i]
+                # if check < 0:
+                #     mode_speed[i] = -mode_speed[i]
+
+
+
+
+                                
+                i += 1
+                
             
             i = 0
             while i < self.number_of_drives:
@@ -158,14 +205,46 @@ class PltfClcStd:
                 speed[i] = mode_speed[i]
                 i += 1
 
+
         else:
             i = 0
             while i < self.number_of_drives:
                 steering[i] = math.atan2(vy,vx)
                 speed[i] = math.sqrt(pow(vx,2) + pow(vy,2))
-                if vy != 0 and vy < 0:
-                   if i == 1 or i == 3:
-                    steering[i] -= math.pi
+
+                if vy != 0 and vy < 0 and vx == 0:
+                    speed[i] = -speed[i]
+                    if i == 3:
+                        steering[i] -= math.pi
+                        speed[i] = -speed[i]
+                    if i == 2:
+                        steering[i] -= math.pi
+                        speed[i] = -speed[i]
+                    
+
+                    steering[i] += math.pi
+                elif vy != 0 and vy > 0 and vx == 0:
+                    if i == 3:
+                        steering[i] += math.pi
+                        speed[i] = -speed[i]
+                    if i == 2:
+                        steering[i] += math.pi
+                        speed[i] = -speed[i]
+
+                elif vy != 0 and vy < 0 and vx != 0:
+                    speed[i] = -speed[i]
+                    if i == 0:
+                        # steering[i] -= math.pi
+                        speed[i] = -speed[i]
+                    if i == 1:
+                        # steering[i] -= math.pi
+                        speed[i] = -speed[i]
+                elif vy != 0 and vy > 0 and vx != 0:
+                    if i == 0:
+                        steering[i] -= math.pi
+                        speed[i] = -speed[i]
+
+                
 
                 i += 1
 
@@ -351,8 +430,8 @@ class PltfClcStd:
                     
                     wz += temp_wz
                     j += 1
-                
-                wz /= wz_used
+                if wz_used != 0:
+                    wz /= wz_used
 
                 rad_ang = math.atan2(rot_x, rot_y)
                 if math.isinf(rad_ang) or math.isnan(rad_ang):
@@ -369,7 +448,7 @@ class PltfClcStd:
 
 
             else:
-                self.get_logger().info("translating: %d" %translating)
+                print("translating")
                 return False
 
             

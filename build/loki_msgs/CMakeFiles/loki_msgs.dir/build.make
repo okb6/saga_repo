@@ -149,6 +149,9 @@ CMakeFiles/loki_msgs: rosidl_cmake/srv/StatesOfIO_Response.msg
 CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/Params.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/Params_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/Params_Response.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/HomeS.srv
+CMakeFiles/loki_msgs: rosidl_cmake/srv/HomeS_Request.msg
+CMakeFiles/loki_msgs: rosidl_cmake/srv/HomeS_Response.msg
 CMakeFiles/loki_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/loki_msgs: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/loki_msgs: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

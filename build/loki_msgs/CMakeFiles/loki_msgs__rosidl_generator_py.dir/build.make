@@ -615,6 +615,20 @@ CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs/srv/_params_s.c -o CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.s
 
+CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o: CMakeFiles/loki_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o: rosidl_generator_py/loki_msgs/srv/_home_s_s.c
+CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o: CMakeFiles/loki_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs/srv/_home_s_s.c
+
+CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs/srv/_home_s_s.c > CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.i
+
+CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py/loki_msgs/srv/_home_s_s.c -o CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.s
+
 # Object files for target loki_msgs__rosidl_generator_py
 loki_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c.o" \
@@ -655,7 +669,8 @@ loki_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_sim_drive_s.c.o" \
 "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_state_base_s.c.o" \
 "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_states_of_io_s.c.o" \
-"CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.o"
+"CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.o" \
+"CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o"
 
 # External object files for target loki_msgs__rosidl_generator_py
 loki_msgs__rosidl_generator_py_EXTERNAL_OBJECTS =
@@ -699,6 +714,7 @@ rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/l
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_state_base_s.c.o
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_states_of_io_s.c.o
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_params_s.c.o
+rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/build.make
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: libloki_msgs__rosidl_typesupport_c.so
@@ -719,7 +735,7 @@ rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: /opt/ros/hum
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so: CMakeFiles/loki_msgs__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking C shared library rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking C shared library rosidl_generator_py/loki_msgs/libloki_msgs__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loki_msgs__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

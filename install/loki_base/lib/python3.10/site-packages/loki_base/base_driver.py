@@ -8,7 +8,7 @@ from sensor_msgs.msg import JointState, Imu
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Int32
 from std_srvs.srv import SetBool, Trigger
-from loki_msgs.srv import MotorControllerSetup, CanID, DriveParams, InitPltf, GetSetBool, EvalCanBuffer, StateBase, ContArray, BatteryVars, StatesOfIO, DriveCmds, DeviceCmds, SimDrive, PosZeroAll, PosZero, HomesteeringAll, CotMap, MotCot, SetBools, Params
+from loki_msgs.srv import MotorControllerSetup, CanID, DriveParams, InitPltf, GetSetBool, EvalCanBuffer, StateBase, ContArray, BatteryVars, StatesOfIO, DriveCmds, DeviceCmds, SimDrive, PosZeroAll, PosZero, HomesteeringAll, CotMap, MotCot, SetBools, Params, HomeS
 # from tf2 import transform_broadcaster, transform_datatypes
 from loki_base.pltf_clc_std import PltfClcStd
 import numpy as np
@@ -203,7 +203,7 @@ class BaseDriver(Node):
 
         #Services
         self.server_setup_controller = self.create_service(MotorControllerSetup, 'setup_motor_controller', self.srv_callback_setup_controller)
-        self.server_home_steering = self.create_service(Trigger, 'home_steering', self.srv_callback_home_steering )
+        self.server_home_steering = self.create_service(HomeS, 'home_steering', self.srv_callback_home_steering)
         self.server_current_pos_zero = self.create_service(CanID, 'set_home_count_current_pos_zero', self.srv_callback_curent_pos_zero)
         self.server_reset_odom = self.create_service(Trigger, 'reset_base_odom', self.srv_Callback_Reset_odom)
         # self.server_set_drive_params = self.create_service(DriveParams, 'set_drive_params', self.srv_callback_set_drive_params) #no client?? will make regular funciton
@@ -222,7 +222,7 @@ class BaseDriver(Node):
         self.cli_sim_drive = self.create_client(SimDrive, 'simdrive')
         self.cli_current_pos_as_zero_all = self.create_client(PosZeroAll, 'poszeroall')
         self.cli_current_pos_as_zero = self.create_client(PosZero, 'poszero')
-        self.cli_home_steering_all = self.create_client(HomesteeringAll, 'homesteeringall')
+        self.cli_home_steering_all = self.create_client(HomesteeringAll, "homesteeringall")
         self.cli_setup_motor_controller = self.create_client(MotCot, 'motcot')
         self.cli_get_controller_setup_map = self.create_client(CotMap, 'cotmap')
         # self.cli_call_set_bool = self.create_client(SetBools, 'callsetbool')

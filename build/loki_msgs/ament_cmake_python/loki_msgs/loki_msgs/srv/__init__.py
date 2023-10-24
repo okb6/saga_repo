@@ -8,6 +8,7 @@ from loki_msgs.srv._drive_cmds import DriveCmds  # noqa: F401
 from loki_msgs.srv._drive_params import DriveParams  # noqa: F401
 from loki_msgs.srv._eval_can_buffer import EvalCanBuffer  # noqa: F401
 from loki_msgs.srv._get_set_bool import GetSetBool  # noqa: F401
+from loki_msgs.srv._home_s import HomeS  # noqa: F401
 from loki_msgs.srv._homesteering_all import HomesteeringAll  # noqa: F401
 from loki_msgs.srv._init_pltf import InitPltf  # noqa: F401
 from loki_msgs.srv._mot_cot import MotCot  # noqa: F401

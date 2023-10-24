@@ -222,6 +222,10 @@ CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/params.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/params__builder.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/params__struct.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/params__traits.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/home_s.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__builder.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__struct.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__traits.hpp
 
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -277,6 +281,7 @@ rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/srv
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/srv/StateBase.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/srv/StatesOfIO.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/srv/Params.idl
+rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/srv/HomeS.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -834,6 +839,18 @@ rosidl_generator_cpp/loki_msgs/srv/detail/params__struct.hpp: rosidl_generator_c
 rosidl_generator_cpp/loki_msgs/srv/detail/params__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/srv/detail/params__traits.hpp
 
+rosidl_generator_cpp/loki_msgs/srv/home_s.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/srv/home_s.hpp
+
+rosidl_generator_cpp/loki_msgs/srv/detail/home_s__builder.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/srv/detail/home_s__builder.hpp
+
+rosidl_generator_cpp/loki_msgs/srv/detail/home_s__struct.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/srv/detail/home_s__struct.hpp
+
+rosidl_generator_cpp/loki_msgs/srv/detail/home_s__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/srv/detail/home_s__traits.hpp
+
 loki_msgs__cpp: CMakeFiles/loki_msgs__cpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/base_state.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/battery_alarms.hpp
@@ -937,6 +954,9 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/eval_can_buffer__trait
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/get_set_bool__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/get_set_bool__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/get_set_bool__traits.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__builder.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__struct.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/home_s__traits.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/homesteering_all__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/homesteering_all__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/detail/homesteering_all__traits.hpp
@@ -979,6 +999,7 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/drive_cmds.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/drive_params.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/eval_can_buffer.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/get_set_bool.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/home_s.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/homesteering_all.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/init_pltf.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/srv/mot_cot.hpp

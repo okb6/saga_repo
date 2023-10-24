@@ -58,6 +58,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/loki_msgs/srv/_eval_can_buffer_s.c"
   "../rosidl_generator_py/loki_msgs/srv/_get_set_bool.py"
   "../rosidl_generator_py/loki_msgs/srv/_get_set_bool_s.c"
+  "../rosidl_generator_py/loki_msgs/srv/_home_s.py"
+  "../rosidl_generator_py/loki_msgs/srv/_home_s_s.c"
   "../rosidl_generator_py/loki_msgs/srv/_homesteering_all.py"
   "../rosidl_generator_py/loki_msgs/srv/_homesteering_all_s.c"
   "../rosidl_generator_py/loki_msgs/srv/_init_pltf.py"

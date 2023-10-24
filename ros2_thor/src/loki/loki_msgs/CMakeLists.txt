@@ -47,6 +47,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/StateBase.srv"
   "srv/StatesOfIO.srv"
   "srv/Params.srv"
+  "srv/HomeS.srv"
 
   DEPENDENCIES 
   std_msgs

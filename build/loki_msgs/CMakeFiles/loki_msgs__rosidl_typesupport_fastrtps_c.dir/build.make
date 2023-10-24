@@ -116,6 +116,7 @@ rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesuppo
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/loki_msgs/srv/StateBase.idl
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/loki_msgs/srv/StatesOfIO.idl
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/loki_msgs/srv/Params.idl
+rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/loki_msgs/srv/HomeS.idl
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -438,6 +439,12 @@ rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__rosidl_typesupport_fa
 
 rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp: rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp: rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp
 
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__type_support_c.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__type_support_c.cpp
@@ -985,6 +992,20 @@ CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp -o CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.s
 
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o -MF CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o.d -o CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp
+
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp > CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.i
+
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp -o CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.s
+
 # Object files for target loki_msgs__rosidl_typesupport_fastrtps_c
 loki_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/msg/detail/thorvald_io__type_support_c.cpp.o" \
@@ -1025,7 +1046,8 @@ loki_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/sim_drive__type_support_c.cpp.o" \
 "CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/state_base__type_support_c.cpp.o" \
 "CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/states_of_io__type_support_c.cpp.o" \
-"CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.o"
+"CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.o" \
+"CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o"
 
 # External object files for target loki_msgs__rosidl_typesupport_fastrtps_c
 loki_msgs__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -1069,6 +1091,7 @@ libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typ
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/state_base__type_support_c.cpp.o
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/states_of_io__type_support_c.cpp.o
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/params__type_support_c.cpp.o
+libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp.o
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: libloki_msgs__rosidl_generator_c.so
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
@@ -1086,7 +1109,7 @@ libloki_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libbuiltin_i
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 libloki_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Linking CXX shared library libloki_msgs__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX shared library libloki_msgs__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1151,6 +1174,8 @@ CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesuppo
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/eval_can_buffer__type_support_c.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/get_set_bool__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/get_set_bool__type_support_c.cpp
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/home_s__type_support_c.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/homesteering_all__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/homesteering_all__type_support_c.cpp
 CMakeFiles/loki_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/loki_msgs/srv/detail/init_pltf__rosidl_typesupport_fastrtps_c.h

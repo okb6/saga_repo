@@ -53,6 +53,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_eval_can_buffer_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_get_set_bool_s.c.o"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_get_set_bool_s.c.o.d"
+  "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o"
+  "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_home_s_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_homesteering_all_s.c.o"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_homesteering_all_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/srv/_init_pltf_s.c.o"
