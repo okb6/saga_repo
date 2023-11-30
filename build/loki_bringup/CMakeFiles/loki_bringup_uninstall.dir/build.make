@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_bringup
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_bringup
 
 # Utility rule file for loki_bringup_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/loki_bringup_uninstall.dir/compiler_depend.make
 include CMakeFiles/loki_bringup_uninstall.dir/progress.make
 
 CMakeFiles/loki_bringup_uninstall:
-	/usr/bin/cmake -P /home/odin/Documents/GitHub/saga_repo/build/loki_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/loki/Documents/GitHub/saga_repo/build/loki_bringup/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 loki_bringup_uninstall: CMakeFiles/loki_bringup_uninstall
 loki_bringup_uninstall: CMakeFiles/loki_bringup_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/loki_bringup_uninstall.dir/clean:
 .PHONY : CMakeFiles/loki_bringup_uninstall.dir/clean
 
 CMakeFiles/loki_bringup_uninstall.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup /home/odin/Documents/GitHub/saga_repo/build/loki_bringup /home/odin/Documents/GitHub/saga_repo/build/loki_bringup /home/odin/Documents/GitHub/saga_repo/build/loki_bringup/CMakeFiles/loki_bringup_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_bringup /home/loki/Documents/GitHub/saga_repo/build/loki_bringup /home/loki/Documents/GitHub/saga_repo/build/loki_bringup /home/loki/Documents/GitHub/saga_repo/build/loki_bringup/CMakeFiles/loki_bringup_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_bringup_uninstall.dir/depend
 

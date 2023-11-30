@@ -3,10 +3,10 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="loki_ii">
   <xacro:arg name="robot_name" default=""/>
   <xacro:arg name="tf_prefix" default=""/>
-  <xacro:arg name="robot_config" default="$(find-pkg-share loki_base)/config/robot_017.yaml"/>
+  <xacro:arg name="robot_config" default="$(find loki_base)/config/robot_017.yaml"/>
   <xacro:arg name="model_extras" default=""/>
 
-  <gazebo>
+  <!-- <gazebo>
     <plugin name="$(arg robot_name)_loki_gazebo_plugins" filename="libloki_gazebo_plugins_synch.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>20</updateRate>
@@ -38,7 +38,7 @@
       <wheel9>$(arg tf_prefix)wheel9</wheel9>
       <wheel10>$(arg tf_prefix)wheel10</wheel10>
     </plugin>
-  </gazebo>
+  </gazebo> -->
 
    <xacro:macro name="cuboid_inertial" params="mass length width height xyz rpy">
     <inertial>
@@ -79,7 +79,7 @@
 
 <!-- ROBOT-SPECIFIC PARAMETERS -->
   <!-- Parameters file in config directory as specified in argument -->
-  <xacro:property name="base_params" value="${load_yaml('$(arg robot_config)')}"/>
+  <xacro:property name="base_params" value="${xacro.load_yaml('$(arg robot_config)')}"/>
   <xacro:property name="model_extras" value="$(arg model_extras)"/>
 
   <!-- MATERIAL DEFINITIONS -->

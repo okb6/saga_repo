@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_msgs
 
 # Utility rule file for loki_msgs.
 
@@ -66,90 +66,90 @@ include CMakeFiles/loki_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/loki_msgs.dir/progress.make
 
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ThorvaldIO.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BaseState.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryAlarms.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryArray.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryData.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/CANFrame.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerArray.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerConfig.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerData.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerInfo.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerState.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/DriveParam.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/EnclosureState.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/IOArray.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/IOState.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/MotorState.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerStatusFlag.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DigitalWrite.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ThorvaldIO.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BaseState.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryAlarms.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryArray.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryData.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/CANFrame.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerArray.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerConfig.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerData.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerInfo.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerState.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/DriveParam.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/EnclosureState.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/IOArray.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/IOState.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/MotorState.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ControllerStatusFlag.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DigitalWrite.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DigitalWrite_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DigitalWrite_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/CanID.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/CanID.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/CanID_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/CanID_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DriveParams.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DriveParams.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DriveParams_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DriveParams_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/MotorControllerSetup.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/MotorControllerSetup.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/MotorControllerSetup_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/MotorControllerSetup_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SwitchBool.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SwitchBool.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SwitchBool_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SwitchBool_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/BatteryVars.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/BatteryVars.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/BatteryVars_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/BatteryVars_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/ContArray.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/ContArray.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/ContArray_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/ContArray_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/CotMap.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/CotMap.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/CotMap_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/CotMap_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DeviceCmds.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DeviceCmds.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DeviceCmds_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DeviceCmds_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DriveCmds.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/DriveCmds.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DriveCmds_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/DriveCmds_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/EvalCanBuffer.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/EvalCanBuffer.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/EvalCanBuffer_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/EvalCanBuffer_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/GetSetBool.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/GetSetBool.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/GetSetBool_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/GetSetBool_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/HomesteeringAll.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/HomesteeringAll.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/HomesteeringAll_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/HomesteeringAll_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/InitPltf.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/InitPltf.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/InitPltf_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/InitPltf_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/MotCot.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/MotCot.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/MotCot_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/MotCot_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/PosZero.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/PosZero.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/PosZero_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/PosZero_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/PosZeroAll.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/PosZeroAll.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/PosZeroAll_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/PosZeroAll_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SetBools.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SetBools.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SetBools_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SetBools_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SimDrive.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/SimDrive.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SimDrive_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/SimDrive_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/StateBase.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/StateBase.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/StateBase_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/StateBase_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/StatesOfIO.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/StatesOfIO.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/StatesOfIO_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/StatesOfIO_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/Params.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/Params.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/Params_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/Params_Response.msg
-CMakeFiles/loki_msgs: /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/HomeS.srv
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/srv/HomeS.srv
 CMakeFiles/loki_msgs: rosidl_cmake/srv/HomeS_Request.msg
 CMakeFiles/loki_msgs: rosidl_cmake/srv/HomeS_Response.msg
 CMakeFiles/loki_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -224,6 +224,6 @@ CMakeFiles/loki_msgs.dir/clean:
 .PHONY : CMakeFiles/loki_msgs.dir/clean
 
 CMakeFiles/loki_msgs.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_msgs.dir/depend
 

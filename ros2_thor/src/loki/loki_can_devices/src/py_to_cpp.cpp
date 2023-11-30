@@ -554,6 +554,7 @@ class PyToCpp : public rclcpp::Node {
                                     std::shared_ptr<loki_msgs::srv::SimDrive::Response> response){
                 
                 can_ctrl_pltf_->simulateAllDrives(base_command_out_);
+                // RCLCPP_INFO(this->get_logger(), "%d", base_command_out_.steer_speed);
 
             return true;
         }
@@ -888,6 +889,9 @@ class PyToCpp : public rclcpp::Node {
             latest_base_command.steer_pos = msg.steer_pos;
             latest_base_command.steer_max_speed = msg.steer_max_speed;
             latest_base_command.channel = msg.channel;
+            // RCLCPP_INFO(this->get_logger(), "prop %d", latest_base_command.prop_speed);
+            // RCLCPP_INFO(this->get_logger(), "steer %d", latest_base_command.steer_speed);
+            // RCLCPP_INFO(this->get_logger(), "max %d", latest_base_command.steer_max_speed);
             base_command_out_ = latest_base_command;
 
         }

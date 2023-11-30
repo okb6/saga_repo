@@ -39,6 +39,7 @@
     <include file="$(find-pkg-share loki_description)/launch/model.launch.py"/>
 
 
+
     <!-- base bringup-->
     <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch.py"/>
 
@@ -51,9 +52,6 @@
 
     <!-- twist mux bringup -->
     <include file="$(find-pkg-share loki_twist_mux)/launch/twist_mux.launch"/>
-
-    <!-- Launch the Gazebo world.  -->
-    <include file="$(find-pkg-share rasberry_gazebo)/launch/gazebo.launch.py" if="$(var simple_sim)"  />
 
   </group>
 

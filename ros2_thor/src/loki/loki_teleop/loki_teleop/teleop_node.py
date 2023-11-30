@@ -19,10 +19,6 @@ class TeleopNode(Node):
         self.custom_trigger_map = {}
         self.buttons = []
         self.axes = []
-        self.swarm_communication = False
-        self.swarm_on = False
-        self.secondary_communication = False 
-        self.secondary_on = False
 
         params_loaded = self.lookupParameters()      
 
@@ -38,7 +34,6 @@ class TeleopNode(Node):
         #PUBLISHERS
         self.twist_pub = self.create_publisher(Twist, 'cmd_vel', 1)
         self.lock_pub = self.create_publisher(Bool, 'joy_priority', 1)
-        self.multi_robot = self.create_publisher(Twist, 'muli_cmd_vel', 1)
 
         #Clients
         self.home_client = self.create_client(HomeS, 'home_steering')
@@ -52,7 +47,7 @@ class TeleopNode(Node):
         self.Mode_Forward = 0
         self.Mode_Left = 1
         self.Mode_Turning = 2
-        # self.Mode_omni = 3
+        self.Mode_omni = 3
 
         self.previous_drive_mode = self.Mode_Forward
         self.previous_non_turn_mode = self.Mode_Forward
@@ -157,12 +152,12 @@ class TeleopNode(Node):
         self.button_turning_safety = self.get_parameter('button_turning_safety').value
 
         #lookup homing button combination
-        self.declare_parameter('secondary_robot', rclpy.Parameter.Type.STRING_ARRAY)
-        self.secondary_robot_buttons = self.get_parameter('secondary_robot').value
+        self.declare_parameter('home_buttons', rclpy.Parameter.Type.STRING_ARRAY)
+        self.home_buttons = self.get_parameter('home_buttons').value
 
-        #lookup multi robot button combination
-        self.declare_parameter('multi_robot', rclpy.Parameter.Type.STRING_ARRAY)
-        self.multi_robot_parameters = self.get_parameter('multi_robot').value 
+        #lookup omni button combination
+        self.declare_parameter('omni_buttons', rclpy.Parameter.Type.STRING_ARRAY)
+        self.omni_buttons = self.get_parameter('omni_buttons').value 
 
         #lookup kvbuttons
         self.declare_parameter('kv_default_buttons', rclpy.Parameter.Type.STRING_ARRAY)
@@ -366,18 +361,18 @@ class TeleopNode(Node):
                     else:
                         self.get_logger().info("callling service failed")
                 
-        # elif self.evaluateButtonPressCombo(self.home_buttons):
-        #     self.get_logger().info("calling homiing")
+        elif self.evaluateButtonPressCombo(self.home_buttons):
+            self.get_logger().info("calling homiing")
 
-        #     future = self.home_client.call_async(HomeS.Request())
-        #     rclpy.spin_until_future_complete(self, future)
-        #     response = future.result()
-        #     self.get_logger().info("calling service: home_steering")
+            future = self.home_client.call_async(HomeS.Request())
+            rclpy.spin_until_future_complete(self, future)
+            response = future.result()
+            self.get_logger().info("calling service: home_steering")
             
-        #     if response:
-        #         self.get_logger().info("finished calling")
-        #     else:
-        #         self.get_logger().info("calling homing service failed")
+            if response:
+                self.get_logger().info("finished calling")
+            else:
+                self.get_logger().info("calling homing service failed")
             
         ##################
         #MODES OF TURNING#
@@ -396,39 +391,9 @@ class TeleopNode(Node):
             # self.get_logger().info("mode_left")
             mode = self.Mode_Left
             self.previous_non_turn_mode = self.Mode_Left
-        # elif self.evaluateButtonPressCombo(self.multi_robot_parameters):
-        #     mode = self.Mode_omni
-        #     self.previous_non_turn_mode = self.Mode_Forward
-
-        if self.evaluateButtonPressCombo(self.multi_robot_parameters) and not self.swarm_on:
-            self.swarm_communication = True
-            self.swarm_on = True
-            self.secondary_communication = False 
-            self.secondary_on = False 
-            self.get_logger().warning("Swarm Communication has been initiated: Controlling both robots now")
-
-        elif self.evaluateButtonPress(self.multi_robot_parameters) and self.swarm_on:
-            self.swarm_communication = False
-            self.swarm_on = False
-            self.secondary_communication = False 
-            self.secondary_on = False 
-            self.get_logger().warning("Swarm Communication has been disabled, controlling only the main robot")
-            
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and not self.secondary_on:
-            self.swarm_communication = False 
-            self.swarm_on = False 
-            self.secondary_communication = True 
-            self.secondary_on = False
-            self.get_logger().warning("Controlling secondary robot")
-
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on:
-            self.swarm_communication = False 
-            self.swarm_on = False
-            self.secondary_communication = False 
-            self.secondary_on = False 
-            self.get_logger().warning("Controlling primary robot")
-            
-        
+        elif self.evaluateButtonPressCombo(self.omni_buttons):
+            mode = self.Mode_omni
+            self.previous_non_turn_mode = self.Mode_Forward
         
         #############
         ####Gains####
@@ -512,30 +477,10 @@ class TeleopNode(Node):
         twist_msg.angular.y = 0.0
         twist_msg.angular.z = wz
 
-        backup_twist = Twist()
-
-        backup_twist.linear.x = 0.0
-        backup_twist.linear.y = 0.0
-        backup_twist.linear.z = 0.0
-        
-        backup_twist.angular.x = 0.0
-        backup_twist.angular.y = 0.0
-        backup_twist.angular.z = 0.0
-
-
-
         # self.get_logger().info("vx{}, vy{}, wz{}".format(vx, vy, wz))
 
         if self.teleop_lock_on:
-            if self.swarm_communication:
-                self.twist_pub.publish(twist_msg)
-                self.multi_robot.publish(twist_msg)
-            elif self.secondary_communication:
-                self.multi_robot.publish(twist_msg)
-                self.twist_pub.publish(backup_twist)
-            else:
-                self.twist_pub.publish(twist_msg)
-                self.multi_robot.publish(backup_twist)
+            self.twist_pub.publish(twist_msg)
         
         self.previous_drive_mode = mode
 

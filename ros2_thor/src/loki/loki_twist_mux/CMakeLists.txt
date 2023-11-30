@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(loki_twist_mux)
 
 find_package(ament_cmake REQUIRED)

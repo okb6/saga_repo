@@ -49,7 +49,8 @@ setup(
     entry_points={
         'console_scripts': [
             'base_driver = loki_base.base_driver:main',
-            'enlcosure_board_serial = loki_base.enclosure_board_serial:main'
+            'enlcosure_board_serial = loki_base.enclosure_board_serial:main',
+            'isaac_wheels = loki_base.isaac_wheels:main'
         ],
     },
     include_package_data=True

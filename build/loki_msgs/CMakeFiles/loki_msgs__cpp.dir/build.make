@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_msgs
 
 # Utility rule file for loki_msgs__cpp.
 
@@ -371,8 +371,8 @@ rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geomet
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
@@ -1024,6 +1024,6 @@ CMakeFiles/loki_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/loki_msgs__cpp.dir/clean
 
 CMakeFiles/loki_msgs__cpp.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_msgs__cpp.dir/depend
 
