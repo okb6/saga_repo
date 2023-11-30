@@ -70,6 +70,10 @@ CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/base_state.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/base_state__builder.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/base_state__struct.hpp
@@ -243,6 +247,7 @@ rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/ThorvaldIO.idl
+rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/DriveInverted.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BaseState.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BatteryAlarms.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BatteryArray.idl
@@ -382,6 +387,18 @@ rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp: rosidl_genera
 
 rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 
 rosidl_generator_cpp/loki_msgs/msg/base_state.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/base_state.hpp
@@ -896,6 +913,9 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_state__trai
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__traits.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__traits.hpp
@@ -914,6 +934,7 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/motor_state__traits.hp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_param.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/enclosure_state.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/io_array.hpp

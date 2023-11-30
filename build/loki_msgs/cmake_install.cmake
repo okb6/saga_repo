@@ -360,6 +360,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_msgs/msg" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_adapter/loki_msgs/msg/DriveInverted.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_msgs/msg" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_adapter/loki_msgs/msg/BaseState.idl")
 endif()
 
@@ -517,6 +521,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_msgs/msg" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ThorvaldIO.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/loki_msgs/msg" TYPE FILE FILES "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/DriveInverted.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

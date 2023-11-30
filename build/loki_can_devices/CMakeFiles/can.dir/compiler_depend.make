@@ -2866,6 +2866,7 @@ CMakeFiles/can.dir/src/can_ctrl_pltf.cpp.o: /home/loki/Documents/GitHub/saga_rep
   /usr/include/boost/date_time/time_facet.hpp \
   /usr/include/boost/algorithm/string/erase.hpp \
   /usr/include/boost/date_time/posix_time/time_parsers.hpp \
+  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_dummy.h \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/CanDriveItf.h \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_io_itf.h \
@@ -3839,6 +3840,68 @@ CMakeFiles/can.dir/src/can_io_v1uv.cpp.o: /home/loki/Documents/GitHub/saga_repo/
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc
 
+CMakeFiles/can.dir/src/can_line_dummy.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_dummy.cpp \
+  /usr/include/stdc-predef.h \
+  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_dummy.h \
+  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_itf.h \
+  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_frame.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+
 CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp \
   /usr/include/stdc-predef.h \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_socketcan.h \
@@ -4080,6 +4143,7 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: /home/loki/Documents/GitHub/sag
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h \
+  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_dummy.h \
   /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/CanDriveItf.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -6470,6 +6534,8 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: /home/loki/Documents/GitHub/saga_repo/r
 
 /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_battery_itf.h:
 
+/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_dummy.h:
+
 /usr/include/boost/date_time/posix_time/time_parsers.hpp:
 
 /usr/include/boost/date_time/time_facet.hpp:
@@ -8453,6 +8519,8 @@ CMakeFiles/can.dir/src/kc_battery.cpp.o: /home/loki/Documents/GitHub/saga_repo/r
 /usr/include/c++/11/cmath:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
+
+/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_dummy.cpp:
 
 /usr/include/linux/limits.h:
 

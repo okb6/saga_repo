@@ -64,5 +64,6 @@
     <include file="$(find-pkg-share loki_twist_mux)/launch/twist_mux.launch"/>
   </group>
 
+  <node pkg="loki_base" exec="isaac_wheels" name="isaac_wheels" namespace="$(var tf_prefix)"/>
 
 </launch>

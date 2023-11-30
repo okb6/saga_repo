@@ -83,6 +83,7 @@ rosidl_generator_c/loki_msgs/msg/thorvald_io.h: /opt/ros/humble/share/rosidl_gen
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: rosidl_adapter/loki_msgs/msg/ThorvaldIO.idl
+rosidl_generator_c/loki_msgs/msg/thorvald_io.h: rosidl_adapter/loki_msgs/msg/DriveInverted.idl
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: rosidl_adapter/loki_msgs/msg/BaseState.idl
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: rosidl_adapter/loki_msgs/msg/BatteryAlarms.idl
 rosidl_generator_c/loki_msgs/msg/thorvald_io.h: rosidl_adapter/loki_msgs/msg/BatteryArray.idl
@@ -222,6 +223,18 @@ rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__struct.h: rosidl_generator_
 
 rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__type_support.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__type_support.h
+
+rosidl_generator_c/loki_msgs/msg/drive_inverted.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/drive_inverted.h
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__type_support.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__type_support.h
 
 rosidl_generator_c/loki_msgs/msg/base_state.h: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/base_state.h
@@ -694,6 +707,9 @@ rosidl_generator_c/loki_msgs/srv/detail/home_s__type_support.h: rosidl_generator
 rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c
 
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c
+
 rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c: rosidl_generator_c/loki_msgs/msg/thorvald_io.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c
 
@@ -825,10 +841,24 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c.s
 
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c
+
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c > CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.i
+
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.s
+
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.i: cmake_force
@@ -842,7 +872,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.i: cmake_force
@@ -856,7 +886,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.i: cmake_force
@@ -870,7 +900,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_data__functions.c.i: cmake_force
@@ -884,7 +914,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.c.i: cmake_force
@@ -898,7 +928,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_array__functions.c.i: cmake_force
@@ -912,7 +942,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_config__functions.c.i: cmake_force
@@ -926,7 +956,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_data__functions.c.i: cmake_force
@@ -940,7 +970,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.c.i: cmake_force
@@ -954,7 +984,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_state__functions.c.i: cmake_force
@@ -968,7 +998,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c.i: cmake_force
@@ -982,7 +1012,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/enclosure_state__functions.c.i: cmake_force
@@ -996,7 +1026,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_array__functions.c.i: cmake_force
@@ -1010,7 +1040,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.c.i: cmake_force
@@ -1024,7 +1054,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/motor_state__functions.c.i: cmake_force
@@ -1038,7 +1068,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o: rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.c.i: cmake_force
@@ -1052,7 +1082,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/digital_write__functions.c.i: cmake_force
@@ -1066,7 +1096,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/can_id__functions.c.i: cmake_force
@@ -1080,7 +1110,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_params__functions.c.i: cmake_force
@@ -1094,7 +1124,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__functions.c.i: cmake_force
@@ -1108,7 +1138,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.c.i: cmake_force
@@ -1122,7 +1152,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/battery_vars__functions.c.i: cmake_force
@@ -1136,7 +1166,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cont_array__functions.c.i: cmake_force
@@ -1150,7 +1180,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/cot_map__functions.c.i: cmake_force
@@ -1164,7 +1194,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.c.i: cmake_force
@@ -1178,7 +1208,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.c.i: cmake_force
@@ -1192,7 +1222,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.c.i: cmake_force
@@ -1206,7 +1236,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/get_set_bool__functions.c.i: cmake_force
@@ -1220,7 +1250,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/homesteering_all__functions.c.i: cmake_force
@@ -1234,7 +1264,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/init_pltf__functions.c.i: cmake_force
@@ -1248,7 +1278,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/mot_cot__functions.c.i: cmake_force
@@ -1262,7 +1292,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero__functions.c.i: cmake_force
@@ -1276,7 +1306,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.c.i: cmake_force
@@ -1290,7 +1320,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/set_bools__functions.c.i: cmake_force
@@ -1304,7 +1334,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/sim_drive__functions.c.i: cmake_force
@@ -1318,7 +1348,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.c.i: cmake_force
@@ -1332,7 +1362,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.c.i: cmake_force
@@ -1346,7 +1376,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/params__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/params__functions.c.i: cmake_force
@@ -1360,7 +1390,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o: rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o: CMakeFiles/loki_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o -MF CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o.d -o CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.o -c /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c
 
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.c.i: cmake_force
@@ -1374,6 +1404,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/srv/de
 # Object files for target loki_msgs__rosidl_generator_c
 loki_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c.o" \
+"CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o" \
 "CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o" \
 "CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o" \
 "CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o" \
@@ -1418,6 +1449,7 @@ loki_msgs__rosidl_generator_c_OBJECTS = \
 loki_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.c.o
+libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c.o
 libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.c.o
 libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.c.o
 libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.c.o
@@ -1465,7 +1497,7 @@ libloki_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__
 libloki_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libloki_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libloki_msgs__rosidl_generator_c.so: CMakeFiles/loki_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking C shared library libloki_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Linking C shared library libloki_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/loki_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1531,6 +1563,10 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msg
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__functions.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__struct.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/controller_status_flag__type_support.h
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.c
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__type_support.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.c
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_param__functions.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/drive_param__struct.h
@@ -1555,6 +1591,7 @@ CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msg
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__struct.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__type_support.h
+CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/drive_inverted.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/drive_param.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/enclosure_state.h
 CMakeFiles/loki_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loki_msgs/msg/io_array.h

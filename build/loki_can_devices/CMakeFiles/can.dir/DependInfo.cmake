@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_frame.cpp" "CMakeFiles/can.dir/src/can_frame.cpp.o" "gcc" "CMakeFiles/can.dir/src/can_frame.cpp.o.d"
   "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1pcb.cpp" "CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o" "gcc" "CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o.d"
   "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_io_v1uv.cpp" "CMakeFiles/can.dir/src/can_io_v1uv.cpp.o" "gcc" "CMakeFiles/can.dir/src/can_io_v1uv.cpp.o.d"
+  "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_dummy.cpp" "CMakeFiles/can.dir/src/can_line_dummy.cpp.o" "gcc" "CMakeFiles/can.dir/src/can_line_dummy.cpp.o.d"
   "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/can_line_socketcan.cpp" "CMakeFiles/can.dir/src/can_line_socketcan.cpp.o" "gcc" "CMakeFiles/can.dir/src/can_line_socketcan.cpp.o.d"
   "/home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/src/kc_battery.cpp" "CMakeFiles/can.dir/src/kc_battery.cpp.o" "gcc" "CMakeFiles/can.dir/src/kc_battery.cpp.o.d"
   )

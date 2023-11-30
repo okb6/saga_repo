@@ -67,6 +67,7 @@ include CMakeFiles/loki_msgs.dir/compiler_depend.make
 include CMakeFiles/loki_msgs.dir/progress.make
 
 CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/ThorvaldIO.msg
+CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/DriveInverted.msg
 CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BaseState.msg
 CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryAlarms.msg
 CMakeFiles/loki_msgs: /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs/msg/BatteryArray.msg

@@ -29,6 +29,7 @@ def generate_launch_description():
 
 
 
+
     basedriver = Node(
         package="loki_base",
         namespace="",
@@ -54,15 +55,8 @@ def generate_launch_description():
 
     )
 
-    isaacsim = Node(
-        package="loki_base",
-        namespace="",
-        executable="isaac_wheels",
-        name="isaac_wheels",
-        output = 'screen'
-    )
 
-    ld.add_action(isaacsim)
+
     ld.add_action(robot_mode_launch_arg)
     ld.add_action(simple_sim_launch_arg)
     ld.add_action(enable_odom_launch_arg)

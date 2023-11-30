@@ -70,6 +70,7 @@ loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_introspection_c.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_c.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_thorvald_io.py
+loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_base_state.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_alarms.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_array.py
@@ -112,6 +113,7 @@ loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/srv/_home_
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/__init__.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/srv/__init__.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c
+loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_base_state_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_alarms_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_array_s.c
@@ -166,6 +168,7 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/ThorvaldIO.idl
+rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/DriveInverted.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BaseState.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BatteryAlarms.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BatteryArray.idl
@@ -306,6 +309,9 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_c.c: rosidl_gen
 rosidl_generator_py/loki_msgs/msg/_thorvald_io.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_thorvald_io.py
 
+rosidl_generator_py/loki_msgs/msg/_drive_inverted.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
+
 rosidl_generator_py/loki_msgs/msg/_base_state.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_base_state.py
 
@@ -431,6 +437,9 @@ rosidl_generator_py/loki_msgs/srv/__init__.py: rosidl_generator_py/loki_msgs/_lo
 
 rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c
+
+rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 
 rosidl_generator_py/loki_msgs/msg/_base_state_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_base_state_s.c
@@ -576,6 +585,8 @@ loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_state.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_state_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_status_flag.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c
+loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
+loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_param.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_param_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_enclosure_state.py

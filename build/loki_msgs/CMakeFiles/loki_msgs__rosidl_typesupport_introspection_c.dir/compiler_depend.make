@@ -794,6 +794,70 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
+CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_inverted__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_inverted__type_support.c \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_inverted__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  rosidl_typesupport_introspection_c/loki_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/field_types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/identifier.h \
+  /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/message_introspection.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+  rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h \
+  rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h
+
 CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_param__type_support.c.o: rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_param__type_support.c \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
@@ -2782,6 +2846,12 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/switch_bool__type_support.c:
+
+rosidl_generator_c/loki_msgs/srv/detail/states_of_io__struct.h:
+
+rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.h:
+
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/controller_state__type_support.c:
 
 rosidl_generator_c/loki_msgs/srv/detail/motor_controller_setup__struct.h:
@@ -2825,8 +2895,6 @@ rosidl_typesupport_introspection_c/loki_msgs/msg/detail/can_frame__rosidl_typesu
 rosidl_generator_c/loki_msgs/msg/detail/battery_data__type_support.h:
 
 rosidl_generator_c/loki_msgs/msg/drive_param.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/switch_bool__type_support.c:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_array__struct.h:
 
@@ -2922,11 +2990,13 @@ rosidl_generator_c/loki_msgs/srv/detail/switch_bool__functions.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/pos_zero_all__type_support.c:
 
-rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_array__rosidl_typesupport_introspection_c.h:
-
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/mot_cot__rosidl_typesupport_introspection_c.h:
 
 rosidl_generator_c/loki_msgs/msg/controller_status_flag.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/battery_array__rosidl_typesupport_introspection_c.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_inverted__type_support.c:
 
 rosidl_generator_c/loki_msgs/srv/detail/device_cmds__functions.h:
 
@@ -3084,8 +3154,6 @@ rosidl_generator_c/loki_msgs/srv/detail/cont_array__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/battery_alarms.h:
 
-rosidl_generator_c/loki_msgs/srv/detail/states_of_io__functions.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/can_frame__functions.h:
@@ -3105,6 +3173,10 @@ rosidl_generator_c/loki_msgs/msg/detail/motor_state__struct.h:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/drive_param__struct.h:
 
@@ -3140,8 +3212,6 @@ rosidl_generator_c/loki_msgs/msg/detail/io_state__functions.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_state__rosidl_typesupport_introspection_c.h:
 
-rosidl_generator_c/loki_msgs/srv/detail/states_of_io__struct.h:
-
 rosidl_typesupport_introspection_c/loki_msgs/msg/detail/io_state__type_support.c:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__functions.h:
@@ -3167,6 +3237,8 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/motor_controller_setup__
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 rosidl_typesupport_introspection_c/loki_msgs/srv/detail/eval_can_buffer__rosidl_typesupport_introspection_c.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/msg/detail/drive_inverted__rosidl_typesupport_introspection_c.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
@@ -3205,6 +3277,10 @@ rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__functions.h:
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/drive_cmds__struct.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/states_of_io__rosidl_typesupport_introspection_c.h:
+
+rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_params__type_support.c:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h:
 
@@ -3297,7 +3373,3 @@ rosidl_typesupport_introspection_c/loki_msgs/srv/detail/state_base__rosidl_types
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/state_base__struct.h:
-
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/drive_params__type_support.c:
-
-rosidl_typesupport_introspection_c/loki_msgs/srv/detail/states_of_io__rosidl_typesupport_introspection_c.h:

@@ -197,6 +197,7 @@ CMakeFiles/can.dir/src/can_line_socketcan.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_ctrl_pltf.h \
+ /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/can_line_dummy.h \
  /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_can_devices/include/loki_can_devices/CanDriveItf.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \

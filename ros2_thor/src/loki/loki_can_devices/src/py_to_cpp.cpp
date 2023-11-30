@@ -53,7 +53,7 @@ int can_device_t_frame_count_;
 std::vector<CanFrame> can_device_t_frames_;
 bool mute_device_commands_;
 std::string can_interface_name_;
-int can_interface_type_;
+std::string can_interface_type_;
 
 
 class PyToCpp : public rclcpp::Node {
@@ -99,7 +99,7 @@ class PyToCpp : public rclcpp::Node {
 
             //can details
             declare_parameter("can_interface_name", "can0");
-            declare_parameter("can_interface_type", 0);
+            declare_parameter("can_interface_type", "socketcan");
 
             get_parameter("can_interface_name", can_interface_name_);
             get_parameter("can_interface_type", can_interface_type_);
@@ -434,9 +434,17 @@ class PyToCpp : public rclcpp::Node {
 
         bool server_init_pltf(const std::shared_ptr<loki_msgs::srv::InitPltf::Request> request,
                         const std::shared_ptr<loki_msgs::srv::InitPltf::Response> response){
+
+            int num_can_type;
             
-            
-            bool ret = can_ctrl_pltf_->initPltf(can_interface_type_, can_interface_name_, motor_drives_, batteries_, ios_);
+            if (can_interface_type_ == "socketcan"){
+                num_can_type = 1;
+            }
+            else{
+                num_can_type = 0;
+            }
+
+            bool ret = can_ctrl_pltf_->initPltf(num_can_type, can_interface_name_, motor_drives_, batteries_, ios_);
             response->initpltf = ret;
             return true;
 

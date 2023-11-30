@@ -250,6 +250,9 @@ CMakeFiles/loki_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_gener
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/loki_msgs/msg/detail/thorvald_io__functions.h \
+  rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__type_support.h \
+  rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h \
+  rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h \
   rosidl_generator_c/loki_msgs/msg/detail/base_state__type_support.h \
   rosidl_generator_c/loki_msgs/msg/detail/base_state__struct.h \
   rosidl_generator_c/loki_msgs/msg/detail/base_state__functions.h \
@@ -512,6 +515,10 @@ rosidl_generator_c/loki_msgs/msg/detail/battery_data__type_support.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_array__functions.h:
 
+rosidl_generator_c/loki_msgs/msg/detail/battery_array__struct.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/battery_array__type_support.h:
+
 rosidl_generator_c/loki_msgs/msg/detail/controller_info__functions.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -580,6 +587,12 @@ rosidl_generator_c/loki_msgs/msg/detail/controller_data__struct.h:
 
 /usr/include/unistd.h:
 
+rosidl_generator_c/loki_msgs/srv/detail/mot_cot__type_support.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
 rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
@@ -609,6 +622,8 @@ rosidl_generator_c/loki_msgs/srv/detail/pos_zero_all__functions.h:
 /usr/include/alloca.h:
 
 /usr/include/python3.10/cpython/pyerrors.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__type_support.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/battery_vars__struct.h:
 
@@ -733,6 +748,8 @@ rosidl_generator_c/loki_msgs/srv/detail/home_s__functions.h:
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/python3.10/boolobject.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__struct.h:
 
 rosidl_generator_c/loki_msgs/srv/detail/eval_can_buffer__functions.h:
 
@@ -900,8 +917,6 @@ rosidl_generator_c/loki_msgs/msg/detail/can_frame__struct.h:
 
 /usr/include/python3.10/cpython/object.h:
 
-rosidl_generator_c/loki_msgs/msg/detail/battery_array__struct.h:
-
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/python3.10/pyhash.h:
@@ -967,6 +982,8 @@ rosidl_generator_c/loki_msgs/msg/rosidl_generator_c__visibility_control.h:
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
 /usr/include/python3.10/moduleobject.h:
+
+rosidl_generator_c/loki_msgs/msg/detail/drive_inverted__functions.h:
 
 /usr/include/python3.10/cpython/pydebug.h:
 
@@ -1101,11 +1118,3 @@ rosidl_generator_c/loki_msgs/msg/detail/base_state__struct.h:
 rosidl_generator_c/loki_msgs/srv/detail/state_base__functions.h:
 
 rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__struct.h:
-
-rosidl_generator_c/loki_msgs/srv/detail/mot_cot__type_support.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-rosidl_generator_c/loki_msgs/msg/detail/battery_alarms__functions.h:
-
-rosidl_generator_c/loki_msgs/msg/detail/battery_array__type_support.h:

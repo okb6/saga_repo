@@ -367,6 +367,30 @@ src/can_io_v1uv.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can.dir/build.make CMakeFiles/can.dir/src/can_io_v1uv.cpp.s
 .PHONY : src/can_io_v1uv.cpp.s
 
+src/can_line_dummy.o: src/can_line_dummy.cpp.o
+.PHONY : src/can_line_dummy.o
+
+# target to build an object file
+src/can_line_dummy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can.dir/build.make CMakeFiles/can.dir/src/can_line_dummy.cpp.o
+.PHONY : src/can_line_dummy.cpp.o
+
+src/can_line_dummy.i: src/can_line_dummy.cpp.i
+.PHONY : src/can_line_dummy.i
+
+# target to preprocess a source file
+src/can_line_dummy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can.dir/build.make CMakeFiles/can.dir/src/can_line_dummy.cpp.i
+.PHONY : src/can_line_dummy.cpp.i
+
+src/can_line_dummy.s: src/can_line_dummy.cpp.s
+.PHONY : src/can_line_dummy.s
+
+# target to generate assembly for a file
+src/can_line_dummy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can.dir/build.make CMakeFiles/can.dir/src/can_line_dummy.cpp.s
+.PHONY : src/can_line_dummy.cpp.s
+
 src/can_line_socketcan.o: src/can_line_socketcan.cpp.o
 .PHONY : src/can_line_socketcan.o
 
@@ -474,6 +498,9 @@ help:
 	@echo "... src/can_io_v1uv.o"
 	@echo "... src/can_io_v1uv.i"
 	@echo "... src/can_io_v1uv.s"
+	@echo "... src/can_line_dummy.o"
+	@echo "... src/can_line_dummy.i"
+	@echo "... src/can_line_dummy.s"
 	@echo "... src/can_line_socketcan.o"
 	@echo "... src/can_line_socketcan.i"
 	@echo "... src/can_line_socketcan.s"
