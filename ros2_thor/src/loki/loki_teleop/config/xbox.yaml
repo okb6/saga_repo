@@ -1,4 +1,4 @@
-teleop_node:
+Loki/teleop_node:
   ros__parameters:
     turn_calc_w: 0.75
     turn_calc_l: 0.75
@@ -49,13 +49,92 @@ teleop_node:
     # Button combination for homing
     # Buttons must be pressed at the same time
 
-    home_buttons: [button_0, button_3] #A and Y together
+    secondary_robot: [button_0, button_3] #A and Y together
 
 
     # Button combination for cahnging to omni mode
     # Buttons must be pressed at the same time
 
-    omni_buttons: [button_1, button_2] #B and X together
+    multi_robot: [button_1, button_2] #B and X together
+
+    kv_default_buttons: [button_4, button_5] #LB and RB
+
+    mode_left_buttons: [button_function, button_left] #Button function and button left (start and Left)
+    mode_forward_buttons: [button_function, button_forward] #button function and button forward (start and up)
+
+    trigger_map: 
+      button_0: "release_esd_lock"
+      button_1: ""
+      button_2: "relative/path/to/service"
+      button_3: "/absolute/path/to/service"
+      button_4: ""
+      button_5: ""
+      button_6: ""
+
+    gains:        
+      kv_default: 0.75
+      kv_min: 0.1
+      kv_max: 1.5
+      kv_increment: 0.1
+                  
+Loki/teleop_node_discovery_server:
+  ros__parameters:
+    turn_calc_w: 0.75
+    turn_calc_l: 0.75
+
+    #The teleop node must find axis_linear and axis_angular
+    #Other axis are optional
+    axis_map: 
+      axis_vx: 1 # L STICK X
+      axis_vy: 0 # L STICK X
+      axis_wz: 3 # R STICK Y
+      axis_turn_left: 2 # LT
+      axis_turn_right: 5 # RT
+
+      # The teleop node will work without buttons.
+      #
+    button_map:
+      # increase and decrease gain
+      button_less_gain: 4 # LB
+      button_more_gain: 5 # RB
+                  
+      # function button
+      button_function: 7 # START
+
+      # the teleop lock will publish true on the teleop lock topic
+      # [button_function + button_teleop_lock] to unlock
+      button_teleop_lock: 6 # BACK
+
+      # Switch drive mode
+      button_left: 11 # LEFT
+      button_forward: 13 # UP
+
+      # Other buttons
+      button_0: 0 # A
+      button_1: 1 # B
+      button_2: 2 # X
+      button_3: 3 # Y
+      button_4: 8 # XBOX
+      button_5: 9 # L STICK
+      button_6: 10 # R STICK
+      button_7: 12 # RIGHT
+      button_8: 14 # DOWN
+
+    # Button that must be pressed when turning in place
+    
+    button_turning_safety: button_3 #Y
+
+
+    # Button combination for homing
+    # Buttons must be pressed at the same time
+
+    secondary_robot: [button_0, button_3] #A and Y together
+
+
+    # Button combination for cahnging to omni mode
+    # Buttons must be pressed at the same time
+
+    multi_robot: [button_1, button_2] #B and X together
 
     kv_default_buttons: [button_4, button_5] #LB and RB
 

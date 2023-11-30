@@ -28,7 +28,6 @@ def generate_launch_description():
     # twist_cov_launch_arg = DeclareLaunchArgument("twist_covariance", default_value=[])
 
 
-
     basedriver = Node(
         package="loki_base",
         namespace="",
