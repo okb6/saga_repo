@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/loki_msgs/msg/_controller_state_s.c"
   "../rosidl_generator_py/loki_msgs/msg/_controller_status_flag.py"
   "../rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c"
+  "../rosidl_generator_py/loki_msgs/msg/_drive_inverted.py"
+  "../rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c"
   "../rosidl_generator_py/loki_msgs/msg/_drive_param.py"
   "../rosidl_generator_py/loki_msgs/msg/_drive_param_s.c"
   "../rosidl_generator_py/loki_msgs/msg/_enclosure_state.py"

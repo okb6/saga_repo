@@ -22,6 +22,7 @@ add_library(
   src/can_frame.cpp 
   src/can_line_socketcan.cpp
   src/can_ctrl_pltf.cpp
+  src/can_line_dummy.cpp
 )
 
 add_executable(

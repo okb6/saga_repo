@@ -1,8 +1,8 @@
-# Install script for directory: /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py
+# Install script for directory: /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/odin/Documents/GitHub/saga_repo/install/loki_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/loki/Documents/GitHub/saga_repo/install/loki_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

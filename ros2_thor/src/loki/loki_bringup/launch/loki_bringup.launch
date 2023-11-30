@@ -44,7 +44,7 @@
 
 
     <!-- base bringup-->
-    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch.py">
+    <include file="$(find-pkg-share loki_base)/launch/base_bringup.launch">
       <let name="robot_model" value="$(var robot_model)" />
       <let name="tf_prefix" value="$(var tf_prefix)" />
       <let name="simple_sim" value="$(var simple_sim)" />
@@ -54,14 +54,6 @@
       <let name="can_interface_name" value="$(var can_interface_name)" />
     </include>
   </group>
-
- <!--spawn gazebo world-->
-  <include file= "$(find-pkg-share rasberry_gazebo)/launch/gazebo.launch.py" if="$(var simple_sim)">
-    <arg name="world" default="$(var world)"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
-   <let name="gui" value="$(var with_gui)"/>
-  </include>
-
-  <!--spawn robot-->
-  <node pkg="gazebo_ros" exec="spawn_model" name="spawner" args="-urdf -param /robot_description -model thorvald_ii -x $(var start_pose_x) -y $(var start_pose_y) -z $(var start_pose_z) -R $(var  start_pose_R)  -P $(var start_pose_P)  -Y $(var start_pose_Y)" if="$(var simple_sim)"/>
 </launch>
+
 

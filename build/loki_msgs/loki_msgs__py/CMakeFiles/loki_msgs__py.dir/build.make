@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_msgs
 
 # Utility rule file for loki_msgs__py.
 
@@ -70,6 +70,7 @@ loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_introspection_c.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_c.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_thorvald_io.py
+loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_base_state.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_alarms.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_array.py
@@ -112,6 +113,7 @@ loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/srv/_home_
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/__init__.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/srv/__init__.py
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c
+loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_base_state_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_alarms_s.c
 loki_msgs__py/CMakeFiles/loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_battery_array_s.c
@@ -166,6 +168,7 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/ThorvaldIO.idl
+rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/DriveInverted.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BaseState.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BatteryAlarms.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/loki_msgs/msg/BatteryArray.idl
@@ -294,8 +297,8 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -305,6 +308,9 @@ rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_c.c: rosidl_gen
 
 rosidl_generator_py/loki_msgs/msg/_thorvald_io.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_thorvald_io.py
+
+rosidl_generator_py/loki_msgs/msg/_drive_inverted.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
 
 rosidl_generator_py/loki_msgs/msg/_base_state.py: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_base_state.py
@@ -431,6 +437,9 @@ rosidl_generator_py/loki_msgs/srv/__init__.py: rosidl_generator_py/loki_msgs/_lo
 
 rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_thorvald_io_s.c
+
+rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 
 rosidl_generator_py/loki_msgs/msg/_base_state_s.c: rosidl_generator_py/loki_msgs/_loki_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/loki_msgs/msg/_base_state_s.c
@@ -576,6 +585,8 @@ loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_state.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_state_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_status_flag.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c
+loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted.py
+loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_param.py
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_drive_param_s.c
 loki_msgs__py: rosidl_generator_py/loki_msgs/msg/_enclosure_state.py
@@ -643,10 +654,10 @@ loki_msgs__py/CMakeFiles/loki_msgs__py.dir/build: loki_msgs__py
 .PHONY : loki_msgs__py/CMakeFiles/loki_msgs__py.dir/build
 
 loki_msgs__py/CMakeFiles/loki_msgs__py.dir/clean:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/loki_msgs__py.dir/cmake_clean.cmake
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/loki_msgs__py.dir/cmake_clean.cmake
 .PHONY : loki_msgs__py/CMakeFiles/loki_msgs__py.dir/clean
 
 loki_msgs__py/CMakeFiles/loki_msgs__py.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py/CMakeFiles/loki_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/loki_msgs__py/CMakeFiles/loki_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : loki_msgs__py/CMakeFiles/loki_msgs__py.dir/depend
 

@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/can.dir/src/can_io_v1pcb.cpp.o.d"
   "CMakeFiles/can.dir/src/can_io_v1uv.cpp.o"
   "CMakeFiles/can.dir/src/can_io_v1uv.cpp.o.d"
+  "CMakeFiles/can.dir/src/can_line_dummy.cpp.o"
+  "CMakeFiles/can.dir/src/can_line_dummy.cpp.o.d"
   "CMakeFiles/can.dir/src/can_line_socketcan.cpp.o"
   "CMakeFiles/can.dir/src/can_line_socketcan.cpp.o.d"
   "CMakeFiles/can.dir/src/kc_battery.cpp.o"

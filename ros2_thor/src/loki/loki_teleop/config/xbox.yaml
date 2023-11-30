@@ -49,13 +49,13 @@ Loki/teleop_node:
     # Button combination for homing
     # Buttons must be pressed at the same time
 
-    secondary_robot: [button_0, button_3] #A and Y together
+    home_buttons: [button_0, button_3] #A and Y together
 
 
     # Button combination for cahnging to omni mode
     # Buttons must be pressed at the same time
 
-    multi_robot: [button_1, button_2] #B and X together
+    omni_buttons: [button_1, button_2] #B and X together
 
     kv_default_buttons: [button_4, button_5] #LB and RB
 
@@ -76,8 +76,8 @@ Loki/teleop_node:
       kv_min: 0.1
       kv_max: 1.5
       kv_increment: 0.1
-                  
-Loki/teleop_node_discovery_server:
+
+Odin/teleop_node:
   ros__parameters:
     turn_calc_w: 0.75
     turn_calc_l: 0.75
@@ -128,13 +128,13 @@ Loki/teleop_node_discovery_server:
     # Button combination for homing
     # Buttons must be pressed at the same time
 
-    secondary_robot: [button_0, button_3] #A and Y together
+    home_buttons: [button_0, button_3] #A and Y together
 
 
     # Button combination for cahnging to omni mode
     # Buttons must be pressed at the same time
 
-    multi_robot: [button_1, button_2] #B and X together
+    omni_buttons: [button_1, button_2] #B and X together
 
     kv_default_buttons: [button_4, button_5] #LB and RB
 

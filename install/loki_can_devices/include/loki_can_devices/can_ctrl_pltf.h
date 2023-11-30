@@ -3,6 +3,7 @@
 
 #include <loki_can_devices/can_line_itf.h>
 #include <loki_can_devices/can_line_socketcan.h>
+#include <loki_can_devices/can_line_dummy.h>
 
 #include <loki_can_devices/CanDriveItf.h>
 #include <loki_can_devices/can_battery_itf.h>
@@ -47,6 +48,7 @@ public:
   */
   enum CanAdapters
   {
+    CAN_ITF_NONE,
     CAN_ITF_SOCKETCAN
   };
  /**

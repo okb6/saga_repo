@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_msgs
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_msgs
 
 # Utility rule file for loki_msgs__cpp.
 
@@ -70,6 +70,10 @@ CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/base_state.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/base_state__builder.hpp
 CMakeFiles/loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/base_state__struct.hpp
@@ -243,6 +247,7 @@ rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/ThorvaldIO.idl
+rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/DriveInverted.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BaseState.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BatteryAlarms.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: rosidl_adapter/loki_msgs/msg/BatteryArray.idl
@@ -371,8 +376,8 @@ rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geomet
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
@@ -382,6 +387,18 @@ rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp: rosidl_genera
 
 rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+
+rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 
 rosidl_generator_cpp/loki_msgs/msg/base_state.hpp: rosidl_generator_cpp/loki_msgs/msg/thorvald_io.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/loki_msgs/msg/base_state.hpp
@@ -896,6 +913,9 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_state__trai
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/controller_status_flag__traits.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__builder.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__struct.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_inverted__traits.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/drive_param__traits.hpp
@@ -914,6 +934,7 @@ loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/motor_state__traits.hp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__builder.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__struct.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/detail/thorvald_io__traits.hpp
+loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_inverted.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/drive_param.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/enclosure_state.hpp
 loki_msgs__cpp: rosidl_generator_cpp/loki_msgs/msg/io_array.hpp
@@ -1024,6 +1045,6 @@ CMakeFiles/loki_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/loki_msgs__cpp.dir/clean
 
 CMakeFiles/loki_msgs__cpp.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs /home/odin/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs /home/loki/Documents/GitHub/saga_repo/build/loki_msgs/CMakeFiles/loki_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_msgs__cpp.dir/depend
 

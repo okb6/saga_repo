@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_state_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c.o"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_controller_status_flag_s.c.o.d"
+  "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c.o"
+  "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_drive_inverted_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_drive_param_s.c.o"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_drive_param_s.c.o.d"
   "CMakeFiles/loki_msgs__rosidl_generator_py.dir/rosidl_generator_py/loki_msgs/msg/_enclosure_state_s.c.o"

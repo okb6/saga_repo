@@ -9,6 +9,7 @@ find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME} 
   "msg/ThorvaldIO.msg"
+  "msg/DriveInverted.msg"
   "msg/BaseState.msg"
   "msg/BatteryAlarms.msg"
   "msg/BatteryArray.msg"

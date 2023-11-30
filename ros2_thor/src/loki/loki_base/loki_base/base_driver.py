@@ -3,18 +3,15 @@ from rclpy.node import Node
 from rclpy.time import Time
 from rclpy.duration import Duration
 from geometry_msgs.msg import Twist
-from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, CANFrame
-from sensor_msgs.msg import JointState, Imu
+from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, DriveInverted
+from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry
-from std_msgs.msg import Int32
 from std_srvs.srv import SetBool, Trigger
 from loki_msgs.srv import MotorControllerSetup, CanID, DriveParams, InitPltf, GetSetBool, EvalCanBuffer, StateBase, ContArray, BatteryVars, StatesOfIO, DriveCmds, DeviceCmds, SimDrive, PosZeroAll, PosZero, HomesteeringAll, CotMap, MotCot, SetBools, Params, HomeS
 # from tf2 import transform_broadcaster, transform_datatypes
 from loki_base.pltf_clc_std import PltfClcStd
 import numpy as np
 from loki_base.Py_Base_State import PyBaseState
-from loki_base.canframe import canframe
-import numpy
 
 class BaseDriver(Node):
 
@@ -29,6 +26,7 @@ class BaseDriver(Node):
         self.emergency_stop = False
         self.latest_base_command_time = self.get_clock().now()
         self.command_timeout_time = Duration(seconds = 0.5)
+        self.drive_inverted = False
 
         # PltfClcStd = PltfClcStd()
 
@@ -85,10 +83,10 @@ class BaseDriver(Node):
             xmd = self.get_parameter(getx).value
             ymd = self.get_parameter(gety).value
 
-            steering_name = "steering{}".format(i)
+            steering_name = "a_steering{}".format(i)
             self.joint_names.append(steering_name)
 
-            wheel_name = "wheel{}".format(i)
+            wheel_name = "a_wheel{}".format(i)
             self.joint_names.append(wheel_name)
 
             if i == 0:
@@ -199,6 +197,7 @@ class BaseDriver(Node):
         self.io_pub = self.create_publisher(IOArray, 'io_data', 1)
         self.base_command_msg = self.create_publisher(BaseState, 'BasePub', 100)
         self.sim_command_msg = self.create_publisher(BaseState, 'simbasestate', 100)
+        self.drive_inverted_pub = self.create_publisher(DriveInverted, "drive_inverted", 1)
 
 
         #Services
@@ -307,7 +306,7 @@ class BaseDriver(Node):
         motor_drives = self.motor_drives
 
         PltfClcStd.initialize(PltfClcStd, self, motor_drives)
-        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command)
+        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command, self.drive_inverted)
 
         return success
     
@@ -376,6 +375,7 @@ class BaseDriver(Node):
         latest_base_command_msg = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, latest_base_command_msg)
         self.bsmg = latest_base_command_msg
+        # self.get_logger().info("{}".format(latest_base_command_msg))
         self.joint_command_pub.publish(latest_base_command_msg)
 
     def client_get_base_state(self):
@@ -443,13 +443,19 @@ class BaseDriver(Node):
         #Joint State
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
-        joint_state_msg.name = self.joint_names
 
         i = 0
+        j = 0
 
-        while i < len(base_state.steer_pos):
-            joint_state_msg.position.append(base_state.steer_pos[i])
-            joint_state_msg.position.append(base_state.prop_pos[i])
+        while i < 8:
+            joint_state_msg.name.append(self.joint_names[i])
+            if (i % 2) == 0:
+                joint_state_msg.position.append(base_state.steer_pos[j])
+                joint_state_msg.velocity.append(0.0)
+            else:
+                joint_state_msg.velocity.append(base_state.prop_speed[j])
+                joint_state_msg.position.append(0.0)
+                j += 1
             i += 1
         
         self.joint_state_pub.publish(joint_state_msg)
@@ -480,7 +486,15 @@ class BaseDriver(Node):
     
     def twist_callback(self,twist_in):
         self.latest_base_command_time = self.get_clock().now()
-        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
+        if not (twist_in.linear.x < 0 and twist_in.angular.z < 0):
+            if twist_in.linear.x < 0 or twist_in.angular.z < 0:
+                self.drive_inverted = True
+            else:
+                self.drive_inverted = False
+
+        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command, self.drive_inverted)
+
+
         # if not twist_in.angular.z == 0:
             # self.get_logger().info("motors help {}".format(self.latest_base_command.steer_pos))
 
@@ -527,15 +541,15 @@ class BaseDriver(Node):
         return
     
     def sendSimCommands(self):
-        current_time = self.get_clock().now()
         
-        if current_time > self.latest_base_command_time + self.command_timeout_time:
+        if self.get_clock().now() > self.latest_base_command_time + self.command_timeout_time:
             PltfClcStd.setZeroSpeed(PltfClcStd, self.latest_base_command)
         self.client_simulate_All_Drives()
 
     def client_simulate_All_Drives(self):
         simcommand = BaseState()
         self.baseStateToMsg(self.latest_base_command_time, self.latest_base_command, simcommand)
+        # self.get_logger().info("simcommand{}".format(simcommand))
         self.sim_command_msg.publish(simcommand)
         SimDrive.Request().commands = 1
         Future = self.cli_sim_drive.call_async(SimDrive.Request())
@@ -695,29 +709,7 @@ class BaseDriver(Node):
         
         response.success = True
         response.message = message
-
-    
-    # def srv_callback_io_set_bool(self, request, response, unique_service_id):
-    #     success = True
-    #     message = ''
-    #     data = request.data
-
-    #     boolservice = self.client_call_set_bool_service(unique_service_id, data, success, message)
-    #     response.success = boolservice.success
-    #     response.message = boolservice.message
-    #     self.get_logger().info(message)
-    
-    # def client_call_set_bool_service(self, unique_service_id, data, success, message):
-    #     SetBools.Request().unique_service_id = unique_service_id
-    #     SetBools.Request().value = data
-    #     SetBools.Request().data = success
-    #     SetBools.Request().data = message
-    #     Future = self.cli_call_set_bool.call_async(SetBools.Request())
-    #     rclpy.spin_until_future_complete(self, Future)
-    #     response = Future.result()
-    #     return response
-
-        
+       
 
     def baseStateToMsg(self, time, base_state_in, base_state_out):
         base_state_out.header.stamp = time.to_msg()

@@ -189,11 +189,11 @@ CanCtrlPltf::initPltf(int can_interface_type, std::string can_interface_name,
                       std::vector<std::map<std::string, double> > battery_map,
                       std::vector<std::map<std::string, int> > io_map)
 {
-    // if (can_interface_type == CAN_ITF_NONE)
-    // {
-    //   std::cout << "Uses NO CAN adapter" << std::endl;
-    //   can_line_ = new CanLineDummy;
-    // }
+    if (can_interface_type == CAN_ITF_NONE)
+    {
+      std::cout << "Uses NO CAN adapter" << std::endl;
+      can_line_ = new CanLineDummy;
+    }
     // else if (can_interface_type == CAN_ITF_ENC_V1REV6)
     // {
     //   std::cout << "Uses Thorvald Main Enc. PCB for CAN on port: " << can_interface_name << std::endl;
@@ -206,7 +206,7 @@ CanCtrlPltf::initPltf(int can_interface_type, std::string can_interface_name,
     //   can_line_ = new CanLineUSBv2;
     //   ((::CanLineUSBv2*)can_line_)->setPort(can_interface_name);
     // }
-    if (can_interface_type == CAN_ITF_SOCKETCAN)
+    else if (can_interface_type == CAN_ITF_SOCKETCAN)
     {
       std::cout << "Uses socketcan on interface: " << can_interface_name << std::endl;
       can_line_ = new CanLineSocketcan;

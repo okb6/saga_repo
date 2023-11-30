@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description
+CMAKE_SOURCE_DIR = /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/odin/Documents/GitHub/saga_repo/build/loki_description
+CMAKE_BINARY_DIR = /home/loki/Documents/GitHub/saga_repo/build/loki_description
 
 # Utility rule file for loki_description_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/loki_description_uninstall.dir/compiler_depend.make
 include CMakeFiles/loki_description_uninstall.dir/progress.make
 
 CMakeFiles/loki_description_uninstall:
-	/usr/bin/cmake -P /home/odin/Documents/GitHub/saga_repo/build/loki_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/loki/Documents/GitHub/saga_repo/build/loki_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 loki_description_uninstall: CMakeFiles/loki_description_uninstall
 loki_description_uninstall: CMakeFiles/loki_description_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/loki_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/loki_description_uninstall.dir/clean
 
 CMakeFiles/loki_description_uninstall.dir/depend:
-	cd /home/odin/Documents/GitHub/saga_repo/build/loki_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description /home/odin/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description /home/odin/Documents/GitHub/saga_repo/build/loki_description /home/odin/Documents/GitHub/saga_repo/build/loki_description /home/odin/Documents/GitHub/saga_repo/build/loki_description/CMakeFiles/loki_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/loki/Documents/GitHub/saga_repo/build/loki_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description /home/loki/Documents/GitHub/saga_repo/ros2_thor/src/loki/loki_description /home/loki/Documents/GitHub/saga_repo/build/loki_description /home/loki/Documents/GitHub/saga_repo/build/loki_description /home/loki/Documents/GitHub/saga_repo/build/loki_description/CMakeFiles/loki_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/loki_description_uninstall.dir/depend
 

@@ -95,9 +95,11 @@ class PltfClcStd:
         
     #     return True
 
-    def calc_commands(self, vx, vy, wz, motor_drives, joint_states_out):
+    def calc_commands(self, vx, vy, wz, motor_drives, joint_states_out, drive_inverted):
         speed = [0.0, 0.0, 0.0, 0.0]
         steering = [0.0, 0.0, 0.0, 0.0]
+
+        y_fix = vy
 
         drive_steer = [0.0, 0.0, 0.0, 0.0]
         mode_speed = [0.0, 0.0, 0.0, 0.0]
@@ -259,6 +261,27 @@ class PltfClcStd:
         # joint_states_out.steer_pos = [0.0, 0.0, 0.0, 0.0]
         # joint_states_out.steer_max_speed = [0.0, 0.0, 0.0, 0.0]
         # joint_states_out.channel = [0, 0, 0, 0]
+
+        if (drive_inverted):
+            i = 0
+            while i < self.number_of_drives:
+                speed[i] = -speed[i]
+                steering[i] = steering[i] - math.pi
+                i += 1
+
+        if vy < 0:
+            steering[2] = steering[2] + (2 * math.pi)
+            steering[3] = steering[3] + (2 * math.pi)
+
+        if vx == 0 and vy == 0 and wz > 0:
+            i = 0
+            while i < self.number_of_drives:
+                speed[i] = -speed[i]
+                steering[i] = steering[i] - math.pi
+                i += 1
+
+
+
 
         i = 0
         while i < self.number_of_drives:

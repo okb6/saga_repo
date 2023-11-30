@@ -9,6 +9,7 @@ from loki_msgs.msg._controller_data import ControllerData  # noqa: F401
 from loki_msgs.msg._controller_info import ControllerInfo  # noqa: F401
 from loki_msgs.msg._controller_state import ControllerState  # noqa: F401
 from loki_msgs.msg._controller_status_flag import ControllerStatusFlag  # noqa: F401
+from loki_msgs.msg._drive_inverted import DriveInverted  # noqa: F401
 from loki_msgs.msg._drive_param import DriveParam  # noqa: F401
 from loki_msgs.msg._enclosure_state import EnclosureState  # noqa: F401
 from loki_msgs.msg._io_array import IOArray  # noqa: F401
