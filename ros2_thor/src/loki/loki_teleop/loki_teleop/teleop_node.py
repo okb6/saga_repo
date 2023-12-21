@@ -79,8 +79,8 @@ class TeleopNode(Node):
         trigger_string_map = ''
         params_loaded = True
 
-        self.declare_parameter('multi_robot', rclpy.Parameter.Type.BOOL)
-        self.multiple_robots('multi_robot').value
+        self.declare_parameter('multi_swarm', rclpy.Parameter.Type.BOOL)
+        self.multiple_robots = self.get_parameter('multi_swarm').value
 
         #Lookup turning radius
         self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
@@ -410,21 +410,21 @@ class TeleopNode(Node):
             self.secondary_on = False 
             self.get_logger().warning("Swarm Communication has been initiated: Controlling both robots now")
 
-        elif self.evaluateButtonPress(self.multi_robot_parameters) and self.swarm_on and self.multiple_robots:
+        elif self.evaluateButtonPressCombo(self.multi_robot_parameters) and self.swarm_on and self.multiple_robots:
             self.swarm_communication = False
             self.swarm_on = False
             self.secondary_communication = False 
             self.secondary_on = False 
             self.get_logger().warning("Swarm Communication has been disabled, controlling only the main robot")
             
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and not self.secondary_on and self.multiple_robots:
+        elif self.evaluateButtonPressCombo(self.secondary_robot_buttons) and not self.secondary_on and self.multiple_robots:
             self.swarm_communication = False 
             self.swarm_on = False 
             self.secondary_communication = True 
             self.secondary_on = False
             self.get_logger().warning("Controlling secondary robot")
 
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on and self.multiple_robots:
+        elif self.evaluateButtonPressCombo(self.secondary_robot_buttons) and self.secondary_on and self.multiple_robots:
             self.swarm_communication = False 
             self.swarm_on = False
             self.secondary_communication = False 
@@ -495,13 +495,13 @@ class TeleopNode(Node):
                 if vy == 0:
                     vy = 0.000001
                 vx = 0.0
-            if mode == self.Mode_omni:
-                vx = axis_v_primary
-                vy = axis_v_secondary
-                if abs(vx) > 0 or abs(vy) > 0 or self.buttons[self.button_map["button_6"]]:
-                    wz = axis_wz * 1.5 * self.kv * (1 -2 * (abs(math.atan2(vy,vx)) > self.m_pi / 2))
-                else:
-                    wz = 0.0
+            # if mode == self.Mode_omni:
+            #     vx = axis_v_primary
+            #     vy = axis_v_secondary
+            #     if abs(vx) > 0 or abs(vy) > 0 or self.buttons[self.button_map["button_6"]]:
+            #         wz = axis_wz * 1.5 * self.kv * (1 -2 * (abs(math.atan2(vy,vx)) > self.m_pi / 2))
+            #     else:
+            #         wz = 0.0
                 
 
 
