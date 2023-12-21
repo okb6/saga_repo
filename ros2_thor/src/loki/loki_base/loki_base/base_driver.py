@@ -306,7 +306,7 @@ class BaseDriver(Node):
         motor_drives = self.motor_drives
 
         PltfClcStd.initialize(PltfClcStd, self, motor_drives)
-        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command, self.drive_inverted)
+        PltfClcStd.calc_commands(PltfClcStd, 0,0,0, self.motor_drives, self.latest_base_command)
 
         return success
     
@@ -492,7 +492,7 @@ class BaseDriver(Node):
             else:
                 self.drive_inverted = False
 
-        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command, self.drive_inverted)
+        self.latest_base_command = PltfClcStd.calc_commands(PltfClcStd, twist_in.linear.x, twist_in.linear.y, twist_in.angular.z, self.motor_drives, self.latest_base_command)
 
 
         # if not twist_in.angular.z == 0:
