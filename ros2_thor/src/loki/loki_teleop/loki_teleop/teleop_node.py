@@ -79,6 +79,9 @@ class TeleopNode(Node):
         trigger_string_map = ''
         params_loaded = True
 
+        self.declare_parameter('multi_swarm', rclpy.Parameter.Type.BOOL)
+        self.multiple_robots('multi_swarm').value
+
         #Lookup turning radius
         self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
         self.declare_parameter('turn_calc_l', rclpy.Parameter.Type.DOUBLE)
@@ -400,28 +403,28 @@ class TeleopNode(Node):
         #     mode = self.Mode_omni
         #     self.previous_non_turn_mode = self.Mode_Forward
 
-        if self.evaluateButtonPressCombo(self.multi_robot_parameters) and not self.swarm_on:
+        if self.evaluateButtonPressCombo(self.multi_robot_parameters) and not self.swarm_on and self.multiple_robots:
             self.swarm_communication = True
             self.swarm_on = True
             self.secondary_communication = False 
             self.secondary_on = False 
             self.get_logger().warning("Swarm Communication has been initiated: Controlling both robots now")
 
-        elif self.evaluateButtonPress(self.multi_robot_parameters) and self.swarm_on:
+        elif self.evaluateButtonPress(self.multi_robot_parameters) and self.swarm_on and self.multiple_robots:
             self.swarm_communication = False
             self.swarm_on = False
             self.secondary_communication = False 
             self.secondary_on = False 
             self.get_logger().warning("Swarm Communication has been disabled, controlling only the main robot")
             
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and not self.secondary_on:
+        elif self.evaluateButtonPress(self.secondary_robot_buttons) and not self.secondary_on and self.multiple_robots:
             self.swarm_communication = False 
             self.swarm_on = False 
             self.secondary_communication = True 
             self.secondary_on = False
             self.get_logger().warning("Controlling secondary robot")
 
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on:
+        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on and self.multiple_robots
             self.swarm_communication = False 
             self.swarm_on = False
             self.secondary_communication = False 
@@ -527,10 +530,10 @@ class TeleopNode(Node):
         # self.get_logger().info("vx{}, vy{}, wz{}".format(vx, vy, wz))
 
         if self.teleop_lock_on:
-            if self.swarm_communication:
+            if self.swarm_communication and self.multiple_robots:
                 self.twist_pub.publish(twist_msg)
                 self.multi_robot.publish(twist_msg)
-            elif self.secondary_communication:
+            elif self.secondary_communication and self.multiple_robots:
                 self.multi_robot.publish(twist_msg)
                 self.twist_pub.publish(backup_twist)
             else:
