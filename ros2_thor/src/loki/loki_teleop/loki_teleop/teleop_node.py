@@ -79,8 +79,8 @@ class TeleopNode(Node):
         trigger_string_map = ''
         params_loaded = True
 
-        self.declare_parameter('multi_swarm', rclpy.Parameter.Type.BOOL)
-        self.multiple_robots('multi_swarm').value
+        self.declare_parameter('multi_robot', rclpy.Parameter.Type.BOOL)
+        self.multiple_robots('multi_robot').value
 
         #Lookup turning radius
         self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
@@ -424,7 +424,7 @@ class TeleopNode(Node):
             self.secondary_on = False
             self.get_logger().warning("Controlling secondary robot")
 
-        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on and self.multiple_robots
+        elif self.evaluateButtonPress(self.secondary_robot_buttons) and self.secondary_on and self.multiple_robots:
             self.swarm_communication = False 
             self.swarm_on = False
             self.secondary_communication = False 
