@@ -1,3 +1,0 @@
-int32 can_id
-int32 setup_id
-int32 setup_value
