@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="robot_name" default="" />
+  <arg name="tf_prefix" default="" />
+  <arg name="robot_model" default="$(find-pkg-share loki_base)/config/robot_017.yaml" />
+  <arg name="model_extras" default="" />
+  <arg name="datum_file" default=""/>
+
+  <!--param name="robot_tf_prefix" value="$(var tf_prefix)" /-->
+
+  <!-- create robot model -->
+  <!-- "inorder" so that file process in read order this allows conditional includes -->
+
+
+  
+  <!-- state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher">
+    <push_ros_namespace namespace="base_driver" />
+    <param name="robot_description" cmd="$(exec-in-pkg xacro xacro) '$(find-pkg-share loki_description)/urdf/thorvald_model.xacro'" />
+  </node>
+
+</launch>
+
