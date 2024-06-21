@@ -18,6 +18,7 @@
 
   <arg name="can_interface_type" default="socketcan" />
   <arg name="can_interface_name" default="can0" />
+  <arg name="nav" default="false"/>
 
   <!-- Robot starting pose arguments for simulation  -->
   <arg name="start_pose_x" default="0" if="$(var simple_sim)"/>
@@ -63,6 +64,11 @@
 
     <!-- twist mux bringup -->
     <include file="$(find-pkg-share loki_twist_mux)/launch/twist_mux.launch"/>
+    
+    <include file="$(find-pkg-share loki_nav)/launch/nav.launch.py" if="$(var nav)"/>
+    
+    <include file="$(find-pkg-share septentrio_gnss_driver)/launch/rover_node.launch.py"/>
+     
   </group>
 
   <node pkg="loki_base" exec="isaac_wheels" name="isaac_wheels" namespace="$(var tf_prefix)"/>
