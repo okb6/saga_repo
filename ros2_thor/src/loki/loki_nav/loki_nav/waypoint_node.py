@@ -8,141 +8,130 @@ from std_srvs.srv import Trigger, SetBool
 from septentrio_gnss_driver.msg import AttEuler
 from rclpy.node import Node
 from loki_msgs.srv import HomeS
+import yaml
 import numpy
+from os import sys
+from geographic_msgs.msg import GeoPose
 
 class WaypointNode(Node):
-    def __init__(self):
+    def __init__(self, wps_file_path):
         super().__init__('waypoint_node')
         self.get_logger().info("started Waypoint Node")
 
-        self.axis_map = {}
-        self.button_map = {}
-        self.custom_trigger_map = {}
-        self.buttons = []
-        self.axes = []
-        self.swarm_communication = False
-        self.swarm_on = False
-        self.secondary_communication = False 
-        self.secondary_on = False
-        self.correct_heading = False
-        self.heading = ''
-        self.lookupParameters()
-        self.get_logger().info("Parameters loaded for waypoint")
-    
-        
+        with open(wps_file_path, 'r') as wps_file:
+            self.wps_dict = yaml.safe_load(wps_file)
+
+        self.current_attitude = 0.0
+        self.current_position = [0.0, 0.0]
         #SUBSCRIBERS
-        self.pose_sub = self.create_subscription(PoseWithCovarianceStamped, 'pose', self.pose_callback, 1)
-        self.heading_sub = self.create_subscription(AttEuler, 'atteuler', self.heading_callback, 1)
+        self.gps_subscription = self.create_subscription(
+            NavSatFix,
+            '/gps/fix',
+            self.gps_callback,
+            10)
+        self.subscription_att = self.create_subscription(
+            AttEuler,
+            '/atteuler',
+            self.att_callback,
+            10)
 
-        #PUBLISHERS
-        self.twist_pub = self.create_publisher(Twist, 'nav_vel', 1)
+        self.twist_pub = self.create_publisher(Twist, 'cmd_vel_nav', 1)
+        self.previous_time = None
+        self.declare_parameter('desired_speed', 0.5)
+        self.desired_speed = self.get_parameter('desired_speed').get_parameter_value().double_value
+
+        self.e_theta = 0.0
+
+        for wp in self.wps_dict["waypoints"]:
+            self.get_wps(wp)
+            while not self.obtained_goal():
+                self.calculate_velocity()
+                rclpy.spin_once(self)
+                
+
+    def get_wps(self, wp):
+        """
+        Get an array of geographic_msgs/msg/GeoPose objects from the yaml file
+        """
+        latitude, longitude, yaw = wp["latitude"], wp["longitude"], wp["yaw"]
+        self.get_goal(latitude, longitude, yaw)
 
 
-        #Initializing Variables
-        self.m_pi = math.pi
-        self.Mode_Forward = 0
-        self.Mode_Left = 1
-        self.Mode_Turning = 2
-        # self.Mode_omni = 3
+    def get_goal(self, latitude, longitude, yaw):
+        self.goal_long = longitude
+        self.goal_lat = latitude
+        self.goal_yaw = yaw
+        self.get_logger().info(f"Setting Waypoint {self.goal_long} , {self.goal_lat} , {self.goal_yaw}")
 
-        self.previous_drive_mode = self.Mode_Forward
-        self.previous_non_turn_mode = self.Mode_Forward
-        self.turning_buttons_initiated = False
-        self.Default_Turning_Calc = 1.0
-
-        self.ang_max = self.m_pi/2
-        self.ang_min = 0.00 
-        self.deadzone = 0.2
-        self.turning_limit = 0.8
         
 
-        self.a = (self.ang_max - self.ang_min) / (1 - self.deadzone)
-        self.b = self.ang_min - self.deadzone * self.a
+    def gps_callback(self, msg):
+        self.current_position[0] = msg.longitude
+        self.current_position[1] = msg.latitude
 
-    def heading_callback(self, heading):
-        wz = 0.0
-        if -95.0 < heading.heading < -85.0:
-            self.correct_heading = True
-            self.heading = heading.heading
-            wz = 0.0
-        
+
+    def att_callback(self, msg):
+        self.current_attitude = msg.heading
+
+    def calculate_velocity(self):
+
+        if (self.current_attitude != 0.0 and self.current_position is not [0.0, 0.0]):
+            self.e_theta = math.radians(self.goal_yaw - self.current_attitude)
+            self.e_theta = (self.e_theta + math.pi) % (2 * math.pi) - math.pi
+            wz = 1 * self.e_theta
+
+            vx = 0.5 * math.cos(self.e_theta)
             
-        else:
-            if self.correct_heading is False:
-                wz = 0.05
-                self.correct_heading = False
-                self.heading = heading.heading
 
-                twist_msg = Twist()
-                twist_msg.linear.x = 0.0
-                twist_msg.linear.y = 0.0
-                twist_msg.linear.z = 0.0
-                twist_msg.angular.x = 0.0
-                twist_msg.angular.y = 0.0
-                twist_msg.angular.z = wz
-                self.twist_pub.publish(twist_msg)
-            
-
-    def lookupParameters(self):
-
-        self.get_logger().info("Looking up Parameters")
-        
-        self.declare_parameter('destinationx', rclpy.Parameter.Type.DOUBLE)
-        self.declare_parameter('destinationy', rclpy.Parameter.Type.DOUBLE)
-        self.declare_parameter('destinationh', rclpy.Parameter.Type.DOUBLE)
-
-        self.dest_x = self.get_parameter('destinationx').value
-        self.dest_y = self.get_parameter('destinationy').value
-        self.dest_h = self.get_parameter('destinationh').value
-        self.get_logger().info(f"{self.dest_h}")
-        return True
-          
-    
-    def pose_callback(self, pose):
-        vx = 0.0
-        vy = 0.0
-        self.get_logger().info(f"{pose.pose.pose.position}")
-        if self.correct_heading: 
-            if (self.dest_x - 0.001 <  pose.pose.pose.position.x < self.dest_x + 0.01) and (self.dest_y - 0.000010 < pose.pose.pose.position.y < self.dest_y + 0.000010):
-                self.get_logger().info("Destination Complete")
-                vx = 0.0
-                vy = 0.0
-                rclpy.shutdown
-            
-            else:
-                if not (self.dest_y - 0.000010 <  pose.pose.pose.position.y < self.dest_y + 0.000010):
-                    if -90 - 10 <  self.heading < -90+10:
-                        vx = 0.25
-                        vy = 0.0
-                    elif (90 - 10 < self.heading < 90 + 10) or (-270-10 <= self.heading <= -270 + 10):
-                        vx = -0.05
-                        vy = 0.0
-                    elif -180 - 5 < self.heading < -180 + 5:
-                        vy = -0.05
-                        vx = 0.0
-                    else :
-                        vy = 0.05
-                        vx = 0.0
-        
+        # Create and publish the twist message
             twist_msg = Twist()
 
             twist_msg.linear.x = vx
-            twist_msg.linear.y = vy
+            twist_msg.linear.y = 0.0
             twist_msg.linear.z = 0.0
-        
+            
             twist_msg.angular.x = 0.0
             twist_msg.angular.y = 0.0
-            twist_msg.angular.z = 0.0
-        # self.get_logger().info("vx{}, vy{}, wz{}".format(vx, vy, wz)
+            twist_msg.angular.z = wz
+
             self.twist_pub.publish(twist_msg)
+        else:
+            
+            
+            self.get_logger().info(f"{self.current_attitude}")
+
+
+
+    def obtained_goal(self):
+        distance_to_goal = math.sqrt((self.goal_long - self.current_position[0]) ** 2 + (self.goal_lat - self.current_position[1]) ** 2)
+        if distance_to_goal < 0.00002 and abs(self.e_theta) < math.radians(0.1):
+            self.get_logger().info("Goal reached")
+            return True
+
+        return False
+
+    
+    def latLonYaw2Geopose(self,latitude: float, longitude: float, yaw: float = 0.0) -> GeoPose:
+        """
+        Creates a geographic_msgs/msg/GeoPose object from latitude, longitude and yaw
+        """
+        geopose = GeoPose()
+
+        geopose.position.latitude = latitude
+        geopose.position.longitude = longitude
+        geopose.orientation = yaw
+        return geopose
+
+            
     
 
 
 
         
 def main(args=None):
+    yaml_file_path = sys.argv[1]
     rclpy.init(args=args)
-    node = WaypointNode()
+    node = WaypointNode(yaml_file_path)
     rclpy.spin(node)
     rclpy.shutdown()
 

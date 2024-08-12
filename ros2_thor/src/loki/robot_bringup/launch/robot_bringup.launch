@@ -19,6 +19,7 @@
   <arg name="can_interface_type" default="socketcan" />
   <arg name="can_interface_name" default="can0" />
   <arg name="nav" default="false"/>
+  <arg name="use_rviz" default="true" />
 
   <!-- Robot starting pose arguments for simulation  -->
   <arg name="start_pose_x" default="0" if="$(var simple_sim)"/>
@@ -64,10 +65,18 @@
 
     <!-- twist mux bringup -->
     <include file="$(find-pkg-share loki_twist_mux)/launch/twist_mux.launch"/>
+    <!-- <include file="$(find-pkg-share duro_gps_driver)/launch/duro_example.launch.py"/> -->
+    <!-- <include file="$(find-pkg-share swiftnav_ros2_driver)/launch/start.py"/> -->
     
-    <include file="$(find-pkg-share loki_nav)/launch/nav.launch.py" if="$(var nav)"/>
+    <!-- <include file="$(find-pkg-share loki_nav)/launch/nav.launch.py" if="$(var nav)"/> -->
     
     <include file="$(find-pkg-share septentrio_gnss_driver)/launch/rover_node.launch.py"/>
+    <include file="$(find-pkg-share loki_nav)/launch/convert.launch.py"/>
+    <!-- <include file="$(find-pkg-share loki_nav)/launch/dual_ekf_navsat.launch.py" if ="$(var nav)"/> -->
+    <!-- <include file="$(find-pkg-share loki_nav)/launch/gps_waypoint_follower.launch.py" if ="$(var nav)"/> -->
+    <!-- <include file="$(find-pkg-share loki_nav)/launch/mapviz.launch.py" if ="$(var nav)"/> -->
+
+    
      
   </group>
 

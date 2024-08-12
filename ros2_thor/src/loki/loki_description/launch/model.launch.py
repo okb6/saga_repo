@@ -19,7 +19,7 @@ def generate_launch_description():
     description = os.path.join(
     get_package_share_directory('loki_description'),
     'urdf',
-    'thorvald_model.xacro'
+    'graspberry.urdf'
     )
 
     robot_name_launch_arg = DeclareLaunchArgument("robot_name", default_value=TextSubstitution(text=""))
@@ -33,7 +33,7 @@ def generate_launch_description():
         namespace= 'base_driver',
         executable= 'robot_state_publisher',
         name= 'robot_state_publisher',
-        arguments= [description]
+        arguments= [description],
     )
 
     ld.add_action(robot_model_launch_arg)

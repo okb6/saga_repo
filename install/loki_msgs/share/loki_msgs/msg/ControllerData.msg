@@ -1,4 +1,0 @@
-ControllerConfig controller_config
-ControllerState controller_state
-MotorState[] motor_state
-

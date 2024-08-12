@@ -1,30 +1,26 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(loki_description)
 
-# Find packages and libraries for ROS 2
+# Find packages and libraries
 find_package(ament_cmake REQUIRED)
-find_package(controller_manager REQUIRED)
-find_package(robot_state_publisher REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rclpy REQUIRED)
-find_package(xacro REQUIRED)
+# find_package(loki_base REQUIRED)
+# find_package(loki_description)
+# find_package(loki_twist_mux)
+# find_package(loki_teleop)
 
-# Declare the package dependencies
 set(dependencies
-  controller_manager
-  robot_state_publisher
+  # loki_base
+  # # loki_description
+  # loki_twist_mux
+  # loki_teleop
   rclcpp
-  rclpy
-  xacro
 )
 
-# Generate the executable or libraries if needed
 
-# Install launch files, meshes, URDF, and config files
-install(DIRECTORY launch meshes urdf 
+install(DIRECTORY launch urdf meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
 ament_package()
-
-

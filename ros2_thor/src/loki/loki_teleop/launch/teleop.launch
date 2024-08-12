@@ -7,6 +7,7 @@
   <arg name="joy_deadzone" default="0.2" />
   <arg name="teleop_controller" default="$(find-pkg-share loki_teleop)/config/xbox.yaml" />
   <arg name="multi_swarm" default="false" />
+  <arg name="nav" default="false" />
 
 
   <node pkg="joy" exec="joy_node" name="joy_node">
@@ -18,6 +19,7 @@
   <node pkg="loki_teleop" exec="teleop_node" name="teleop_node" output="screen">
     <param from="$(var teleop_controller)" />
     <param name="multi_swarm" value="$(var multi_swarm)" />
+    <param name="nav" value="$(var nav)" />
     <remap from="cmd_vel" to="teleop_joy/cmd_vel" />
     <remap from="joy_priority" to="teleop_joy/joy_priority" />
     <remap from="home_steering" to="base_driver/home_steering" />

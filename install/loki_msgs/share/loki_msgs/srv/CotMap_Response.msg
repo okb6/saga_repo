@@ -1,2 +1,0 @@
-
-string[] setup_map

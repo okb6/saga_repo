@@ -24,7 +24,12 @@ class TeleopNode(Node):
         self.secondary_communication = False 
         self.secondary_on = False
 
-        params_loaded = self.lookupParameters()      
+        params_loaded = self.lookupParameters()
+
+        if self.nav:
+            self.locker = True
+        else:
+            self.locker = False      
 
         if params_loaded:
             self.get_logger().info("Parameters read from ROS parameter server")
@@ -78,9 +83,12 @@ class TeleopNode(Node):
         self.get_logger().info("Looking up Parameters")
         trigger_string_map = ''
         params_loaded = True
+        
 
         self.declare_parameter('multi_swarm', rclpy.Parameter.Type.BOOL)
         self.multiple_robots = self.get_parameter('multi_swarm').value
+        self.declare_parameter("nav", rclpy.Parameter.Type.BOOL)
+        self.nav = self.get_parameter("nav").value
 
         #Lookup turning radius
         self.declare_parameter('turn_calc_w', rclpy.Parameter.Type.DOUBLE)
@@ -166,6 +174,9 @@ class TeleopNode(Node):
         #lookup multi robot button combination
         self.declare_parameter('multi_robot', rclpy.Parameter.Type.STRING_ARRAY)
         self.multi_robot_parameters = self.get_parameter('multi_robot').value 
+
+        self.declare_parameter('locker', rclpy.Parameter.Type.STRING)
+        self.locker_parameter = self.get_parameter('locker').value
 
         #lookup kvbuttons
         self.declare_parameter('kv_default_buttons', rclpy.Parameter.Type.STRING_ARRAY)
@@ -270,13 +281,13 @@ class TeleopNode(Node):
     def srv_Callback_Block_Auto(self, request, response):
         message = ''
         self.block_auto_mode_on = request.data
-        if self.block_auto_mode_on:
+        if self.locker:
             message = 'Auto Mode Blocked'
             self.get_logger().info("Auto Mode Blocked!!!!")
 
             self.teleop_lock_on = True
             lock_msg = Bool()
-            lock_msg.data = self.teleop_lock_on
+            lock_msg.data = self.locker
             self.lock_pub.publish(lock_msg)
 
         else:
@@ -300,7 +311,7 @@ class TeleopNode(Node):
             self.get_logger().info('Robot in Manual Mode')
 
         lock_msg = Bool()
-        lock_msg.data = self.teleop_lock_on
+        lock_msg.data = self.locker
         self.lock_pub.publish(lock_msg)
         response.success = True
         response.message = message
@@ -339,15 +350,15 @@ class TeleopNode(Node):
             if self.buttons[self.button_map["button_function"]] and not self.previous_buttons[self.button_map['button_function']] and self.teleop_lock_on and not self.block_auto_mode_on:
                 self.teleop_lock_on = False
                 lock_msg = Bool()
-                lock_msg.data = self.teleop_lock_on
+                lock_msg.data = self.locker
                 self.lock_pub.publish(lock_msg)
             elif not self.previous_buttons[self.button_map["button_teleop_lock"]]:
                 self.teleop_lock_on = True
             
         
-        if self.teleop_lock_on:
+
             lock_msg = Bool()
-            lock_msg.data = self.teleop_lock_on
+            lock_msg.data = self.locker
             self.lock_pub.publish(lock_msg)
         
         if self.buttons[self.button_map["button_function"]]:
@@ -402,6 +413,20 @@ class TeleopNode(Node):
         # elif self.evaluateButtonPressCombo(self.multi_robot_parameters):
         #     mode = self.Mode_omni
         #     self.previous_non_turn_mode = self.Mode_Forward
+
+        if self.evaluateButtonPress(self.locker_parameter) and self.nav:
+            if self.locker:
+                self.get_logger().info("Locker Off")
+                self.locker = False
+                lock_msg = Bool()
+                lock_msg.data = True
+                self.lock_pub.publish(lock_msg)
+            else:
+                self.get_logger().info("Locker on")
+                self.locker = True
+                lock_msg = Bool()
+                lock_msg.data = False
+                self.lock_pub.publish(lock_msg)
 
         if self.evaluateButtonPressCombo(self.multi_robot_parameters) and not self.swarm_on and self.multiple_robots:
             self.swarm_communication = True
@@ -494,7 +519,9 @@ class TeleopNode(Node):
                 vy = axis_v_primary
                 if vy == 0:
                     vy = 0.000001
+
                 vx = 0.0
+
             # if mode == self.Mode_omni:
             #     vx = axis_v_primary
             #     vy = axis_v_secondary
@@ -528,17 +555,17 @@ class TeleopNode(Node):
 
 
         # self.get_logger().info("vx{}, vy{}, wz{}".format(vx, vy, wz))
-
-        if self.teleop_lock_on:
-            if self.swarm_communication and self.multiple_robots:
-                self.twist_pub.publish(twist_msg)
-                self.multi_robot.publish(twist_msg)
-            elif self.secondary_communication and self.multiple_robots:
-                self.multi_robot.publish(twist_msg)
-                self.twist_pub.publish(backup_twist)
-            else:
-                self.twist_pub.publish(twist_msg)
-                self.multi_robot.publish(backup_twist)
+        if not self.locker:
+            if self.teleop_lock_on:
+                if self.swarm_communication and self.multiple_robots:
+                    self.twist_pub.publish(twist_msg)
+                    self.multi_robot.publish(twist_msg)
+                elif self.secondary_communication and self.multiple_robots:
+                    self.multi_robot.publish(twist_msg)
+                    self.twist_pub.publish(backup_twist)
+                else:
+                    self.twist_pub.publish(twist_msg)
+                    self.multi_robot.publish(backup_twist)
         
         self.previous_drive_mode = mode
 

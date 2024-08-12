@@ -2,9 +2,9 @@
   ros__parameters:
     topics:
       navigation:
-        topic   : nav_vel
+        topic   : cmd_vel_nav
         timeout : 0.5
-        priority: 101
+        priority: 50
       joystick:
           topic   : teleop_joy/cmd_vel
           timeout : 0.5
@@ -17,15 +17,25 @@
         topic   : lock_vel
         timeout : 0.5
         priority: 255
-
+twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        topic   : cmd_vel_nav
+        timeout : 0.5
+        priority: 50
+      joystick:
+          topic   : teleop_joy/cmd_vel
+          timeout : 0.5
+          priority: 100
 
 /Odin/twist_mux:
   ros__parameters:
     topics:
       navigation:
-        topic   : dummy_navigation/cmd_vel
+        topic   : cmd_vel_nav
         timeout : 0.5
-        priority: 10
+        priority: 50
       joystick:
           topic   : teleop_joy/cmd_vel
           timeout : 0.5
@@ -34,10 +44,6 @@
         topic   : turtle1/cmd_vel
         timeout : 0.5
         priority: 80
-      mv_bs_vel:
-        topic   : nav_vel
-        timeout : 0.5
-        priority: 60
       esd:
         topic   : lock_vel
         timeout : 0.5

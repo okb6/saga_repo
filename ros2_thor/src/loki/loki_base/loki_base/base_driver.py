@@ -2,7 +2,8 @@ import rclpy
 from rclpy.node import Node
 from rclpy.time import Time
 from rclpy.duration import Duration
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Point, Pose
+
 from loki_msgs.msg import BaseState, ControllerArray, BatteryArray, IOArray, DriveInverted
 from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry
@@ -28,29 +29,7 @@ class BaseDriver(Node):
         self.command_timeout_time = Duration(seconds = 0.5)
         self.drive_inverted = False
 
-        # PltfClcStd = PltfClcStd()
-
-        # # Initialize ROS parameters
-        # # self.declare_parameter('rate', rclpy.Parameter.Type.INTEGER)
-        # self.declare_parameter('can_interface_type', rclpy.Parameter.Type.STRING)
-        # self.declare_parameter('can_interface_name', rclpy.Parameter.Type.STRING)
-
-        # # rate_val = self.get_parameter('rate').value
-        # can_interface_type = self.get_parameter('can_interface_type').value 
-        # can_interface_name = self.get_parameter('can_interface_name').value
-
-        # # Initialize CAN interface type
-        # if can_interface_type == "socketcan":
-        #     interface_type = 0
-        # else:
-        #     self.get_logger().error(
-        #         "Invalid or missing 'can_interface_type' parameter.")
-        #     return
-
-        # self.get_logger().info(f"Using CAN interface {can_interface_name}")
-
-        # Initialize BaseDriver with CAN interface
-        # base_driver = BaseDriver()
+        
 
         self.rate = self.create_rate(10)  # Create rate control object
 
@@ -175,13 +154,6 @@ class BaseDriver(Node):
         self.frame_id = self.get_parameter('odom_frame_id').value
         self.broadcast_tf = self.get_parameter('enable_odom_tf').value
         self.allow_geometry_odometry = self.get_parameter('passthrough_gazebo_odometry').value
-        # self.twist_cov_default_array = np.array([0.001,0,0,0,0,0,
-        #                                 0,0.001,0,0,0,0,
-        #                                 0,0,0.001,0,0,0,
-        #                                 0,0,0,0.001,0,0,
-        #                                 0,0,0,0,0.001,0,
-        #                                 0,0,0,0,0,0.03])
-        #                                 #is this how you do it
         
         #Subscribers
         self.basestate_to_msg = self.create_subscription(BaseState, 'basestatetomsg', self.msg_to_base_state_callback, 100)
@@ -189,9 +161,10 @@ class BaseDriver(Node):
 
         #Publishers
         self.joint_command_pub = self.create_publisher(BaseState, 'joint_commands', 1)
+        self.odom_pos = self.create_publisher(Pose, 'odom_pos', 1)
         self.joint_state_pub = self.create_publisher(JointState, 'joint_states', 1)
         self.base_state_pub = self.create_publisher(BaseState, 'base_state', 1)
-        self.odom_pub = self.create_publisher(Odometry, 'odomery/base_raw', 1)
+        self.odom_pub = self.create_publisher(Odometry, 'odometry', 1)
         self.motor_controller_data_pub = self.create_publisher(ControllerArray, 'motor_controller_data', 1)
         self.battery_pub = self.create_publisher(BatteryArray, 'battery_data', 1)
         self.io_pub = self.create_publisher(IOArray, 'io_data', 1)
@@ -265,6 +238,7 @@ class BaseDriver(Node):
 
         else:
             self.get_logger().info("Initialized Robot Base")
+            PltfClcStd.zeroOdometryPose(PltfClcStd)
 
 
 
@@ -298,8 +272,6 @@ class BaseDriver(Node):
                 # self.rate.sleep()
 
 
-
-        
 
     def loadClcPlugin(self):
         success = True
@@ -397,7 +369,6 @@ class BaseDriver(Node):
         self.client_get_base_state()
 
         base_state = self.basestatemsg
-        durat = Duration(seconds = 0.5)
 
         base_state_msg = BaseState()
         self.baseStateToMsg(self.get_clock().now(), base_state, base_state_msg)
@@ -413,29 +384,10 @@ class BaseDriver(Node):
         yaw = 0.0
 
         if not self.has_gazebo:
-            if PltfClcStd.calculateOdometry(PltfClcStd, base_state, vx, vy, wz, x, y, yaw, self.motor_drives, self, durat):
-                odom_msg.header.frame_id = self.frame_id
-                odom_msg.child_frame_id = "base_link"
-                odom_msg.header.stamp = self.get_clock().now().to_msg()
-
-                odom_msg.pose.pose.position.x = x
-                odom_msg.pose.pose.position.y = y     
-                odom_msg.pose.pose.position.z = 0.0
-            
-                increase_pose_cov = (abs(vx) > 0.005) or (abs(vy) > 0.005) or (abs(wz) > 0.005)
-                i = 0
-                while i < 36:
-                    self.pose_cov[i] = self.pose_cov[i] + self.twist_cov[i] * increase_pose_cov
-                    i += 1
-
-                odom_msg.pose.covariance = self.pose_cov
-
-                odom_msg.twist.twist.linear.x = vx
-                odom_msg.twist.twist.linear.y = vy
-                odom_msg.twist.twist.angular.z = wz
-
-                odom_msg.twist.covariance = self.twist_cov
+            odom_msg = PltfClcStd.calculateOdometry(PltfClcStd, self, base_state, odom_msg, self.motor_drives)
+            if odom_msg is not None:
                 self.odom_pub.publish(odom_msg)
+                self.odom_pos.publish(odom_msg.pose.pose)
             
             else:
                 self.get_logger().warn("odometry calculation failed")
